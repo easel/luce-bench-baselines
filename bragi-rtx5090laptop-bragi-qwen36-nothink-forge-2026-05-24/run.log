@@ -1,0 +1,64 @@
+[capability] url=http://localhost:8080 area=forge questions=forge
+[capability] server=luce-dflash v0.0.0+cpp props_schema=2  model=Qwen3.6 27B  kv=tq3_0/tq3_0  compute=None
+[capability] forge scenarios=30 tags=all names=all
+  basic_2step: FAIL (MaxIterationsError) — 15 iterations, 25.6s
+  sequential_3step: FAIL (MaxIterationsError) — 15 iterations, 33.4s
+  error_recovery: FAIL (ToolExecutionError) — 3 iterations, 4.7s
+  tool_selection: FAIL (MaxIterationsError) — 15 iterations, 34.3s
+  argument_fidelity: FAIL (MaxIterationsError) — 15 iterations, 27.2s
+  sequential_reasoning: FAIL (MaxIterationsError) — 15 iterations, 27.8s
+  conditional_routing: FAIL (MaxIterationsError) — 15 iterations, 75.9s
+  data_gap_recovery: FAIL (MaxIterationsError) — 15 iterations, 35.4s
+  data_gap_recovery_extended: FAIL (MaxIterationsError) — 20 iterations, 51.0s
+  argument_transformation: FAIL (MaxIterationsError) — 15 iterations, 59.0s
+  inconsistent_api_recovery: FAIL (MaxIterationsError) — 20 iterations, 137.8s
+  grounded_synthesis: FAIL (MaxIterationsError) — 20 iterations, 43.2s
+  relevance_detection: OK — 2 iterations, 5.0s
+  basic_2step_stateful: FAIL (MaxIterationsError) — 15 iterations, 25.6s
+  sequential_3step_stateful: FAIL (MaxIterationsError) — 15 iterations, 35.9s
+  error_recovery_stateful: FAIL (ToolExecutionError) — 3 iterations, 4.8s
+  tool_selection_stateful: FAIL (MaxIterationsError) — 15 iterations, 32.6s
+  argument_fidelity_stateful: FAIL (MaxIterationsError) — 15 iterations, 27.3s
+  sequential_reasoning_stateful: FAIL (MaxIterationsError) — 15 iterations, 28.6s
+  conditional_routing_stateful: FAIL (MaxIterationsError) — 15 iterations, 62.6s
+  data_gap_recovery_stateful: FAIL (MaxIterationsError) — 15 iterations, 38.0s
+  data_gap_recovery_extended_stateful: FAIL (MaxIterationsError) — 20 iterations, 50.1s
+  argument_transformation_stateful: FAIL (MaxIterationsError) — 15 iterations, 55.0s
+  inconsistent_api_recovery_stateful: FAIL (MaxIterationsError) — 20 iterations, 77.4s
+  grounded_synthesis_stateful: FAIL (MaxIterationsError) — 20 iterations, 43.3s
+  relevance_detection_stateful: OK — 2 iterations, 4.2s
+  compaction_chain_baseline: FAIL (MaxIterationsError) — 20 iterations, 59.9s
+  compaction_chain_p1: FAIL (MaxIterationsError) — 20 iterations, 60.0s
+  compaction_chain_p2: FAIL (MaxIterationsError) — 20 iterations, 62.0s
+  compaction_chain_p3: FAIL (MaxIterationsError) — 20 iterations, 61.9s
+   1 FAIL forge-guardrails@0.7.1-vendored basic_2step                    given=MaxIterationsError wall=25.65s prefill=8.7s/744tps decode=16.7s/24tps
+   2 FAIL forge-guardrails@0.7.1-vendored sequential_3step               given=MaxIterationsError wall=33.40s prefill=9.8s/754tps decode=23.4s/24tps
+   3 FAIL forge-guardrails@0.7.1-vendored error_recovery                 given=ToolExecutionError wall=4.72s prefill=1.5s/737tps decode=3.2s/24tps
+   4 FAIL forge-guardrails@0.7.1-vendored tool_selection                 given=MaxIterationsError wall=34.32s prefill=14.4s/766tps decode=19.7s/24tps
+   5 FAIL forge-guardrails@0.7.1-vendored argument_fidelity              given=MaxIterationsError wall=27.19s prefill=9.6s/754tps decode=17.4s/24tps
+   6 FAIL forge-guardrails@0.7.1-vendored sequential_reasoning           given=MaxIterationsError wall=27.82s prefill=10.8s/778tps decode=16.8s/24tps
+   7 FAIL forge-guardrails@0.7.1-vendored conditional_routing            given=MaxIterationsError wall=75.90s prefill=12.7s/775tps decode=62.9s/24tps
+   8 FAIL forge-guardrails@0.7.1-vendored data_gap_recovery              given=MaxIterationsError wall=35.43s prefill=15.6s/758tps decode=19.7s/24tps
+   9 FAIL forge-guardrails@0.7.1-vendored data_gap_recovery_extended     given=MaxIterationsError wall=51.02s prefill=27.7s/770tps decode=23.0s/24tps
+  10 FAIL forge-guardrails@0.7.1-vendored argument_transformation        given=MaxIterationsError wall=58.99s prefill=19.8s/771tps decode=39.0s/24tps
+  11 FAIL forge-guardrails@0.7.1-vendored inconsistent_api_recovery      given=MaxIterationsError wall=137.76s prefill=26.6s/768tps decode=110.8s/24tps
+  12 FAIL forge-guardrails@0.7.1-vendored grounded_synthesis             given=MaxIterationsError wall=43.18s prefill=18.7s/766tps decode=24.2s/24tps
+  13 PASS forge-guardrails@0.7.1-vendored relevance_detection            given=PASS wall=4.97s prefill=1.6s/783tps decode=3.3s/24tps
+  14 FAIL forge-guardrails@0.7.1-vendored basic_2step_stateful           given=MaxIterationsError wall=25.61s prefill=8.7s/742tps decode=16.7s/24tps
+  15 FAIL forge-guardrails@0.7.1-vendored sequential_3step_stateful      given=MaxIterationsError wall=35.94s prefill=9.9s/751tps decode=25.9s/24tps
+  16 FAIL forge-guardrails@0.7.1-vendored error_recovery_stateful        given=ToolExecutionError wall=4.76s prefill=1.5s/729tps decode=3.2s/24tps
+  17 FAIL forge-guardrails@0.7.1-vendored tool_selection_stateful        given=MaxIterationsError wall=32.62s prefill=14.3s/760tps decode=18.1s/24tps
+  18 FAIL forge-guardrails@0.7.1-vendored argument_fidelity_stateful     given=MaxIterationsError wall=27.32s prefill=9.7s/750tps decode=17.5s/24tps
+  19 FAIL forge-guardrails@0.7.1-vendored sequential_reasoning_stateful  given=MaxIterationsError wall=28.59s prefill=11.0s/776tps decode=17.4s/24tps
+  20 FAIL forge-guardrails@0.7.1-vendored conditional_routing_stateful   given=MaxIterationsError wall=62.64s prefill=12.8s/774tps decode=49.6s/24tps
+  21 FAIL forge-guardrails@0.7.1-vendored data_gap_recovery_stateful     given=MaxIterationsError wall=37.95s prefill=15.1s/760tps decode=22.6s/24tps
+  22 FAIL forge-guardrails@0.7.1-vendored data_gap_recovery_extended_stateful given=MaxIterationsError wall=50.14s prefill=27.6s/773tps decode=22.3s/24tps
+  23 FAIL forge-guardrails@0.7.1-vendored argument_transformation_stateful given=MaxIterationsError wall=55.01s prefill=19.5s/771tps decode=35.3s/24tps
+  24 FAIL forge-guardrails@0.7.1-vendored inconsistent_api_recovery_stateful given=MaxIterationsError wall=77.37s prefill=24.9s/763tps decode=52.2s/24tps
+  25 FAIL forge-guardrails@0.7.1-vendored grounded_synthesis_stateful    given=MaxIterationsError wall=43.32s prefill=18.8s/765tps decode=24.3s/24tps
+  26 PASS forge-guardrails@0.7.1-vendored relevance_detection_stateful   given=PASS wall=4.21s prefill=1.7s/780tps decode=2.5s/24tps
+  27 FAIL forge-guardrails@0.7.1-vendored compaction_chain_baseline      given=MaxIterationsError wall=59.85s prefill=33.9s/770tps decode=25.6s/24tps
+  28 FAIL forge-guardrails@0.7.1-vendored compaction_chain_p1            given=MaxIterationsError wall=59.95s prefill=33.9s/771tps decode=25.7s/24tps
+  29 FAIL forge-guardrails@0.7.1-vendored compaction_chain_p2            given=MaxIterationsError wall=62.05s prefill=34.8s/769tps decode=27.0s/24tps
+  30 FAIL forge-guardrails@0.7.1-vendored compaction_chain_p3            given=MaxIterationsError wall=61.91s prefill=34.8s/767tps decode=26.8s/24tps
+[capability] pass_rate=6.67%
