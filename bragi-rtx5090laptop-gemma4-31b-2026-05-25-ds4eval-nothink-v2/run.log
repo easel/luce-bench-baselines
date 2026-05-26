@@ -1,0 +1,7 @@
+[sampling] from /props: temp=1.0 top_p=0.949999988079071 top_k=64
+[capability] url=http://localhost:8080 area=ds4-eval questions=92
+[capability] server=luce-dflash v0.0.0+cpp props_schema=2  model=Gemma 4 31B IT  kv=tq3_0/tq3_0  compute=None
+   1 PASS GPQA Diamond   recNu3MXkvWUzHZr9    given=B correct=B format=True hint=True wall=213.26s prefill=0.2s/917tps decode=213.0s/19tps thk=0
+   2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C correct=C format=True hint=True wall=214.04s prefill=0.2s/744tps decode=213.8s/19tps thk=0
+   3 PASS AIME2025       aime2025-01          given=70 correct=70 format=True hint=True wall=213.81s prefill=0.1s/702tps decode=213.7s/19tps thk=0
+   4 PASS GPQA Diamond   recoiTJPGUmzAkief    given=C correct=C format=True hint=True wall=32.54s prefill=0.4s/854tps decode=32.1s/19tps thk=0

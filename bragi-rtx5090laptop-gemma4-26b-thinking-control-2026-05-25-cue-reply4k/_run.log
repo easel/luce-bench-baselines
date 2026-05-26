@@ -1,0 +1,17 @@
+  [think-low] POST ...
+  [think-low] OK prompt=664 comp=4307 think=None content_chars=6076 reasoning_chars=2296 finish=stop 41.872s
+  [think-medium] POST ...
+  [think-medium] OK prompt=664 comp=5462 think=None content_chars=2671 reasoning_chars=8046 finish=stop 53.727s
+  [think-default] POST ...
+  [think-default] OK prompt=664 comp=13585 think=None content_chars=2520 reasoning_chars=22994 finish=stop 137.152s
+  [nothink] POST ...
+  [nothink] OK prompt=666 comp=4241 think=None content_chars=8579 reasoning_chars=0 finish=stop 42.495s
+/home/erik/Projects/luce2/dflash/scripts/probe_thinking_control.py:247: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "run_at": _dt.datetime.utcnow().isoformat() + "Z",
+
+| mode | prompt | comp | think | content | reasoning | finish | wall_s | tok/s |
+|---|---|---|---|---|---|---|---|---|
+| think-low | 664 | 4307 | None | 6076 | 2296 | stop | 41.872 | 0 |
+| think-medium | 664 | 5462 | None | 2671 | 8046 | stop | 53.727 | 0 |
+| think-default | 664 | 13585 | None | 2520 | 22994 | stop | 137.152 | 0 |
+| nothink | 666 | 4241 | None | 8579 | 0 | stop | 42.495 | 0 |

@@ -1,0 +1,7 @@
+[sampling] from /props: temp=0.6000000238418579 top_p=0.949999988079071 top_k=50
+[capability] url=http://localhost:8080 area=ds4-eval questions=92
+[capability] server=luce-dflash v0.0.0+cpp props_schema=2  model=Laguna-XS.2  kv=tq3_0/tq3_0  compute=None
+   1 FAIL GPQA Diamond   recNu3MXkvWUzHZr9    given=? correct=B format=False hint=False wall=373.87s prefill=0.1s/1973tps decode=373.5s/43tps thk=0
+   2 FAIL SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=? correct=C format=False hint=False wall=371.74s prefill=0.1s/1825tps decode=371.4s/43tps thk=0
+   3 FAIL AIME2025       aime2025-01          given=? correct=70 format=False hint=False wall=376.12s prefill=0.1s/1194tps decode=375.8s/43tps thk=0
+   4 FAIL GPQA Diamond   recoiTJPGUmzAkief    given=? correct=C format=False hint=False wall=399.81s prefill=0.1s/2295tps decode=399.1s/40tps thk=0

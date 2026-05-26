@@ -1,0 +1,17 @@
+  [nothink] POST ...
+  [nothink] OK prompt=666 comp=4241 think=None content_chars=8579 reasoning_chars=0 finish=stop 41.451s
+  [nothink-terse] POST ...
+  [nothink-terse] OK prompt=683 comp=4942 think=None content_chars=8750 reasoning_chars=0 finish=stop 48.558s
+  [nothink-prefill-answer] POST ...
+  [nothink-prefill-answer] OK prompt=675 comp=8192 think=None content_chars=15229 reasoning_chars=0 finish=length 81.03s
+  [nothink-stop-after-answer] POST ...
+  [nothink-stop-after-answer] OK prompt=683 comp=4942 think=None content_chars=122 reasoning_chars=0 finish=stop 48.648s
+/home/erik/Projects/luce2/dflash/scripts/probe_thinking_control.py:247: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "run_at": _dt.datetime.utcnow().isoformat() + "Z",
+
+| mode | prompt | comp | think | content | reasoning | finish | wall_s | tok/s |
+|---|---|---|---|---|---|---|---|---|
+| nothink | 666 | 4241 | None | 8579 | 0 | stop | 41.451 | 0 |
+| nothink-terse | 683 | 4942 | None | 8750 | 0 | stop | 48.558 | 0 |
+| nothink-prefill-answer | 675 | 8192 | None | 15229 | 0 | length | 81.03 | 0 |
+| nothink-stop-after-answer | 683 | 4942 | None | 122 | 0 | stop | 48.648 | 0 |

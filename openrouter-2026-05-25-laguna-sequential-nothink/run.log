@@ -1,0 +1,15 @@
+[capability] url=https://openrouter.ai/api area=ds4-eval questions=92
+   1 FAIL GPQA Diamond   recNu3MXkvWUzHZr9    given=C correct=B format=True hint=False wall=0.79s thk=33
+   2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C correct=C format=True hint=True wall=2.13s thk=260
+   3 PASS AIME2025       aime2025-01          given=70 correct=70 format=True hint=True wall=37.51s thk=3094
+   4 PASS GPQA Diamond   recoiTJPGUmzAkief    given=C correct=C format=True hint=True wall=42.23s thk=4182
+   5 PASS SuperGPQA      b7e20eac98764fb0bf30e8366d951daa given=J correct=J format=True hint=True wall=5.82s thk=869
+   6 PASS AIME2025       aime2025-16          given=468 correct=468 format=True hint=True wall=13.77s thk=1728
+   7 PASS GPQA Diamond   rec4UqStf9WUVif1f    given=B correct=B format=True hint=True wall=37.82s thk=3917
+   8 PASS SuperGPQA      4a1d1780a93f4093b6fb7d3c314cbea8 given=E correct=E format=True hint=True wall=4.08s thk=526
+   9 FAIL AIME2025       aime2025-02          given=? correct=588 format=False hint=True wall=132.05s thk=8192
+  10 PASS GPQA Diamond   recgI6tUQ7RLJRWGx    given=B correct=B format=True hint=True wall=15.91s thk=1677
+  11 PASS SuperGPQA      6082513c8dba4ec68aa68f1bf5854d09 given=A correct=A format=True hint=True wall=3.80s thk=470
+  12 PASS AIME2025       aime2025-03          given=16 correct=16 format=True hint=True wall=31.08s thk=3346
+  13 FAIL GPQA Diamond   recDytVnNYZe2HuUU    given=? correct=A format=False hint=False wall=109.30s thk=8192
+  14 PASS SuperGPQA      bebf1ed45ae14ad7b4f205f3909cb58a given=J correct=J format=True hint=True wall=3.36s thk=355
