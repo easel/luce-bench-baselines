@@ -1,0 +1,10 @@
+[lucebench] v0.2.4 area=longctx cases=6 url=http://127.0.0.1:1236 model=dflash think=False max_tokens=256
+    1 PASS long-context-frontier frontier-2k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=12.04s 0tps
+    2 PASS long-context-frontier frontier-4k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=16.12s 0tps
+    3 PASS long-context-frontier frontier-8k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=29.76s 0tps
+    4 PASS long-context-frontier frontier-16k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=40.34s 0tps
+    5 PASS long-context-frontier frontier-32k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=70.34s 0tps
+    6 PASS long-context-frontier frontier-64k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=169.51s 0tps
+
+[lucebench] pass_rate=100.00% (6/6) wall_total=338s wall_median=35.0s
+[lucebench] wrote 6 rows to /home/erik/Projects/lucebox-hub/dflash/docs/tuning-snapshots/sindri-rtx3090ti-gemma4-26b-2026-05-27-longctx-nothink/result.json

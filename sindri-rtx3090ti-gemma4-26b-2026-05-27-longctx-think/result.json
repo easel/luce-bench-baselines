@@ -1,0 +1,205 @@
+{
+  "lucebench_version": "0.2.4",
+  "area": "longctx",
+  "url": "http://127.0.0.1:1236",
+  "model": "dflash",
+  "think": true,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 4,
+  "pass_rate": 66.66666666666667,
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 8.026,
+      "http_status": 200,
+      "prompt_tokens": 2173,
+      "completion_tokens": 34,
+      "content": "\n\n\nRisk: The server's reliance on parsing XML tool calls may lead to reliability issues if the model output deviates from the expected XML format.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 29,
+        "thinking_tokens": 2,
+        "total_tokens": 34
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 10.671,
+      "http_status": 200,
+      "prompt_tokens": 4259,
+      "completion_tokens": 87,
+      "content": "\n\n\nRisk: The requirement to preserve patch isolation for multiple disparate changes (/props, Docker startup, uv bootstrap, and benchmark harness) increases the likelihood of merge conflicts or regression errors during future updates.thought\n\nRisk: The requirement to preserve patch isolation for multiple disparate changes (/props, Docker startup, uv bootstrap, and benchmark harness) increases the likelihood of merge conflicts or regression errors during future updates.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 80,
+        "thinking_tokens": 2,
+        "total_tokens": 87
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 24.603,
+      "http_status": 200,
+      "prompt_tokens": 8423,
+      "completion_tokens": 82,
+      "content": "\n\n\nRisk: The requirement to preserve patch isolation for disparate components like /props, Docker startup, uv bootstrap, and benchmark harness changes increases the complexity of maintaining a stable and reproducible deployment.thought\n\nRisk: The requirement to preserve patch isolation for disparate components like /props, Docker startup, uv bootstrap, and benchmark harness changes increases the complexity of maintaining a stable and reproducible deployment.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 76,
+        "thinking_tokens": 2,
+        "total_tokens": 82
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 47.412,
+      "http_status": 200,
+      "prompt_tokens": 16772,
+      "completion_tokens": 57,
+      "content": "\n\n\nRisk: The requirement to preserve patch isolation for multiple distinct components like /props, Docker startup, uv bootstrap, and benchmark harness changes within a single patch poses a significant risk to maintainability and the ability to revert specific configuration or feature updates independently.string\n",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 52,
+        "thinking_tokens": 2,
+        "total_tokens": 57
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 100.647,
+      "http_status": 200,
+      "prompt_tokens": 33469,
+      "completion_tokens": 256,
+      "content": "\n\n\nTo determine the highest-risk reliability issue, I analyzed the provided repository context, which describes an audit of a local inference server.\n\nThe context highlights several critical components:\n1.  **`lucebox/lucebox/smoke.py`**: A smoke test designed to verify that the `/props` endpoint is populated, text streaming works, and tools are emitted in the OpenAI format.\n2.  **`dflash/scripts/server.py`**: The server implementation, which renders Qwen chat templates, streams SSE deltas, parses XML tool calls, and reports runtime properties.\n3.  **Review Note**: A requirement to preserve patch isolation for `/props`, Docker startup, `uv` bootstrap, and benchmark harness changes so they can be split later.\n\nThe primary reliability risk involves the potential for regressions or failures in the core functionalities being audited: API compatibility (specifically the OpenAI tool format), the correctness of the XML tool-call parsing in the server, and the successful streaming of SSE deltas. Given that the smoke test specifically targets the `/props` population, text streaming, and OpenAI-formatted tool emission, any failure in these areas would directly violate the server's functional requirements.\n\nThe highest-risk",
+      "reasoning_content": null,
+      "finish_reason": "length",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 254,
+        "thinking_tokens": 2,
+        "total_tokens": 256
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "risk_prefix_missing",
+        "correct": "starts-with-Risk:",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 214.868,
+      "http_status": 200,
+      "prompt_tokens": 66851,
+      "completion_tokens": 74,
+      "content": "\n\n\nBased on the provided repository context, the most critical concern is maintaining patch isolation for several distinct, interconnected system components to prevent regression or deployment failures.\n\nRisk: Failure to preserve patch isolation for /props, Docker startup, uv bootstrap, and benchmark harness changes may lead to unstable deployments and difficult-to-debug regressions during the auditing process.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {
+        "close_kind": "hard",
+        "content_tokens": 69,
+        "thinking_tokens": 2,
+        "total_tokens": 74
+      },
+      "timings": {
+        "decode_ms": 0.0,
+        "decode_tokens_per_sec": 0.0,
+        "prefill_ms": 0.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "risk_prefix_missing",
+        "correct": "starts-with-Risk:",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": false
+      }
+    }
+  ]
+}

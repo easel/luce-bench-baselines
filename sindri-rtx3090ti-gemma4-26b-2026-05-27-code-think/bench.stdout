@@ -1,0 +1,14 @@
+[lucebench] v0.2.3 area=code cases=10 url=http://127.0.0.1:1236 model=dflash think=True max_tokens=2048
+    1 FAIL HumanEval-port has_close_elements       given=parse_fail           correct=parses-as-python     wall=72.21s 0tps
+    2 FAIL HumanEval-port separate_paren_groups    given=parse_fail           correct=parses-as-python     wall=57.72s 0tps
+    3 FAIL HumanEval-port truncate_number          given=parse_fail           correct=parses-as-python     wall=62.28s 0tps
+    4 FAIL HumanEval-port below_zero               given=parse_fail           correct=parses-as-python     wall=2.56s 0tps
+    5 FAIL HumanEval-port mean_absolute_deviation  given=parse_fail           correct=parses-as-python     wall=3.54s 0tps
+    6 FAIL HumanEval-port intersperse              given=parse_fail           correct=parses-as-python     wall=61.87s 0tps
+    7 FAIL HumanEval-port parse_nested_parens      given=parse_fail           correct=parses-as-python     wall=1.57s 0tps
+    8 FAIL HumanEval-port filter_by_substring      given=parse_fail           correct=parses-as-python     wall=44.62s 0tps
+    9 FAIL HumanEval-port sum_product              given=parse_fail           correct=parses-as-python     wall=43.87s 0tps
+   10 FAIL HumanEval-port rolling_max              given=parse_fail           correct=parses-as-python     wall=0.84s 0tps
+
+[lucebench] pass_rate=0.00% (0/10) wall_total=351s wall_median=44.2s
+[lucebench] wrote 10 rows to /home/erik/Projects/lucebox-hub/dflash/docs/tuning-snapshots/sindri-rtx3090ti-gemma4-26b-2026-05-27-code-think/result.json

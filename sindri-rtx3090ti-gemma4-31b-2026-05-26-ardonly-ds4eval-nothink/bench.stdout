@@ -1,0 +1,2 @@
+[capability] url=http://127.0.0.1:1236 area=ds4-eval questions=92
+[capability] server=luce-dflash v0.0.0+cpp props_schema=2  model=Gemma 4 31B IT  kv=tq3_0/tq3_0  compute=None

@@ -1,0 +1,33 @@
+    1 FAIL forge   basic_2step                      wall=147.54s calls=1
+    2 FAIL forge   sequential_3step                 wall=21.87s calls=1
+    3 FAIL forge   error_recovery                   wall=86.74s calls=1
+    4 FAIL forge   tool_selection                   wall=118.33s calls=1
+    5 FAIL forge   argument_fidelity                wall=128.07s calls=1
+    6 FAIL forge   sequential_reasoning             wall=123.67s calls=1
+    7 FAIL forge   conditional_routing              wall=142.43s calls=1
+    8 FAIL forge   data_gap_recovery                wall=131.30s calls=1
+    9 FAIL forge   data_gap_recovery_extended       wall=130.85s calls=1
+   10 FAIL forge   argument_transformation          wall=110.36s calls=1
+   11 FAIL forge   inconsistent_api_recovery        wall=21.48s calls=1
+   12 FAIL forge   grounded_synthesis               wall=133.92s calls=1
+   13 FAIL forge   relevance_detection              wall=1.61s calls=1
+   14 FAIL forge   basic_2step_stateful             wall=110.58s calls=1
+   15 FAIL forge   sequential_3step_stateful        wall=26.82s calls=1
+   16 FAIL forge   error_recovery_stateful          wall=134.17s calls=1
+   17 FAIL forge   tool_selection_stateful          wall=138.50s calls=1
+   18 FAIL forge   argument_fidelity_stateful       wall=130.97s calls=1
+   19 FAIL forge   sequential_reasoning_stateful    wall=15.41s calls=1
+   20 FAIL forge   conditional_routing_stateful     wall=135.62s calls=1
+   21 FAIL forge   data_gap_recovery_stateful       wall=84.18s calls=1
+   22 FAIL forge   data_gap_recovery_extended_stateful wall=136.22s calls=1
+   23 FAIL forge   argument_transformation_stateful wall=136.04s calls=1
+   24 FAIL forge   inconsistent_api_recovery_stateful wall=109.62s calls=1
+   25 FAIL forge   grounded_synthesis_stateful      wall=95.95s calls=1
+   26 FAIL forge   relevance_detection_stateful     wall=110.94s calls=1
+   27 FAIL forge   compaction_chain_baseline        wall=124.18s calls=1
+   28 FAIL forge   compaction_chain_p1              wall=141.67s calls=1
+   29 FAIL forge   compaction_chain_p2              wall=111.83s calls=1
+   30 FAIL forge   compaction_chain_p3              wall=124.75s calls=1
+
+[lucebench] forge pass_rate=0.00% (0/30)
+[lucebench] wrote 30 rows to /home/erik/Projects/lucebox-hub/dflash/docs/tuning-snapshots/sindri-rtx3090ti-gemma4-26b-2026-05-27-forge-think/result.json

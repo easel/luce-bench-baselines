@@ -1,0 +1,8 @@
+[lucebench] v0.2.3 area=agent cases=4 url=http://127.0.0.1:1236 model=dflash think=False max_tokens=4096
+    1 FAIL agent-shape-probe codex-mini-read-task     given=narrative            correct=code_block | json_tool_call | apply_patch wall=7.49s 0tps
+    2 PASS agent-shape-probe codex-mini-apply-patch   given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch wall=101.32s 0tps
+    3 PASS agent-shape-probe codex-large-explore      given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch wall=28.31s 0tps
+    4 PASS agent-shape-probe codex-medium-test        given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch wall=135.80s 0tps
+
+[lucebench] pass_rate=75.00% (3/4) wall_total=273s wall_median=64.8s
+[lucebench] wrote 4 rows to /home/erik/Projects/lucebox-hub/dflash/docs/tuning-snapshots/sindri-rtx3090ti-gemma4-26b-2026-05-27-agent-nothink/result.json
