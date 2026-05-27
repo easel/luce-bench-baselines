@@ -1,0 +1,48 @@
+{
+  "lucebench_version": "0.2.4",
+  "name": "sweep-nothink",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "areas": [
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 69,
+      "rate": 75.0,
+      "wall_total": 2287.851,
+      "wall_median": 9.088000000000001
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 2,
+      "rate": 20.0,
+      "wall_total": 43.695,
+      "wall_median": 0.5489999999999999
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 4,
+      "rate": 66.66666666666667,
+      "wall_total": 15.225,
+      "wall_median": 2.1319999999999997
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 3,
+      "rate": 75.0,
+      "wall_total": 126.673,
+      "wall_median": 41.19
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 957.268,
+      "wall_median": 39.422
+    }
+  ]
+}

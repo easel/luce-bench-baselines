@@ -1,0 +1,155 @@
+{
+  "lucebench_version": "0.2.4",
+  "area": "longctx",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 4,
+  "pass_rate": 66.66666666666667,
+  "wall_total": 15.225,
+  "wall_median": 2.1319999999999997,
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 2.135,
+      "http_status": 200,
+      "prompt_tokens": 2175,
+      "completion_tokens": 133,
+      "content": "Risk: The server's reliance on parsing XML tool calls from Qwen chat templates creates a high probability of tool-call failure if the model's output format deviates from the expected XML structure.|thought\n|Risk: The server's reliance on parsing XML tool calls from Qwen chat templates creates a high probability of tool-call failure if the model's output format deviates from the expected XML structure.\n\nRisk: The server's reliance on parsing XML tool calls from Qwen chat templates creates a high probability of tool-call failure if the model's output format deviates from the expected XML structure.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1282.0,
+        "decode_tokens_per_sec": 103.7,
+        "prefill_ms": 850.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 2.129,
+      "http_status": 200,
+      "prompt_tokens": 4261,
+      "completion_tokens": 52,
+      "content": "Risk: The requirement to preserve patch isolation for multiple independent components (props, Docker, uv bootstrap, and benchmark harness) creates a significant risk of complex, difficult-to-debug merge conflicts or regressions during the auditing and update process.---\n",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 506.3,
+        "decode_tokens_per_sec": 102.7,
+        "prefill_ms": 1619.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 3.744,
+      "http_status": 200,
+      "prompt_tokens": 8425,
+      "completion_tokens": 53,
+      "content": "Risk: The requirement to preserve patch isolation for disparate components like /props, Docker startup, uv bootstrap, and benchmark harness changes suggests that failure to manage these dependencies independently could lead to unstable or non-reproducible deployment and testing cycles.string\n",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 526.9,
+        "decode_tokens_per_sec": 100.6,
+        "prefill_ms": 3212.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 7.199,
+      "http_status": 200,
+      "prompt_tokens": 16774,
+      "completion_tokens": 53,
+      "content": "Risk: The review note's instruction to preserve patch isolation for /props, Docker startup, uv bootstrap, and benchmark harness changes implies that these critical components are currently bundled in a way that prevents independent testing or deployment, complicating stability verification.string\n",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 538.4,
+        "decode_tokens_per_sec": 98.4,
+        "prefill_ms": 6654.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "pass": false,
+      "error": "HTTPError: HTTP Error 400: Bad Request",
+      "wall_seconds": 0.007,
+      "http_status": null,
+      "graded": {
+        "pass": false,
+        "given": "risk_prefix_missing",
+        "correct": "starts-with-Risk:",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "pass": false,
+      "error": "HTTPError: HTTP Error 400: Bad Request",
+      "wall_seconds": 0.011,
+      "http_status": null,
+      "graded": {
+        "pass": false,
+        "given": "risk_prefix_missing",
+        "correct": "starts-with-Risk:",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": false
+      }
+    }
+  ]
+}
