@@ -1,0 +1,40 @@
+{
+  "lucebench_version": "0.2.3",
+  "name": "bragi-rtx5090laptop-gemma4-26b-2026-05-26-sweep-nothink",
+  "url": "http://bragi:8080",
+  "model": "dflash",
+  "areas": [
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 72,
+      "rate": 78.26086956521739,
+      "wall_total": 2211.237,
+      "wall_median": 9.534500000000001
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 1,
+      "rate": 10.0,
+      "wall_total": 44.730000000000004,
+      "wall_median": 0.775
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 4,
+      "rate": 66.66666666666667,
+      "wall_total": 20.671,
+      "wall_median": 3.6639999999999997
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 3,
+      "rate": 75.0,
+      "wall_total": 58.201,
+      "wall_median": 7.061
+    }
+  ]
+}
