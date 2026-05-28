@@ -1,0 +1,497 @@
+[lucebench] v0.2.7.dev0
+[lucebench] preflight http://localhost:8080
+  liveness     ✓  reached in 0.00s
+  /v1/models   ✓  *dflash
+  /props       ✓  model_card=/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json  reply_budget=4096
+[lucebench] sweep name=sindri-rtx3090ti-qwen36-27b-tuned-quality-sweep-nothink-2026-05-28 areas=smoke,ds4-eval,gsm8k,truthfulqa-mc1,hellaswag,code,longctx,agent,agent_recorded,forge url=http://localhost:8080 model=dflash out=/tmp/luce-bench-baselines/sindri-rtx3090ti-qwen36-27b-tuned-quality-sweep-nothink-2026-05-28
+
+[lucebench] === area=smoke cases=3 think=False max_tokens=4096 ===
+    1 PASS smoke          smoke-arithmetic         given=4                    correct=4                    prefill=331ms decode=40ms 50tps in=50 out=2
+    2 PASS smoke          smoke-capital            given=Paris                correct=Paris                prefill=103ms decode=40ms 50tps in=49 out=2
+    3 PASS smoke          smoke-sequence           given=3                    correct=3                    prefill=109ms decode=40ms 50tps in=53 out=2
+[lucebench] area=smoke pass_rate=100.00% (3/3) wall_total=1s
+
+[lucebench] === area=ds4-eval cases=92 think=False max_tokens=16000 ===
+    1 PASS GPQA Diamond   recNu3MXkvWUzHZr9        given=B                    correct=B                    prefill=409ms decode=105.6s 20tps in=229 out=2078
+    2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C                    correct=C                    prefill=322ms decode=26.1s 19tps in=165 out=490
+    3 PASS AIME2025       aime2025-01              given=70                   correct=70                   prefill=184ms decode=58.3s 19tps in=98 out=1101
+    4 PASS GPQA Diamond   recoiTJPGUmzAkief        given=C                    correct=C                    prefill=812ms decode=45.8s 18tps in=350 out=822
+    5 PASS SuperGPQA      b7e20eac98764fb0bf30e8366d951daa given=J                    correct=J                    prefill=647ms decode=57.2s 18tps in=291 out=1004
+    6 PASS AIME2025       aime2025-16              given=468                  correct=468                  prefill=358ms decode=77.6s 17tps in=169 out=1336
+    7 PASS GPQA Diamond   rec4UqStf9WUVif1f        given=B                    correct=B                    prefill=415ms decode=70.6s 17tps in=200 out=1226
+    8 PASS SuperGPQA      4a1d1780a93f4093b6fb7d3c314cbea8 given=E                    correct=E                    prefill=320ms decode=30.4s 17tps in=141 out=521
+    9 FAIL AIME2025       aime2025-02              given=294                  correct=588                  prefill=1.5s decode=389.8s 17tps in=697 out=6462
+   10 PASS GPQA Diamond   recgI6tUQ7RLJRWGx        given=B                    correct=B                    prefill=479ms decode=82.4s 15tps in=218 out=1258
+   11 FAIL SuperGPQA      6082513c8dba4ec68aa68f1bf5854d09 given=E                    correct=A                    prefill=329ms decode=18.7s 18tps in=152 out=332
+   12 PASS AIME2025       aime2025-03              given=16                   correct=16                   prefill=369ms decode=92.0s 17tps in=181 out=1580
+   13 PASS GPQA Diamond   recDytVnNYZe2HuUU        given=A                    correct=A                    prefill=359ms decode=343.2s 15tps in=183 out=5091
+   14 PASS SuperGPQA      bebf1ed45ae14ad7b4f205f3909cb58a given=J                    correct=J                    prefill=370ms decode=16.9s 14tps in=191 out=245
+   15 FAIL AIME2025       aime2025-18              given=81                   correct=82                   prefill=807ms decode=292.3s 16tps in=338 out=4636
+   16 PASS GPQA Diamond   recNFJjE5PPTqVJGv        given=D                    correct=D                    prefill=356ms decode=87.5s 17tps in=162 out=1524
+   17 PASS SuperGPQA      7ca71b86327744b78e93185a45bc5cef given=I                    correct=I                    prefill=413ms decode=39.5s 17tps in=199 out=677
+   18 PASS AIME2025       aime2025-04              given=117                  correct=117                  prefill=245ms decode=132.0s 16tps in=125 out=2144
+   19 PASS GPQA Diamond   rec2UlKqC6RFHdcro        given=B                    correct=B                    prefill=401ms decode=68.6s 12tps in=215 out=830
+   20 PASS SuperGPQA      d44b94f7749345a39a65f6312bda8764 given=E                    correct=E                    prefill=429ms decode=87.6s 12tps in=203 out=1077
+   21 PASS AIME2025       aime2025-19              given=106                  correct=106                  prefill=563ms decode=99.5s 17tps in=269 out=1730
+   22 PASS GPQA Diamond   recv7GsQg3f0fvB1f        given=B                    correct=B                    prefill=701ms decode=56.2s 16tps in=275 out=922
+   23 PASS SuperGPQA      febe406f44d74a40b50bb5b7c69d5dc1 given=B                    correct=B                    prefill=593ms decode=41.7s 15tps in=259 out=636
+   24 PASS AIME2025       aime2025-05              given=279                  correct=279                  prefill=339ms decode=326.9s 16tps in=148 out=5378
+   25 PASS GPQA Diamond   recrHBEJJoDTV05JR        given=C                    correct=C                    prefill=581ms decode=587.2s 14tps in=257 out=8257
+   26 PASS SuperGPQA      31950dc80ded400a9181f50626d1f75c given=C                    correct=C                    prefill=384ms decode=88.4s 12tps in=186 out=1075
+   27 PASS AIME2025       aime2025-06              given=504                  correct=504                  prefill=333ms decode=84.2s 16tps in=151 out=1330
+   28 FAIL GPQA Diamond   recb80OwMgNnceA9t        given=C                    correct=D                    prefill=504ms decode=521.3s 16tps in=227 out=8294
+   29 PASS SuperGPQA      0f14cd17be174618af6d60227e7dca9f given=C                    correct=C                    prefill=1.8s decode=167.7s 15tps in=797 out=2545
+   30 PASS AIME2025       aime2025-21              given=293                  correct=293                  prefill=1.9s decode=229.8s 15tps in=832 out=3459
+   31 PASS GPQA Diamond   recA1i5ZAh0Uzclxp        given=C                    correct=C                    prefill=700ms decode=347.0s 16tps in=295 out=5587
+   32 PASS SuperGPQA      cef9bcc087434cc2b4e354a9baef55eb given=J                    correct=J                    prefill=1.1s decode=66.7s 14tps in=455 out=902
+   33 PASS AIME2025       aime2025-07              given=821                  correct=821                  prefill=436ms decode=456.4s 15tps in=212 out=6855
+   34 PASS GPQA Diamond   recqGD3fxPCI59vPQ        given=B                    correct=B                    prefill=620ms decode=123.0s 16tps in=257 out=1971
+   35 PASS SuperGPQA      9f93aa2cfdb547b5b3a4623f80f7fff6 given=I                    correct=I                    prefill=312ms decode=39.0s 15tps in=184 out=584
+   36 PASS AIME2025       aime2025-22              given=237                  correct=237                  prefill=307ms decode=419.1s 16tps in=160 out=6886
+   37 PASS GPQA Diamond   rechKl68Uc6H7vU0N        given=A                    correct=A                    prefill=837ms decode=762.6s 11tps in=365 out=8493
+   38 FAIL SuperGPQA      97ad69dda7b2462c98638b79e78aea0b given=I                    correct=E                    prefill=358ms decode=83.7s 8.3tps in=173 out=692
+   39 PASS AIME2025       aime2025-08              given=77                   correct=77                   prefill=341ms decode=132.8s 9.4tps in=183 out=1252
+   40 PASS GPQA Diamond   rec1zl5LvaatzGhFt        given=B                    correct=B                    prefill=1.2s decode=192.0s 9.4tps in=408 out=1799
+   41 FAIL SuperGPQA      e78e4e539d6f4e379ac140d923d7b1be given=E                    correct=H                    prefill=274ms decode=48.8s 10tps in=144 out=507
+   42 FAIL AIME2025       aime2025-09              given=464                  correct=62                   prefill=392ms decode=802.6s 11tps in=172 out=8846
+   43 PASS GPQA Diamond   recTs7qzfJs6kfLUK        given=A                    correct=A                    prefill=1.6s decode=105.3s 13tps in=662 out=1392
+   44 PASS SuperGPQA      8483667a25e74fdfa3188de4ea734f03 given=A                    correct=A                    prefill=384ms decode=200.8s 14tps in=215 out=2889
+   45 FAIL AIME2025       aime2025-24              given=150                  correct=149                  prefill=322ms decode=142.8s 15tps in=160 out=2153
+   46 PASS GPQA Diamond   rec32C1ZEapBnCC0E        given=C                    correct=C                    prefill=642ms decode=136.8s 16tps in=266 out=2248
+   47 PASS SuperGPQA      e5ed76ef98144f06843125daf1bccd35 given=A                    correct=A                    prefill=367ms decode=167.4s 16tps in=193 out=2685
+   48 PASS AIME2025       aime2025-10              given=81                   correct=81                   prefill=855ms decode=468.8s 16tps in=373 out=7412
+   49 FAIL GPQA Diamond   recZWeueB7lSPR6wN        given=A                    correct=B                    prefill=606ms decode=363.0s 16tps in=259 out=5884
+   50 FAIL SuperGPQA      fd7924876c4845cd83d95d61dfa0b236 given=J                    correct=H                    prefill=319ms decode=31.9s 16tps in=143 out=505
+   51 FAIL AIME2025       aime2025-25              given=513                  correct=907                  prefill=296ms decode=109.9s 17tps in=136 out=1832
+   52 PASS GPQA Diamond   recVvpD8miVjmmyfe        given=C                    correct=C                    prefill=301ms decode=453.1s 17tps in=145 out=7615
+   53 PASS SuperGPQA      6bfe7d19299d4b3184636e1f51694306 given=I                    correct=I                    prefill=852ms decode=162.2s 17tps in=410 out=2698
+   54 PASS AIME2025       aime2025-26              given=113                  correct=113                  prefill=215ms decode=277.0s 17tps in=126 out=4627
+   55 PASS GPQA Diamond   recAAJoHMW45Lv5je        given=D                    correct=D                    prefill=489ms decode=318.8s 17tps in=251 out=5472
+   56 PASS SuperGPQA      e1825d70c5844c22933087eafa89e39c given=J                    correct=J                    prefill=1.1s decode=73.4s 18tps in=496 out=1291
+   57 FAIL AIME2025       aime2025-12              given=507                  correct=510                  prefill=374ms decode=604.7s 16tps in=180 out=9875
+   58 PASS GPQA Diamond   reckEnrOPFT9Ru7tW        given=C                    correct=C                    prefill=746ms decode=184.1s 17tps in=312 out=3049
+   59 PASS SuperGPQA      ab430ac3f18e4e02a2cb3f35498c6b30 given=A                    correct=A                    prefill=675ms decode=197.3s 17tps in=296 out=3330
+   60 PASS AIME2025       aime2025-27              given=19                   correct=19                   prefill=671ms decode=199.2s 16tps in=330 out=3163
+   61 PASS GPQA Diamond   rec8nshandHARTkrg        given=A                    correct=A                    prefill=1.3s decode=402.1s 16tps in=567 out=6603
+   62 PASS SuperGPQA      e8c5da5ca40647158b0c91dd695c6243 given=F                    correct=F                    prefill=1.2s decode=97.0s 17tps in=496 out=1618
+   63 PASS AIME2025       aime2025-13              given=204                  correct=204                  prefill=304ms decode=501.8s 16tps in=149 out=7812
+   64 PASS GPQA Diamond   recFaL6j8UMhutXrc        given=A                    correct=A                    prefill=1.3s decode=702.8s 12tps in=495 out=8441
+   65 PASS SuperGPQA      05efdc6fb2404ddc8dd5729bb68c74e5 given=H                    correct=H                    prefill=428ms decode=179.2s 16tps in=214 out=2910
+   66 FAIL AIME2025       aime2025-28              given=48                   correct=248                  prefill=397ms decode=784.9s 15tps in=209 out=11847
+   67 FAIL GPQA Diamond   reczQ4I0VpENdMtIj        given=A                    correct=C                    prefill=528ms decode=188.5s 16tps in=235 out=3112
+   68 PASS SuperGPQA      ba52e06cbe1a4310a77a7d12cd1db943 given=H                    correct=H                    prefill=1.3s decode=124.6s 16tps in=605 out=2043
+   69 FAIL AIME2025       aime2025-29              given=131                  correct=104                  prefill=337ms decode=761.3s 13tps in=162 out=10234
+   70 FAIL GPQA Diamond   recWxGU8Q4YReJ1tb        given=A                    correct=C                    prefill=1.8s decode=518.1s 16tps in=821 out=8069
+   71 FAIL SuperGPQA      591a77df21324272914be82ac6583399 given=D                    correct=F                    prefill=796ms decode=63.1s 16tps in=334 out=1044
+   72 FAIL AIME2025       aime2025-15              given=3                    correct=735                  prefill=292ms decode=554.2s 15tps in=144 out=8318
+   73 PASS GPQA Diamond   recMicVBcqy1xM1jq        given=B                    correct=B                    prefill=578ms decode=137.2s 13tps in=245 out=1743
+   74 FAIL SuperGPQA      e780f37a5baa4fe094cd9c157486664d given=J                    correct=H                    prefill=499ms decode=46.2s 16tps in=229 out=723
+   75 FAIL AIME2025       aime2025-30              given=752                  correct=240                  prefill=328ms decode=467.6s 17tps in=150 out=8042
+   76 PASS COMPSEC        compsec-076              given=20                   correct=17-20                prefill=982ms decode=35.6s 18tps in=450 out=623
+   77 PASS COMPSEC        compsec-077              given=18,19,20             correct=18-20                prefill=975ms decode=43.8s 17tps in=394 out=727
+   78 PASS COMPSEC        compsec-078              given=11                   correct=11                   prefill=804ms decode=20.7s 16tps in=377 out=343
+   79 PASS COMPSEC        compsec-079              given=18                   correct=18-19                prefill=967ms decode=30.2s 18tps in=425 out=531
+   80 PASS COMPSEC        compsec-080              given=5                    correct=5-6                  prefill=712ms decode=89.0s 17tps in=324 out=1502
+   81 PASS COMPSEC        compsec-081              given=10                   correct=10-15                prefill=790ms decode=36.4s 18tps in=370 out=651
+   82 PASS COMPSEC        compsec-082              given=10                   correct=9-10                 prefill=707ms decode=58.4s 16tps in=323 out=961
+   83 PASS COMPSEC        compsec-083              given=9                    correct=9-11                 prefill=820ms decode=70.4s 14tps in=345 out=998
+   84 PASS COMPSEC        compsec-084              given=7                    correct=6-7                  prefill=824ms decode=71.0s 12tps in=355 out=887
+   85 PASS COMPSEC        compsec-085              given=5                    correct=5                    prefill=611ms decode=321ms 16tps in=264 out=5
+   86 PASS COMPSEC        compsec-086              given=3                    correct=3,13-15              prefill=956ms decode=35.3s 12tps in=397 out=413
+   87 PASS COMPSEC        compsec-087              given=8                    correct=8,20-22              prefill=1.3s decode=133.3s 14tps in=518 out=1809
+   88 FAIL COMPSEC        compsec-088              given=7                    correct=11                   prefill=758ms decode=91.4s 14tps in=344 out=1274
+   89 PASS COMPSEC        compsec-089              given=10                   correct=10                   prefill=726ms decode=34.1s 14tps in=290 out=488
+   90 PASS COMPSEC        compsec-090              given=12                   correct=12-13                prefill=892ms decode=36.1s 17tps in=386 out=614
+   91 PASS COMPSEC        compsec-091              given=3                    correct=3                    prefill=599ms decode=29.6s 18tps in=278 out=537
+   92 PASS COMPSEC        compsec-092              given=12                   correct=10-14                prefill=769ms decode=156.3s 18tps in=361 out=2771
+[lucebench] area=ds4-eval pass_rate=77.17% (71/92) wall_total=18663s
+
+[lucebench] === area=gsm8k cases=100 think=False max_tokens=2048 ===
+    1 PASS gsm8k          gsm8k-test-0013          given=18                   correct=18                   prefill=168ms decode=35.6s 17tps in=96 out=614
+    2 PASS gsm8k          gsm8k-test-0051          given=5                    correct=5                    prefill=170ms decode=18.5s 17tps in=87 out=312
+    3 PASS gsm8k          gsm8k-test-0054          given=40                   correct=40                   prefill=224ms decode=18.6s 14tps in=119 out=253
+    4 PASS gsm8k          gsm8k-test-0061          given=1430                 correct=1430                 prefill=213ms decode=14.7s 18tps in=100 out=273
+    5 PASS gsm8k          gsm8k-test-0065          given=36                   correct=36                   prefill=163ms decode=17.2s 19tps in=85 out=324
+    6 PASS gsm8k          gsm8k-test-0088          given=8000                 correct=8000                 prefill=147ms decode=14.8s 19tps in=76 out=285
+    7 FAIL gsm8k          gsm8k-test-0093          given=36.36                correct=36                   prefill=225ms decode=39.1s 17tps in=122 out=670
+    8 PASS gsm8k          gsm8k-test-0114          given=6                    correct=6                    prefill=211ms decode=21.3s 18tps in=119 out=372
+    9 PASS gsm8k          gsm8k-test-0135          given=40                   correct=40                   prefill=162ms decode=11.0s 19tps in=84 out=212
+   10 PASS gsm8k          gsm8k-test-0142          given=140                  correct=140                  prefill=164ms decode=10.1s 18tps in=84 out=182
+   11 PASS gsm8k          gsm8k-test-0146          given=2125                 correct=2125                 prefill=207ms decode=19.8s 18tps in=120 out=347
+   12 FAIL gsm8k          gsm8k-test-0161          given=8                    correct=32                   prefill=197ms decode=110.6s 18tps in=110 out=2048
+   13 FAIL gsm8k          gsm8k-test-0163          given=54                   correct=50                   prefill=172ms decode=22.9s 18tps in=94 out=414
+   14 PASS gsm8k          gsm8k-test-0178          given=122                  correct=122                  prefill=147ms decode=23.1s 16tps in=80 out=361
+   15 PASS gsm8k          gsm8k-test-0189          given=34                   correct=34                   prefill=238ms decode=28.3s 14tps in=106 out=399
+   16 PASS gsm8k          gsm8k-test-0191          given=5                    correct=5                    prefill=149ms decode=17.8s 17tps in=75 out=308
+   17 PASS gsm8k          gsm8k-test-0198          given=320                  correct=320                  prefill=206ms decode=27.7s 18tps in=114 out=513
+   18 PASS gsm8k          gsm8k-test-0206          given=860                  correct=860                  prefill=200ms decode=22.2s 18tps in=116 out=400
+   19 PASS gsm8k          gsm8k-test-0209          given=145                  correct=145                  prefill=150ms decode=20.0s 19tps in=75 out=381
+   20 PASS gsm8k          gsm8k-test-0228          given=1                    correct=1                    prefill=179ms decode=17.6s 16tps in=93 out=285
+   21 FAIL gsm8k          gsm8k-test-0255          given=40                   correct=192                  prefill=170ms decode=112.7s 18tps in=87 out=2048
+   22 PASS gsm8k          gsm8k-test-0285          given=21                   correct=21                   prefill=122ms decode=6.3s 19tps in=64 out=119
+   23 PASS gsm8k          gsm8k-test-0292          given=75                   correct=75                   prefill=180ms decode=20.4s 19tps in=90 out=383
+   24 PASS gsm8k          gsm8k-test-0318          given=123                  correct=123                  prefill=159ms decode=15.5s 18tps in=89 out=286
+   25 PASS gsm8k          gsm8k-test-0326          given=14                   correct=14                   prefill=201ms decode=25.7s 18tps in=107 out=458
+   26 PASS gsm8k          gsm8k-test-0333          given=100                  correct=100                  prefill=216ms decode=19.0s 18tps in=119 out=332
+   27 PASS gsm8k          gsm8k-test-0334          given=6                    correct=6                    prefill=165ms decode=77.4s 17tps in=94 out=1347
+   28 PASS gsm8k          gsm8k-test-0350          given=8                    correct=8                    prefill=218ms decode=23.1s 18tps in=116 out=404
+   29 PASS gsm8k          gsm8k-test-0393          given=20                   correct=20                   prefill=144ms decode=78.0s 18tps in=74 out=1417
+   30 FAIL gsm8k          gsm8k-test-0407          given=1500                 correct=2000                 prefill=305ms decode=29.2s 17tps in=132 out=494
+   31 PASS gsm8k          gsm8k-test-0429          given=13                   correct=13                   prefill=163ms decode=14.1s 18tps in=81 out=255
+   32 PASS gsm8k          gsm8k-test-0432          given=30                   correct=30                   prefill=302ms decode=19.3s 18tps in=129 out=345
+   33 PASS gsm8k          gsm8k-test-0435          given=5                    correct=5                    prefill=154ms decode=11.3s 14tps in=79 out=153
+   34 PASS gsm8k          gsm8k-test-0440          given=98                   correct=98                   prefill=229ms decode=23.1s 16tps in=75 out=374
+   35 FAIL gsm8k          gsm8k-test-0447          given=98                   correct=5                    prefill=170ms decode=15.1s 13tps in=87 out=198
+   36 PASS gsm8k          gsm8k-test-0449          given=112                  correct=112                  prefill=173ms decode=15.5s 13tps in=87 out=206
+   37 PASS gsm8k          gsm8k-test-0451          given=11050                correct=11050                prefill=211ms decode=29.0s 13tps in=100 out=382
+   38 PASS gsm8k          gsm8k-test-0457          given=45                   correct=45                   prefill=244ms decode=18.1s 13tps in=115 out=238
+   39 PASS gsm8k          gsm8k-test-0466          given=1.00                 correct=1                    prefill=167ms decode=17.0s 18tps in=88 out=311
+   40 PASS gsm8k          gsm8k-test-0469          given=4                    correct=4                    prefill=172ms decode=10.5s 16tps in=95 out=173
+   41 PASS gsm8k          gsm8k-test-0476          given=5                    correct=5                    prefill=183ms decode=16.3s 14tps in=85 out=234
+   42 PASS gsm8k          gsm8k-test-0501          given=273                  correct=273                  prefill=201ms decode=25.6s 18tps in=100 out=470
+   43 PASS gsm8k          gsm8k-test-0505          given=1600                 correct=1600                 prefill=310ms decode=39.0s 18tps in=143 out=708
+   44 PASS gsm8k          gsm8k-test-0538          given=18                   correct=18                   prefill=193ms decode=8.3s 19tps in=107 out=157
+   45 PASS gsm8k          gsm8k-test-0541          given=50                   correct=50                   prefill=188ms decode=34.2s 18tps in=99 out=622
+   46 PASS gsm8k          gsm8k-test-0542          given=7.00                 correct=7                    prefill=173ms decode=17.9s 17tps in=94 out=299
+   47 PASS gsm8k          gsm8k-test-0546          given=130                  correct=130                  prefill=172ms decode=19.2s 18tps in=90 out=339
+   48 PASS gsm8k          gsm8k-test-0548          given=100                  correct=100                  prefill=159ms decode=10.4s 18tps in=74 out=188
+   49 PASS gsm8k          gsm8k-test-0552          given=450                  correct=450                  prefill=192ms decode=13.4s 17tps in=107 out=231
+   50 PASS gsm8k          gsm8k-test-0563          given=12                   correct=12                   prefill=168ms decode=13.9s 16tps in=87 out=225
+   51 PASS gsm8k          gsm8k-test-0569          given=21                   correct=21                   prefill=207ms decode=13.7s 16tps in=105 out=226
+   52 PASS gsm8k          gsm8k-test-0592          given=1                    correct=1                    prefill=195ms decode=12.5s 19tps in=106 out=234
+   53 PASS gsm8k          gsm8k-test-0600          given=10                   correct=10                   prefill=186ms decode=9.8s 18tps in=100 out=176
+   54 PASS gsm8k          gsm8k-test-0644          given=29                   correct=29                   prefill=169ms decode=10.9s 17tps in=89 out=183
+   55 PASS gsm8k          gsm8k-test-0646          given=79                   correct=79                   prefill=179ms decode=23.5s 16tps in=84 out=372
+   56 PASS gsm8k          gsm8k-test-0664          given=32                   correct=32                   prefill=174ms decode=20.8s 19tps in=91 out=387
+   57 PASS gsm8k          gsm8k-test-0689          given=7.00                 correct=7                    prefill=161ms decode=31.9s 18tps in=86 out=572
+   58 PASS gsm8k          gsm8k-test-0696          given=145                  correct=145                  prefill=302ms decode=35.2s 19tps in=147 out=667
+   59 PASS gsm8k          gsm8k-test-0704          given=50                   correct=50                   prefill=150ms decode=13.8s 18tps in=73 out=241
+   60 PASS gsm8k          gsm8k-test-0727          given=112                  correct=112                  prefill=216ms decode=20.8s 19tps in=118 out=396
+   61 PASS gsm8k          gsm8k-test-0735          given=50                   correct=50                   prefill=182ms decode=39.9s 17tps in=97 out=678
+   62 FAIL gsm8k          gsm8k-test-0740          given=30                   correct=25                   prefill=191ms decode=20.4s 18tps in=100 out=378
+   63 PASS gsm8k          gsm8k-test-0747          given=350                  correct=350                  prefill=187ms decode=13.9s 19tps in=96 out=265
+   64 PASS gsm8k          gsm8k-test-0758          given=133                  correct=133                  prefill=144ms decode=6.3s 17tps in=65 out=105
+   65 PASS gsm8k          gsm8k-test-0775          given=276                  correct=276                  prefill=172ms decode=13.8s 19tps in=101 out=261
+   66 PASS gsm8k          gsm8k-test-0777          given=4400                 correct=4400                 prefill=292ms decode=50.2s 18tps in=129 out=920
+   67 PASS gsm8k          gsm8k-test-0778          given=38.00                correct=38                   prefill=220ms decode=16.7s 19tps in=121 out=317
+   68 PASS gsm8k          gsm8k-test-0810          given=310                  correct=310                  prefill=194ms decode=27.1s 18tps in=102 out=501
+   69 PASS gsm8k          gsm8k-test-0821          given=35                   correct=35                   prefill=217ms decode=9.8s 18tps in=115 out=180
+   70 PASS gsm8k          gsm8k-test-0859          given=1520                 correct=1520                 prefill=158ms decode=23.8s 18tps in=92 out=422
+   71 PASS gsm8k          gsm8k-test-0864          given=80                   correct=80                   prefill=202ms decode=14.6s 18tps in=102 out=265
+   72 PASS gsm8k          gsm8k-test-0865          given=23                   correct=23                   prefill=207ms decode=19.8s 19tps in=104 out=380
+   73 FAIL gsm8k          gsm8k-test-0919          given=310                  correct=90                   prefill=206ms decode=23.4s 17tps in=120 out=403
+   74 PASS gsm8k          gsm8k-test-0928          given=60                   correct=60                   prefill=202ms decode=22.1s 18tps in=115 out=397
+   75 PASS gsm8k          gsm8k-test-0939          given=650                  correct=650                  prefill=229ms decode=16.1s 20tps in=119 out=315
+   76 PASS gsm8k          gsm8k-test-0940          given=280                  correct=280                  prefill=158ms decode=22.9s 18tps in=91 out=399
+   77 PASS gsm8k          gsm8k-test-0946          given=450                  correct=450                  prefill=155ms decode=8.0s 20tps in=82 out=162
+   78 PASS gsm8k          gsm8k-test-1022          given=12                   correct=12                   prefill=166ms decode=34.3s 18tps in=94 out=635
+   79 PASS gsm8k          gsm8k-test-1034          given=66                   correct=66                   prefill=141ms decode=12.7s 19tps in=75 out=236
+   80 PASS gsm8k          gsm8k-test-1093          given=144                  correct=144                  prefill=192ms decode=28.9s 19tps in=101 out=554
+   81 PASS gsm8k          gsm8k-test-1098          given=30                   correct=30                   prefill=162ms decode=13.0s 16tps in=84 out=206
+   82 PASS gsm8k          gsm8k-test-1103          given=90                   correct=90                   prefill=178ms decode=24.0s 18tps in=110 out=434
+   83 PASS gsm8k          gsm8k-test-1116          given=60                   correct=60                   prefill=156ms decode=9.8s 19tps in=80 out=191
+   84 PASS gsm8k          gsm8k-test-1130          given=25                   correct=25                   prefill=211ms decode=32.8s 18tps in=119 out=600
+   85 FAIL gsm8k          gsm8k-test-1140          given=25                   correct=27                   prefill=158ms decode=23.5s 18tps in=87 out=433
+   86 PASS gsm8k          gsm8k-test-1149          given=93                   correct=93                   prefill=126ms decode=9.4s 20tps in=71 out=184
+   87 FAIL gsm8k          gsm8k-test-1161          given=140                  correct=170                  prefill=183ms decode=36.3s 19tps in=110 out=695
+   88 PASS gsm8k          gsm8k-test-1182          given=1800                 correct=1800                 prefill=144ms decode=20.8s 19tps in=80 out=389
+   89 PASS gsm8k          gsm8k-test-1206          given=40000                correct=40000                prefill=188ms decode=17.8s 17tps in=105 out=304
+   90 FAIL gsm8k          gsm8k-test-1209          given=89                   correct=29                   prefill=395ms decode=23.6s 18tps in=200 out=424
+   91 PASS gsm8k          gsm8k-test-1232          given=15                   correct=15                   prefill=158ms decode=18.3s 17tps in=82 out=309
+   92 PASS gsm8k          gsm8k-test-1236          given=84                   correct=84                   prefill=194ms decode=15.6s 19tps in=104 out=298
+   93 PASS gsm8k          gsm8k-test-1247          given=7                    correct=7                    prefill=217ms decode=89.3s 18tps in=128 out=1613
+   94 PASS gsm8k          gsm8k-test-1266          given=147                  correct=147                  prefill=166ms decode=17.3s 19tps in=92 out=334
+   95 PASS gsm8k          gsm8k-test-1287          given=84                   correct=84                   prefill=173ms decode=17.3s 19tps in=96 out=327
+   96 FAIL gsm8k          gsm8k-test-1300          given=2                    correct=120                  prefill=168ms decode=13.9s 19tps in=85 out=269
+   97 PASS gsm8k          gsm8k-test-1301          given=23                   correct=23                   prefill=211ms decode=21.0s 18tps in=116 out=371
+   98 FAIL gsm8k          gsm8k-test-1309          given=2180                 correct=2280                 prefill=191ms decode=22.2s 19tps in=99 out=426
+   99 PASS gsm8k          gsm8k-test-1310          given=64                   correct=64                   prefill=200ms decode=39.5s 17tps in=108 out=688
+  100 PASS gsm8k          gsm8k-test-1316          given=230                  correct=230                  prefill=213ms decode=17.1s 18tps in=113 out=313
+[lucebench] area=gsm8k pass_rate=87.00% (87/100) wall_total=2411s
+
+[lucebench] === area=truthfulqa-mc1 cases=100 think=False max_tokens=256 ===
+    1 PASS truthfulqa-mc1 truthfulqa-mc1-val-0006  given=A                    correct=A                    prefill=221ms decode=49ms 41tps in=125 out=2
+    2 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0025  given=D                    correct=A                    prefill=291ms decode=51ms 39tps in=145 out=2
+    3 PASS truthfulqa-mc1 truthfulqa-mc1-val-0027  given=A                    correct=A                    prefill=353ms decode=63ms 32tps in=158 out=2
+    4 PASS truthfulqa-mc1 truthfulqa-mc1-val-0030  given=A                    correct=A                    prefill=227ms decode=98ms 20tps in=124 out=2
+    5 PASS truthfulqa-mc1 truthfulqa-mc1-val-0032  given=A                    correct=A                    prefill=354ms decode=53ms 38tps in=191 out=2
+    6 PASS truthfulqa-mc1 truthfulqa-mc1-val-0044  given=A                    correct=A                    prefill=366ms decode=76ms 26tps in=162 out=2
+    7 PASS truthfulqa-mc1 truthfulqa-mc1-val-0046  given=A                    correct=A                    prefill=222ms decode=58ms 34tps in=128 out=2
+    8 PASS truthfulqa-mc1 truthfulqa-mc1-val-0071  given=A                    correct=A                    prefill=230ms decode=54ms 37tps in=128 out=2
+    9 PASS truthfulqa-mc1 truthfulqa-mc1-val-0073  given=A                    correct=A                    prefill=383ms decode=101ms 20tps in=168 out=2
+   10 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0080  given=C                    correct=A                    prefill=212ms decode=50ms 40tps in=127 out=2
+   11 PASS truthfulqa-mc1 truthfulqa-mc1-val-0081  given=A                    correct=A                    prefill=361ms decode=59ms 34tps in=172 out=2
+   12 PASS truthfulqa-mc1 truthfulqa-mc1-val-0089  given=A                    correct=A                    prefill=350ms decode=58ms 34tps in=147 out=2
+   13 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0094  given=B                    correct=A                    prefill=305ms decode=55ms 36tps in=155 out=2
+   14 PASS truthfulqa-mc1 truthfulqa-mc1-val-0095  given=A                    correct=A                    prefill=390ms decode=61ms 33tps in=164 out=2
+   15 PASS truthfulqa-mc1 truthfulqa-mc1-val-0099  given=A                    correct=A                    prefill=222ms decode=50ms 40tps in=124 out=2
+   16 PASS truthfulqa-mc1 truthfulqa-mc1-val-0103  given=A                    correct=A                    prefill=392ms decode=60ms 34tps in=191 out=2
+   17 PASS truthfulqa-mc1 truthfulqa-mc1-val-0104  given=A                    correct=A                    prefill=317ms decode=59ms 34tps in=133 out=2
+   18 PASS truthfulqa-mc1 truthfulqa-mc1-val-0114  given=A                    correct=A                    prefill=218ms decode=52ms 38tps in=116 out=2
+   19 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0127  given=C                    correct=A                    prefill=351ms decode=56ms 36tps in=156 out=2
+   20 PASS truthfulqa-mc1 truthfulqa-mc1-val-0142  given=A                    correct=A                    prefill=207ms decode=52ms 38tps in=104 out=2
+   21 PASS truthfulqa-mc1 truthfulqa-mc1-val-0159  given=A                    correct=A                    prefill=364ms decode=59ms 34tps in=163 out=2
+   22 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0163  given=B                    correct=A                    prefill=329ms decode=58ms 34tps in=146 out=2
+   23 PASS truthfulqa-mc1 truthfulqa-mc1-val-0166  given=A                    correct=A                    prefill=370ms decode=62ms 32tps in=190 out=2
+   24 PASS truthfulqa-mc1 truthfulqa-mc1-val-0167  given=A                    correct=A                    prefill=449ms decode=58ms 35tps in=210 out=2
+   25 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0175  given=C                    correct=A                    prefill=310ms decode=105ms 19tps in=148 out=2
+   26 PASS truthfulqa-mc1 truthfulqa-mc1-val-0196  given=A                    correct=A                    prefill=217ms decode=41ms 48tps in=138 out=2
+   27 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0203  given=E                    correct=A                    prefill=355ms decode=53ms 38tps in=170 out=2
+   28 PASS truthfulqa-mc1 truthfulqa-mc1-val-0214  given=A                    correct=A                    prefill=354ms decode=62ms 32tps in=150 out=2
+   29 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0220  given=B                    correct=A                    prefill=218ms decode=54ms 37tps in=119 out=2
+   30 PASS truthfulqa-mc1 truthfulqa-mc1-val-0223  given=A                    correct=A                    prefill=322ms decode=59ms 34tps in=150 out=2
+   31 PASS truthfulqa-mc1 truthfulqa-mc1-val-0225  given=A                    correct=A                    prefill=326ms decode=56ms 36tps in=138 out=2
+   32 PASS truthfulqa-mc1 truthfulqa-mc1-val-0228  given=A                    correct=A                    prefill=304ms decode=65ms 31tps in=139 out=2
+   33 PASS truthfulqa-mc1 truthfulqa-mc1-val-0233  given=A                    correct=A                    prefill=234ms decode=56ms 36tps in=128 out=2
+   34 PASS truthfulqa-mc1 truthfulqa-mc1-val-0238  given=A                    correct=A                    prefill=230ms decode=50ms 40tps in=116 out=2
+   35 PASS truthfulqa-mc1 truthfulqa-mc1-val-0250  given=A                    correct=A                    prefill=367ms decode=62ms 32tps in=163 out=2
+   36 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0270  given=E                    correct=A                    prefill=354ms decode=64ms 31tps in=161 out=2
+   37 PASS truthfulqa-mc1 truthfulqa-mc1-val-0273  given=A                    correct=A                    prefill=364ms decode=63ms 32tps in=181 out=2
+   38 PASS truthfulqa-mc1 truthfulqa-mc1-val-0276  given=A                    correct=A                    prefill=324ms decode=132ms 15tps in=158 out=2
+   39 PASS truthfulqa-mc1 truthfulqa-mc1-val-0281  given=A                    correct=A                    prefill=267ms decode=116ms 17tps in=141 out=2
+   40 PASS truthfulqa-mc1 truthfulqa-mc1-val-0284  given=A                    correct=A                    prefill=283ms decode=51ms 39tps in=141 out=2
+   41 PASS truthfulqa-mc1 truthfulqa-mc1-val-0296  given=A                    correct=A                    prefill=323ms decode=58ms 34tps in=151 out=2
+   42 PASS truthfulqa-mc1 truthfulqa-mc1-val-0300  given=A                    correct=A                    prefill=397ms decode=62ms 32tps in=189 out=2
+   43 PASS truthfulqa-mc1 truthfulqa-mc1-val-0344  given=A                    correct=A                    prefill=315ms decode=62ms 32tps in=158 out=2
+   44 PASS truthfulqa-mc1 truthfulqa-mc1-val-0348  given=A                    correct=A                    prefill=369ms decode=60ms 34tps in=162 out=2
+   45 PASS truthfulqa-mc1 truthfulqa-mc1-val-0352  given=A                    correct=A                    prefill=315ms decode=58ms 34tps in=160 out=2
+   46 PASS truthfulqa-mc1 truthfulqa-mc1-val-0363  given=A                    correct=A                    prefill=340ms decode=57ms 35tps in=151 out=2
+   47 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0367  given=D                    correct=A                    prefill=231ms decode=52ms 38tps in=126 out=2
+   48 PASS truthfulqa-mc1 truthfulqa-mc1-val-0370  given=A                    correct=A                    prefill=316ms decode=58ms 35tps in=133 out=2
+   49 PASS truthfulqa-mc1 truthfulqa-mc1-val-0373  given=A                    correct=A                    prefill=336ms decode=55ms 37tps in=149 out=2
+   50 PASS truthfulqa-mc1 truthfulqa-mc1-val-0379  given=A                    correct=A                    prefill=301ms decode=57ms 35tps in=129 out=2
+   51 PASS truthfulqa-mc1 truthfulqa-mc1-val-0387  given=A                    correct=A                    prefill=189ms decode=55ms 36tps in=96 out=2
+   52 PASS truthfulqa-mc1 truthfulqa-mc1-val-0388  given=A                    correct=A                    prefill=210ms decode=59ms 34tps in=112 out=2
+   53 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0389  given=B                    correct=A                    prefill=311ms decode=60ms 33tps in=144 out=2
+   54 PASS truthfulqa-mc1 truthfulqa-mc1-val-0429  given=A                    correct=A                    prefill=206ms decode=55ms 36tps in=100 out=2
+   55 PASS truthfulqa-mc1 truthfulqa-mc1-val-0432  given=A                    correct=A                    prefill=322ms decode=124ms 16tps in=147 out=2
+   56 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0459  given=C                    correct=A                    prefill=283ms decode=53ms 38tps in=144 out=2
+   57 PASS truthfulqa-mc1 truthfulqa-mc1-val-0464  given=A                    correct=A                    prefill=292ms decode=57ms 35tps in=135 out=2
+   58 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0470  given=D                    correct=A                    prefill=415ms decode=59ms 34tps in=187 out=2
+   59 PASS truthfulqa-mc1 truthfulqa-mc1-val-0473  given=A                    correct=A                    prefill=219ms decode=50ms 40tps in=126 out=2
+   60 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0517  given=C                    correct=A                    prefill=247ms decode=59ms 34tps in=126 out=2
+   61 PASS truthfulqa-mc1 truthfulqa-mc1-val-0546  given=A                    correct=A                    prefill=338ms decode=62ms 32tps in=159 out=2
+   62 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0549  given=B                    correct=A                    prefill=220ms decode=52ms 39tps in=118 out=2
+   63 PASS truthfulqa-mc1 truthfulqa-mc1-val-0558  given=A                    correct=A                    prefill=324ms decode=74ms 27tps in=140 out=2
+   64 PASS truthfulqa-mc1 truthfulqa-mc1-val-0565  given=A                    correct=A                    prefill=451ms decode=53ms 38tps in=226 out=2
+   65 PASS truthfulqa-mc1 truthfulqa-mc1-val-0574  given=A                    correct=A                    prefill=217ms decode=50ms 40tps in=125 out=2
+   66 PASS truthfulqa-mc1 truthfulqa-mc1-val-0591  given=A                    correct=A                    prefill=225ms decode=61ms 33tps in=109 out=2
+   67 PASS truthfulqa-mc1 truthfulqa-mc1-val-0603  given=A                    correct=A                    prefill=328ms decode=52ms 38tps in=157 out=2
+   68 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0604  given=D                    correct=A                    prefill=355ms decode=59ms 34tps in=166 out=2
+   69 PASS truthfulqa-mc1 truthfulqa-mc1-val-0616  given=A                    correct=A                    prefill=225ms decode=56ms 36tps in=118 out=2
+   70 PASS truthfulqa-mc1 truthfulqa-mc1-val-0618  given=A                    correct=A                    prefill=326ms decode=53ms 38tps in=155 out=2
+   71 PASS truthfulqa-mc1 truthfulqa-mc1-val-0623  given=A                    correct=A                    prefill=378ms decode=59ms 34tps in=179 out=2
+   72 PASS truthfulqa-mc1 truthfulqa-mc1-val-0633  given=A                    correct=A                    prefill=360ms decode=111ms 18tps in=167 out=2
+   73 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0643  given=B                    correct=A                    prefill=254ms decode=52ms 38tps in=137 out=2
+   74 PASS truthfulqa-mc1 truthfulqa-mc1-val-0650  given=A                    correct=A                    prefill=213ms decode=50ms 40tps in=122 out=2
+   75 PASS truthfulqa-mc1 truthfulqa-mc1-val-0654  given=A                    correct=A                    prefill=318ms decode=64ms 32tps in=156 out=2
+   76 PASS truthfulqa-mc1 truthfulqa-mc1-val-0663  given=A                    correct=A                    prefill=333ms decode=54ms 37tps in=140 out=2
+   77 PASS truthfulqa-mc1 truthfulqa-mc1-val-0665  given=A                    correct=A                    prefill=215ms decode=51ms 40tps in=123 out=2
+   78 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0677  given=C                    correct=A                    prefill=384ms decode=60ms 33tps in=162 out=2
+   79 PASS truthfulqa-mc1 truthfulqa-mc1-val-0686  given=A                    correct=A                    prefill=409ms decode=157ms 13tps in=195 out=2
+   80 PASS truthfulqa-mc1 truthfulqa-mc1-val-0692  given=A                    correct=A                    prefill=280ms decode=60ms 34tps in=129 out=2
+   81 PASS truthfulqa-mc1 truthfulqa-mc1-val-0699  given=A                    correct=A                    prefill=188ms decode=47ms 43tps in=123 out=2
+   82 PASS truthfulqa-mc1 truthfulqa-mc1-val-0714  given=A                    correct=A                    prefill=329ms decode=57ms 35tps in=146 out=2
+   83 PASS truthfulqa-mc1 truthfulqa-mc1-val-0718  given=A                    correct=A                    prefill=207ms decode=60ms 33tps in=110 out=2
+   84 PASS truthfulqa-mc1 truthfulqa-mc1-val-0721  given=A                    correct=A                    prefill=317ms decode=55ms 36tps in=153 out=2
+   85 PASS truthfulqa-mc1 truthfulqa-mc1-val-0733  given=A                    correct=A                    prefill=212ms decode=54ms 37tps in=108 out=2
+   86 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0737  given=G                    correct=A                    prefill=375ms decode=54ms 37tps in=170 out=2
+   87 PASS truthfulqa-mc1 truthfulqa-mc1-val-0747  given=A                    correct=A                    prefill=370ms decode=65ms 31tps in=167 out=2
+   88 PASS truthfulqa-mc1 truthfulqa-mc1-val-0754  given=A                    correct=A                    prefill=313ms decode=57ms 35tps in=130 out=2
+   89 PASS truthfulqa-mc1 truthfulqa-mc1-val-0758  given=A                    correct=A                    prefill=377ms decode=107ms 19tps in=178 out=2
+   90 PASS truthfulqa-mc1 truthfulqa-mc1-val-0759  given=A                    correct=A                    prefill=297ms decode=58ms 35tps in=148 out=2
+   91 PASS truthfulqa-mc1 truthfulqa-mc1-val-0769  given=A                    correct=A                    prefill=288ms decode=55ms 36tps in=138 out=2
+   92 PASS truthfulqa-mc1 truthfulqa-mc1-val-0775  given=A                    correct=A                    prefill=345ms decode=55ms 37tps in=137 out=2
+   93 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0777  given=E                    correct=A                    prefill=234ms decode=52ms 38tps in=128 out=2
+   94 PASS truthfulqa-mc1 truthfulqa-mc1-val-0782  given=A                    correct=A                    prefill=318ms decode=60ms 33tps in=154 out=2
+   95 PASS truthfulqa-mc1 truthfulqa-mc1-val-0788  given=A                    correct=A                    prefill=249ms decode=55ms 36tps in=125 out=2
+   96 PASS truthfulqa-mc1 truthfulqa-mc1-val-0796  given=A                    correct=A                    prefill=306ms decode=54ms 37tps in=142 out=2
+   97 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0801  given=D                    correct=A                    prefill=681ms decode=55ms 36tps in=290 out=2
+   98 PASS truthfulqa-mc1 truthfulqa-mc1-val-0804  given=A                    correct=A                    prefill=350ms decode=54ms 37tps in=150 out=2
+   99 PASS truthfulqa-mc1 truthfulqa-mc1-val-0807  given=A                    correct=A                    prefill=292ms decode=54ms 37tps in=136 out=2
+  100 PASS truthfulqa-mc1 truthfulqa-mc1-val-0811  given=A                    correct=A                    prefill=327ms decode=59ms 34tps in=140 out=2
+[lucebench] area=truthfulqa-mc1 pass_rate=79.00% (79/100) wall_total=40s
+
+[lucebench] === area=hellaswag cases=100 think=False max_tokens=128 ===
+    1 FAIL hellaswag      hellaswag-val-00106      given=D                    correct=C                    prefill=355ms decode=56ms 36tps in=181 out=2
+    2 PASS hellaswag      hellaswag-val-00409      given=A                    correct=A                    prefill=310ms decode=61ms 33tps in=136 out=2
+    3 FAIL hellaswag      hellaswag-val-00434      given=A                    correct=C                    prefill=331ms decode=79ms 25tps in=151 out=2
+    4 PASS hellaswag      hellaswag-val-00488      given=D                    correct=D                    prefill=296ms decode=109ms 18tps in=141 out=2
+    5 PASS hellaswag      hellaswag-val-00520      given=D                    correct=D                    prefill=397ms decode=64ms 32tps in=195 out=2
+    6 FAIL hellaswag      hellaswag-val-00525      given=A                    correct=B                    prefill=421ms decode=65ms 31tps in=198 out=2
+    7 PASS hellaswag      hellaswag-val-00711      given=D                    correct=D                    prefill=288ms decode=63ms 32tps in=132 out=2
+    8 PASS hellaswag      hellaswag-val-00750      given=C                    correct=C                    prefill=307ms decode=59ms 34tps in=150 out=2
+    9 PASS hellaswag      hellaswag-val-00916      given=B                    correct=B                    prefill=388ms decode=61ms 33tps in=192 out=2
+   10 PASS hellaswag      hellaswag-val-01084      given=C                    correct=C                    prefill=314ms decode=61ms 33tps in=157 out=2
+   11 FAIL hellaswag      hellaswag-val-01139      given=A                    correct=D                    prefill=378ms decode=60ms 33tps in=174 out=2
+   12 PASS hellaswag      hellaswag-val-01169      given=D                    correct=D                    prefill=298ms decode=58ms 34tps in=143 out=2
+   13 FAIL hellaswag      hellaswag-val-01291      given=D                    correct=B                    prefill=394ms decode=61ms 33tps in=190 out=2
+   14 PASS hellaswag      hellaswag-val-01307      given=C                    correct=C                    prefill=293ms decode=58ms 35tps in=129 out=2
+   15 PASS hellaswag      hellaswag-val-01424      given=A                    correct=A                    prefill=324ms decode=58ms 35tps in=152 out=2
+   16 PASS hellaswag      hellaswag-val-01519      given=C                    correct=C                    prefill=367ms decode=56ms 36tps in=167 out=2
+   17 FAIL hellaswag      hellaswag-val-01535      given=B                    correct=D                    prefill=311ms decode=58ms 35tps in=150 out=2
+   18 FAIL hellaswag      hellaswag-val-01584      given=A                    correct=D                    prefill=325ms decode=54ms 37tps in=151 out=2
+   19 FAIL hellaswag      hellaswag-val-01654      given=A                    correct=C                    prefill=360ms decode=58ms 35tps in=168 out=2
+   20 FAIL hellaswag      hellaswag-val-01674      given=A                    correct=C                    prefill=322ms decode=58ms 35tps in=150 out=2
+   21 PASS hellaswag      hellaswag-val-01679      given=D                    correct=D                    prefill=223ms decode=52ms 39tps in=116 out=2
+   22 PASS hellaswag      hellaswag-val-01824      given=A                    correct=A                    prefill=364ms decode=56ms 36tps in=162 out=2
+   23 FAIL hellaswag      hellaswag-val-02045      given=C                    correct=D                    prefill=332ms decode=57ms 35tps in=160 out=2
+   24 PASS hellaswag      hellaswag-val-02286      given=C                    correct=C                    prefill=307ms decode=55ms 36tps in=138 out=2
+   25 PASS hellaswag      hellaswag-val-02287      given=B                    correct=B                    prefill=330ms decode=55ms 36tps in=149 out=2
+   26 FAIL hellaswag      hellaswag-val-02340      given=D                    correct=C                    prefill=320ms decode=56ms 35tps in=149 out=2
+   27 PASS hellaswag      hellaswag-val-02547      given=B                    correct=B                    prefill=382ms decode=60ms 33tps in=181 out=2
+   28 PASS hellaswag      hellaswag-val-02615      given=D                    correct=D                    prefill=321ms decode=59ms 34tps in=155 out=2
+   29 PASS hellaswag      hellaswag-val-02664      given=D                    correct=D                    prefill=230ms decode=55ms 37tps in=127 out=2
+   30 FAIL hellaswag      hellaswag-val-02677      given=C                    correct=A                    prefill=320ms decode=54ms 37tps in=132 out=2
+   31 PASS hellaswag      hellaswag-val-02803      given=A                    correct=A                    prefill=371ms decode=56ms 36tps in=176 out=2
+   32 FAIL hellaswag      hellaswag-val-03150      given=A                    correct=D                    prefill=371ms decode=62ms 32tps in=172 out=2
+   33 PASS hellaswag      hellaswag-val-03257      given=C                    correct=C                    prefill=668ms decode=53ms 38tps in=304 out=2
+   34 PASS hellaswag      hellaswag-val-03432      given=D                    correct=D                    prefill=712ms decode=52ms 38tps in=331 out=2
+   35 PASS hellaswag      hellaswag-val-03456      given=C                    correct=C                    prefill=714ms decode=53ms 38tps in=333 out=2
+   36 PASS hellaswag      hellaswag-val-03483      given=C                    correct=C                    prefill=671ms decode=53ms 37tps in=292 out=2
+   37 PASS hellaswag      hellaswag-val-03527      given=D                    correct=D                    prefill=683ms decode=55ms 36tps in=363 out=2
+   38 PASS hellaswag      hellaswag-val-03582      given=B                    correct=B                    prefill=627ms decode=53ms 38tps in=277 out=2
+   39 PASS hellaswag      hellaswag-val-03598      given=D                    correct=D                    prefill=708ms decode=53ms 37tps in=327 out=2
+   40 FAIL hellaswag      hellaswag-val-03611      given=C                    correct=D                    prefill=678ms decode=54ms 37tps in=302 out=2
+   41 PASS hellaswag      hellaswag-val-03657      given=C                    correct=C                    prefill=667ms decode=52ms 38tps in=297 out=2
+   42 PASS hellaswag      hellaswag-val-03733      given=B                    correct=B                    prefill=682ms decode=52ms 39tps in=313 out=2
+   43 PASS hellaswag      hellaswag-val-03752      given=C                    correct=C                    prefill=683ms decode=54ms 37tps in=311 out=2
+   44 PASS hellaswag      hellaswag-val-03811      given=B                    correct=B                    prefill=684ms decode=53ms 38tps in=309 out=2
+   45 PASS hellaswag      hellaswag-val-03814      given=C                    correct=C                    prefill=686ms decode=54ms 37tps in=309 out=2
+   46 PASS hellaswag      hellaswag-val-04010      given=C                    correct=C                    prefill=657ms decode=54ms 37tps in=289 out=2
+   47 PASS hellaswag      hellaswag-val-04012      given=D                    correct=D                    prefill=663ms decode=55ms 36tps in=295 out=2
+   48 PASS hellaswag      hellaswag-val-04040      given=C                    correct=C                    prefill=678ms decode=54ms 37tps in=306 out=2
+   49 PASS hellaswag      hellaswag-val-04333      given=B                    correct=B                    prefill=596ms decode=55ms 37tps in=304 out=2
+   50 PASS hellaswag      hellaswag-val-04339      given=B                    correct=B                    prefill=730ms decode=54ms 37tps in=336 out=2
+   51 PASS hellaswag      hellaswag-val-04374      given=D                    correct=D                    prefill=690ms decode=55ms 36tps in=308 out=2
+   52 PASS hellaswag      hellaswag-val-04386      given=A                    correct=A                    prefill=670ms decode=53ms 38tps in=292 out=2
+   53 PASS hellaswag      hellaswag-val-04422      given=B                    correct=B                    prefill=707ms decode=54ms 37tps in=329 out=2
+   54 PASS hellaswag      hellaswag-val-04506      given=D                    correct=D                    prefill=707ms decode=54ms 37tps in=306 out=2
+   55 PASS hellaswag      hellaswag-val-04552      given=B                    correct=B                    prefill=770ms decode=57ms 35tps in=348 out=2
+   56 PASS hellaswag      hellaswag-val-04554      given=B                    correct=B                    prefill=569ms decode=53ms 38tps in=290 out=2
+   57 PASS hellaswag      hellaswag-val-04557      given=A                    correct=A                    prefill=634ms decode=52ms 38tps in=264 out=2
+   58 PASS hellaswag      hellaswag-val-04741      given=D                    correct=D                    prefill=708ms decode=57ms 35tps in=321 out=2
+   59 PASS hellaswag      hellaswag-val-04803      given=A                    correct=A                    prefill=616ms decode=52ms 38tps in=278 out=2
+   60 PASS hellaswag      hellaswag-val-05155      given=B                    correct=B                    prefill=690ms decode=53ms 38tps in=300 out=2
+   61 PASS hellaswag      hellaswag-val-05168      given=C                    correct=C                    prefill=676ms decode=56ms 36tps in=293 out=2
+   62 PASS hellaswag      hellaswag-val-05313      given=A                    correct=A                    prefill=741ms decode=98ms 20tps in=344 out=2
+   63 PASS hellaswag      hellaswag-val-05514      given=B                    correct=B                    prefill=672ms decode=54ms 37tps in=320 out=2
+   64 PASS hellaswag      hellaswag-val-05574      given=A                    correct=A                    prefill=710ms decode=55ms 37tps in=335 out=2
+   65 PASS hellaswag      hellaswag-val-05635      given=B                    correct=B                    prefill=618ms decode=53ms 38tps in=259 out=2
+   66 PASS hellaswag      hellaswag-val-05820      given=A                    correct=A                    prefill=664ms decode=110ms 18tps in=356 out=2
+   67 PASS hellaswag      hellaswag-val-05881      given=A                    correct=A                    prefill=662ms decode=54ms 37tps in=315 out=2
+   68 PASS hellaswag      hellaswag-val-05925      given=B                    correct=B                    prefill=707ms decode=54ms 37tps in=321 out=2
+   69 PASS hellaswag      hellaswag-val-05977      given=A                    correct=A                    prefill=690ms decode=53ms 38tps in=311 out=2
+   70 PASS hellaswag      hellaswag-val-06065      given=A                    correct=A                    prefill=606ms decode=52ms 38tps in=260 out=2
+   71 PASS hellaswag      hellaswag-val-06201      given=A                    correct=A                    prefill=768ms decode=56ms 36tps in=348 out=2
+   72 PASS hellaswag      hellaswag-val-06216      given=A                    correct=A                    prefill=677ms decode=55ms 36tps in=308 out=2
+   73 PASS hellaswag      hellaswag-val-06224      given=B                    correct=B                    prefill=686ms decode=55ms 37tps in=301 out=2
+   74 PASS hellaswag      hellaswag-val-06227      given=A                    correct=A                    prefill=698ms decode=54ms 37tps in=308 out=2
+   75 PASS hellaswag      hellaswag-val-06482      given=C                    correct=C                    prefill=681ms decode=53ms 38tps in=299 out=2
+   76 PASS hellaswag      hellaswag-val-06572      given=C                    correct=C                    prefill=688ms decode=54ms 37tps in=315 out=2
+   77 PASS hellaswag      hellaswag-val-06873      given=D                    correct=D                    prefill=604ms decode=73ms 27tps in=259 out=2
+   78 PASS hellaswag      hellaswag-val-06912      given=B                    correct=B                    prefill=696ms decode=54ms 37tps in=340 out=2
+   79 PASS hellaswag      hellaswag-val-06924      given=D                    correct=D                    prefill=688ms decode=54ms 37tps in=291 out=2
+   80 PASS hellaswag      hellaswag-val-07359      given=C                    correct=C                    prefill=769ms decode=54ms 37tps in=341 out=2
+   81 PASS hellaswag      hellaswag-val-07428      given=B                    correct=B                    prefill=636ms decode=53ms 38tps in=277 out=2
+   82 PASS hellaswag      hellaswag-val-07517      given=A                    correct=A                    prefill=720ms decode=55ms 36tps in=326 out=2
+   83 PASS hellaswag      hellaswag-val-07527      given=B                    correct=B                    prefill=697ms decode=56ms 36tps in=306 out=2
+   84 PASS hellaswag      hellaswag-val-07573      given=C                    correct=C                    prefill=618ms decode=54ms 37tps in=279 out=2
+   85 PASS hellaswag      hellaswag-val-08179      given=C                    correct=C                    prefill=758ms decode=54ms 37tps in=343 out=2
+   86 PASS hellaswag      hellaswag-val-08279      given=D                    correct=D                    prefill=632ms decode=54ms 37tps in=307 out=2
+   87 PASS hellaswag      hellaswag-val-08751      given=C                    correct=C                    prefill=690ms decode=53ms 38tps in=295 out=2
+   88 PASS hellaswag      hellaswag-val-08785      given=C                    correct=C                    prefill=670ms decode=99ms 20tps in=292 out=2
+   89 PASS hellaswag      hellaswag-val-08928      given=C                    correct=C                    prefill=666ms decode=54ms 37tps in=297 out=2
+   90 PASS hellaswag      hellaswag-val-08935      given=B                    correct=B                    prefill=638ms decode=63ms 32tps in=280 out=2
+   91 PASS hellaswag      hellaswag-val-09044      given=B                    correct=B                    prefill=593ms decode=80ms 25tps in=300 out=2
+   92 PASS hellaswag      hellaswag-val-09125      given=A                    correct=A                    prefill=688ms decode=53ms 38tps in=308 out=2
+   93 PASS hellaswag      hellaswag-val-09195      given=D                    correct=D                    prefill=619ms decode=55ms 36tps in=261 out=2
+   94 PASS hellaswag      hellaswag-val-09292      given=C                    correct=C                    prefill=683ms decode=71ms 28tps in=298 out=2
+   95 PASS hellaswag      hellaswag-val-09459      given=B                    correct=B                    prefill=705ms decode=106ms 19tps in=321 out=2
+   96 PASS hellaswag      hellaswag-val-09654      given=D                    correct=D                    prefill=616ms decode=56ms 36tps in=287 out=2
+   97 FAIL hellaswag      hellaswag-val-09674      given=A                    correct=D                    prefill=678ms decode=54ms 37tps in=299 out=2
+   98 PASS hellaswag      hellaswag-val-09863      given=B                    correct=B                    prefill=692ms decode=106ms 19tps in=306 out=2
+   99 PASS hellaswag      hellaswag-val-09891      given=A                    correct=A                    prefill=702ms decode=98ms 20tps in=322 out=2
+  100 PASS hellaswag      hellaswag-val-09980      given=A                    correct=A                    prefill=740ms decode=96ms 21tps in=339 out=2
+[lucebench] area=hellaswag pass_rate=85.00% (85/100) wall_total=66s
+
+[lucebench] === area=code cases=10 think=False max_tokens=2048 ===
+    1 PASS HumanEval-port has_close_elements       given=parse_ok             correct=parses-as-python     prefill=380ms decode=2.3s 19tps in=186 out=43
+    2 PASS HumanEval-port separate_paren_groups    given=parse_ok             correct=parses-as-python     prefill=410ms decode=6.5s 12tps in=196 out=77
+    3 FAIL HumanEval-port truncate_number          given=parse_fail           correct=parses-as-python     prefill=300ms decode=1.0s 11tps in=147 out=11
+    4 PASS HumanEval-port below_zero               given=parse_ok             correct=parses-as-python     prefill=363ms decode=2.3s 10tps in=189 out=24
+    5 PASS HumanEval-port mean_absolute_deviation  given=parse_ok             correct=parses-as-python     prefill=437ms decode=1.9s 13tps in=181 out=26
+    6 PASS HumanEval-port intersperse              given=parse_ok             correct=parses-as-python     prefill=350ms decode=2.5s 13tps in=165 out=33
+    7 PASS HumanEval-port parse_nested_parens      given=parse_ok             correct=parses-as-python     prefill=504ms decode=4.5s 14tps in=200 out=62
+    8 PASS HumanEval-port filter_by_substring      given=parse_ok             correct=parses-as-python     prefill=314ms decode=655ms 17tps in=156 out=11
+    9 PASS HumanEval-port sum_product              given=parse_ok             correct=parses-as-python     prefill=369ms decode=1.5s 14tps in=192 out=21
+   10 PASS HumanEval-port rolling_max              given=parse_ok             correct=parses-as-python     prefill=363ms decode=2.5s 15tps in=181 out=37
+[lucebench] area=code pass_rate=90.00% (9/10) wall_total=30s
+
+[lucebench] === area=longctx cases=6 think=False max_tokens=256 ===
+    1 PASS long-context-frontier frontier-2k              given=risk_prefix_ok       correct=starts-with-Risk:    prefill=4.8s decode=3.5s 15tps in=2121 out=53
+    2 PASS long-context-frontier frontier-4k              given=risk_prefix_ok       correct=starts-with-Risk:    prefill=9.3s decode=3.9s 11tps in=4156 out=43
+    3 PASS long-context-frontier frontier-8k              given=risk_prefix_ok       correct=starts-with-Risk:    prefill=19.3s decode=2.8s 15tps in=8218 out=41
+    4 PASS long-context-frontier frontier-16k             given=risk_prefix_ok       correct=starts-with-Risk:    prefill=41.0s decode=3.5s 14tps in=16362 out=48
+    5 PASS long-context-frontier frontier-32k             given=risk_prefix_ok       correct=starts-with-Risk:    prefill=93.7s decode=4.7s 12tps in=32649 out=58
+    6 PASS long-context-frontier frontier-64k             given=risk_prefix_ok       correct=starts-with-Risk:    prefill=228.9s decode=4.8s 10tps in=65212 out=49
+[lucebench] area=longctx pass_rate=100.00% (6/6) wall_total=421s
+
+[lucebench] === area=agent cases=4 think=False max_tokens=4096 ===
+    1 PASS agent-shape-probe codex-mini-read-task     given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch prefill=3.7s decode=4.4s 14tps in=1552 out=60
+    2 FAIL agent-shape-probe codex-mini-apply-patch   given=narrative            correct=code_block | json_tool_call | apply_patch prefill=4.1s decode=690ms 19tps in=1765 out=13
+    3 PASS agent-shape-probe codex-large-explore      given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch prefill=12.7s decode=21.8s 11tps in=5361 out=237
+    4 PASS agent-shape-probe codex-medium-test        given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch prefill=11.0s decode=36.2s 8.9tps in=4824 out=321
+[lucebench] area=agent pass_rate=75.00% (3/4) wall_total=95s
+
+[lucebench] === area=agent_recorded cases=26 think=False max_tokens=4096 ===
+    1 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-5ff904708a given=engaged              correct=Read,Bash,Write,Edit | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-07f6f8ff-20260528T010451-d88e26f9,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-07f6f8ff-20260528T010451-d88e26f9/.ddx/executions/20260528T010451-d88e26f9/no_changes_rationale.txt prefill=4.1s decode=4.9s 9.3tps in=1852 out=46
+    2 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-c41604143b given=engaged              correct=Read,Glob,Bash,Monitor | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-09103a98-20260528T040639-c31b855d,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-09103a98-20260528T040639-c31b855d/AGENTS.md prefill=5.7s decode=9.9s 9.7tps in=2472 out=96
+    3 PASS agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-432ce00a0a given=engaged              correct=Read,Glob,Bash,Write | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-439a49ae-20260528T002632-2fe5caef/arch_a_validation_minimal.py,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-439a49ae-20260528T002632-2fe5caef/benchmarks/competitive/docker-compose.yml prefill=7.1s decode=20.2s 14tps in=3118 out=284
+    4 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-aacc43b222 given=stub                 correct=Bash,Read,Monitor,Write | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-780a1278-20260528T014337-bbbbfcb0/.ddx/executions/20260528T014337-bbbbfcb0/manifest.json,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-780a1278-20260528T014337-bbbbfcb0/.ddx/executions/20260528T014337-bbbbfcb0/no_changes_rationale.txt prefill=3.9s decode=788ms 15tps in=1772 out=12
+    5 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-da272ac247 given=engaged              correct=Read,Glob,Edit,Grep | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-da8fb4a4-20260528T042621-ada3a65f/crates/niflheim-core/src/config/mod.rs,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-da8fb4a4-20260528T042621-ada3a65f/crates/niflheim-core/src/config/storage.rs prefill=8.3s decode=8.1s 14tps in=3671 out=111
+    6 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-43c0b72fe3 given=engaged              correct=Bash,Read,Write,Monitor | ./.ddx/executions/20260528T024433-37b5df01/no_changes_rationale.txt,/tmp/step2-pipelining-run/soak-report-samples.jsonl prefill=4.2s decode=8.6s 15tps in=1832 out=125
+    7 FAIL agent-recorded-claude-code claude-2026-05-27-we-are-rebasing-easel-auto-integ-49dea9d669 given=engaged              correct=Bash,Read,Edit | <HOME>/Projects/luce2-auto-cron-20260527-152327/server/src/common/model_backend.h,<HOME>/Projects/luce2-auto-cron-20260527-152327/server/src/qwen35/qwen35_backend.cpp prefill=309ms decode=121.7s 13tps in=140 out=1561
+    8 PASS agent-recorded-claude-code claude-2026-05-27-resolve-the-current-git-merge-co-d513fe219f given=engaged              correct=Bash,ToolSearch,TaskCreate prefill=232ms decode=125.8s 13tps in=122 out=1605
+    9 FAIL agent-recorded-claude-code claude-2026-05-28-assess-whether-pr-131-broad-gemm-48b2593c35 given=engaged              correct=Bash                 prefill=228ms decode=80.3s 14tps in=125 out=1138
+   10 FAIL agent-recorded-claude-code claude-2026-05-28-assess-pr-135-merge-conflicts-fo-fdc9f08609 given=refused              correct=Bash                 prefill=319ms decode=84.7s 11tps in=139 out=916
+   11 FAIL agent-recorded-claude-code claude-2026-05-28-assess-pr-177-merge-conflicts-in-e29c692709 given=engaged              correct=Bash                 prefill=254ms decode=74.9s 9.1tps in=120 out=679
+   12 FAIL agent-recorded-claude-code claude-2026-05-28-assess-whether-pr-182-gemma4-mtp-5e46c356ef given=engaged              correct=Bash                 prefill=320ms decode=114.2s 12tps in=130 out=1328
+   13 FAIL agent-recorded-claude-code claude-2026-05-28-assess-this-conflicted-merge-of--2d45ab1f38 given=refused              correct=Bash                 prefill=228ms decode=89.6s 13tps in=127 out=1150
+   14 FAIL agent-recorded-claude-code claude-2026-05-28-assess-pr-39-merge-conflicts-in--5ea156df00 given=refused              correct=Bash                 prefill=235ms decode=96.6s 13tps in=127 out=1235
+   15 FAIL agent-recorded-claude-code claude-2026-05-28-review-pr-237-origin-pr-237-agai-c39dc051bc given=refused              correct=Bash                 prefill=328ms decode=180.6s 13tps in=149 out=2320
+   16 FAIL agent-recorded-claude-code claude-2026-05-28-read-only-feasibility-report-com-fa144ffd71 given=refused              correct=Bash                 prefill=181ms decode=119.1s 12tps in=87 out=1450
+   17 FAIL agent-recorded-claude-code claude-2026-05-27-assess-whether-pr-135-native-mul-aa3ab7518c given=refused              correct=Bash                 prefill=300ms decode=110.1s 13tps in=102 out=1409
+   18 FAIL agent-recorded-claude-code claude-2026-05-28-in-this-conflicted-pr177-worktre-965ae84c4a given=engaged              correct=Bash,Read,Grep | /tmp/luce-pr177-feas-20260527-234303/server/src/errors.cpp,/tmp/luce-pr177-feas-20260527-234303/server/src/gemma4 prefill=248ms decode=107.2s 14tps in=126 out=1475
+   19 FAIL agent-recorded-codex codex-2026-03-11-review-the-beads-ready-for-work--59cdbb7aae given=engaged              correct=Bash                 prefill=207ms decode=13.6s 18tps in=118 out=243
+   20 FAIL agent-recorded-codex codex-2026-05-13-mode-lint-you-are-the-bead-lifec-4bc1c8d35b given=engaged              correct=Bash                 prefill=1.9s decode=3.7s 16tps in=889 out=61
+   21 FAIL agent-recorded-codex codex-2026-05-12-mode-intake-you-are-evaluating-w-eea12b26b4 given=engaged              correct=Bash                 prefill=4.2s decode=39.3s 16tps in=1941 out=628
+   22 PASS agent-recorded-codex codex-2026-05-04-execute-bead-bead-id-niflheim-b0-ee7d11c58f given=engaged              correct=Bash,write_stdin     prefill=5.5s decode=5.2s 13tps in=2344 out=69
+   23 FAIL agent-recorded-codex codex-2026-05-11-execute-bead-instructions-you-ar-4ed0606482 given=engaged              correct=Bash,write_stdin     prefill=5.1s decode=3.7s 16tps in=2084 out=59
+   24 PASS agent-recorded-codex codex-2026-05-03-execute-bead-bead-id-niflheim-73-2b90e280dc given=engaged              correct=Bash,write_stdin     prefill=3.8s decode=3.1s 14tps in=1683 out=44
+   25 FAIL agent-recorded-codex codex-2026-03-09-review-this-project-for-rust-bes-754bc600e6 given=engaged              correct=update_plan,Bash,write_stdin prefill=202ms decode=132.6s 17tps in=105 out=2262
+   26 FAIL agent-recorded-codex codex-2026-03-11-review-the-beads-ready-for-work--7af90ec58b given=refused              correct=Bash,write_stdin     prefill=205ms decode=51.9s 16tps in=118 out=843
+[lucebench] area=agent_recorded pass_rate=15.38% (4/26) wall_total=1670s
+
+[lucebench] === area=forge max_tokens=4096 ===
+[lucebench] area=forge pass_rate=0.00% (0/30)
+
+[lucebench] sweep complete → /tmp/luce-bench-baselines/sindri-rtx3090ti-qwen36-27b-tuned-quality-sweep-nothink-2026-05-28
+# luce-bench sweep — sindri-rtx3090ti-qwen36-27b-tuned-quality-sweep-nothink-2026-05-28
+
+- url:   `http://localhost:8080`
+- model: `dflash`
+- lucebench v0.2.7.dev0
+
+| area | n | pass | rate | wall_total | wall_median |
+|------|---|------|------|------------|-------------|
+| smoke | 3 | 3 | 100.0% | 1s | 0.2s |
+| ds4-eval | 92 | 71 | 77.2% | 18663s | 117.0s |
+| gsm8k | 100 | 87 | 87.0% | 2411s | 19.5s |
+| truthfulqa-mc1 | 100 | 79 | 79.0% | 40s | 0.4s |
+| hellaswag | 100 | 85 | 85.0% | 66s | 0.7s |
+| code | 10 | 9 | 90.0% | 30s | 2.7s |
+| longctx | 6 | 6 | 100.0% | 421s | 33.4s |
+| agent | 4 | 3 | 75.0% | 95s | 21.4s |
+| agent_recorded | 26 | 4 | 15.4% | 1670s | 63.7s |
+| forge | 30 | 0 | 0.0% | 142s | 3.6s |
