@@ -1,0 +1,606 @@
+[server] loading tokenizer from /home/erik/Models/Gemma-4-26B-A4B-it/google_gemma-4-26B-A4B-it-Q4_K_M.gguf
+[tokenizer] added_tokens: 24 special tokens
+[tokenizer] loaded vocab=262144 merges=514906 bos=2 eos=1 eot=106 pre=qwen35 sp=yes
+[server] creating backend...
+[backend_factory] detected arch=gemma4
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 24563 MiB):
+  Device 0: NVIDIA GeForce RTX 3090 Ti, compute capability 8.6, VMM: no, VRAM: 24563 MiB
+[gemma4-loader] n_layer=30 n_embd=2816 head_dim_swa=256 head_dim_full=512 n_head=16 n_head_kv=8
+[gemma4-loader] n_expert=128 used=8 dense_lead=0 sliding_window=1024
+[gemma4-loader] kv_sharing_start=30 per_layer_embd=0 logit_softcap=30
+[gemma4-loader] loaded 658 tensors, vocab=262144
+[gemma4] draft loaded: fc_in=16896 target_hidden=2816 draft_hidden=2816 n_capture_layers=6 swa=2048
+[gemma4] spec-decode ready: capture_layers=6 mirror_cap=4096
+[gemma4] capture_layer_ids: 1 6 11 17 22 27
+[gemma4] init ok: 30 layers, embd=2816, vocab=262144, max_ctx=131072
+[server] gguf meta: general.name='Gemma 4 26B A4B It' general.architecture='gemma4'
+[model_card] using cards dir: share/model_cards
+[model_card] probing sidecar: share/model_cards/gemma-4-26b-a4b-it.json (from general.name='Gemma 4 26B A4B It')
+[server] effort-tier ceiling = max_ctx(131072) - hard_limit_reply_budget(4096) = 126976
+
+[server] ╭─── Configuration ───────────────────────────────────╮
+[server] │  host            = 127.0.0.1
+[server] │  port            = 1236
+[server] │  model           = /home/erik/Models/Gemma-4-26B-A4B-it/google_gemma-4-26B-A4B-it-Q4_K_M.gguf
+[server] │  draft           = /home/erik/Models/Gemma-4-26B-A4B-it/gemma-4-26B-A4B-it-DFlash-q8_0.gguf
+[server] │  model_name      = dflash
+[server] │  max_ctx         = 131072
+[server] │  model_card      = share/model_cards/gemma-4-26b-a4b-it.json
+[server] │  max_tokens      = 16384 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │  think_max_tokens= 12288 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │  hard_limit_reply= 4096 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │  effort tiers    = low=1536 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │                    medium=6144 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │                    high=12288 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │                    x-high=12288 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │                    max=12288 (share/model_cards/gemma-4-26b-a4b-it.json)
+[server] │  target_device   = auto:0
+[server] │  draft_device    = auto:0
+[server] │  peer_access     = off
+[server] │  chunk           = 512
+[server] │  fa_window       = 2048
+[server] │  ddtree          = ON
+[server] │  ddtree_budget   = 22
+[server] │  prefix_cache    = 0 slots
+[server] │  cors            = ON
+[server] │  cache_type_k    = q4_0
+[server] │  cache_type_v    = q4_0
+[server] │  pflash          = off
+[server] │  lazy_draft      = off
+[server] ╰─────────────────────────────────────────────────────╯
+
+[server] level-2 force-close (sidecar-hint, 12 chars → 2 tokens, hard_limit_reply_budget = 4096)
+[server] level-2 force-close token ids: 101,108
+[server] listening on http://127.0.0.1:1236
+[server] request path=/v1/chat/completions body_bytes=1191
+[server] chat chatcmpl_0000000000000000 format=chat stream=false msgs=2 tools=0 prompt_tokens=229 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000000 format=chat stream=false prompt_tokens=229 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000000 restore=false slot=-1 prefix_len=0 effective_prompt=229 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=138.641 s speed=115.41 tok/s steps=1455 accepted=15307/23280 (65.8%) avg_commit=11.00
+[server] chat DONE chatcmpl_0000000000000000 ok=true in=229 effective_in=229 out=16000 139.2s 114.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=138.6s(115.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=836
+[server] chat chatcmpl_0000000000000001 format=chat stream=false msgs=2 tools=0 prompt_tokens=165 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000001 format=chat stream=false prompt_tokens=165 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000001 restore=false slot=-1 prefix_len=0 effective_prompt=165 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=336 time=7.713 s speed=43.56 tok/s steps=74 accepted=263/1184 (22.2%) avg_commit=4.54
+[server] chat DONE chatcmpl_0000000000000001 ok=true in=165 effective_in=165 out=336 8.2s 41.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=7.7s(43.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=591
+[server] chat chatcmpl_0000000000000002 format=chat stream=false msgs=2 tools=0 prompt_tokens=100 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000002 format=chat stream=false prompt_tokens=100 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000002 restore=false slot=-1 prefix_len=0 effective_prompt=100 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=694 time=5.792 s speed=119.83 tok/s steps=84 accepted=618/1344 (46.0%) avg_commit=8.26
+[server] chat DONE chatcmpl_0000000000000002 ok=true in=100 effective_in=100 out=694 6.0s 115.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=5.8s(119.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1415
+[server] chat chatcmpl_0000000000000003 format=chat stream=false msgs=2 tools=0 prompt_tokens=346 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000003 format=chat stream=false prompt_tokens=346 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000003 restore=false slot=-1 prefix_len=0 effective_prompt=346 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=662 time=10.066 s speed=65.77 tok/s steps=128 accepted=537/2048 (26.2%) avg_commit=5.17
+[server] chat DONE chatcmpl_0000000000000003 ok=true in=346 effective_in=346 out=662 10.5s 62.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=10.1s(65.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1564
+[server] chat chatcmpl_0000000000000004 format=chat stream=false msgs=2 tools=0 prompt_tokens=283 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000004 format=chat stream=false prompt_tokens=283 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000004 restore=false slot=-1 prefix_len=0 effective_prompt=283 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=505 time=10.308 s speed=48.99 tok/s steps=117 accepted=389/1872 (20.8%) avg_commit=4.32
+[server] chat DONE chatcmpl_0000000000000004 ok=true in=283 effective_in=283 out=505 11.1s 45.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=10.3s(49.0tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=752
+[server] chat chatcmpl_0000000000000005 format=chat stream=false msgs=2 tools=0 prompt_tokens=169 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000005 format=chat stream=false prompt_tokens=169 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000005 restore=false slot=-1 prefix_len=0 effective_prompt=169 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=83.058 s speed=192.64 tok/s steps=1164 accepted=15678/18624 (84.2%) avg_commit=13.75
+[server] chat DONE chatcmpl_0000000000000005 ok=true in=169 effective_in=169 out=16000 83.4s 192.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=83.1s(192.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=760
+[server] chat chatcmpl_0000000000000006 format=chat stream=false msgs=2 tools=0 prompt_tokens=185 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000006 format=chat stream=false prompt_tokens=185 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000006 restore=false slot=-1 prefix_len=0 effective_prompt=185 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=839 time=11.692 s speed=71.76 tok/s steps=99 accepted=751/1584 (47.4%) avg_commit=8.47
+[server] chat DONE chatcmpl_0000000000000006 ok=true in=185 effective_in=185 out=839 12.0s 69.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=11.7s(71.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=798
+[server] chat chatcmpl_0000000000000007 format=chat stream=false msgs=2 tools=0 prompt_tokens=141 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000007 format=chat stream=false prompt_tokens=141 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000007 restore=false slot=-1 prefix_len=0 effective_prompt=141 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=238 time=7.064 s speed=33.69 tok/s steps=68 accepted=171/1088 (15.7%) avg_commit=3.50
+[server] chat DONE chatcmpl_0000000000000007 ok=true in=141 effective_in=141 out=238 7.3s 32.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=7.1s(33.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=2004
+[server] chat chatcmpl_0000000000000008 format=chat stream=false msgs=2 tools=0 prompt_tokens=697 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000008 format=chat stream=false prompt_tokens=697 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000008 restore=false slot=-1 prefix_len=0 effective_prompt=697 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=86.191 s speed=185.63 tok/s steps=1338 accepted=15474/21408 (72.3%) avg_commit=11.96
+[server] chat DONE chatcmpl_0000000000000008 ok=true in=697 effective_in=697 out=16000 87.8s 182.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=86.2s(185.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1033
+[server] chat chatcmpl_0000000000000009 format=chat stream=false msgs=2 tools=0 prompt_tokens=214 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000009 format=chat stream=false prompt_tokens=214 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000009 restore=false slot=-1 prefix_len=0 effective_prompt=214 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=703 time=7.230 s speed=97.24 tok/s steps=109 accepted=598/1744 (34.3%) avg_commit=6.45
+[server] chat DONE chatcmpl_0000000000000009 ok=true in=214 effective_in=214 out=703 7.5s 93.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=7.2s(97.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=878
+[server] chat chatcmpl_000000000000000a format=chat stream=false msgs=2 tools=0 prompt_tokens=151 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000a format=chat stream=false prompt_tokens=151 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000a restore=false slot=-1 prefix_len=0 effective_prompt=151 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=312 time=4.722 s speed=66.07 tok/s steps=70 accepted=243/1120 (21.7%) avg_commit=4.46
+[server] chat DONE chatcmpl_000000000000000a ok=true in=151 effective_in=151 out=312 4.9s 63.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=4.7s(66.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1029
+[server] chat chatcmpl_000000000000000b format=chat stream=false msgs=2 tools=0 prompt_tokens=181 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000b format=chat stream=false prompt_tokens=181 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000b restore=false slot=-1 prefix_len=0 effective_prompt=181 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=779 time=6.498 s speed=119.89 tok/s steps=94 accepted=699/1504 (46.5%) avg_commit=8.29
+[server] chat DONE chatcmpl_000000000000000b ok=true in=181 effective_in=181 out=779 6.8s 115.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=6.5s(119.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=796
+[server] chat chatcmpl_000000000000000c format=chat stream=false msgs=2 tools=0 prompt_tokens=178 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000c format=chat stream=false prompt_tokens=178 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000c restore=false slot=-1 prefix_len=0 effective_prompt=178 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=100.720 s speed=158.86 tok/s steps=1123 accepted=15803/17968 (88.0%) avg_commit=14.25
+[server] chat DONE chatcmpl_000000000000000c ok=true in=178 effective_in=178 out=16000 101.0s 158.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=100.7s(158.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=803
+[server] chat chatcmpl_000000000000000d format=chat stream=false msgs=2 tools=0 prompt_tokens=177 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000d format=chat stream=false prompt_tokens=177 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000d restore=false slot=-1 prefix_len=0 effective_prompt=177 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=307 time=5.856 s speed=52.43 tok/s steps=53 accepted=257/848 (30.3%) avg_commit=5.79
+[server] chat DONE chatcmpl_000000000000000d ok=true in=177 effective_in=177 out=307 6.1s 50.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=5.9s(52.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1247
+[server] chat chatcmpl_000000000000000e format=chat stream=false msgs=2 tools=0 prompt_tokens=335 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000e format=chat stream=false prompt_tokens=335 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000e restore=false slot=-1 prefix_len=0 effective_prompt=335 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=285.154 s speed=56.11 tok/s steps=2198 accepted=13957/35168 (39.7%) avg_commit=7.28
+[server] chat DONE chatcmpl_000000000000000e ok=true in=335 effective_in=335 out=16000 286.0s 55.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=285.2s(56.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=670
+[server] chat chatcmpl_000000000000000f format=chat stream=false msgs=2 tools=0 prompt_tokens=159 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000000f format=chat stream=false prompt_tokens=159 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000000f restore=false slot=-1 prefix_len=0 effective_prompt=159 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=228.215 s speed=70.11 tok/s steps=2595 accepted=13416/41520 (32.3%) avg_commit=6.17
+[server] chat DONE chatcmpl_000000000000000f ok=true in=159 effective_in=159 out=16000 228.5s 70.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=228.2s(70.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=997
+[server] chat chatcmpl_0000000000000010 format=chat stream=false msgs=2 tools=0 prompt_tokens=192 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000010 format=chat stream=false prompt_tokens=192 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000010 restore=false slot=-1 prefix_len=0 effective_prompt=192 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=460 time=6.892 s speed=66.74 tok/s steps=106 accepted=355/1696 (20.9%) avg_commit=4.34
+[server] chat DONE chatcmpl_0000000000000010 ok=true in=192 effective_in=192 out=460 7.2s 64.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=6.9s(66.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=654
+[server] chat chatcmpl_0000000000000011 format=chat stream=false msgs=2 tools=0 prompt_tokens=124 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000011 format=chat stream=false prompt_tokens=124 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000011 restore=false slot=-1 prefix_len=0 effective_prompt=124 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=80.709 s speed=198.24 tok/s steps=1261 accepted=15454/20176 (76.6%) avg_commit=12.69
+[server] chat DONE chatcmpl_0000000000000011 ok=true in=124 effective_in=124 out=16000 81.0s 197.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=80.7s(198.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=972
+[server] chat chatcmpl_0000000000000012 format=chat stream=false msgs=2 tools=0 prompt_tokens=206 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000012 format=chat stream=false prompt_tokens=206 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000012 restore=false slot=-1 prefix_len=0 effective_prompt=206 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=86.615 s speed=184.73 tok/s steps=1225 accepted=15609/19600 (79.6%) avg_commit=13.06
+[server] chat DONE chatcmpl_0000000000000012 ok=true in=206 effective_in=206 out=16000 86.9s 184.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=86.6s(184.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=754
+[server] chat chatcmpl_0000000000000013 format=chat stream=false msgs=2 tools=0 prompt_tokens=203 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000013 format=chat stream=false prompt_tokens=203 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000013 restore=false slot=-1 prefix_len=0 effective_prompt=203 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=775 time=10.377 s speed=74.69 tok/s steps=97 accepted=694/1552 (44.7%) avg_commit=7.99
+[server] chat DONE chatcmpl_0000000000000013 ok=true in=203 effective_in=203 out=775 10.9s 71.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=10.4s(74.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=934
+[server] chat chatcmpl_0000000000000014 format=chat stream=false msgs=2 tools=0 prompt_tokens=254 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000014 format=chat stream=false prompt_tokens=254 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000014 restore=false slot=-1 prefix_len=0 effective_prompt=254 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=168.869 s speed=94.75 tok/s steps=1492 accepted=14853/23872 (62.2%) avg_commit=10.72
+[server] chat DONE chatcmpl_0000000000000014 ok=true in=254 effective_in=254 out=16000 169.4s 94.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=168.9s(94.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1519
+[server] chat chatcmpl_0000000000000015 format=chat stream=false msgs=2 tools=0 prompt_tokens=265 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000015 format=chat stream=false prompt_tokens=265 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000015 restore=false slot=-1 prefix_len=0 effective_prompt=265 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=413 time=6.138 s speed=67.29 tok/s steps=92 accepted=322/1472 (21.9%) avg_commit=4.49
+[server] chat DONE chatcmpl_0000000000000015 ok=true in=265 effective_in=265 out=413 6.5s 63.5 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=6.1s(67.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1460
+[server] chat chatcmpl_0000000000000016 format=chat stream=false msgs=2 tools=0 prompt_tokens=247 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000016 format=chat stream=false prompt_tokens=247 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000016 restore=false slot=-1 prefix_len=0 effective_prompt=247 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=310 time=4.098 s speed=75.65 tok/s steps=62 accepted=252/992 (25.4%) avg_commit=5.00
+[server] chat DONE chatcmpl_0000000000000016 ok=true in=247 effective_in=247 out=310 4.4s 69.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=4.1s(75.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=735
+[server] chat chatcmpl_0000000000000017 format=chat stream=false msgs=2 tools=0 prompt_tokens=149 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000017 format=chat stream=false prompt_tokens=149 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000017 restore=false slot=-1 prefix_len=0 effective_prompt=149 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=260.835 s speed=61.34 tok/s steps=2393 accepted=13634/38288 (35.6%) avg_commit=6.69
+[server] chat DONE chatcmpl_0000000000000017 ok=true in=149 effective_in=149 out=16000 261.1s 61.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=260.8s(61.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1325
+[server] chat chatcmpl_0000000000000018 format=chat stream=false msgs=2 tools=0 prompt_tokens=249 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000018 format=chat stream=false prompt_tokens=249 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000018 restore=false slot=-1 prefix_len=0 effective_prompt=249 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=209.754 s speed=76.28 tok/s steps=1800 accepted=14411/28800 (50.0%) avg_commit=8.89
+[server] chat DONE chatcmpl_0000000000000018 ok=true in=249 effective_in=249 out=16000 210.2s 76.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=209.8s(76.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=708
+[server] chat chatcmpl_0000000000000019 format=chat stream=false msgs=2 tools=0 prompt_tokens=195 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000019 format=chat stream=false prompt_tokens=195 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000019 restore=false slot=-1 prefix_len=0 effective_prompt=195 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=705 time=10.259 s speed=68.72 tok/s steps=78 accepted=638/1248 (51.1%) avg_commit=9.04
+[server] chat DONE chatcmpl_0000000000000019 ok=true in=195 effective_in=195 out=705 10.7s 66.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=10.3s(68.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=763
+[server] chat chatcmpl_000000000000001a format=chat stream=false msgs=2 tools=0 prompt_tokens=142 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001a format=chat stream=false prompt_tokens=142 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001a restore=false slot=-1 prefix_len=0 effective_prompt=142 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=690 time=11.780 s speed=58.57 tok/s steps=85 accepted=615/1360 (45.2%) avg_commit=8.12
+[server] chat DONE chatcmpl_000000000000001a ok=true in=142 effective_in=142 out=690 12.1s 57.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=11.8s(58.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=831
+[server] chat chatcmpl_000000000000001b format=chat stream=false msgs=2 tools=0 prompt_tokens=212 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001b format=chat stream=false prompt_tokens=212 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001b restore=false slot=-1 prefix_len=0 effective_prompt=212 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=148.918 s speed=107.44 tok/s steps=1476 accepted=15294/23616 (64.8%) avg_commit=10.84
+[server] chat DONE chatcmpl_000000000000001b ok=true in=212 effective_in=212 out=16000 149.3s 107.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=148.9s(107.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=2195
+[server] chat chatcmpl_000000000000001c format=chat stream=false msgs=2 tools=0 prompt_tokens=838 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001c format=chat stream=false prompt_tokens=838 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001c restore=false slot=-1 prefix_len=0 effective_prompt=838 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=194.422 s speed=82.30 tok/s steps=1954 accepted=14373/31264 (46.0%) avg_commit=8.19
+[server] chat DONE chatcmpl_000000000000001c ok=true in=838 effective_in=838 out=16000 196.6s 81.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=2.1s decode=194.4s(82.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=2405
+[server] chat chatcmpl_000000000000001d format=chat stream=false msgs=2 tools=0 prompt_tokens=806 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001d format=chat stream=false prompt_tokens=806 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001d restore=false slot=-1 prefix_len=0 effective_prompt=806 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=121.589 s speed=131.59 tok/s steps=1207 accepted=15663/19312 (81.1%) avg_commit=13.26
+[server] chat DONE chatcmpl_000000000000001d ok=true in=806 effective_in=806 out=16000 123.8s 129.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=2.2s decode=121.6s(131.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1142
+[server] chat chatcmpl_000000000000001e format=chat stream=false msgs=2 tools=0 prompt_tokens=268 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001e format=chat stream=false prompt_tokens=268 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001e restore=false slot=-1 prefix_len=0 effective_prompt=268 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=107.885 s speed=148.31 tok/s steps=1199 accepted=15697/19184 (81.8%) avg_commit=13.34
+[server] chat DONE chatcmpl_000000000000001e ok=true in=268 effective_in=268 out=16000 108.7s 147.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=107.9s(148.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1293
+[server] chat chatcmpl_000000000000001f format=chat stream=false msgs=2 tools=0 prompt_tokens=445 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000001f format=chat stream=false prompt_tokens=445 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000001f restore=false slot=-1 prefix_len=0 effective_prompt=445 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=113.191 s speed=141.35 tok/s steps=1171 accepted=15724/18736 (83.9%) avg_commit=13.66
+[server] chat DONE chatcmpl_000000000000001f ok=true in=445 effective_in=445 out=16000 114.2s 140.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.9s decode=113.2s(141.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1004
+[server] chat chatcmpl_0000000000000020 format=chat stream=false msgs=2 tools=0 prompt_tokens=212 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000020 format=chat stream=false prompt_tokens=212 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000020 restore=false slot=-1 prefix_len=0 effective_prompt=212 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=123.715 s speed=129.33 tok/s steps=1373 accepted=15401/21968 (70.1%) avg_commit=11.65
+[server] chat DONE chatcmpl_0000000000000020 ok=true in=212 effective_in=212 out=16000 124.1s 129.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=123.7s(129.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1061
+[server] chat chatcmpl_0000000000000021 format=chat stream=false msgs=2 tools=0 prompt_tokens=252 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000021 format=chat stream=false prompt_tokens=252 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000021 restore=false slot=-1 prefix_len=0 effective_prompt=252 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=154.762 s speed=103.38 tok/s steps=1477 accepted=15224/23632 (64.4%) avg_commit=10.83
+[server] chat DONE chatcmpl_0000000000000021 ok=true in=252 effective_in=252 out=16000 155.2s 103.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=154.8s(103.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=768
+[server] chat chatcmpl_0000000000000022 format=chat stream=false msgs=2 tools=0 prompt_tokens=194 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000022 format=chat stream=false prompt_tokens=194 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000022 restore=false slot=-1 prefix_len=0 effective_prompt=194 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=436 time=3.120 s speed=139.73 tok/s steps=51 accepted=390/816 (47.8%) avg_commit=8.55
+[server] chat DONE chatcmpl_0000000000000022 ok=true in=194 effective_in=194 out=436 3.4s 128.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=3.1s(139.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=824
+[server] chat chatcmpl_0000000000000023 format=chat stream=false msgs=2 tools=0 prompt_tokens=157 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000023 format=chat stream=false prompt_tokens=157 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000023 restore=false slot=-1 prefix_len=0 effective_prompt=157 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=127.353 s speed=125.64 tok/s steps=1313 accepted=15493/21008 (73.7%) avg_commit=12.19
+[server] chat DONE chatcmpl_0000000000000023 ok=true in=157 effective_in=157 out=16000 127.6s 125.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=127.4s(125.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1194
+[server] chat chatcmpl_0000000000000024 format=chat stream=false msgs=2 tools=0 prompt_tokens=319 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000024 format=chat stream=false prompt_tokens=319 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000024 restore=false slot=-1 prefix_len=0 effective_prompt=319 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=1575 time=41.253 s speed=38.18 tok/s steps=333 accepted=1246/5328 (23.4%) avg_commit=4.73
+[server] chat DONE chatcmpl_0000000000000024 ok=true in=319 effective_in=319 out=1575 41.7s 37.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=41.3s(38.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=888
+[server] chat chatcmpl_0000000000000025 format=chat stream=false msgs=2 tools=0 prompt_tokens=166 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000025 format=chat stream=false prompt_tokens=166 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000025 restore=false slot=-1 prefix_len=0 effective_prompt=166 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=686 time=16.439 s speed=41.73 tok/s steps=133 accepted=555/2128 (26.1%) avg_commit=5.16
+[server] chat DONE chatcmpl_0000000000000025 ok=true in=166 effective_in=166 out=686 17.1s 40.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.7s decode=16.4s(41.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=830
+[server] chat chatcmpl_0000000000000026 format=chat stream=false msgs=2 tools=0 prompt_tokens=181 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000026 format=chat stream=false prompt_tokens=181 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000026 restore=false slot=-1 prefix_len=0 effective_prompt=181 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=130.674 s speed=122.44 tok/s steps=1403 accepted=14805/22448 (66.0%) avg_commit=11.40
+[server] chat DONE chatcmpl_0000000000000026 ok=true in=181 effective_in=181 out=16000 131.2s 121.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=130.7s(122.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1555
+[server] chat chatcmpl_0000000000000027 format=chat stream=false msgs=2 tools=0 prompt_tokens=392 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000027 format=chat stream=false prompt_tokens=392 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000027 restore=false slot=-1 prefix_len=0 effective_prompt=392 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=2666 time=26.972 s speed=98.84 tok/s steps=404 accepted=2287/6464 (35.4%) avg_commit=6.60
+[server] chat DONE chatcmpl_0000000000000027 ok=true in=392 effective_in=392 out=2666 27.5s 97.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=27.0s(98.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=852
+[server] chat chatcmpl_0000000000000028 format=chat stream=false msgs=2 tools=0 prompt_tokens=143 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000028 format=chat stream=false prompt_tokens=143 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000028 restore=false slot=-1 prefix_len=0 effective_prompt=143 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=262 time=3.958 s speed=66.20 tok/s steps=65 accepted=200/1040 (19.2%) avg_commit=4.03
+[server] chat DONE chatcmpl_0000000000000028 ok=true in=143 effective_in=143 out=262 4.2s 63.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=4.0s(66.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=852
+[server] chat chatcmpl_0000000000000029 format=chat stream=false msgs=2 tools=0 prompt_tokens=165 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000029 format=chat stream=false prompt_tokens=165 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000029 restore=false slot=-1 prefix_len=0 effective_prompt=165 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=137.570 s speed=116.30 tok/s steps=1286 accepted=15515/20576 (75.4%) avg_commit=12.44
+[server] chat DONE chatcmpl_0000000000000029 ok=true in=165 effective_in=165 out=16000 137.9s 116.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=137.6s(116.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=2430
+[server] chat chatcmpl_000000000000002a format=chat stream=false msgs=2 tools=0 prompt_tokens=596 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002a format=chat stream=false prompt_tokens=596 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002a restore=false slot=-1 prefix_len=0 effective_prompt=596 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=312.813 s speed=51.15 tok/s steps=2832 accepted=13212/45312 (29.2%) avg_commit=5.65
+[server] chat DONE chatcmpl_000000000000002a ok=true in=596 effective_in=596 out=16000 314.7s 50.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.9s decode=312.8s(51.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=880
+[server] chat chatcmpl_000000000000002b format=chat stream=false msgs=2 tools=0 prompt_tokens=191 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002b format=chat stream=false prompt_tokens=191 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002b restore=false slot=-1 prefix_len=0 effective_prompt=191 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=253.492 s speed=63.12 tok/s steps=3214 accepted=13024/51424 (25.3%) avg_commit=4.98
+[server] chat DONE chatcmpl_000000000000002b ok=true in=191 effective_in=191 out=16000 253.8s 63.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=253.5s(63.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=735
+[server] chat chatcmpl_000000000000002c format=chat stream=false msgs=2 tools=0 prompt_tokens=161 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002c format=chat stream=false prompt_tokens=161 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002c restore=false slot=-1 prefix_len=0 effective_prompt=161 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=97.539 s speed=164.04 tok/s steps=1311 accepted=15466/20976 (73.7%) avg_commit=12.20
+[server] chat DONE chatcmpl_000000000000002c ok=true in=161 effective_in=161 out=16000 98.1s 163.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=97.5s(164.0tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1232
+[server] chat chatcmpl_000000000000002d format=chat stream=false msgs=2 tools=0 prompt_tokens=260 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002d format=chat stream=false prompt_tokens=260 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002d restore=false slot=-1 prefix_len=0 effective_prompt=260 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=278.774 s speed=57.39 tok/s steps=2688 accepted=13330/43008 (31.0%) avg_commit=5.95
+[server] chat DONE chatcmpl_000000000000002d ok=true in=260 effective_in=260 out=16000 279.2s 57.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=278.8s(57.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=765
+[server] chat chatcmpl_000000000000002e format=chat stream=false msgs=2 tools=0 prompt_tokens=188 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002e format=chat stream=false prompt_tokens=188 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002e restore=false slot=-1 prefix_len=0 effective_prompt=188 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=127.475 s speed=125.51 tok/s steps=1203 accepted=15656/19248 (81.3%) avg_commit=13.30
+[server] chat DONE chatcmpl_000000000000002e ok=true in=188 effective_in=188 out=16000 127.9s 125.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=127.5s(125.5tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1294
+[server] chat chatcmpl_000000000000002f format=chat stream=false msgs=2 tools=0 prompt_tokens=367 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000002f format=chat stream=false prompt_tokens=367 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000002f restore=false slot=-1 prefix_len=0 effective_prompt=367 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=249.626 s speed=64.10 tok/s steps=2030 accepted=14076/32480 (43.3%) avg_commit=7.88
+[server] chat DONE chatcmpl_000000000000002f ok=true in=367 effective_in=367 out=16000 250.8s 63.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.1s decode=249.6s(64.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1018
+[server] chat chatcmpl_0000000000000030 format=chat stream=false msgs=2 tools=0 prompt_tokens=229 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000030 format=chat stream=false prompt_tokens=229 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000030 restore=false slot=-1 prefix_len=0 effective_prompt=229 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=117.984 s speed=135.61 tok/s steps=1199 accepted=15721/19184 (81.9%) avg_commit=13.34
+[server] chat DONE chatcmpl_0000000000000030 ok=true in=229 effective_in=229 out=16000 118.5s 135.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=118.0s(135.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=848
+[server] chat chatcmpl_0000000000000031 format=chat stream=false msgs=2 tools=0 prompt_tokens=143 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000031 format=chat stream=false prompt_tokens=143 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000031 restore=false slot=-1 prefix_len=0 effective_prompt=143 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=429 time=10.155 s speed=42.25 tok/s steps=104 accepted=325/1664 (19.5%) avg_commit=4.12
+[server] chat DONE chatcmpl_0000000000000031 ok=true in=143 effective_in=143 out=429 10.6s 40.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=10.2s(42.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=770
+[server] chat chatcmpl_0000000000000032 format=chat stream=false msgs=2 tools=0 prompt_tokens=136 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000032 format=chat stream=false prompt_tokens=136 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000032 restore=false slot=-1 prefix_len=0 effective_prompt=136 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=151.145 s speed=105.86 tok/s steps=1373 accepted=15417/21968 (70.2%) avg_commit=11.65
+[server] chat DONE chatcmpl_0000000000000032 ok=true in=136 effective_in=136 out=16000 151.4s 105.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.2s decode=151.1s(105.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=709
+[server] chat chatcmpl_0000000000000033 format=chat stream=false msgs=2 tools=0 prompt_tokens=144 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000033 format=chat stream=false prompt_tokens=144 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000033 restore=false slot=-1 prefix_len=0 effective_prompt=144 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=137.136 s speed=116.67 tok/s steps=1376 accepted=15414/22016 (70.0%) avg_commit=11.63
+[server] chat DONE chatcmpl_0000000000000033 ok=true in=144 effective_in=144 out=16000 137.5s 116.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=137.1s(116.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1420
+[server] chat chatcmpl_0000000000000034 format=chat stream=false msgs=2 tools=0 prompt_tokens=396 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000034 format=chat stream=false prompt_tokens=396 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000034 restore=false slot=-1 prefix_len=0 effective_prompt=396 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=461.531 s speed=34.67 tok/s steps=3966 accepted=12038/63456 (19.0%) avg_commit=4.03
+[server] chat DONE chatcmpl_0000000000000034 ok=true in=396 effective_in=396 out=16000 463.1s 34.5 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=461.5s(34.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=706
+[server] chat chatcmpl_0000000000000035 format=chat stream=false msgs=2 tools=0 prompt_tokens=125 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000035 format=chat stream=false prompt_tokens=125 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000035 restore=false slot=-1 prefix_len=0 effective_prompt=125 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=147.103 s speed=108.77 tok/s steps=1945 accepted=14350/31120 (46.1%) avg_commit=8.23
+[server] chat DONE chatcmpl_0000000000000035 ok=true in=125 effective_in=125 out=16000 147.7s 108.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=147.1s(108.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1269
+[server] chat chatcmpl_0000000000000036 format=chat stream=false msgs=2 tools=0 prompt_tokens=244 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000036 format=chat stream=false prompt_tokens=244 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000036 restore=false slot=-1 prefix_len=0 effective_prompt=244 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=284.903 s speed=56.16 tok/s steps=2502 accepted=13520/40032 (33.8%) avg_commit=6.39
+[server] chat DONE chatcmpl_0000000000000036 ok=true in=244 effective_in=244 out=16000 285.3s 56.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=284.9s(56.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1261
+[server] chat chatcmpl_0000000000000037 format=chat stream=false msgs=2 tools=0 prompt_tokens=448 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000037 format=chat stream=false prompt_tokens=448 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000037 restore=false slot=-1 prefix_len=0 effective_prompt=448 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=204.451 s speed=78.26 tok/s steps=1587 accepted=14781/25392 (58.2%) avg_commit=10.08
+[server] chat DONE chatcmpl_0000000000000037 ok=true in=448 effective_in=448 out=16000 206.1s 77.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.6s decode=204.5s(78.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=923
+[server] chat chatcmpl_0000000000000038 format=chat stream=false msgs=2 tools=0 prompt_tokens=181 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000038 format=chat stream=false prompt_tokens=181 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000038 restore=false slot=-1 prefix_len=0 effective_prompt=181 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=145.798 s speed=109.74 tok/s steps=1187 accepted=15061/18992 (79.3%) avg_commit=13.48
+[server] chat DONE chatcmpl_0000000000000038 ok=true in=181 effective_in=181 out=16000 146.5s 109.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=145.8s(109.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1225
+[server] chat chatcmpl_0000000000000039 format=chat stream=false msgs=2 tools=0 prompt_tokens=272 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000039 format=chat stream=false prompt_tokens=272 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000039 restore=false slot=-1 prefix_len=0 effective_prompt=272 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=1351 time=42.532 s speed=31.76 tok/s steps=347 accepted=1007/5552 (18.1%) avg_commit=3.89
+[server] chat DONE chatcmpl_0000000000000039 ok=true in=272 effective_in=272 out=1351 43.6s 31.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.0s decode=42.5s(31.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1041
+[server] chat chatcmpl_000000000000003a format=chat stream=false msgs=2 tools=0 prompt_tokens=296 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003a format=chat stream=false prompt_tokens=296 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003a restore=false slot=-1 prefix_len=0 effective_prompt=296 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=2594 time=32.434 s speed=79.98 tok/s steps=447 accepted=2157/7152 (30.2%) avg_commit=5.80
+[server] chat DONE chatcmpl_000000000000003a ok=true in=296 effective_in=296 out=2594 32.8s 79.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=32.4s(80.0tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1166
+[server] chat chatcmpl_000000000000003b format=chat stream=false msgs=2 tools=0 prompt_tokens=325 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003b format=chat stream=false prompt_tokens=325 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003b restore=false slot=-1 prefix_len=0 effective_prompt=325 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=84.977 s speed=188.29 tok/s steps=1264 accepted=15502/20224 (76.7%) avg_commit=12.66
+[server] chat DONE chatcmpl_000000000000003b ok=true in=325 effective_in=325 out=16000 85.5s 187.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=85.0s(188.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1901
+[server] chat chatcmpl_000000000000003c format=chat stream=false msgs=2 tools=0 prompt_tokens=497 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003c format=chat stream=false prompt_tokens=497 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003c restore=false slot=-1 prefix_len=0 effective_prompt=497 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=127.842 s speed=125.15 tok/s steps=1269 accepted=15551/20304 (76.6%) avg_commit=12.61
+[server] chat DONE chatcmpl_000000000000003c ok=true in=497 effective_in=497 out=16000 128.6s 124.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.7s decode=127.8s(125.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1417
+[server] chat chatcmpl_000000000000003d format=chat stream=false msgs=2 tools=0 prompt_tokens=447 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003d format=chat stream=false prompt_tokens=447 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003d restore=false slot=-1 prefix_len=0 effective_prompt=447 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=349.796 s speed=45.74 tok/s steps=2681 accepted=13324/42896 (31.1%) avg_commit=5.97
+[server] chat DONE chatcmpl_000000000000003d ok=true in=447 effective_in=447 out=16000 350.4s 45.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=349.8s(45.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=904
+[server] chat chatcmpl_000000000000003e format=chat stream=false msgs=2 tools=0 prompt_tokens=145 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003e format=chat stream=false prompt_tokens=145 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003e restore=false slot=-1 prefix_len=0 effective_prompt=145 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=176.141 s speed=90.84 tok/s steps=2241 accepted=13811/35856 (38.5%) avg_commit=7.14
+[server] chat DONE chatcmpl_000000000000003e ok=true in=145 effective_in=145 out=16000 176.5s 90.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=176.1s(90.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1568
+[server] chat chatcmpl_000000000000003f format=chat stream=false msgs=2 tools=0 prompt_tokens=470 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000003f format=chat stream=false prompt_tokens=470 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000003f restore=false slot=-1 prefix_len=0 effective_prompt=470 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=117.716 s speed=135.92 tok/s steps=1140 accepted=15768/18240 (86.4%) avg_commit=14.04
+[server] chat DONE chatcmpl_000000000000003f ok=true in=470 effective_in=470 out=16000 118.4s 135.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=117.7s(135.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=759
+[server] chat chatcmpl_0000000000000040 format=chat stream=false msgs=2 tools=0 prompt_tokens=212 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000040 format=chat stream=false prompt_tokens=212 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000040 restore=false slot=-1 prefix_len=0 effective_prompt=212 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=253.491 s speed=63.12 tok/s steps=2384 accepted=13654/38144 (35.8%) avg_commit=6.71
+[server] chat DONE chatcmpl_0000000000000040 ok=true in=212 effective_in=212 out=16000 254.0s 63.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=253.5s(63.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=863
+[server] chat chatcmpl_0000000000000041 format=chat stream=false msgs=2 tools=0 prompt_tokens=209 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000041 format=chat stream=false prompt_tokens=209 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000041 restore=false slot=-1 prefix_len=0 effective_prompt=209 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=6305 time=114.358 s speed=55.13 tok/s steps=906 accepted=5468/14496 (37.7%) avg_commit=6.96
+[server] chat DONE chatcmpl_0000000000000041 ok=true in=209 effective_in=209 out=6305 114.7s 55.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=114.4s(55.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1341
+[server] chat chatcmpl_0000000000000042 format=chat stream=false msgs=2 tools=0 prompt_tokens=231 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000042 format=chat stream=false prompt_tokens=231 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000042 restore=false slot=-1 prefix_len=0 effective_prompt=231 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=725 time=20.019 s speed=36.22 tok/s steps=162 accepted=565/2592 (21.8%) avg_commit=4.48
+[server] chat DONE chatcmpl_0000000000000042 ok=true in=231 effective_in=231 out=725 20.6s 35.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=20.0s(36.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1303
+[server] chat chatcmpl_0000000000000043 format=chat stream=false msgs=2 tools=0 prompt_tokens=609 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000043 format=chat stream=false prompt_tokens=609 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000043 restore=false slot=-1 prefix_len=0 effective_prompt=609 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=260.878 s speed=61.33 tok/s steps=2289 accepted=13770/36624 (37.6%) avg_commit=6.99
+[server] chat DONE chatcmpl_0000000000000043 ok=true in=609 effective_in=609 out=16000 263.3s 60.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=2.4s decode=260.9s(61.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=802
+[server] chat chatcmpl_0000000000000044 format=chat stream=false msgs=2 tools=0 prompt_tokens=161 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000044 format=chat stream=false prompt_tokens=161 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000044 restore=false slot=-1 prefix_len=0 effective_prompt=161 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=109.576 s speed=146.02 tok/s steps=1336 accepted=15273/21376 (71.4%) avg_commit=11.98
+[server] chat DONE chatcmpl_0000000000000044 ok=true in=161 effective_in=161 out=16000 110.0s 145.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.4s decode=109.6s(146.0tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1788
+[server] chat chatcmpl_0000000000000045 format=chat stream=false msgs=2 tools=0 prompt_tokens=834 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000045 format=chat stream=false prompt_tokens=834 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000045 restore=false slot=-1 prefix_len=0 effective_prompt=834 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=342.932 s speed=46.66 tok/s steps=2793 accepted=13208/44688 (29.6%) avg_commit=5.73
+[server] chat DONE chatcmpl_0000000000000045 ok=true in=834 effective_in=834 out=16000 344.5s 46.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=342.9s(46.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1046
+[server] chat chatcmpl_0000000000000046 format=chat stream=false msgs=2 tools=0 prompt_tokens=328 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000046 format=chat stream=false prompt_tokens=328 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000046 restore=false slot=-1 prefix_len=0 effective_prompt=328 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=114.426 s speed=139.83 tok/s steps=1295 accepted=15452/20720 (74.6%) avg_commit=12.36
+[server] chat DONE chatcmpl_0000000000000046 ok=true in=328 effective_in=328 out=16000 115.3s 138.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=114.4s(139.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=714
+[server] chat chatcmpl_0000000000000047 format=chat stream=false msgs=2 tools=0 prompt_tokens=144 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000047 format=chat stream=false prompt_tokens=144 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000047 restore=false slot=-1 prefix_len=0 effective_prompt=144 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=106.750 s speed=149.88 tok/s steps=1218 accepted=15615/19488 (80.1%) avg_commit=13.14
+[server] chat DONE chatcmpl_0000000000000047 ok=true in=144 effective_in=144 out=16000 107.3s 149.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.5s decode=106.7s(149.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1111
+[server] chat chatcmpl_0000000000000048 format=chat stream=false msgs=2 tools=0 prompt_tokens=235 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000048 format=chat stream=false prompt_tokens=235 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000048 restore=false slot=-1 prefix_len=0 effective_prompt=235 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=696 time=10.688 s speed=65.12 tok/s steps=101 accepted=600/1616 (37.1%) avg_commit=6.89
+[server] chat DONE chatcmpl_0000000000000048 ok=true in=235 effective_in=235 out=696 11.8s 59.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.1s decode=10.7s(65.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1157
+[server] chat chatcmpl_0000000000000049 format=chat stream=false msgs=2 tools=0 prompt_tokens=223 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000049 format=chat stream=false prompt_tokens=223 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000049 restore=false slot=-1 prefix_len=0 effective_prompt=223 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=451 time=11.678 s speed=38.62 tok/s steps=108 accepted=345/1728 (20.0%) avg_commit=4.18
+[server] chat DONE chatcmpl_0000000000000049 ok=true in=223 effective_in=223 out=451 12.0s 37.5 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=11.7s(38.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=790
+[server] chat chatcmpl_000000000000004a format=chat stream=false msgs=2 tools=0 prompt_tokens=149 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004a format=chat stream=false prompt_tokens=149 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004a restore=false slot=-1 prefix_len=0 effective_prompt=149 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=239.410 s speed=66.83 tok/s steps=1918 accepted=14195/30688 (46.3%) avg_commit=8.34
+[server] chat DONE chatcmpl_000000000000004a ok=true in=149 effective_in=149 out=16000 239.8s 66.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.3s decode=239.4s(66.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1786
+[server] chat chatcmpl_000000000000004b format=chat stream=false msgs=2 tools=0 prompt_tokens=487 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004b format=chat stream=false prompt_tokens=487 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004b restore=false slot=-1 prefix_len=0 effective_prompt=487 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=413 time=10.490 s speed=39.37 tok/s steps=81 accepted=333/1296 (25.7%) avg_commit=5.10
+[server] chat DONE chatcmpl_000000000000004b ok=true in=487 effective_in=487 out=413 11.7s 35.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.2s decode=10.5s(39.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1655
+[server] chat chatcmpl_000000000000004c format=chat stream=false msgs=2 tools=0 prompt_tokens=405 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004c format=chat stream=false prompt_tokens=405 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004c restore=false slot=-1 prefix_len=0 effective_prompt=405 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=350 time=8.163 s speed=42.87 tok/s steps=82 accepted=269/1312 (20.5%) avg_commit=4.27
+[server] chat DONE chatcmpl_000000000000004c ok=true in=405 effective_in=405 out=350 8.9s 39.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=8.2s(42.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1544
+[server] chat chatcmpl_000000000000004d format=chat stream=false msgs=2 tools=0 prompt_tokens=412 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004d format=chat stream=false prompt_tokens=412 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004d restore=false slot=-1 prefix_len=0 effective_prompt=412 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=377 time=8.129 s speed=46.37 tok/s steps=72 accepted=306/1152 (26.6%) avg_commit=5.24
+[server] chat DONE chatcmpl_000000000000004d ok=true in=412 effective_in=412 out=377 8.8s 43.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=8.1s(46.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1795
+[server] chat chatcmpl_000000000000004e format=chat stream=false msgs=2 tools=0 prompt_tokens=446 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004e format=chat stream=false prompt_tokens=446 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004e restore=false slot=-1 prefix_len=0 effective_prompt=446 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=449 time=11.287 s speed=39.78 tok/s steps=98 accepted=354/1568 (22.6%) avg_commit=4.58
+[server] chat DONE chatcmpl_000000000000004e ok=true in=446 effective_in=446 out=449 12.8s 35.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=11.3s(39.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1636
+[server] chat chatcmpl_000000000000004f format=chat stream=false msgs=2 tools=0 prompt_tokens=357 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000004f format=chat stream=false prompt_tokens=357 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000004f restore=false slot=-1 prefix_len=0 effective_prompt=357 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=201 time=6.209 s speed=32.37 tok/s steps=50 accepted=152/800 (19.0%) avg_commit=4.02
+[server] chat DONE chatcmpl_000000000000004f ok=true in=357 effective_in=357 out=201 7.7s 26.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=6.2s(32.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1606
+[server] chat chatcmpl_0000000000000050 format=chat stream=false msgs=2 tools=0 prompt_tokens=416 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000050 format=chat stream=false prompt_tokens=416 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000050 restore=false slot=-1 prefix_len=0 effective_prompt=416 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=759 time=14.722 s speed=51.56 tok/s steps=111 accepted=655/1776 (36.9%) avg_commit=6.84
+[server] chat DONE chatcmpl_0000000000000050 ok=true in=416 effective_in=416 out=759 15.8s 48.1 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.0s decode=14.7s(51.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1392
+[server] chat chatcmpl_0000000000000051 format=chat stream=false msgs=2 tools=0 prompt_tokens=342 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000051 format=chat stream=false prompt_tokens=342 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000051 restore=false slot=-1 prefix_len=0 effective_prompt=342 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=426 time=14.987 s speed=28.43 tok/s steps=103 accepted=324/1648 (19.7%) avg_commit=4.14
+[server] chat DONE chatcmpl_0000000000000051 ok=true in=342 effective_in=342 out=426 15.6s 27.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=15.0s(28.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1541
+[server] chat chatcmpl_0000000000000052 format=chat stream=false msgs=2 tools=0 prompt_tokens=372 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000052 format=chat stream=false prompt_tokens=372 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000052 restore=false slot=-1 prefix_len=0 effective_prompt=372 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=1163 time=25.866 s speed=44.96 tok/s steps=201 accepted=980/3216 (30.5%) avg_commit=5.79
+[server] chat DONE chatcmpl_0000000000000052 ok=true in=372 effective_in=372 out=1163 26.7s 43.5 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.9s decode=25.9s(45.0tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1434
+[server] chat chatcmpl_0000000000000053 format=chat stream=false msgs=2 tools=0 prompt_tokens=374 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000053 format=chat stream=false prompt_tokens=374 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000053 restore=false slot=-1 prefix_len=0 effective_prompt=374 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=516 time=9.487 s speed=54.39 tok/s steps=114 accepted=403/1824 (22.1%) avg_commit=4.53
+[server] chat DONE chatcmpl_0000000000000053 ok=true in=374 effective_in=374 out=516 10.4s 49.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.9s decode=9.5s(54.4tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1312
+[server] chat chatcmpl_0000000000000054 format=chat stream=false msgs=2 tools=0 prompt_tokens=283 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000054 format=chat stream=false prompt_tokens=283 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000054 restore=false slot=-1 prefix_len=0 effective_prompt=283 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=597 time=17.449 s speed=34.21 tok/s steps=145 accepted=453/2320 (19.5%) avg_commit=4.12
+[server] chat DONE chatcmpl_0000000000000054 ok=true in=283 effective_in=283 out=597 18.2s 32.7 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=17.4s(34.2tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1657
+[server] chat chatcmpl_0000000000000055 format=chat stream=false msgs=2 tools=0 prompt_tokens=427 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000055 format=chat stream=false prompt_tokens=427 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000055 restore=false slot=-1 prefix_len=0 effective_prompt=427 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=406 time=8.665 s speed=46.86 tok/s steps=77 accepted=331/1232 (26.9%) avg_commit=5.27
+[server] chat DONE chatcmpl_0000000000000055 ok=true in=427 effective_in=427 out=406 9.2s 43.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=8.7s(46.9tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1852
+[server] chat chatcmpl_0000000000000056 format=chat stream=false msgs=2 tools=0 prompt_tokens=538 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000056 format=chat stream=false prompt_tokens=538 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000056 restore=false slot=-1 prefix_len=0 effective_prompt=538 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=98.675 s speed=162.15 tok/s steps=1110 accepted=15841/17760 (89.2%) avg_commit=14.41
+[server] chat DONE chatcmpl_0000000000000056 ok=true in=538 effective_in=538 out=16000 100.1s 159.8 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.4s decode=98.7s(162.1tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1525
+[server] chat chatcmpl_0000000000000057 format=chat stream=false msgs=2 tools=0 prompt_tokens=369 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000057 format=chat stream=false prompt_tokens=369 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000057 restore=false slot=-1 prefix_len=0 effective_prompt=369 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=455 time=9.524 s speed=47.77 tok/s steps=85 accepted=370/1360 (27.2%) avg_commit=5.35
+[server] chat DONE chatcmpl_0000000000000057 ok=true in=369 effective_in=369 out=455 11.0s 41.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.5s decode=9.5s(47.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1272
+[server] chat chatcmpl_0000000000000058 format=chat stream=false msgs=2 tools=0 prompt_tokens=310 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000058 format=chat stream=false prompt_tokens=310 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000058 restore=false slot=-1 prefix_len=0 effective_prompt=310 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=213 time=7.816 s speed=27.25 tok/s steps=53 accepted=161/848 (19.0%) avg_commit=4.02
+[server] chat DONE chatcmpl_0000000000000058 ok=true in=310 effective_in=310 out=213 9.0s 23.5 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.2s decode=7.8s(27.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1588
+[server] chat chatcmpl_0000000000000059 format=chat stream=false msgs=2 tools=0 prompt_tokens=418 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000059 format=chat stream=false prompt_tokens=418 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_0000000000000059 restore=false slot=-1 prefix_len=0 effective_prompt=418 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=383 time=6.651 s speed=57.59 tok/s steps=76 accepted=308/1216 (25.3%) avg_commit=5.04
+[server] chat DONE chatcmpl_0000000000000059 ok=true in=418 effective_in=418 out=383 7.6s 50.4 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=1.0s decode=6.7s(57.6tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1281
+[server] chat chatcmpl_000000000000005a format=chat stream=false msgs=2 tools=0 prompt_tokens=293 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000005a format=chat stream=false prompt_tokens=293 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000005a restore=false slot=-1 prefix_len=0 effective_prompt=293 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=342 time=5.368 s speed=63.71 tok/s steps=78 accepted=265/1248 (21.2%) avg_commit=4.38
+[server] chat DONE chatcmpl_000000000000005a ok=true in=293 effective_in=293 out=342 6.2s 55.0 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=5.4s(63.7tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=1564
+[server] chat chatcmpl_000000000000005b format=chat stream=false msgs=2 tools=0 prompt_tokens=385 max_tokens=16000 max_ctx=131072 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_000000000000005b format=chat stream=false prompt_tokens=385 max_tokens=16000 tools=0
+[server] chat CACHE chatcmpl_000000000000005b restore=false slot=-1 prefix_len=0 effective_prompt=385 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[gemma4-spec] tokens=16000 time=117.428 s speed=136.25 tok/s steps=1153 accepted=15787/18448 (85.6%) avg_commit=13.88
+[server] chat DONE chatcmpl_000000000000005b ok=true in=385 effective_in=385 out=16000 118.3s 135.3 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.8s decode=117.4s(136.3tok/s) error=-
