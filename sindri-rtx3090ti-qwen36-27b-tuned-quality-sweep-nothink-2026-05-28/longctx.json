@@ -1,0 +1,195 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "longctx",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 6,
+  "pass_rate": 100.0,
+  "wall_total": 421.091,
+  "wall_median": 33.411,
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 8.395,
+      "ttft_seconds": 5.0207,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 2121,
+      "completion_tokens": 53,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls within Qwen chat templates creates a high-risk reliability issue because any deviation in the model's output format can break API compatibility and prevent proper tool execution, especially under the strict validation requirements of the smoke tests.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3528.5,
+        "decode_tokens_per_sec": 15.0,
+        "prefill_ms": 4764.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 13.364,
+      "ttft_seconds": 9.5864,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4156,
+      "completion_tokens": 43,
+      "reasoning_tokens": null,
+      "content": "Risk: The smoke check may produce false positives regarding OpenAI format compliance because the server parses XML tool calls internally while the test expects OpenAI-formatted tool emissions, creating a potential mismatch in API compatibility validation.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3931.3,
+        "decode_tokens_per_sec": 10.9,
+        "prefill_ms": 9348.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 22.18,
+      "ttft_seconds": 19.5323,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 8218,
+      "completion_tokens": 41,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls for SSE delta streaming introduces a significant reliability risk if the parsing logic fails to handle edge cases, potentially breaking OpenAI-compatible tool emission during inference.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2804.9,
+        "decode_tokens_per_sec": 14.6,
+        "prefill_ms": 19284.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 44.642,
+      "ttft_seconds": 41.2801,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 16362,
+      "completion_tokens": 48,
+      "reasoning_tokens": null,
+      "content": "Risk: The smoke test's requirement to validate tool emissions in OpenAI format against a server that natively parses XML tool calls introduces a high risk of format mismatch failures due to the lack of explicit conversion logic mentioned in the repository context.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3530.9,
+        "decode_tokens_per_sec": 13.6,
+        "prefill_ms": 40996.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 98.549,
+      "ttft_seconds": 94.1265,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 32649,
+      "completion_tokens": 58,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on a single, repetitively stated smoke test to validate critical API components like /props, text streaming, and OpenAI-formatted tools creates a high risk of silent regressions if that test becomes outdated or fails to cover edge cases in the underlying server logic.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4672.8,
+        "decode_tokens_per_sec": 12.4,
+        "prefill_ms": 93707.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 233.961,
+      "ttft_seconds": 229.4157,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 65212,
+      "completion_tokens": 49,
+      "reasoning_tokens": null,
+      "content": "Risk: The divergence between the server's internal XML tool call parsing and the smoke test's expectation of OpenAI format output creates a critical compatibility risk where tool-use functionality may appear functional in isolated tests but fail in real-world API integrations.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4804.1,
+        "decode_tokens_per_sec": 10.2,
+        "prefill_ms": 228947.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    }
+  ]
+}

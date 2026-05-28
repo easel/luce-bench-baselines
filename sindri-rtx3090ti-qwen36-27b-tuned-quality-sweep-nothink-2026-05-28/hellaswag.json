@@ -1,0 +1,3015 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "hellaswag",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 128,
+  "n": 100,
+  "pass": 85,
+  "pass_rate": 85.0,
+  "wall_total": 65.749,
+  "wall_median": 0.749,
+  "rows": [
+    {
+      "case_id": "hellaswag-val-00106",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.439,
+      "ttft_seconds": 0.4389,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 181,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.7,
+        "decode_tokens_per_sec": 35.9,
+        "prefill_ms": 355.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "D",
+        "correct": "C",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00409",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.397,
+      "ttft_seconds": 0.3974,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 136,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 60.8,
+        "decode_tokens_per_sec": 32.9,
+        "prefill_ms": 310.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00434",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.435,
+      "ttft_seconds": 0.4352,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 151,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 79.1,
+        "decode_tokens_per_sec": 25.3,
+        "prefill_ms": 331.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "C",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00488",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.431,
+      "ttft_seconds": 0.4312,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 141,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 109.3,
+        "decode_tokens_per_sec": 18.3,
+        "prefill_ms": 295.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00520",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.492,
+      "ttft_seconds": 0.4916,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 195,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 63.6,
+        "decode_tokens_per_sec": 31.5,
+        "prefill_ms": 397.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00525",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.516,
+      "ttft_seconds": 0.5154,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 198,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 65.2,
+        "decode_tokens_per_sec": 30.7,
+        "prefill_ms": 421.1
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "B",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00711",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.376,
+      "ttft_seconds": 0.3763,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 132,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 62.6,
+        "decode_tokens_per_sec": 32.0,
+        "prefill_ms": 287.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00750",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.395,
+      "ttft_seconds": 0.3945,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 150,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 59.1,
+        "decode_tokens_per_sec": 33.9,
+        "prefill_ms": 307.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-00916",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.476,
+      "ttft_seconds": 0.4763,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 192,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 61.1,
+        "decode_tokens_per_sec": 32.7,
+        "prefill_ms": 388.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01084",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.402,
+      "ttft_seconds": 0.4023,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 157,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 60.9,
+        "decode_tokens_per_sec": 32.9,
+        "prefill_ms": 313.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01139",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.464,
+      "ttft_seconds": 0.4638,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 174,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 60.2,
+        "decode_tokens_per_sec": 33.2,
+        "prefill_ms": 378.4
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01169",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.383,
+      "ttft_seconds": 0.3829,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 143,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 58.3,
+        "decode_tokens_per_sec": 34.3,
+        "prefill_ms": 298.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01291",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.481,
+      "ttft_seconds": 0.4804,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 190,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 60.8,
+        "decode_tokens_per_sec": 32.9,
+        "prefill_ms": 394.1
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "D",
+        "correct": "B",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01307",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.374,
+      "ttft_seconds": 0.3743,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 129,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.6,
+        "decode_tokens_per_sec": 34.7,
+        "prefill_ms": 292.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01424",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.407,
+      "ttft_seconds": 0.4071,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 152,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.5,
+        "decode_tokens_per_sec": 34.8,
+        "prefill_ms": 324.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01519",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.448,
+      "ttft_seconds": 0.4479,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 167,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.5,
+        "decode_tokens_per_sec": 36.0,
+        "prefill_ms": 366.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01535",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.395,
+      "ttft_seconds": 0.3946,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 150,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.7,
+        "decode_tokens_per_sec": 34.6,
+        "prefill_ms": 311.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "B",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01584",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.406,
+      "ttft_seconds": 0.4061,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 151,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.5,
+        "decode_tokens_per_sec": 36.7,
+        "prefill_ms": 325.4
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01654",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.446,
+      "ttft_seconds": 0.446,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 168,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.8,
+        "decode_tokens_per_sec": 34.6,
+        "prefill_ms": 360.5
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "C",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01674",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.407,
+      "ttft_seconds": 0.4065,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 150,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.5,
+        "decode_tokens_per_sec": 34.8,
+        "prefill_ms": 321.9
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "C",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01679",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.297,
+      "ttft_seconds": 0.2973,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 116,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 51.6,
+        "decode_tokens_per_sec": 38.8,
+        "prefill_ms": 223.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-01824",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.444,
+      "ttft_seconds": 0.4439,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 162,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.6,
+        "decode_tokens_per_sec": 36.0,
+        "prefill_ms": 363.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02045",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.413,
+      "ttft_seconds": 0.4129,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 160,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.9,
+        "decode_tokens_per_sec": 35.2,
+        "prefill_ms": 331.9
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "C",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02286",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.385,
+      "ttft_seconds": 0.3846,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 138,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.0,
+        "decode_tokens_per_sec": 36.3,
+        "prefill_ms": 307.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02287",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.408,
+      "ttft_seconds": 0.408,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 149,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.2,
+        "decode_tokens_per_sec": 36.2,
+        "prefill_ms": 329.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02340",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.4,
+      "ttft_seconds": 0.4003,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 149,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.5,
+        "decode_tokens_per_sec": 35.4,
+        "prefill_ms": 320.1
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "D",
+        "correct": "C",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02547",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.471,
+      "ttft_seconds": 0.4705,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 181,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 60.0,
+        "decode_tokens_per_sec": 33.3,
+        "prefill_ms": 382.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02615",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.407,
+      "ttft_seconds": 0.4069,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 155,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 59.4,
+        "decode_tokens_per_sec": 33.7,
+        "prefill_ms": 321.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02664",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.307,
+      "ttft_seconds": 0.3068,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 127,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.7,
+        "decode_tokens_per_sec": 36.6,
+        "prefill_ms": 229.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02677",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.4,
+      "ttft_seconds": 0.3995,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 132,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.4,
+        "decode_tokens_per_sec": 36.7,
+        "prefill_ms": 319.7
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "C",
+        "correct": "A",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-02803",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.451,
+      "ttft_seconds": 0.451,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 176,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.3,
+        "decode_tokens_per_sec": 35.5,
+        "prefill_ms": 370.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03150",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.458,
+      "ttft_seconds": 0.4579,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 172,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 62.2,
+        "decode_tokens_per_sec": 32.2,
+        "prefill_ms": 370.7
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03257",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.754,
+      "ttft_seconds": 0.7537,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 304,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.1,
+        "decode_tokens_per_sec": 37.7,
+        "prefill_ms": 667.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03432",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.798,
+      "ttft_seconds": 0.7983,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 331,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.4,
+        "decode_tokens_per_sec": 38.2,
+        "prefill_ms": 712.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03456",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.798,
+      "ttft_seconds": 0.7975,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 333,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.1,
+        "decode_tokens_per_sec": 37.7,
+        "prefill_ms": 713.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03483",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.755,
+      "ttft_seconds": 0.7546,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 292,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.4,
+        "decode_tokens_per_sec": 37.4,
+        "prefill_ms": 670.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03527",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.769,
+      "ttft_seconds": 0.7693,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 363,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.2,
+        "decode_tokens_per_sec": 36.3,
+        "prefill_ms": 682.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03582",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.712,
+      "ttft_seconds": 0.7123,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 277,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.1,
+        "decode_tokens_per_sec": 37.6,
+        "prefill_ms": 627.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03598",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.795,
+      "ttft_seconds": 0.7952,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 327,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.4,
+        "decode_tokens_per_sec": 37.4,
+        "prefill_ms": 708.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03611",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.761,
+      "ttft_seconds": 0.7614,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 302,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.3,
+        "decode_tokens_per_sec": 36.8,
+        "prefill_ms": 677.6
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "C",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03657",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.749,
+      "ttft_seconds": 0.7493,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 297,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.0,
+        "decode_tokens_per_sec": 38.5,
+        "prefill_ms": 666.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03733",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.77,
+      "ttft_seconds": 0.7696,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 313,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 51.8,
+        "decode_tokens_per_sec": 38.6,
+        "prefill_ms": 682.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03752",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.767,
+      "ttft_seconds": 0.7668,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 311,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.1,
+        "decode_tokens_per_sec": 37.0,
+        "prefill_ms": 683.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03811",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.765,
+      "ttft_seconds": 0.765,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 309,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.7,
+        "decode_tokens_per_sec": 37.9,
+        "prefill_ms": 684.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-03814",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.769,
+      "ttft_seconds": 0.769,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 309,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.9,
+        "decode_tokens_per_sec": 37.1,
+        "prefill_ms": 686.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04010",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.744,
+      "ttft_seconds": 0.7435,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 289,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.9,
+        "decode_tokens_per_sec": 37.1,
+        "prefill_ms": 656.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04012",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.753,
+      "ttft_seconds": 0.7525,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 295,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.4,
+        "decode_tokens_per_sec": 36.1,
+        "prefill_ms": 662.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04040",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.766,
+      "ttft_seconds": 0.766,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 306,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.0,
+        "decode_tokens_per_sec": 37.0,
+        "prefill_ms": 678.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04333",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.679,
+      "ttft_seconds": 0.6793,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 304,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.6,
+        "decode_tokens_per_sec": 36.6,
+        "prefill_ms": 595.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04339",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.818,
+      "ttft_seconds": 0.8183,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 336,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.9,
+        "decode_tokens_per_sec": 37.1,
+        "prefill_ms": 730.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04374",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.78,
+      "ttft_seconds": 0.7797,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 308,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.0,
+        "decode_tokens_per_sec": 36.4,
+        "prefill_ms": 690.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04386",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.758,
+      "ttft_seconds": 0.7582,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 292,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.9,
+        "decode_tokens_per_sec": 37.8,
+        "prefill_ms": 670.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04422",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.792,
+      "ttft_seconds": 0.7922,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 329,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.7,
+        "decode_tokens_per_sec": 37.3,
+        "prefill_ms": 707.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04506",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.791,
+      "ttft_seconds": 0.7906,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 306,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.8,
+        "decode_tokens_per_sec": 37.2,
+        "prefill_ms": 707.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04552",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.865,
+      "ttft_seconds": 0.8647,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 348,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.8,
+        "decode_tokens_per_sec": 35.2,
+        "prefill_ms": 770.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04554",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.656,
+      "ttft_seconds": 0.6554,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 290,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.6,
+        "decode_tokens_per_sec": 38.0,
+        "prefill_ms": 569.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04557",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.71,
+      "ttft_seconds": 0.7103,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 264,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.1,
+        "decode_tokens_per_sec": 38.4,
+        "prefill_ms": 633.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04741",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.796,
+      "ttft_seconds": 0.7954,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 321,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 57.3,
+        "decode_tokens_per_sec": 34.9,
+        "prefill_ms": 708.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-04803",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.695,
+      "ttft_seconds": 0.6951,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 278,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.5,
+        "decode_tokens_per_sec": 38.1,
+        "prefill_ms": 615.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05155",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.771,
+      "ttft_seconds": 0.7706,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 300,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.9,
+        "decode_tokens_per_sec": 37.8,
+        "prefill_ms": 690.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05168",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.759,
+      "ttft_seconds": 0.7587,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 293,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.1,
+        "decode_tokens_per_sec": 35.6,
+        "prefill_ms": 675.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05313",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.873,
+      "ttft_seconds": 0.8733,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 344,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 98.5,
+        "decode_tokens_per_sec": 20.3,
+        "prefill_ms": 740.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05514",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.757,
+      "ttft_seconds": 0.7566,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 320,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.0,
+        "decode_tokens_per_sec": 37.1,
+        "prefill_ms": 671.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05574",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.794,
+      "ttft_seconds": 0.7936,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 335,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.6,
+        "decode_tokens_per_sec": 36.6,
+        "prefill_ms": 709.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05635",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.702,
+      "ttft_seconds": 0.7021,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 259,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.0,
+        "decode_tokens_per_sec": 37.7,
+        "prefill_ms": 617.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05820",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.81,
+      "ttft_seconds": 0.8101,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 356,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 110.5,
+        "decode_tokens_per_sec": 18.1,
+        "prefill_ms": 663.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05881",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.749,
+      "ttft_seconds": 0.7491,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 315,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.5,
+        "decode_tokens_per_sec": 37.4,
+        "prefill_ms": 662.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05925",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.793,
+      "ttft_seconds": 0.7925,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 321,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.6,
+        "decode_tokens_per_sec": 37.3,
+        "prefill_ms": 707.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-05977",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.773,
+      "ttft_seconds": 0.7731,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 311,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.3,
+        "decode_tokens_per_sec": 37.5,
+        "prefill_ms": 689.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06065",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.685,
+      "ttft_seconds": 0.6848,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 260,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.3,
+        "decode_tokens_per_sec": 38.3,
+        "prefill_ms": 605.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06201",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.857,
+      "ttft_seconds": 0.8568,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 348,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.3,
+        "decode_tokens_per_sec": 35.5,
+        "prefill_ms": 767.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06216",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.765,
+      "ttft_seconds": 0.7648,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 308,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.3,
+        "decode_tokens_per_sec": 36.2,
+        "prefill_ms": 676.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06224",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.77,
+      "ttft_seconds": 0.7697,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 301,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.6,
+        "decode_tokens_per_sec": 36.6,
+        "prefill_ms": 685.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06227",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.781,
+      "ttft_seconds": 0.7806,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 308,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.2,
+        "decode_tokens_per_sec": 36.9,
+        "prefill_ms": 698.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06482",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.765,
+      "ttft_seconds": 0.7645,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 299,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.2,
+        "decode_tokens_per_sec": 37.6,
+        "prefill_ms": 680.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06572",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.776,
+      "ttft_seconds": 0.7762,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 315,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.5,
+        "decode_tokens_per_sec": 36.7,
+        "prefill_ms": 688.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06873",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.71,
+      "ttft_seconds": 0.7095,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 259,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 73.1,
+        "decode_tokens_per_sec": 27.3,
+        "prefill_ms": 604.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06912",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.788,
+      "ttft_seconds": 0.7875,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 340,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.6,
+        "decode_tokens_per_sec": 37.3,
+        "prefill_ms": 695.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-06924",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.779,
+      "ttft_seconds": 0.7788,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 291,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.9,
+        "decode_tokens_per_sec": 37.1,
+        "prefill_ms": 688.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-07359",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.852,
+      "ttft_seconds": 0.8519,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 341,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.5,
+        "decode_tokens_per_sec": 36.7,
+        "prefill_ms": 769.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-07428",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.714,
+      "ttft_seconds": 0.7136,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 277,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.6,
+        "decode_tokens_per_sec": 38.0,
+        "prefill_ms": 635.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-07517",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.801,
+      "ttft_seconds": 0.8006,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 326,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.9,
+        "decode_tokens_per_sec": 36.5,
+        "prefill_ms": 719.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-07527",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.782,
+      "ttft_seconds": 0.7816,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 306,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.0,
+        "decode_tokens_per_sec": 35.7,
+        "prefill_ms": 696.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-07573",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.704,
+      "ttft_seconds": 0.7043,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 279,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 54.4,
+        "decode_tokens_per_sec": 36.7,
+        "prefill_ms": 617.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08179",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.848,
+      "ttft_seconds": 0.8483,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 343,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.6,
+        "decode_tokens_per_sec": 37.3,
+        "prefill_ms": 758.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08279",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.719,
+      "ttft_seconds": 0.719,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 307,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.6,
+        "decode_tokens_per_sec": 37.3,
+        "prefill_ms": 631.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08751",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.773,
+      "ttft_seconds": 0.7733,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 295,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.1,
+        "decode_tokens_per_sec": 37.7,
+        "prefill_ms": 689.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08785",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.798,
+      "ttft_seconds": 0.7975,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 292,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 98.9,
+        "decode_tokens_per_sec": 20.2,
+        "prefill_ms": 669.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08928",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.749,
+      "ttft_seconds": 0.7487,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 297,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.5,
+        "decode_tokens_per_sec": 37.4,
+        "prefill_ms": 666.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-08935",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.733,
+      "ttft_seconds": 0.733,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 280,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 62.7,
+        "decode_tokens_per_sec": 31.9,
+        "prefill_ms": 637.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09044",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.706,
+      "ttft_seconds": 0.7055,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 300,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 80.0,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 593.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09125",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.773,
+      "ttft_seconds": 0.7728,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 308,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 52.8,
+        "decode_tokens_per_sec": 37.8,
+        "prefill_ms": 688.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09195",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.704,
+      "ttft_seconds": 0.7034,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 261,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 55.0,
+        "decode_tokens_per_sec": 36.3,
+        "prefill_ms": 618.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09292",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.79,
+      "ttft_seconds": 0.7899,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 298,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "C",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 71.0,
+        "decode_tokens_per_sec": 28.2,
+        "prefill_ms": 683.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "C",
+        "correct": "C",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09459",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.849,
+      "ttft_seconds": 0.8484,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 321,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 106.5,
+        "decode_tokens_per_sec": 18.8,
+        "prefill_ms": 705.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09654",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.706,
+      "ttft_seconds": 0.7055,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 287,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "D",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 56.1,
+        "decode_tokens_per_sec": 35.6,
+        "prefill_ms": 615.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "D",
+        "correct": "D",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09674",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.776,
+      "ttft_seconds": 0.7754,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 299,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 53.8,
+        "decode_tokens_per_sec": 37.2,
+        "prefill_ms": 677.9
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "A",
+        "correct": "D",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09863",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.834,
+      "ttft_seconds": 0.8334,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 306,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "B",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 106.5,
+        "decode_tokens_per_sec": 18.8,
+        "prefill_ms": 691.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "B",
+        "correct": "B",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09891",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.836,
+      "ttft_seconds": 0.836,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 322,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 98.4,
+        "decode_tokens_per_sec": 20.3,
+        "prefill_ms": 702.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "hellaswag-val-09980",
+      "source": "hellaswag",
+      "kind": "multiple-choice",
+      "wall_seconds": 0.869,
+      "ttft_seconds": 0.8688,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 339,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "A",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 95.9,
+        "decode_tokens_per_sec": 20.9,
+        "prefill_ms": 740.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "A",
+        "correct": "A",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "agent",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 4096,
+  "n": 4,
+  "pass": 3,
+  "pass_rate": 75.0,
+  "wall_total": 95.037,
+  "wall_median": 21.446,
+  "rows": [
+    {
+      "case_id": "codex-mini-read-task",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 8.256,
+      "ttft_seconds": 4.2362,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 1552,
+      "completion_tokens": 60,
+      "reasoning_tokens": null,
+      "content": "I would use:\n\n```\nrg -n \"\" dflash/src/server/http_server.cpp\n```\n\nor simply:\n\n```\ncat dflash/src/server/http_server.cpp\n```\n\nto read the file contents, then analyze the code to summarize its purpose in 2\u20133 sentences.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4448.7,
+        "decode_tokens_per_sec": 13.5,
+        "prefill_ms": 3662.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "agent_shape_ok",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-mini-apply-patch",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 4.87,
+      "ttft_seconds": 4.325,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 1765,
+      "completion_tokens": 13,
+      "reasoning_tokens": null,
+      "content": "Let me find the function and understand the bug first.\n\n",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 689.7,
+        "decode_tokens_per_sec": 18.8,
+        "prefill_ms": 4082.8
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "narrative",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-large-explore",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 34.636,
+      "ttft_seconds": 13.036,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 5361,
+      "completion_tokens": 237,
+      "reasoning_tokens": null,
+      "content": "I'll search the repository for authentication-related files using several targeted approaches.\n\n```\nshell{\"command\":\"rg -l -t py 'auth|login|password|token|jwt|session|oauth|signin' --ignore-case 2>/dev/null; rg -l --glob '*.ts' --glob '*.js' --glob '*.py' --glob '*.java' --glob '*.go' 'auth|login|password|token|jwt|session|oauth|signin' --ignore-case 2>/dev/null\"}\n```\n```\nshell{\"command\":\"rg -l 'middleware|guard|interceptor|authenticate' -g '*.py' -g '*.ts' -g '*.js' -g '*.java' -g '*.go' 2>/dev/null\"}\n```\n```\nshell{\"command\":\"find . -maxdepth 4 -type f \\\\( -name '*auth*' -o -name '*login*' -o -name '*token*' -o -name '*session*' -o -name '*passport*' -o -name '*jwt*' \\\\) 2>/dev/null | head -30\"}\n```",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 21759.5,
+        "decode_tokens_per_sec": 10.9,
+        "prefill_ms": 12713.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "agent_shape_ok",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-medium-test",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 47.275,
+      "ttft_seconds": 11.2477,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4824,
+      "completion_tokens": 321,
+      "reasoning_tokens": null,
+      "content": "*** Begin Patch\n*** Add File: tests/test_parse_thinking_budget.py\nimport pytest\n\n\ndef test_parse_thinking_budget():\n    from thinking_budget import parse_thinking_budget\n\n    # Numeric strings\n    assert parse_thinking_budget(\"0\") == 0\n    assert parse_thinking_budget(\"4096\") == 4096\n    assert parse_thinking_budget(\"100_000\") == 100000\n\n    # Preset keywords (case-insensitive)\n    assert parse_thinking_budget(\"low\") == 1024\n    assert parse_thinking_budget(\"LOW\") == 1024\n    assert parse_thinking_budget(\"medium\") == 2048\n    assert parse_thinking_budget(\"Medium\") == 2048\n    assert parse_thinking_budget(\"high\") == 4096\n    assert parse_thinking_budget(\"HIGH\") == 4096\n\n    # Edge cases\n    assert parse_thinking_budget(\"  4096  \") == 4096\n    assert parse_thinking_budget(\" high \") == 4096\n\n    # Invalid input\n    with pytest.raises(ValueError, match=\"Invalid thinking budget\"):\n        parse_thinking_budget(\"invalid\")\n\n    with pytest.raises(ValueError, match=\"Invalid thinking budget\"):\n        parse_thinking_budget(\"\")\n\n    with pytest.raises(ValueError, match=\"Invalid thinking budget\"):\n        parse_thinking_budget(\"-1\")\n*** End Patch",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 36176.4,
+        "decode_tokens_per_sec": 8.9,
+        "prefill_ms": 10987.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "agent_shape_ok",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}
