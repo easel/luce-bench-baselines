@@ -31,12 +31,45 @@ Each row payload is the bench's standard ds4-eval-shaped dict:
 `pass`, `wall_seconds`, `prompt_tokens`, `completion_tokens`, `content`,
 `reasoning_content`, `finish_reason`, `timings` (when surfaced), etc.
 
+## Adding a new baseline
+
+`scripts/run-baseline.sh` runs luce-bench against a server via `uvx` and
+drops the snapshot into the canonical `<host>-<gpu>-<label>-<date>/`
+directory format. Host + GPU are auto-detected.
+
+```bash
+# Single area (default ds4-eval)
+scripts/run-baseline.sh \
+    --url http://localhost:8080 \
+    --api-model dflash \
+    --label qwen36-nothink-ds4eval
+
+# Full sweep against OpenRouter
+export OPENROUTER_API_KEY=sk-or-...
+scripts/run-baseline.sh \
+    --url https://openrouter.ai/api \
+    --api-model qwen/qwen3.6-27b \
+    --auth-env OPENROUTER_API_KEY \
+    --label or-qwen36-think-sweep \
+    --areas all --think
+```
+
+luce-bench itself is fetched on demand via `uvx --from
+git+https://github.com/easel/lucebox-hub@<ref>#subdirectory=luce-bench`.
+Ref defaults to `feat/lucebox-docker` (where luce-bench currently lives);
+flip to `main` once the PR merges. Override per run with `--ref`.
+
+Each run dir gets: `result.json` (or per-area JSON for `--areas all`),
+`bench.stdout`, `bench.stderr`, a `/props` snapshot when the server
+exposes one, and a re-runnable `command.sh` capturing the exact uvx
+invocation. Commit + push manually after the run.
+
 ## Using them
 
 Diff your own sweep against a baseline:
 
 ```bash
-luce-bench --sweep --name my-machine --base-url http://127.0.0.1:8000
+luce-bench --areas all --name my-machine --base-url http://127.0.0.1:8000
 git clone https://github.com/easel/luce-bench-baselines ../baselines
 luce-bench-report ./snapshots/my-machine \
   ../baselines/bragi-rtx5090laptop-gemma4-26b-2026-05-25-ds4eval-think
