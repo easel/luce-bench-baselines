@@ -1,0 +1,5 @@
+   Updating https://github.com/easel/lucebox-hub (feat/lucebox-docker)
+    Updated https://github.com/easel/lucebox-hub (2cb62ee72731081fb1057565a303c37d77a99780)
+   Building luce-bench @ git+https://github.com/easel/lucebox-hub@2cb62ee72731081fb1057565a303c37d77a99780#subdirectory=luce-bench
+      Built luce-bench @ git+https://github.com/easel/lucebox-hub@2cb62ee72731081fb1057565a303c37d77a99780#subdirectory=luce-bench
+Installed 17 packages in 312ms

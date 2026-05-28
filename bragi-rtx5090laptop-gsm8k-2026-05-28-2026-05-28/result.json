@@ -1,0 +1,3013 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "gsm8k",
+  "url": "http://bragi:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 512,
+  "n": 100,
+  "pass": 80,
+  "pass_rate": 80.0,
+  "rows": [
+    {
+      "case_id": "gsm8k-test-0013",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.736,
+      "ttft_seconds": 0.9143,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 96,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine how many vacuum cleaners Melanie started with, we can work backward from the final amount or set up an algebraic equation. Let's use algebra for clarity.\n\n**Step 1: Define the variable**\nLet $x$ be the initial number of vacuum cleaners Melanie started with.\n\n**Step 2: Analyze the first transaction (Green House)**\nShe sold a third of her vacuum cleaners at the green house.\n- Sold: $\\frac{1}{3}x$\n- Remaining: $x - \\frac{1}{3}x = \\frac{2}{3}x$\n\n**Step 3: Analyze the second transaction (Red House)**\nShe sold 2 more to the red house.\n- Sold: $2$\n- Remaining: $\\frac{2}{3}x - 2$\n\n**Step 4: Analyze the third transaction (Orange House)**\nShe sold half of what was left at the orange house.\n- Current amount before Orange House: $\\frac{2}{3}x - 2$\n- Sold: $\\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right)$\n- Remaining: Since she sold half, she has the other half left.\n  $$ \\text{Remaining} = \\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right) $$\n\n**Step 5: Set up the equation**\nWe are told that she has 5 vacuum cleaners left.\n$$ \\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right) = 5 $$\n\n**Step 6: Solve for $x$**\n\n1. Multiply both sides by 2 to remove the fraction on the left:\n   $$ \\frac{2}{3}x - 2 = 10 $$\n\n2. Add 2 to both sides:\n   $$ \\frac{2}{3}x = 12 $$\n\n3. Multiply both sides by 3 to clear the denominator:\n   $$ 2x = 36 $$\n\n4. Divide by 2:\n   $$ x = 18 $$\n\n**Verification:**\n1. Start with **18**.\n2. Sell 1/3 at the Green House: $\\frac{1}{3} \\times 18 = 6",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20464.0,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 739.9
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "6",
+        "correct": "18",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0051",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.531,
+      "ttft_seconds": 0.287,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 269,
+      "reasoning_tokens": null,
+      "content": "To find out how long it takes Tom to get back, we need to determine the distance of the trip and then calculate the time required to travel that distance at the return speed.\n\n**Step 1: Calculate the distance traveled to the destination.**\nTom travels from 1:00 PM to 4:00 PM.\n- Duration of travel = 4:00 PM - 1:00 PM = 3 hours.\n- Speed = 10 miles per hour.\n- Distance = Speed \u00d7 Time\n- Distance = $10 \\text{ mph} \\times 3 \\text{ hours} = 30 \\text{ miles}$.\n\nSo, the destination is 30 miles away from the starting point.\n\n**Step 2: Calculate the time taken to travel back.**\nTom travels back the same distance (30 miles) at a rate of 6 mph.\n- Distance = 30 miles.\n- Speed = 6 miles per hour.\n- Time = Distance / Speed\n- Time = $30 \\text{ miles} / 6 \\text{ mph} = 5 \\text{ hours}$.\n\n**Conclusion:**\nIt takes Tom 5 hours to get back.\n\n**Answer:** 5 hours",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10776.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 131.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "5",
+        "correct": "5",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0054",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.646,
+      "ttft_seconds": 0.2747,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 119,
+      "completion_tokens": 266,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of kittens the Doubtfire family now has, we need to sum the number of adopted kittens and the number of new kittens born to the house cats.\n\n**Step 1: Identify the number of adopted kittens.**\nThe problem states that the sisters are driving home with **7** adopted kittens.\n\n**Step 2: Calculate the number of kittens Patchy has had.**\nThe problem states that Patchy has had \"thrice the number of adopted kittens.\"\n$$ \\text{Patchy's kittens} = 3 \\times 7 = 21 $$\n\n**Step 3: Identify the number of kittens Trixie has had.**\nThe problem states that Trixie has had **12** kittens.\n\n**Step 4: Calculate the total number of kittens.**\nTotal kittens = (Adopted kittens) + (Patchy's kittens) + (Trixie's kittens)\n$$ \\text{Total} = 7 + 21 + 12 $$\n\nCalculate the sum:\n$$ 7 + 21 = 28 $$\n$$ 28 + 12 = 40 $$\n\n**Conclusion:**\nThe Doubtfire family now has a total of 40 kittens.\n\n40",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10690.1,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 162.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "40",
+        "correct": "40",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0061",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.962,
+      "ttft_seconds": 0.2675,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 100,
+      "completion_tokens": 303,
+      "reasoning_tokens": null,
+      "content": "To determine the total amount Janet paid, we need to calculate the cost of the material, the construction, and the insurance separately, and then add them together.\n\n**Step 1: Calculate the base cost of the brooch.**\nThe base cost consists of the material cost and the construction cost.\n$$ \\text{Base Cost} = \\$500 (\\text{material}) + \\$800 (\\text{construction}) $$\n$$ \\text{Base Cost} = \\$1,300 $$\n\n**Step 2: Calculate the insurance cost.**\nThe insurance cost is 10% of the base cost calculated in Step 1.\n$$ \\text{Insurance Cost} = 10\\% \\times \\$1,300 $$\n$$ \\text{Insurance Cost} = 0.10 \\times 1,300 $$\n$$ \\text{Insurance Cost} = \\$130 $$\n\n**Step 3: Calculate the total amount paid.**\nAdd the base cost and the insurance cost together.\n$$ \\text{Total Paid} = \\text{Base Cost} + \\text{Insurance Cost} $$\n$$ \\text{Total Paid} = \\$1,300 + \\$130 $$\n$$ \\text{Total Paid} = \\$1,430 $$\n\n**Conclusion:**\nJanet paid a total of $1,430.\n\n1430",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12199.2,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 141.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "1430",
+        "correct": "1430",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0065",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 9.934,
+      "ttft_seconds": 0.2821,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 85,
+      "completion_tokens": 251,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to find the total hours Jim spends on TV and reading.\n\n**1. Calculate the time spent per session:**\n*   **TV time:** Jim spends 2 hours watching TV.\n*   **Reading time:** He reads for half as long as he watches TV.\n    $$ \\text{Reading Time} = 2 \\text{ hours} / 2 = 1 \\text{ hour} $$\n*   **Total time per session:**\n    $$ 2 \\text{ hours (TV)} + 1 \\text{ hour (Reading)} = 3 \\text{ hours} $$\n\n**2. Calculate the weekly total:**\n*   He does this routine 3 times a week.\n    $$ 3 \\text{ hours/session} \\times 3 \\text{ sessions/week} = 9 \\text{ hours/week} $$\n\n**3. Calculate the total for 4 weeks:**\n*   Multiply the weekly total by the number of weeks.\n    $$ 9 \\text{ hours/week} \\times 4 \\text{ weeks} = 36 \\text{ hours} $$\n\n**Answer:**\n36",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10149.0,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 117.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "36",
+        "correct": "36",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0088",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.476,
+      "ttft_seconds": 0.2827,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 76,
+      "completion_tokens": 335,
+      "reasoning_tokens": null,
+      "content": "To find out how many copies Harald sold, we can set up an algebraic equation based on the information provided.\n\n**Step 1: Define the variables**\nLet $H$ be the number of copies Harald sold.\nLet $M$ be the number of copies Marilyn sold.\n\n**Step 2: Translate the statements into equations**\n1. \"Marilyn's first record sold 10 times as many copies as Harald's.\"\n   $$ M = 10H $$\n\n2. \"They sold 88,000 copies combined.\"\n   $$ M + H = 88,000 $$\n\n**Step 3: Solve for $H$**\nSubstitute the value of $M$ from the first equation into the second equation:\n$$ 10H + H = 88,000 $$\n\nCombine like terms:\n$$ 11H = 88,000 $$\n\nDivide both sides by 11 to isolate $H$:\n$$ H = \\frac{88,000}{11} $$\n$$ H = 8,000 $$\n\n**Verification:**\nIf Harald sold 8,000 copies, Marilyn sold $10 \\times 8,000 = 80,000$ copies.\nTotal copies = $80,000 + 8,000 = 88,000$. This matches the problem statement.\n\n**Final Answer:**\nHarald sold 8,000 copies.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 13615.4,
+        "decode_tokens_per_sec": 24.6,
+        "prefill_ms": 113.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "8000",
+        "correct": "8000",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0093",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.364,
+      "ttft_seconds": 0.3305,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 122,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n**Step 1: Determine Gerald's original time.**\nThe problem states that Lee used to run the 400-meter hurdles two seconds faster than Gerald. We are given that Lee's time is 38 seconds.\nLet $T_{Lee}$ be Lee's time and $T_{Gerald\\_original}$ be Gerald's original time.\n$$T_{Lee} = 38 \\text{ seconds}$$\n$$T_{Lee} = T_{Gerald\\_original} - 2$$\n\nSubstituting Lee's time into the equation:\n$$38 = T_{Gerald\\_original} - 2$$\n$$T_{Gerald\\_original} = 38 + 2$$\n$$T_{Gerald\\_original} = 40 \\text{ seconds}$$\n\nSo, Gerald's original time was 40 seconds.\n\n**Step 2: Calculate the effect of the diet on Gerald's speed and time.**\nThe problem states that Gerald's diet improved his **speed** by 10%. It is crucial to distinguish between speed and time.\n*   Speed ($v$) is inversely proportional to time ($t$) for a fixed distance ($d$), since $v = d/t$.\n*   If speed increases by 10%, the new speed ($v_{new}$) is $1.10$ times the original speed ($v_{old}$).\n    $$v_{new} = 1.10 \\times v_{old}$$\n\nSince $t = d/v$, we can express the new time ($t_{new}$) in terms of the old time ($t_{old}$):\n$$t_{new} = \\frac{d}{v_{new}} = \\frac{d}{1.10 \\times v_{old}} = \\frac{1}{1.10} \\times \\left(\\frac{d}{v_{old}}\\right) = \\frac{1}{1.10} \\times t_{old}$$\n\nAlternatively, using fractions:\nA 10% increase in speed means the new speed is $\\frac{11}{10}$ of the old speed.\nSince time is the inverse of speed, the new time is $\\frac{10}{11}$ of the old time.\n\n**Step 3: Calculate Gerald's",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20884.4,
+        "decode_tokens_per_sec": 24.5,
+        "prefill_ms": 160.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "3",
+        "correct": "36",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0114",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.201,
+      "ttft_seconds": 0.3223,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 119,
+      "completion_tokens": 251,
+      "reasoning_tokens": null,
+      "content": "To find the number of ducks in Jamal's photograph, we need to work backwards through the information provided.\n\n**Step 1: Determine the number of photographs Brittany's phone can hold.**\nWe know that Jamal's phone can hold 6 times more photographs than Brittany's phone.\nLet $B$ be the number of photographs Brittany's phone can hold.\n$$1800 = 6 \\times B$$\n$$B = \\frac{1800}{6}$$\n$$B = 300$$\nSo, Brittany's phone can hold 300 photographs.\n\n**Step 2: Determine the number of ducks in the photograph.**\nWe know that the maximum number of photographs Brittany's phone can hold (which we found to be 300) is 50 times more than the number of birds (ducks) in Jamal's photograph.\nLet $D$ be the number of ducks in the photograph.\n$$300 = 50 \\times D$$\n$$D = \\frac{300}{50}$$\n$$D = 6$$\n\n**Conclusion:**\nThere are 6 ducks in Jamal's photograph.\n\n6",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10210.5,
+        "decode_tokens_per_sec": 24.6,
+        "prefill_ms": 156.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "6",
+        "correct": "6",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0135",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.364,
+      "ttft_seconds": 0.2856,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 84,
+      "completion_tokens": 210,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Determine the number of games Brian has at the time of comparison:**\n    The problem states that Brian originally has 20 video games, but he lost 5 right before the comparison was made.\n    $$ \\text{Brian's games} = 20 - 5 = 15 $$\n\n2.  **Determine the number of games Bobby has:**\n    The problem states that Bobby has \"5 fewer than 3 times as many video games as Brian does.\" This refers to Brian's current count (after the loss).\n    \n    First, calculate 3 times Brian's current amount:\n    $$ 3 \\times 15 = 45 $$\n    \n    Next, subtract 5 from that amount (since Bobby has 5 *fewer*):\n    $$ 45 - 5 = 40 $$\n\n**Answer:**\nBobby has 40 video games.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8540.7,
+        "decode_tokens_per_sec": 24.6,
+        "prefill_ms": 123.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "40",
+        "correct": "40",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0142",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.759,
+      "ttft_seconds": 0.25,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 84,
+      "completion_tokens": 192,
+      "reasoning_tokens": null,
+      "content": "To determine how much money Jordan would earn, we need to calculate the total number of hours he would work in a week if he spent his gaming time working, and then multiply that by his hourly wage.\n\n**Step 1: Calculate the total gaming hours per week.**\nJordan plays video games for 2 hours every day. There are 7 days in a week.\n$$ 2 \\text{ hours/day} \\times 7 \\text{ days/week} = 14 \\text{ hours/week} $$\n\n**Step 2: Calculate the total earnings for those hours.**\nJordan earns $10 per hour. If he works for the 14 hours he usually spends gaming:\n$$ 14 \\text{ hours} \\times \\$10/\\text{hour} = \\$140 $$\n\n**Final Answer:**\nJordan would earn **$140** in one week.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7834.2,
+        "decode_tokens_per_sec": 24.5,
+        "prefill_ms": 125.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "140",
+        "correct": "140",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0146",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.807,
+      "ttft_seconds": 0.2764,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 120,
+      "completion_tokens": 291,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of Lego blocks Johnny picks up, we need to sum the number of pieces in each of the three boxed sets.\n\n**Step 1: Identify the number of pieces in the first set.**\nThe first set has **500** pieces.\n\n**Step 2: Calculate the number of pieces in the second set.**\nThe problem states the second set has \"3 times more pieces than the 500 piece one.\"\n$$500 \\times 3 = 1500 \\text{ pieces}$$\n\n**Step 3: Calculate the number of pieces in the third set.**\nThe problem states the third set has \"1/4 the number of pieces\" as the first set (the 500-piece one).\n$$500 \\times \\frac{1}{4} = \\frac{500}{4} = 125 \\text{ pieces}$$\n\n**Step 4: Calculate the total number of pieces.**\nSum the pieces from all three sets:\n$$500 + 1500 + 125$$\n\n$$500 + 1500 = 2000$$\n$$2000 + 125 = 2125$$\n\n**Conclusion:**\nJohnny picks up a total of **2125** blocks.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 11932.9,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 158.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "2125",
+        "correct": "2125",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0161",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.352,
+      "ttft_seconds": 0.2659,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 110,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of fish caught by Anakin and Locsin, we need to calculate the catch for each person individually and then sum them up. Note that in biological terms, starfish (echinoderms) and sea horses (fish) are distinct, but \"clownfish\" are definitely fish. However, in the context of typical elementary math word problems of this type, the term \"fish\" is often used loosely to refer to all marine creatures caught, or the question implies counting all the marine animals mentioned. Let's look at the specific question: \"How many **fish** were they able to catch?\"\n\nStrictly speaking:\n- Starfish are not fish.\n- Sea horses are fish.\n- Clownfish are fish.\n\nHowever, in standardized benchmark datasets (like GSM8K or similar logic puzzles), \"fish\" is frequently used as a catch-all term for the aquatic creatures listed unless a distinction is explicitly required to exclude non-fish. If we strictly exclude starfish, the answer would be different. Let's analyze the standard interpretation of such riddles. Usually, these problems ask for the total count of the items listed as \"catches\". Let's calculate the total count of all marine animals first, as that is the most common intent in these \"shopping list\" style word problems. If the strict biological definition is required, I will provide that as a secondary consideration, but usually, the prompt implies \"total marine animals\".\n\nLet's assume the question asks for the total number of marine animals (starfish, sea horses, and clownfish) combined, as is standard for this genre of problem unless it's a \"trick\" question. Let's calculate the totals for each creature type.\n\n**Step 1: Calculate Anakin's Catch**\n*   Starfish: 10\n*   Sea horses: 6\n*   Clownfish: 3\n\n**Step 2: Calculate Locsin's Catch**\n*   **Starfish:** Locsin caught 5 fewer starfish than Anakin.\n    $$10 - 5 = 5 \\text{ starfish}$$\n*   **Sea horses:** Locsin caught 3 fewer sea horses than Anakin.\n    $$6 - 3 = 3 \\text{ sea horses}$$\n*   **Clownfish:** Locsin caught 2 more clownfish than Anakin.\n    $$3 + 2 = 5 \\text{ clownfish}$$",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20916.8,
+        "decode_tokens_per_sec": 24.5,
+        "prefill_ms": 144.5
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "5",
+        "correct": "32",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0163",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 14.53,
+      "ttft_seconds": 0.2825,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 94,
+      "completion_tokens": 362,
+      "reasoning_tokens": null,
+      "content": "To find the total worth of all the toys, we need to calculate the cost of each item based on the information provided.\n\n**1. Identify the quantities and given costs:**\n*   **Red cars:** 5\n*   **Action figures:** 3\n*   **Doll:** 1\n*   **Cost of one red car:** $4\n*   **Cost of one action figure:** $5\n\n**2. Determine the cost of the doll:**\nThe problem states that \"The doll cost as much as 3 action figures\".\n*   Cost of 1 action figure = $5\n*   Cost of the doll = $3 \\times 5 = \\$15$\n\n**3. Calculate the total cost for each type of toy:**\n\n*   **Total cost for Red cars:**\n    $$5 \\text{ cars} \\times \\$4/\\text{car} = \\$20$$\n\n*   **Total cost for Action figures:**\n    $$3 \\text{ action figures} \\times \\$5/\\text{action figure} = \\$15$$\n\n*   **Total cost for the Doll:**\n    $$1 \\text{ doll} \\times \\$15/\\text{doll} = \\$15$$\n\n**4. Calculate the total worth of all toys:**\n$$ \\text{Total Worth} = (\\text{Cost of Red cars}) + (\\text{Cost of Action figures}) + (\\text{Cost of Doll}) $$\n$$ \\text{Total Worth} = \\$20 + \\$15 + \\$15 $$\n$$ \\text{Total Worth} = \\$50 $$\n\n**Conclusion:**\nThe total worth of all the toys is **$50**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14664.2,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 134.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "50",
+        "correct": "50",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0178",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.844,
+      "ttft_seconds": 0.2521,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 80,
+      "completion_tokens": 304,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to determine the total number of crabs:\n\n**Step 1: Determine the number of crabs Bo has.**\nThe problem states that Bo has 40 crabs.\n$$Bo = 40$$\n\n**Step 2: Determine the number of crabs Monic has.**\nThe problem states that Monic has 4 fewer crabs than Bo.\n$$Monic = Bo - 4$$\n$$Monic = 40 - 4 = 36$$\n\n**Step 3: Determine the number of crabs Rani has.**\nThe problem states that Rani has ten more crabs than Monic.\n$$Rani = Monic + 10$$\n$$Rani = 36 + 10 = 46$$\n\n**Step 4: Calculate the total number of crabs.**\nAdd the number of crabs held by each person together.\n$$ \\text{Total} = Bo + Monic + Rani $$\n$$ \\text{Total} = 40 + 36 + 46 $$\n\nFirst, add Bo and Monic's crabs:\n$$ 40 + 36 = 76 $$\n\nThen, add Rani's crabs:\n$$ 76 + 46 = 122 $$\n\n**Final Answer:**\nThe three have **122** crabs together.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12257.1,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 114.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "122",
+        "correct": "122",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0189",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 17.602,
+      "ttft_seconds": 0.2449,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 106,
+      "completion_tokens": 442,
+      "reasoning_tokens": null,
+      "content": "To determine how much each friend paid, we need to calculate the total cost incurred by the group and then divide that amount by the number of friends.\n\n**Step 1: Calculate the cost of the food.**\nThe friends spent $4.50 less on food than on tickets.\nCost of tickets = $20.25\nCost of food = Cost of tickets - $4.50\n$$ \\text{Cost of food} = 20.25 - 4.50 = 15.75 $$\nSo, they spent **$15.75** on food.\n\n**Step 2: Calculate the cost of the rides.**\nThey went on 2 different rides, which cost $33 for each ride.\n$$ \\text{Cost of rides} = 2 \\times 33 = 66 $$\nSo, they spent **$66.00** on rides.\n\n**Step 3: Calculate the total cost.**\nTotal Cost = Cost of tickets + Cost of food + Cost of rides\n$$ \\text{Total Cost} = 20.25 + 15.75 + 66.00 $$\n\nFirst, add the ticket and food costs:\n$$ 20.25 + 15.75 = 36.00 $$\n\nThen, add the ride costs:\n$$ 36.00 + 66.00 = 102.00 $$\n\nThe total cost for the group is **$102.00**.\n\n**Step 4: Calculate the cost per person.**\nThere are 3 friends, and they agreed to split the costs evenly.\n$$ \\text{Cost per person} = \\frac{\\text{Total Cost}}{3} $$\n$$ \\text{Cost per person} = \\frac{102.00}{3} $$\n$$ \\text{Cost per person} = 34.00 $$\n\nEach friend paid $34.00.\n\n34",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17906.9,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 144.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "34",
+        "correct": "34",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0191",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 19.931,
+      "ttft_seconds": 0.258,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 75,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To find out how much each duck needs to pay (eat), we need to determine the total amount of insects consumed by the flock per day and then divide that by the number of ducks. Alternatively, we can find the daily consumption per duck first. Let's break it down logically.\n\n**Method 1: Calculate total daily consumption first**\n\n1.  **Calculate the total weekly consumption for the flock:**\n    There are 10 ducks, and each duck needs 3.5 pounds of insects per week.\n    $$ \\text{Total weekly consumption} = 10 \\text{ ducks} \\times 3.5 \\text{ pounds/duck/week} = 35 \\text{ pounds/week} $$\n\n2.  **Calculate the total daily consumption for the flock:**\n    There are 7 days in a week. To find the daily amount, divide the weekly total by 7.\n    $$ \\text{Total daily consumption} = \\frac{35 \\text{ pounds}}{7 \\text{ days}} = 5 \\text{ pounds/day} $$\n\n3.  **Calculate the daily consumption per duck:**\n    The question asks \"how many pounds of insects do **they** need per day\". The pronoun \"they\" refers to the flock (\"a flock of ten ducks\"). However, phrasing can sometimes be ambiguous. Does it mean \"how much does *each* duck need per day\" or \"how much does the *group* need per day\"?\n    \n    Let's re-read carefully: \"how many pounds of insects do **they** need per day?\"\n    In English grammar, \"they\" refers to the subject previously mentioned, which is \"a flock of ten ducks\" (collective noun/plural). Usually, if the question meant \"each,\" it would say \"how many pounds... does **each** need per day?\" or \"how many pounds... do **the ducks** need **each** per day?\".\n    \n    However, let's look at the singular/plural agreement.\n    - If \"they\" refers to the flock as a group: The answer is 5 pounds.\n    - If \"they\" refers to the individual ducks collectively implying a per-duck average (common in these types of word problems where the unit is normalized): The answer would be $5 / 10 = 0.5$ pounds.\n    \n    Let's look at the phrasing again:",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20569.1,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 108.8
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "0.5",
+        "correct": "5",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0198",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.598,
+      "ttft_seconds": 0.2456,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 114,
+      "completion_tokens": 393,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of Pokemon cards Elaine has now, we need to track the number of cards she had initially and add the cards collected in each subsequent month.\n\n**Step 1: Determine the initial number of cards.**\nElaine initially had:\n$$20 \\text{ cards}$$\n\n**Step 2: Calculate cards collected in the first month.**\nThe problem states she collected three times the initial number.\n$$3 \\times 20 = 60 \\text{ cards}$$\n\n**Step 3: Calculate cards collected in the second month.**\nShe collected 20 fewer cards than those she collected in the first month.\n$$60 - 20 = 40 \\text{ cards}$$\n\n**Step 4: Calculate cards collected in the third month.**\nShe collected twice the combined number of cards collected in the first and second months.\nFirst, find the combined total of the first and second months:\n$$60 + 40 = 100 \\text{ cards}$$\nThen, multiply by 2:\n$$2 \\times 100 = 200 \\text{ cards}$$\n\n**Step 5: Calculate the total number of cards.**\nAdd the initial amount and the cards collected in all three months:\n$$\\text{Initial} + \\text{Month 1} + \\text{Month 2} + \\text{Month 3}$$\n$$20 + 60 + 40 + 200$$\n\nLet's sum them up:\n$$20 + 60 = 80$$\n$$80 + 40 = 120$$\n$$120 + 200 = 320$$\n\nElaine has a total of 320 Pokemon cards.\n\n320",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15753.9,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 154.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "320",
+        "correct": "320",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0206",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.36,
+      "ttft_seconds": 0.2527,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 116,
+      "completion_tokens": 396,
+      "reasoning_tokens": null,
+      "content": "To calculate the total distance Micheal rode, we need to break down the problem into two periods: the first four weeks and the next three weeks.\n\n**Step 1: Calculate the distance covered in the first four weeks.**\n*   Frequency: At least 5 times a week. We assume the minimum specified, which is 5 times.\n*   Distance per ride: 25 kilometers.\n*   Duration: 4 weeks.\n\nFirst, find the weekly distance for this period:\n$$5 \\text{ rides/week} \\times 25 \\text{ km/ride} = 125 \\text{ km/week}$$\n\nNext, find the total distance for the 4 weeks:\n$$125 \\text{ km/week} \\times 4 \\text{ weeks} = 500 \\text{ km}$$\n\n**Step 2: Calculate the distance covered in the next three weeks.**\n*   Frequency: 2 times a week.\n*   Distance per ride: 60 kilometers.\n*   Duration: 3 weeks.\n\nFirst, find the weekly distance for this period:\n$$2 \\text{ rides/week} \\times 60 \\text{ km/ride} = 120 \\text{ km/week}$$\n\nNext, find the total distance for the 3 weeks:\n$$120 \\text{ km/week} \\times 3 \\text{ weeks} = 360 \\text{ km}$$\n\n**Step 3: Calculate the total distance.**\nAdd the distances from both periods together:\n$$500 \\text{ km} + 360 \\text{ km} = 860 \\text{ km}$$\n\n**Conclusion:**\nMicheal rode a total of 860 kilometers.\n\n860",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15905.0,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 156.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "860",
+        "correct": "860",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0209",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.206,
+      "ttft_seconds": 0.2469,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 75,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To find the total cost of buying each cup, we need to determine the total cost of all the cups and then divide by the number of cups.\n\n**Step 1: Calculate the total cost of the plates.**\n*   \"Half a dozen\" plates means $6$ plates.\n*   The cost of one plate is $\\$6000$.\n*   Total cost of plates = $6 \\times \\$6000 = \\$36,000$.\n\n**Step 2: Calculate the total cost of the cups.**\n*   The problem states that the cost of twenty dozen cups is $\\$1200$ less than the total cost of the plates.\n*   Total cost of cups = Total cost of plates - $\\$1200$\n*   Total cost of cups = $\\$36,000 - \\$1200 = \\$34,800$.\n\n**Step 3: Determine the number of cups.**\n*   \"Twenty dozen\" cups means $20 \\times 12$ cups.\n*   Number of cups = $240$ cups.\n\n**Step 4: Calculate the cost per cup.**\n*   Cost per cup = $\\frac{\\text{Total cost of cups}}{\\text{Number of cups}}$\n*   Cost per cup = $\\frac{34,800}{240}$\n\nLet's perform the division:\n$$ \\frac{34,800}{240} = \\frac{34,800 \\div 10}{240 \\div 10} = \\frac{3,480}{24} $$\n\nDivide $3480$ by $24$:\n$$ 3480 \\div 24 $$\n$$ 24 \\times 100 = 2400 $$\n$$ 3480 - 2400 = 1080 $$\n$$ 24 \\times 40 = 960 $$\n$$ 1080 - 960 = 120 $$\n$$ 24 \\times 5 = 120 $$\n$$ 120 - 120 = 0 $$\n$$ 100 + 40 + 5 = 145 $$\n\nSo",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20518.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 108.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "145",
+        "correct": "145",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0228",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.675,
+      "ttft_seconds": 0.259,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 93,
+      "completion_tokens": 302,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Determine Kalinda's work rate:**\n    Kalinda can place 4 pieces per minute.\n\n2.  **Determine her mom's work rate:**\n    Her mom places half as many pieces per minute as Kalinda.\n    $$ \\text{Mom's rate} = \\frac{4}{2} = 2 \\text{ pieces per minute} $$\n\n3.  **Calculate the combined work rate:**\n    Working together, their combined rate is the sum of their individual rates.\n    $$ \\text{Combined rate} = 4 + 2 = 6 \\text{ pieces per minute} $$\n\n4.  **Calculate the total time in minutes:**\n    The puzzle has 360 pieces. To find the time required, divide the total number of pieces by the combined rate.\n    $$ \\text{Time (minutes)} = \\frac{360}{6} = 60 \\text{ minutes} $$\n\n5.  **Convert the time to hours:**\n    There are 60 minutes in 1 hour.\n    $$ \\text{Time (hours)} = \\frac{60 \\text{ minutes}}{60 \\text{ minutes/hour}} = 1 \\text{ hour} $$\n\n**Conclusion:**\nIt will take them 1 hour to complete the puzzle.\n\n1",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12128.1,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 128.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "1",
+        "correct": "1",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0255",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 17.499,
+      "ttft_seconds": 0.2573,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 443,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step solution:\n\n**Step 1: Determine the initial number of stalls and cows.**\nThe problem states there are \"Ten stalls\" initially, but later refers to \"each of the twenty stalls.\" This implies that the number of stalls available for the new cows is 20. Let's assume the context implies there are 20 stalls in total where the distribution occurs.\n\n*   Number of stalls = 20\n*   Initial cows per stall = 20\n\n**Step 2: Determine the number of new cows added per stall.**\nMr. Sylas buys 40 cows and divides them equally among the 20 stalls.\n$$ \\text{New cows per stall} = \\frac{\\text{Total new cows}}{\\text{Number of stalls}} $$\n$$ \\text{New cows per stall} = \\frac{40}{20} = 2 \\text{ cows per stall} $$\n\n**Step 3: Calculate the total number of cows in a single stall.**\nEach stall originally had 20 cows. We add the 2 new cows to each stall.\n$$ \\text{Total cows per stall} = \\text{Initial cows} + \\text{New cows} $$\n$$ \\text{Total cows per stall} = 20 + 2 = 22 \\text{ cows} $$\n\n**Step 4: Calculate the number of cows in 8 of the stalls.**\nThe question asks for the total number of cows in 8 of these stalls.\n$$ \\text{Total cows in 8 stalls} = 8 \\times \\text{Total cows per stall} $$\n$$ \\text{Total cows in 8 stalls} = 8 \\times 22 $$\n\nCalculation:\n$$ 8 \\times 20 = 160 $$\n$$ 8 \\times 2 = 16 $$\n$$ 160 + 16 = 176 $$\n\n**Conclusion:**\nThere are 176 cows in 8 of the stalls.\n\n176",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17739.1,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 127.3
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "176",
+        "correct": "192",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0285",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 4.716,
+      "ttft_seconds": 0.2296,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 64,
+      "completion_tokens": 121,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction:\n\n1.  **Calculate the brother's current age:**\n    Ann is 9 years old. Her brother is twice her age.\n    $$ 9 \\times 2 = 18 $$\n    So, the brother is currently 18 years old.\n\n2.  **Calculate the brother's age in 3 years:**\n    Add 3 years to his current age.\n    $$ 18 + 3 = 21 $$\n\n**Conclusion:**\nHer brother will be 21 years old.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4808.8,
+        "decode_tokens_per_sec": 25.2,
+        "prefill_ms": 93.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "21",
+        "correct": "21",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0292",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 16.371,
+      "ttft_seconds": 0.2233,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 90,
+      "completion_tokens": 423,
+      "reasoning_tokens": null,
+      "content": "To determine how much money Susan earns, we need to calculate the total time she actually worked and then apply her earnings rate.\n\n**Step 1: Calculate the total duration of the work period.**\nThe time from 8:00 a.m. to 11:00 a.m. is:\n$$ 11:00 - 8:00 = 3 \\text{ hours} $$\n\nConvert hours to minutes:\n$$ 3 \\text{ hours} \\times 60 \\text{ minutes/hour} = 180 \\text{ minutes} $$\n\n**Step 2: Calculate the actual working time.**\nSusan pauses for half an hour (30 minutes). We subtract this break time from the total duration to find the time she spent working.\n$$ \\text{Working time} = 180 \\text{ minutes} - 30 \\text{ minutes} = 150 \\text{ minutes} $$\n\n**Step 3: Calculate the earnings.**\nSusan earns $5 every 10 minutes. First, we determine how many 10-minute intervals are in her working time.\n$$ \\text{Number of intervals} = \\frac{150 \\text{ minutes}}{10 \\text{ minutes/interval}} = 15 \\text{ intervals} $$\n\nNow, multiply the number of intervals by the earnings per interval:\n$$ \\text{Total Earnings} = 15 \\text{ intervals} \\times \\$5/\\text{interval} $$\n$$ 15 \\times 5 = 75 $$\n\n**Alternative Method (Hourly Rate):**\n1. Earnings per minute: $\\$5 / 10 = \\$0.50$ per minute.\n2. Total working minutes: $150$ minutes.\n3. Total earnings: $150 \\times \\$0.50 = \\$75$.\n\n**Final Answer:**\nSusan earns **$75**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16937.7,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 128.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "75",
+        "correct": "75",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0318",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.918,
+      "ttft_seconds": 0.2268,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 89,
+      "completion_tokens": 350,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of children in the classroom, we need to calculate the number of girls and nongendered children based on the given number of boys.\n\n**Step 1: Identify the number of boys.**\nThe problem states there are 30 boys.\n$$ \\text{Boys} = 30 $$\n\n**Step 2: Calculate the number of girls.**\nThe problem states there are 3 times as many girls as boys.\n$$ \\text{Girls} = 3 \\times \\text{Boys} $$\n$$ \\text{Girls} = 3 \\times 30 = 90 $$\n\n**Step 3: Calculate the number of nongendered children.**\nThe problem states there are $1/10$ as many nongendered children as boys.\n$$ \\text{Nongendered} = \\frac{1}{10} \\times \\text{Boys} $$\n$$ \\text{Nongendered} = \\frac{1}{10} \\times 30 = 3 $$\n\n**Step 4: Calculate the total number of children.**\nAdd the number of boys, girls, and nongendered children together.\n$$ \\text{Total Children} = \\text{Boys} + \\text{Girls} + \\text{Nongendered} $$\n$$ \\text{Total Children} = 30 + 90 + 3 $$\n$$ \\text{Total Children} = 120 + 3 = 123 $$\n\nThe classroom has a total of 123 children.\n\n123",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14043.6,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 125.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "123",
+        "correct": "123",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0326",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 16.754,
+      "ttft_seconds": 0.273,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 107,
+      "completion_tokens": 431,
+      "reasoning_tokens": null,
+      "content": "To find out how many people got on the bus at the terminal, we can work backward from the final total or set up a simple algebraic equation. Let's define the variable $x$ as the number of people who got on the bus at the terminal.\n\n**Step 1: Track the number of people through each stop.**\n\n1.  **At the Terminal:**\n    *   Initial people on the bus: $x$\n\n2.  **At the First Bus Stop:**\n    *   5 people got on.\n    *   Current total: $x + 5$\n\n3.  **At the Second Bus Stop:**\n    *   7 people got off.\n    *   8 people got on.\n    *   Net change: $-7 + 8 = +1$\n    *   Current total: $(x + 5) - 7 + 8$\n    *   Simplifying this expression: $x + 5 + 1 = x + 6$\n\n**Step 2: Set up the equation.**\n\nWe are told that there were a total of 20 people heading to the third stop. This means the number of people on the bus after the second stop is 20.\n\n$$x + 6 = 20$$\n\n**Step 3: Solve for $x$.**\n\nSubtract 6 from both sides of the equation:\n\n$$x = 20 - 6$$\n$$x = 14$$\n\n**Verification:**\n*   Start with 14 people at the terminal.\n*   First stop: $14 + 5 = 19$ people.\n*   Second stop: $19 - 7 = 12$ people get off, then $12 + 8 = 20$ people get on.\n*   Total heading to the third stop: 20. This matches the problem statement.\n\n**Conclusion:**\n\n14 people got on the bus at the terminal.\n\n14",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17280.4,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 142.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "14",
+        "correct": "14",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0333",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.451,
+      "ttft_seconds": 0.29,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 119,
+      "completion_tokens": 341,
+      "reasoning_tokens": null,
+      "content": "To determine the cost difference between the two offers, we need to calculate the total cost for each offer and then find the difference between them.\n\n**Step 1: Calculate the total cost of Furniture United's offer.**\n\n*   Advance payment: $\\$1,350$\n*   Monthly installments: $6 \\times \\$350$\n\nFirst, calculate the total installment amount:\n$$6 \\times 350 = 2,100$$\n\nNow, add the advance payment to the total installments:\n$$1,350 + 2,100 = 3,450$$\n\nThe total cost for Furniture United is **$\\$3,450$**.\n\n**Step 2: Calculate the total cost of Cozy Homes' offer.**\n\n*   Advance payment: $\\$1,100$\n*   Monthly installments: $9 \\times \\$250$\n\nFirst, calculate the total installment amount:\n$$9 \\times 250 = 2,250$$\n\nNow, add the advance payment to the total installments:\n$$1,100 + 2,250 = 3,350$$\n\nThe total cost for Cozy Homes is **$\\$3,350$**.\n\n**Step 3: Calculate the difference between the two offers.**\n\nSubtract the lower total cost from the higher total cost:\n$$3,450 - 3,350 = 100$$\n\nThe cost difference is **$\\$100$**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 13662.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 190.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "100",
+        "correct": "100",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0334",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.948,
+      "ttft_seconds": 0.224,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 94,
+      "completion_tokens": 357,
+      "reasoning_tokens": null,
+      "content": "To determine how many guns each person would have if they shared them equally, we must first find the total number of paintball guns and the total number of people involved.\n\n**Step 1: Identify the number of people and their gun counts.**\nThe problem lists four individuals: Nick, Richard, Jason, and DJ.\n*   Nick: 10 guns\n*   Richard: 5 guns\n*   Jason: The problem states \"Nick, Richard, Jason and DJ each have paintball guns,\" but then lists specific counts for DJ (8), Nick (10), and Richard (5). It also mentions \"RJ has 1 gun\". Given the list of names in the premise (Nick, Richard, Jason, DJ), \"RJ\" is almost certainly a typo for \"Jason\". Therefore, Jason has 1 gun.\n*   DJ: 8 guns\n\nSo, the group consists of 4 people: Nick, Richard, Jason, and DJ.\n\n**Step 2: Calculate the total number of guns.**\n$$Total\\ Guns = Nick + Richard + Jason + DJ$$\n$$Total\\ Guns = 10 + 5 + 1 + 8$$\n$$Total\\ Guns = 24$$\n\n**Step 3: Divide the total number of guns equally among the people.**\nThere are 4 people.\n$$Guns\\ per\\ person = \\frac{Total\\ Guns}{Number\\ of\\ People}$$\n$$Guns\\ per\\ person = \\frac{24}{4}$$\n$$Guns\\ per\\ person = 6$$\n\n**Conclusion:**\nIf they shared their guns equally, each of them would have 6 guns.\n\n6",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14281.9,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 127.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "6",
+        "correct": "6",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0350",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.432,
+      "ttft_seconds": 0.2534,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 116,
+      "completion_tokens": 393,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of hours for Peyton's after-work activities, we need to calculate the duration of each activity and sum them up.\n\n**Step 1: Determine the duration of each activity.**\n\n1.  **Monday (Yoga Class):**\n    The problem states the yoga class is **1 hour** long.\n\n2.  **Tuesday (Cooking Class):**\n    The problem states the cooking class lasts three times as long as Monday\u2019s yoga.\n    $$3 \\times 1 \\text{ hour} = 3 \\text{ hours}$$\n\n3.  **Wednesday (Cheese-Tasting Event):**\n    The problem states this event is a half-hour.\n    $$0.5 \\text{ hours}$$\n\n4.  **Thursday (Museum Tour):**\n    The problem states the museum tour takes half as long as the cooking class.\n    The cooking class was 3 hours long.\n    $$\\frac{1}{2} \\times 3 \\text{ hours} = 1.5 \\text{ hours}$$\n\n5.  **Friday (Errands):**\n    The problem states the errands take **2 hours**.\n\n**Step 2: Sum the durations.**\n\n$$1 \\text{ (Mon)} + 3 \\text{ (Tue)} + 0.5 \\text{ (Wed)} + 1.5 \\text{ (Thu)} + 2 \\text{ (Fri)}$$\n\nLet's add them step-by-step:\n*   $1 + 3 = 4$\n*   $4 + 0.5 = 4.5$\n*   $4.5 + 1.5 = 6$\n*   $6 + 2 = 8$\n\n**Conclusion:**\n\nThe total time for all after-work activities is 8 hours.\n\n8",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15747.3,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 160.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "8",
+        "correct": "8",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0393",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 19.892,
+      "ttft_seconds": 0.2036,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 74,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine the percentage of time spent editing, we must first calculate the total time spent on all activities and ensure all time units are consistent (hours or minutes).\n\n**Step 1: Calculate the duration of each activity.**\n\n*   **Writing:** The problem states Carol spends **4 hours** writing the song.\n*   **Recording:** The problem states she spends half the time writing on recording.\n    $$3.5 \\text{ is incorrect. } \\frac{1}{2} \\times 4 \\text{ hours} = 2 \\text{ hours}$$\n    So, recording takes **2 hours**.\n*   **Editing:** The problem states she spends **90 minutes** editing. To keep units consistent with the other activities (hours), we convert minutes to hours:\n    $$90 \\text{ minutes} = \\frac{90}{60} \\text{ hours} = 1.5 \\text{ hours}$$\n\n**Step 2: Calculate the total work time.**\n\n$$\\text{Total Time} = \\text{Writing Time} + \\text{Recording Time} + \\text{Editing Time}$$\n$$\\text{Total Time} = 4 \\text{ hours} + 2 \\text{ hours} + 1.5 \\text{ hours}$$\n$$\\text{Total Time} = 7.5 \\text{ hours}$$\n\n**Step 3: Calculate the percentage of time spent editing.**\n\nThe formula for the percentage is:\n$$\\text{Percentage} = \\left( \\frac{\\text{Editing Time}}{\\text{Total Time}} \\right) \\times 100\\%$$\n\nSubstitute the values in hours:\n$$\\text{Percentage} = \\left( \\frac{1.5}{7.5} \\right) \\times 100\\%$$\n\nSimplify the fraction $\\frac{1.5}{7.5}$:\n$$\\frac{1.5}{7.5} = \\frac{15}{75} = \\frac{1}{5}$$\n\nConvert $\\frac{1}{5}$ to a percentage:\n$$\\frac{1}{5} = 0.2$$\n$$0.2 \\times 100\\% = 20\\%$$\n\n**Conclusion:**\n\nCarol spent 20% of her total work time editing",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20541.3,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 109.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "20",
+        "correct": "20",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0407",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.061,
+      "ttft_seconds": 0.2946,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 132,
+      "completion_tokens": 509,
+      "reasoning_tokens": null,
+      "content": "To determine how many steps Elliott took during his jog, we can break down the problem step-by-step by tracking the total goal and the steps accounted for so far.\n\n**1. Identify the total daily goal:**\nElliott's goal is 10,000 steps.\n\n**2. Calculate the steps taken before the jog:**\n*   **Walks to and from school:** He finished half of his steps.\n    $$10,000 \\times 0.5 = 5,000 \\text{ steps}$$\n*   **Short walk with friend:** He took another 1,000 steps.\n    $$5,000 + 1,000 = 6,000 \\text{ steps}$$\n\nSo, before the jog, Elliott had taken **6,000 steps**.\n\n**3. Determine the remaining steps needed after the jog:**\nThe problem states that after the jog, he had **2,000 steps left** to reach his goal.\n\n**4. Calculate the steps taken during the jog:**\nWe know the total goal is 10,000 steps. We can set up an equation where $J$ is the steps taken during the jog:\n\n$$\\text{Steps before jog} + \\text{Steps during jog} + \\text{Steps remaining} = \\text{Total Goal}$$\n$$6,000 + J + 2,000 = 10,000$$\n\nCombine the known steps (before jog and remaining):\n$$8,000 + J = 10,000$$\n\nSolve for $J$:\n$$J = 10,000 - 8,000$$\n$$J = 2,000$$\n\n**Verification:**\n*   Walks to/from school: 5,000\n*   Walk with friend: 1,000\n*   Jog: 2,000\n*   Remaining needed: 2,000\n*   Total: $5,000 + 1,000 + 2,000 + 2,000 = 10,000$.\n\nElliott took 2,000 steps during his jog.\n\n2,000",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20366.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 200.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "2000",
+        "correct": "2000",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0429",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.335,
+      "ttft_seconds": 0.2655,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 81,
+      "completion_tokens": 267,
+      "reasoning_tokens": null,
+      "content": "To find the total number of letters in Indras' and her sister's names, we will calculate the number of letters in each name separately and then sum them up.\n\n**Step 1: Determine the number of letters in Indras' name.**\nThe problem states that Indras has 6 letters in her name.\n$$ \\text{Indras' letters} = 6 $$\n\n**2. Determine the number of letters in her sister's name.**\nThe problem states that her sister's name has 4 more letters than half of the letters in Indras' name.\n\nFirst, calculate half of the letters in Indras' name:\n$$ \\frac{6}{2} = 3 \\text{ letters} $$\n\nNext, add 4 to this amount to find the sister's name length:\n$$ 3 + 4 = 7 \\text{ letters} $$\n\nSo, the sister's name has **7 letters**.\n\n**Step 3: Calculate the total number of letters.**\nAdd the number of letters in Indras' name and her sister's name together:\n$$ 6 + 7 = 13 $$\n\n**Conclusion:**\nThere are **13** letters in Indras' and her sister's names combined.\n\n13",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10675.9,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 120.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "13",
+        "correct": "13",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0432",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.673,
+      "ttft_seconds": 0.2976,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 129,
+      "completion_tokens": 395,
+      "reasoning_tokens": null,
+      "content": "To determine how many dragons Prince Bruce slew, we will break down the information step-by-step based on the relationships provided in the text.\n\n**Step 1: Determine the number of dragons slain by Prince Thaddeus.**\nThe text explicitly states:\nPrince Thaddeus slew **100** dragons.\n\n**Step 2: Determine the number of dragons slain by Prince Arthur.**\nThe text states: Prince Arthur slew three quarters as many dragons as Prince Thaddeus.\n$$ \\text{Arthur's Dragons} = \\frac{3}{4} \\times \\text{Thaddeus's Dragons} $$\n$$ \\text{Arthur's Dragons} = \\frac{3}{4} \\times 100 $$\n$$ \\text{Arthur's Dragons} = 3 \\times 25 $$\n$$ \\text{Arthur's Dragons} = 75 $$\n\n**Step 3: Determine the number of dragons slain by Prince Walter.**\nThe text states: Prince Walter slew twice as many dragons as Prince Arthur.\n$$ \\text{Walter's Dragons} = 2 \\times \\text{Arthur's Dragons} $$\n$$ \\text{Walter's Dragons} = 2 \\times 75 $$\n$$ \\text{Walter's Dragons} = 150 $$\n\n**Step 4: Determine the number of dragons slain by Prince Bruce.**\nThe text states: Prince Bruce slew one-fifth as many dragons as Prince Walter.\n$$ \\text{Bruce's Dragons} = \\frac{1}{5} \\times \\text{Walter's Dragons} $$\n$$ \\text{Bruce's Dragons} = \\frac{1}{5} \\times 150 $$\n$$ \\text{Bruce's Dragons} = 30 $$\n\n**Conclusion:**\nPrince Bruce slew 30 dragons.\n\n30",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15823.3,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 185.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "30",
+        "correct": "30",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0435",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.057,
+      "ttft_seconds": 0.2607,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 79,
+      "completion_tokens": 206,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Identify the total number of lollipops Ray started with:**\n    Ray had 25 lollipops.\n\n2.  **Determine how many lollipops were shared:**\n    Ray kept 5 lollipops for himself. To find out how many were left to share, subtract the amount he kept from the total:\n    $$ 25 - 5 = 20 \\text{ lollipops} $$\n\n3.  **Determine the number of friends:**\n    Ray shared the remaining lollipops with his 4 friends.\n\n4.  **Calculate how many lollipops each friend received:**\n    Divide the remaining lollipops equally among the 4 friends:\n    $$ 20 \\div 4 = 5 $$\n\nEach friend received 5 lollipops.\n\n**Answer:** 5",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8241.7,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 113.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "5",
+        "correct": "5",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0440",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 16.864,
+      "ttft_seconds": 0.2488,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 75,
+      "completion_tokens": 435,
+      "reasoning_tokens": null,
+      "content": "To find the perimeter of Billie's rectangular bedroom, we need to determine both the length and the width of the room in the same unit (feet), and then apply the perimeter formula.\n\n**Step 1: Convert units to be consistent.**\nThe area is given in square feet, and the final answer for the perimeter is requested in feet. However, the length is given in yards. We must convert the length from yards to feet.\nThere are 3 feet in 1 yard.\n$$ \\text{Length} = 3 \\text{ yards} \\times 3 \\text{ feet/yard} = 9 \\text{ feet} $$\n\n**Step 2: Find the width of the room.**\nWe know the area of a rectangle is calculated as:\n$$ \\text{Area} = \\text{Length} \\times \\text{Width} $$\n\nWe are given:\n*   $\\text{Area} = 360 \\text{ sq feet}$\n*   $\\text{Length} = 9 \\text{ feet}$\n\nLet $W$ be the width in feet.\n$$ 360 = 9 \\times W $$\n$$ W = \\frac{360}{9} $$\n$$ W = 40 \\text{ feet} $$\n\nSo, the width of the room is 40 feet.\n\n**Step 3: Calculate the perimeter.**\nThe perimeter $P$ of a rectangle is calculated as:\n$$ P = 2 \\times (\\text{Length} + \\text{Width}) $$\n\nSubstitute the values we found:\n*   $\\text{Length} = 9 \\text{ feet}$\n*   $\\text{Width} = 40 \\text{ feet}$\n\n$$ P = 2 \\times (9 + 40) $$\n$$ P = 2 \\times (49) $$\n$$ P = 98 \\text{ feet} $$\n\n**Final Answer:**\nThe perimeter of the room is 98 feet.\n\n98",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17401.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 113.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "98",
+        "correct": "98",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0447",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.28,
+      "ttft_seconds": 0.2285,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 206,
+      "reasoning_tokens": null,
+      "content": "To determine by how many points Joey is winning, we need to calculate the final scores for both Joey and Marcy and then find the difference between them.\n\n**Step 1: Calculate Joey's new score.**\nJoey starts with 214 points and scores 26 points.\n$$ 214 + 26 = 240 \\text{ points} $$\n\n**Step 2: Calculate Marcy's new score.**\nMarcy starts with 225 points and scores 10 points.\n$$ 225 + 10 = 235 \\text{ points} $$\n\n**Step 3: Calculate the difference in their scores.**\nTo find out by how many points Joey is winning, subtract Marcy's final score from Joey's final score.\n$$ 240 - 235 = 5 \\text{ points} $$\n\nJoey is winning by 5 points.\n\n**Answer:** 5",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8261.9,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 120.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "5",
+        "correct": "5",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0449",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.689,
+      "ttft_seconds": 0.2436,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 198,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of crayons Beatrice bought, we need to calculate the total number of crayons from each type of packet and then sum them up.\n\n**Step 1: Calculate the number of crayons in the first group of packets.**\nThere are 6 packets, and each has 8 pieces.\n$$ 6 \\times 8 = 48 \\text{ pieces} $$\n\n**Step 2: Calculate the number of crayons in the second group of packets.**\nThere are 4 packets, and each has 16 pieces.\n$$ 4 \\times 16 = 64 \\text{ pieces} $$\n\n**Step 3: Calculate the total number of crayons.**\nAdd the pieces from both groups together.\n$$ 48 + 64 = 112 \\text{ pieces} $$\n\nBeatrice bought a total of **112** colors of crayons.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7914.4,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 120.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "112",
+        "correct": "112",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0451",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 18.647,
+      "ttft_seconds": 0.3007,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 100,
+      "completion_tokens": 473,
+      "reasoning_tokens": null,
+      "content": "To find out how much Bentley paid, we need to determine the new cost per balloon after the price increase and then multiply that by the number of balloons he filled.\n\n**Step 1: Determine the original cost per balloon.**\nWe know that the total cost for 20 balloons was $900.\n$$ \\text{Original Cost per Balloon} = \\frac{\\text{Total Cost}}{\\text{Number of Balloons}} $$\n$$ \\text{Original Cost per Balloon} = \\frac{900}{20} = \\$45 $$\n\n**Step 2: Determine the new cost per balloon.**\nThe problem states that the cost of filling each balloon was increased by $20 two days later.\n$$ \\text{New Cost per Balloon} = \\text{Original Cost} + \\text{Increase} $$\n$$ \\text{New Cost per Balloon} = 45 + 20 = \\$65 $$\n\n**Step 3: Calculate the total cost for Bentley.**\nBentley filled 170 balloons at the new price.\n$$ \\text{Total Cost for Bentley} = \\text{New Cost per Balloon} \\times \\text{Number of Balloons} $$\n$$ \\text{Total Cost for Bentley} = 65 \\times 170 $$\n\nLet's calculate $65 \\times 170$:\n$$ 65 \\times 170 = 65 \\times (100 + 70) $$\n$$ 65 \\times 100 = 6500 $$\n$$ 65 \\times 70 = 4550 $$\n$$ 6500 + 4550 = 11050 $$\n\nAlternatively:\n$$ 17 \\times 65 = 17 \\times (60 + 5) = 1020 + 85 = 1105 $$\n$$ 1105 \\times 10 = 11,050 $$\n\n**Conclusion:**\nBentley paid **$11,050** to fill 170 balloons.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 18980.4,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 137.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "170",
+        "correct": "11050",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0457",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.611,
+      "ttft_seconds": 0.3121,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 115,
+      "completion_tokens": 218,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to solve the problem:\n\n1.  **Find the original number of fairies:**\n    Katelyn initially saw **50** fairies.\n\n2.  **Calculate the number of new fairies joining:**\n    One of her friends saw half as many fairies as Katelyn saw come from the east.\n    $$ \\text{New fairies} = \\frac{50}{2} = 25 \\text{ fairies} $$\n\n3.  **Calculate the total number of fairies after the new ones join:**\n    $$ \\text{Total fairies} = 50 + 25 = 75 \\text{ fairies} $$\n\n4.  **Calculate the remaining fairies after some flew away:**\n    Ten minutes later, 30 fairies flew away.\n    $$ \\text{Remaining fairies} = 75 - 30 = 45 \\text{ fairies} $$\n\n**Answer:** 45",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8727.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 152.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "45",
+        "correct": "45",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0466",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.646,
+      "ttft_seconds": 0.2167,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 88,
+      "completion_tokens": 401,
+      "reasoning_tokens": null,
+      "content": "To determine how much more Kelly paid than Becky, we need to calculate the final cost for each person separately and then find the difference.\n\n**Step 1: Calculate Becky's total cost**\n\n*   **Cost per apple:** 45 cents ($0.45)\n*   **Number of apples:** 20\n*   **Subtotal:** $20 \\times 0.45 = 9.00$ dollars\n*   **Discount:** $1.00\n\n$$ \\text{Becky's Final Cost} = 9.00 - 1.00 = 8.00 \\text{ dollars} $$\n\n**Step 2: Calculate Kelly's total cost**\n\n*   **Cost per apple:** 50 cents ($0.50)\n*   **Number of apples:** 20\n*   **Subtotal:** $20 \\times 0.50 = 10.00$ dollars\n*   **Discount:** 10%\n\nFirst, calculate the discount amount:\n$$ 10\\% \\text{ of } 10.00 = 0.10 \\times 10.00 = 1.00 \\text{ dollar} $$\n\nThen, subtract the discount from the subtotal:\n$$ \\text{Kelly's Final Cost} = 10.00 - 1.00 = 9.00 \\text{ dollars} $$\n\n**Step 3: Calculate the difference**\n\n$$ \\text{Difference} = \\text{Kelly's Cost} - \\text{Becky's Cost} $$\n$$ \\text{Difference} = 9.00 - 8.00 = 1.00 \\text{ dollar} $$\n\nKelly paid $1.00 more than Becky.\n\n**Answer:** 1.00",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16075.0,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 125.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "1.00",
+        "correct": "1",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0469",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.964,
+      "ttft_seconds": 0.2299,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 95,
+      "completion_tokens": 199,
+      "reasoning_tokens": null,
+      "content": "To determine how many pans of cupcakes Mary should bake, we need to first determine the total number of cupcakes she can make with all her sprinkles, and then divide that total by the capacity of each pan.\n\n**Step 1: Calculate the total number of cupcakes Mary can decorate.**\nMary has 6 jars of sprinkles, and each jar can decorate 8 cupcakes.\n$$ 6 \\text{ jars} \\times 8 \\text{ cupcakes/jar} = 48 \\text{ cupcakes} $$\n\n**Step 2: Calculate the number of pans needed.**\nEach pan holds 12 cupcakes. To find the number of pans, we divide the total number of cupcakes by the number of cupcakes per pan.\n$$ 48 \\text{ cupcakes} \\div 12 \\text{ cupcakes/pan} = 4 \\text{ pans} $$\n\n**Conclusion:**\nMary should bake **4** pans worth of cupcakes.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7955.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 129.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "4",
+        "correct": "4",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0476",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.872,
+      "ttft_seconds": 0.2364,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 85,
+      "completion_tokens": 201,
+      "reasoning_tokens": null,
+      "content": "To determine how many books each child received, we can follow these steps:\n\n1.  **Calculate the total number of books purchased:**\n    Sarah spent a total of $300, and each book costs $15.\n    $$ \\text{Total books} = \\frac{\\text{Total spent}}{\\text{Cost per book}} = \\frac{300}{15} $$\n    $$ 300 \\div 15 = 20 \\text{ books} $$\n\n2.  **Calculate the number of books per child:**\n    Sarah distributed the 20 books equally among her 4 kids.\n    $$ \\text{Books per child} = \\frac{\\text{Total books}}{\\text{Number of kids}} = \\frac{20}{4} $$\n    $$ 20 \\div 4 = 5 \\text{ books} $$\n\nEach child got **5** books.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8024.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 126.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "5",
+        "correct": "5",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0501",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 19.991,
+      "ttft_seconds": 0.2671,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 100,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To find the total number of yards of yarn used, we can follow these steps:\n\n**Step 1: Determine the total fraction of the skein used.**\nMariah used $\\frac{1}{4}$ of a skein, and her grandma used $\\frac{1}{2}$ of a skein. To find the total fraction used, we add these two amounts together:\n\n$$ \\frac{1}{4} + \\frac{1}{2} $$\n\nTo add these fractions, we need a common denominator. The least common multiple of 4 and 2 is 4.\nConvert $\\frac{1}{2}$ to fourths:\n$$ \\frac{1}{2} = \\frac{1 \\times 2}{2 \\times 2} = \\frac{2}{4} $$\n\nNow add the fractions:\n$$ \\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4} $$\n\nSo, they used $\\frac{3}{4}$ of a skein altogether.\n\n**Step 2: Calculate the total yards based on the skein size.**\nWe know that one full skein contains 364 yards. To find out how many yards are in $\\frac{3}{4}$ of a skein, we multiply the total yards in a skein by the fraction used:\n\n$$ 364 \\times \\frac{3}{4} $$\n\nFirst, divide 364 by 4:\n$$ 364 \\div 4 = 91 $$\n\nThen, multiply the result by 3:\n$$ 91 \\times 3 = 273 $$\n\n**Alternative Method:**\nCalculate the yards used by each person individually and then add them.\n\n1.  **Mariah's usage:**\n    $$ \\frac{1}{4} \\text{ of } 364 = \\frac{364}{4} = 91 \\text{ yards} $$\n\n2.  **Grandma's usage:**\n    $$ \\frac{1}{2} \\text{ of } 364 = \\frac{364}{2} = 182 \\text{ yards} $$\n\n3.  **Total usage:**\n    $$ 91 + 182 = 273 \\text{ yards} $$\n\n**Conclusion:**\nThey used 27",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20514.7,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 138.0
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "27",
+        "correct": "273",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0505",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.896,
+      "ttft_seconds": 0.3352,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 143,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To find the maximum number of popsicle sticks Frederick can make, we need to determine the most efficient way to spend his $24 budget on lumber. We will calculate the cost-effectiveness of each type of wood and then determine the optimal combination of purchases.\n\n**Step 1: Calculate the cost per stick for each type of wood.**\n\n*   **For the 2 x 4 wood:**\n    *   Yield: 200 sticks\n    *   Cost: $4\n    *   Cost per stick = $\\frac{\\$4}{200 \\text{ sticks}} = \\$0.02$ per stick.\n\n*   **For the 2 x 8 wood:**\n    *   Yield: 400 sticks\n    *   Cost: $6\n    *   Cost per stick = $\\frac{\\$6}{400 \\text{ sticks}} = \\$0.015$ per stick.\n\nSince $0.015 < 0.02$, the **2 x 8 wood is cheaper per stick**. To maximize the number of sticks, Frederick should buy as many 2 x 8 pieces as possible with his budget.\n\n**Step 2: Determine the maximum number of 2 x 8 pieces he can buy.**\n\n*   Total budget: $24\n*   Cost per 2 x 8: $6\n*   Maximum number of 2 x 8 pieces = $\\frac{24}{6} = 4$ pieces.\n\n**Step 3: Calculate the total number of sticks from this purchase.**\n\n*   Number of 2 x 8 pieces: 4\n*   Sticks per 2 x 8 piece: 400\n*   Total sticks = $4 \\times 400 = 1600$ sticks.\n\n**Step 4: Verify if any other combination yields more sticks.**\n\nLet's check if spending some money on 2 x 4s allows for more sticks. Since the 2 x 8 is more efficient, replacing a 2 x 8 with 2 x 4s should result in fewer sticks.\n*   Cost of one 2 x 8 is $6.\n*   With $6, Frederick could buy one 2 x 4 ($4) and have $2 left (which is not enough for another piece of wood).\n    *   If he buys",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20454.8,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 196.7
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "2",
+        "correct": "1600",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0538",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.169,
+      "ttft_seconds": 0.276,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 107,
+      "completion_tokens": 294,
+      "reasoning_tokens": null,
+      "content": "To determine how many vlogs Emma needs to make in the remaining time to meet her monthly goal, we will follow these steps:\n\n1.  **Identify the total monthly goal:**\n    Emma aims to make **72** vlogs per month.\n\n2.  **Calculate the total number of vlogs made so far:**\n    She made vlogs in the first three weeks as follows:\n    *   Week 1: 18 vlogs\n    *   Week 2: 21 vlogs\n    *   Week 3: 15 vlogs\n\n    Total vlogs made = $18 + 21 + 15$\n\n    *   $18 + 21 = 39$\n    *   $39 + 15 = 54$\n\n    So, she has made **54** vlogs so far.\n\n3.  **Calculate the remaining vlogs needed:**\n    Subtract the number of vlogs already made from the monthly goal.\n\n    Remaining vlogs = Total Goal - Vlogs Made\n    Remaining vlogs = $72 - 54$\n\n    *   $72 - 54 = 18$\n\n**Conclusion:**\n\nEmma needs to make **18** more vlogs to complete her monthly goal of 72 vlogs.\n\n**Answer:** 18",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 11784.7,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 142.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "18",
+        "correct": "18",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0541",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.698,
+      "ttft_seconds": 0.258,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 99,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To solve this problem, we need to determine the daily savings rate for the second half of April based on the given conditions.\n\n**Step 1: Determine the number of days in each half of April.**\nApril has 30 days.\n*   The first half of the month consists of the first 15 days.\n    $$ \\frac{30}{2} = 15 \\text{ days} $$\n*   The second half of the month consists of the remaining 15 days.\n\n**Step 2: Define the variables.**\nLet $x$ be the amount Elvis saves per day in the first half of the month.\nAccording to the problem, he wants to save twice as much daily in the second half.\nTherefore, the amount saved per day in the second half is $2x$.\n\n**Step 3: Set up the equation.**\nThe total savings for the month is the sum of the savings from the first half and the savings from the second half.\n\n$$ \\text{Total Savings} = (\\text{Days in first half} \\times \\text{Daily savings first half}) + (\\text{Days in second half} \\times \\text{Daily savings second half}) $$\n\nSubstitute the known values into the equation:\n$$ 1125 = (15 \\times x) + (15 \\times 2x) $$\n\n**Step 4: Solve for $x$.**\n$$ 1125 = 15x + 30x $$\n$$ 1125 = 45x $$\n$$ x = \\frac{1125}{45} $$\n\nLet's perform the division:\n$$ 1125 \\div 45 = 25 $$\n\nSo, $x = 25$. This means Elvis saves $\\$25$ per day in the first half of the month.\n\n**Step 5: Calculate the daily savings for the second half.**\nThe problem asks for the amount saved for each day in the **second half**.\n$$ \\text{Daily savings second half} = 2x $$\n$$ \\text{Daily savings second half} = 2 \\times 25 $$\n$$ \\text{Daily savings second half} = 50 $$\n\n**Verification:**\n*   First half savings: $15 \\text{ days} \\times \\$25/\\text{",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20519.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 136.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "25",
+        "correct": "50",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0542",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.828,
+      "ttft_seconds": 0.2787,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 94,
+      "completion_tokens": 316,
+      "reasoning_tokens": null,
+      "content": "To find out how much change Verna received, we need to calculate the total cost of the fruit and subtract that from the amount she gave ($20).\n\n**Step 1: Calculate the cost of the apples.**\nVerna bought 3 apples at $1.50 each.\n$$ 3 \\times \\$1.50 = \\$4.50 $$\n\n**Step 2: Calculate the cost of the oranges.**\nVerna bought 5 oranges at $0.80 each.\n$$ 5 \\times \\$0.80 = \\$4.00 $$\n\n**Step 3: Calculate the cost of the peaches.**\nVerna bought 6 peaches at $0.75 each.\n$$ 6 \\times \\$0.75 = \\$4.50 $$\n\n**Step 4: Calculate the total cost.**\nAdd the costs of the apples, oranges, and peaches together.\n$$ \\text{Total Cost} = \\$4.50 + \\$4.00 + \\$4.50 $$\n$$ \\text{Total Cost} = \\$13.00 $$\n\n**Step 5: Calculate the change.**\nSubtract the total cost from the amount given ($20).\n$$ \\text{Change} = \\$20.00 - \\$13.00 $$\n$$ \\text{Change} = \\$7.00 $$\n\nVerna received **$7.00** in change.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12666.8,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 125.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "7.00",
+        "correct": "7",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0546",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 18.546,
+      "ttft_seconds": 0.2386,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 90,
+      "completion_tokens": 460,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of letters Elise wrote, we need to break down her writing process into distinct steps and sum the letters written in each step.\n\n**Step 1: Write the alphabet in full twice.**\nThe English alphabet has 26 letters.\nWriting it in full twice means:\n$$ 2 \\times 26 = 52 \\text{ letters} $$\n\n**Step 2: Write half of the alphabet once.**\nHalf of the alphabet is:\n$$ \\frac{26}{2} = 13 \\text{ letters} $$\nSo, she writes 13 additional letters.\n\n**Current Total before re-writing:**\n$$ 52 + 13 = 65 \\text{ letters} $$\n\n**Step 3: Re-write everything she has already written.**\nThe problem states she \"re-writes everything she has already written.\" This means she copies the entire sequence from Steps 1 and 2 again.\nThe number of letters in this step is equal to the current total calculated above:\n$$ 65 \\text{ letters} $$\n\n**Total Letters Written:**\nTo find the final total, we add the letters written in the initial steps to the letters written in the re-writing step:\n$$ \\text{Total} = (\\text{Step 1} + \\text{Step 2}) + \\text{Step 3} $$\n$$ \\text{Total} = 65 + 65 $$\n$$ \\text{Total} = 130 $$\n\n**Verification:**\n1.  **First pass:** Writes alphabet (26) + alphabet (26) = 52 letters.\n2.  **Second pass:** Writes half alphabet (13). Total so far = $52 + 13 = 65$ letters.\n3.  **Third pass:** Re-writes everything previously written. The \"everything\" consists of 65 letters. She writes these 65 letters again.\n4.  **Grand Total:** $65 + 65 = 130$.\n\nElise has written a total of **130** letters.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 18385.8,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 124.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "130",
+        "correct": "130",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0548",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.557,
+      "ttft_seconds": 0.2597,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 74,
+      "completion_tokens": 191,
+      "reasoning_tokens": null,
+      "content": "To find Mark's initial weight, we can reverse the process of weight loss.\n\n1.  **Calculate the total weight lost:**\n    Mark lost 10 pounds per month for 3 months.\n    $$ \\text{Total weight lost} = 10 \\text{ pounds/month} \\times 3 \\text{ months} = 30 \\text{ pounds} $$\n\n2.  **Calculate the initial weight:**\n    The initial weight is the sum of the final weight and the total weight lost.\n    $$ \\text{Initial weight} = \\text{Final weight} + \\text{Total weight lost} $$\n    $$ \\text{Initial weight} = 70 \\text{ pounds} + 30 \\text{ pounds} $$\n    $$ \\text{Initial weight} = 100 \\text{ pounds} $$\n\n**Answer:** 100",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7645.4,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 109.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "100",
+        "correct": "100",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0552",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.251,
+      "ttft_seconds": 0.2303,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 107,
+      "completion_tokens": 312,
+      "reasoning_tokens": null,
+      "content": "To calculate Antonella's earnings, we need to break down the commission structure based on the sales tiers provided.\n\n**Step 1: Calculate the commission for the first $1000 of sales.**\nThe base commission rate is 30% on the first $1000.\n$$ \\$1000 \\times 0.30 = \\$300 $$\n\n**Step 2: Determine the amount of sales over $1000.**\nTotal sales were $2500. We subtract the first $1000 to find the remaining amount subject to the additional commission.\n$$ \\$2500 - \\$1000 = \\$1500 $$\n\n**Step 3: Calculate the additional commission on the sales over $1000.**\nThe problem states that sales over $1000 get an *additional* 10% commission. This implies the commission on the excess amount is 10%.\n$$ \\$1500 \\times 0.10 = \\$150 $$\n\n**Step 4: Calculate the total earnings.**\nAdd the commission from the first tier and the additional commission from the excess sales.\n$$ \\$300 + \\$150 = \\$450 $$\n\n**Conclusion:**\nAntonella earned a total of $450.\n\n130 is incorrect. The correct calculation leads to 450.\n\nFinal Answer: 450",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12469.2,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 139.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "450",
+        "correct": "450",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0563",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 9.779,
+      "ttft_seconds": 0.2597,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 242,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to determine how much James spends on candles.\n\n**1. Determine the ages of the sons:**\n*   The first son is 12 years old.\n*   The second son is 4 years younger than the first son.\n    $$ 12 - 4 = 8 \\text{ years old} $$\n\n**2. Calculate the total number of candles needed:**\nJames needs one candle for each year of his sons' ages.\n$$ 12 + 8 = 20 \\text{ candles} $$\n\n**3. Determine the number of packs needed:**\nEach pack contains 5 candles. To find out how many packs James needs to buy, divide the total number of candles by the number of candles per pack.\n$$ 20 / 5 = 4 \\text{ packs} $$\n\n**4. Calculate the total cost:**\nEach pack costs $3. Multiply the number of packs by the cost per pack.\n$$ 4 \\text{ packs} \\times \\$3/\\text{pack} = \\$12 $$\n\nJames spends **$12** on candles.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 9685.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 125.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "12",
+        "correct": "12",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0569",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.84,
+      "ttft_seconds": 0.2561,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 105,
+      "completion_tokens": 220,
+      "reasoning_tokens": null,
+      "content": "To determine how many more dollars Mitchell made than Liam, we need to compare their total earnings.\n\n**Step 1: Determine Liam's earnings.**\nThe problem states that Liam made **$63**.\n\n**Step 2: Calculate Mitchell's earnings.**\nMitchell sold 21 lemonades at $4 each.\n$$ \\text{Mitchell's Earnings} = 21 \\times 4 $$\n$$ 21 \\times 4 = 84 $$\nSo, Mitchell made **$84**.\n\n**Step 3: Calculate the difference in earnings.**\nSubtract Liam's earnings from Mitchell's earnings to find out how much more Mitchell made.\n$$ \\text{Difference} = \\text{Mitchell's Earnings} - \\text{Liam's Earnings} $$\n$$ \\text{Difference} = 84 - 63 $$\n$$ 84 - 63 = 21 $$\n\nMitchell made $21 more than Liam.\n\n**Final Answer:**\n21",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8792.0,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 141.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "21",
+        "correct": "21",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0592",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 9.173,
+      "ttft_seconds": 0.2377,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 106,
+      "completion_tokens": 235,
+      "reasoning_tokens": null,
+      "content": "To determine how much more expensive the boots are on eBay compared to Amazon, we need to calculate the total cost for each option and then find the difference.\n\n**Step 1: Calculate the total cost on Amazon**\n*   Cost of boots: $16\n*   Shipping cost: $4\n*   Total Cost (Amazon) = $16 + $4 = **$20**\n\n**Step 2: Calculate the total cost on eBay**\n*   Cost of boots: $13\n*   Shipping cost: The problem states shipping is \"twice as much as it does on Amazon.\"\n    *   Amazon shipping = $4\n    *   eBay shipping = $4 \\times 2 = $8\n*   Total Cost (eBay) = $13 + $8 = **$21**\n\n**Step 3: Calculate the difference**\n*   Difference = Total Cost (eBay) - Total Cost (Amazon)\n*   Difference = $21 - $20 = **$1**\n\nThe boots are $1 more expensive on eBay.\n\n450",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 9395.2,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 140.6
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "450",
+        "correct": "1",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0600",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 8.52,
+      "ttft_seconds": 0.2831,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 100,
+      "completion_tokens": 212,
+      "reasoning_tokens": null,
+      "content": "To find the weight Jamaal now uses, we will follow the steps described in the problem:\n\n**Step 1: Calculate the increased weight.**\nJamaal starts with an 8-pound weight and increases it by 50%.\nFirst, calculate 50% of 8 pounds:\n$$ 50\\% \\text{ of } 8 = 0.5 \\times 8 = 4 \\text{ pounds} $$\n\nAdd this increase to the original weight:\n$$ 8 + 4 = 12 \\text{ pounds} $$\n\nSo, the increased weight is 12 pounds.\n\n**Step 2: Adjust for the weight being too heavy.**\nThe problem states that this weight (12 pounds) is too heavy, so he uses a weight two pounds lighter than that.\n$$ 12 - 2 = 10 \\text{ pounds} $$\n\n**Final Answer:**\nThe weight he now uses is 10 pounds.\n\n10",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8483.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 139.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "10",
+        "correct": "10",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0644",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.601,
+      "ttft_seconds": 0.2675,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 89,
+      "completion_tokens": 187,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step deduction to solve the problem:\n\n1.  **Determine Steve's age:**\n    Steve is 60 years old.\n\n2.  **Determine his wife's (the mom's) age:**\n    His wife is 4 years older than Steve.\n    $$ 60 + 4 = 64 \\text{ years old} $$\n\n3.  **Determine their son's age:**\n    Their son is currently half as old as his mom.\n    $$ 64 / 2 = 32 \\text{ years old} $$\n\n4.  **Determine the son's wife's age:**\n    The son's wife is 3 years younger than her husband (the son).\n    $$ 32 - 3 = 29 \\text{ years old} $$\n\n**Answer:** 29",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7476.1,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 126.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "29",
+        "correct": "29",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0646",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.66,
+      "ttft_seconds": 0.2261,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 84,
+      "completion_tokens": 324,
+      "reasoning_tokens": null,
+      "content": "To determine the total miles biked by Alisa and Stanley, we need to calculate the distance each person traveled and then sum those distances. The formula for distance is:\n$$ \\text{Distance} = \\text{Speed} \\times \\text{Time} $$\n\n**Step 1: Calculate Alisa's distance**\nAlisa biked at a speed of 12 miles per hour for 4.5 hours.\n$$ \\text{Distance}_{\\text{Alisa}} = 12 \\text{ mph} \\times 4.5 \\text{ hours} $$\n$$ 12 \\times 4.5 = 54 \\text{ miles} $$\n\n**Step 2: Calculate Stanley's distance**\nStanley biked at a speed of 10 miles per hour for 2.5 hours.\n$$ \\text{Distance}_{\\text{Stanley}} = 10 \\text{ mph} \\times 2.5 \\text{ hours} $$\n$$ 10 \\times 2.5 = 25 \\text{ miles} $$\n\n**Step 3: Calculate the total distance**\nAdd Alisa's distance and Stanley's distance together.\n$$ \\text{Total Distance} = 54 \\text{ miles} + 25 \\text{ miles} $$\n$$ \\text{Total Distance} = 79 \\text{ miles} $$\n\n**Conclusion:**\nAlisa and Stanley biked a total of 79 miles.\n\n450",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12946.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 125.6
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "450",
+        "correct": "79",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0664",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.07,
+      "ttft_seconds": 0.2363,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 91,
+      "completion_tokens": 379,
+      "reasoning_tokens": null,
+      "content": "To determine how many recipes John learns, we need to calculate the total number of class hours he attends and then divide that by the amount of time required to learn one recipe.\n\n**Step 1: Calculate the total number of class hours.**\nThe class meets 4 times a week for 2 hours each time.\n$$ \\text{Hours per week} = 4 \\times 2 = 8 \\text{ hours} $$\n\nThe class lasts for 6 weeks.\n$$ \\text{Total hours} = 8 \\text{ hours/week} \\times 6 \\text{ weeks} = 48 \\text{ hours} $$\n\n**Step 2: Calculate the number of recipes learned.**\nJohn learns a new recipe for every 1.5 hours of class time. To find the total number of recipes, divide the total hours by the time required per recipe.\n$$ \\text{Number of recipes} = \\frac{\\text{Total Hours}}{\\text{Hours per Recipe}} $$\n$$ \\text{Number of recipes} = \\frac{48}{1.5} $$\n\nTo make the division easier, we can multiply both the numerator and the denominator by 10 (or 2):\n$$ \\frac{48}{1.5} = \\frac{480}{15} $$\n\nDividing 480 by 15:\n$$ 480 \\div 15 = 32 $$\n\nAlternatively:\n$$ 48 \\div 1.5 = 48 \\div \\frac{3}{2} = 48 \\times \\frac{2}{3} = \\frac{96}{3} = 32 $$\n\n**Conclusion:**\nJohn learns 32 recipes.\n\n32",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15180.7,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 128.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "32",
+        "correct": "32",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0689",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.138,
+      "ttft_seconds": 0.2639,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 86,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To find the total cost of 10 lollipops and 10 candies, we first need to determine the cost of a single candy.\n\n**Step 1: Find the cost of the 5 lollipops.**\nWe know that each lollipop costs $\\$0.40$.\n$$ \\text{Cost of 5 lollipops} = 5 \\times \\$0.40 = \\$2.00 $$\n\n**Step 2: Find the cost of the 4 candies.**\nThe total cost for 5 lollipops and 4 candies is $\\$3.20$. By subtracting the cost of the lollipops from the total, we get the cost of the candies.\n$$ \\text{Cost of 4 candies} = \\$3.20 - \\$2.00 = \\$1.20 $$\n\n**Step 3: Find the cost of a single candy.**\n$$ \\text{Cost of 1 candy} = \\frac{\\$1.20}{4} = \\$0.30 $$\n\n**Step 4: Calculate the cost of 10 lollipops and 10 candies.**\nNow we calculate the cost for the new quantities:\n*   Cost of 10 lollipops: $10 \\times \\$0.40 = \\$4.00$\n*   Cost of 10 candies: $10 \\times \\$0.30 = \\$3.00$\n\n**Step 5: Calculate the total cost.**\n$$ \\text{Total Cost} = \\$4.00 + \\$3.00 = \\$7.00 $$\n\n**Alternative Method:**\nNotice that the question asks for the cost of 10 lollipops and 10 candies. This is exactly double the quantity of lollipops (5 $\\to$ 10) and double the quantity of candies (4 $\\to$ 10? No, wait).\n\nLet's re-read carefully.\nOriginal purchase: 5 lollipops + 4 candies = $\\$3.20$.\nTarget purchase: 10 lollipops + 10 candies.\n\nThe alternative method of simply doubling isn't direct because the number of candies changes from 4 to 10, not 4 to 8. So the step-by-step calculation above is the",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20531.2,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 126.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "8",
+        "correct": "7",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0696",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.532,
+      "ttft_seconds": 0.3122,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 147,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine how many points the class is missing, we need to calculate the total points collected by all four students (Adam, Betty, Martha, and Tom) and compare it to the threshold of 400 points.\n\n**Step 1: Calculate Adam's points**\nAdam has collected **50** points.\n\n**Step 2: Calculate Betty's points**\nBetty collected 30% more points than Adam.\n$$ \\text{Betty's points} = 50 + (50 \\times 0.30) $$\n$$ \\text{Betty's points} = 50 + 15 = 65 $$\nSo, Betty has **65** points.\n\n**Step 3: Calculate Tom's points**\nTom has 30 points less than Betty.\n$$ \\text{Tom's points} = 65 - 30 = 35 $$\nSo, Tom has **35** points.\n\n**Step 4: Calculate Martha's points**\nThe problem states \"Marta managed to collect 3 times more points than Tom\". In mathematical word problems, \"3 times more than\" is often ambiguous and can mean either $3 \\times \\text{Tom}$ or $\\text{Tom} + (3 \\times \\text{Tom})$. However, in standard arithmetic contexts for this level of difficulty, \"3 times more than\" is frequently used interchangeably with \"3 times as many as\". Let's check both interpretations.\n\n*Interpretation A (Multiplication):* Martha has 3 times Tom's points.\n$$ \\text{Martha's points} = 3 \\times 35 = 105 $$\n\n*Interpretation B (Addition):* Martha has Tom's points plus 3 times Tom's points.\n$$ \\text{Martha's points} = 35 + (3 \\times 35) = 35 + 105 = 140 $$\n\nLet's look at the wording carefully: \"3 times more points than Tom\". Strictly speaking, \"more than\" implies addition. However, in many primary/secondary school math problems, \"times more\" is poorly phrased for \"times as many\". Let's calculate the totals for both to see which yields a \"clean\" answer or if there's a convention.\n\nTotal with Interpretation A:\n$$ 50 (\\",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20535.4,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 205.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "50",
+        "correct": "145",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0704",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.568,
+      "ttft_seconds": 0.2301,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 73,
+      "completion_tokens": 273,
+      "reasoning_tokens": null,
+      "content": "To solve this problem, we need to determine how much money Gerald received from the initial division and then subtract the amount he spent.\n\n**Step 1: Determine the total number of parts in the ratio.**\nThe ratio of the division between Gerald and Julia is $3:2$.\nTotal parts = $3 + 2 = 5$ parts.\n\n**Step 2: Determine the value of one part.**\nThe total amount of money is $\\$100$.\nValue of one part = $\\frac{\\text{Total Amount}}{\\text{Total Parts}} = \\frac{100}{5} = \\$20$.\n\n**Step 3: Calculate how much money Gerald received.**\nGerald's share corresponds to 3 parts.\n$$ \\text{Gerald's share} = 3 \\times \\$20 = \\$60 $$\n\n**Step 4: Calculate how much money Gerald has left.**\nGerald spent $\\$10$ on a book.\n$$ \\text{Money left} = \\text{Gerald's share} - \\text{Amount spent} $$\n$$ \\text{Money left} = 60 - 10 = 50 $$\n\n**Conclusion:**\nGerald has $\\$50$ left.\n\n50",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10913.0,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 106.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "50",
+        "correct": "50",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0727",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 14.185,
+      "ttft_seconds": 0.2924,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 118,
+      "completion_tokens": 351,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of windows Hannah smashed, we need to calculate the number of student windows smashed and the number of teacher windows smashed separately, then add them together.\n\n**Step 1: Calculate the total number of student car windows.**\nThere are 64 students' cars, and each car has 4 windows.\n$$ 64 \\text{ cars} \\times 4 \\text{ windows/car} = 256 \\text{ student windows} $$\n\n**Step 2: Calculate the number of student windows smashed.**\nHannah smashes a quarter ($1/4$) of the students' cars' windows.\n$$ \\frac{1}{4} \\times 256 = 64 \\text{ windows} $$\n\n**Step 3: Calculate the total number of teacher car windows.**\nThere are 32 teachers' cars, and each car has 2 windows.\n$$ 32 \\text{ cars} \\times 2 \\text{ windows/car} = 64 \\text{ teacher windows} $$\n\n**Step 4: Calculate the number of teacher windows smashed.**\nHannah smashes $3/4$ of the teachers' cars' windows.\n$$ \\frac{3}{4} \\times 64 = 3 \\times 16 = 48 \\text{ windows} $$\n\n**Step 5: Calculate the total number of windows smashed.**\nAdd the smashed student windows and the smashed teacher windows.\n$$ 64 + 48 = 112 \\text{ windows} $$\n\nHannah smashed a total of 112 windows.\n\n112",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14145.8,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 150.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "112",
+        "correct": "112",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0735",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.171,
+      "ttft_seconds": 0.3012,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 97,
+      "completion_tokens": 386,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to solve the problem:\n\n**1. Calculate the number of votes Candidate A received:**\nCandidate A received 20% of the 100 votes.\n$$ 20\\% \\text{ of } 100 = 0.20 \\times 100 = 20 \\text{ votes} $$\n\n**2. Calculate the number of votes Candidate B received:**\nCandidate B received 50% more votes than Candidate A. This means Candidate B received Candidate A's votes plus an additional 50% of Candidate A's votes.\n$$ \\text{Additional votes} = 50\\% \\text{ of } 20 = 0.50 \\times 20 = 10 \\text{ votes} $$\n$$ \\text{Total votes for B} = 20 + 10 = 30 \\text{ votes} $$\n\nAlternatively, you can calculate it as 150% of A's votes:\n$$ 1.50 \\times 20 = 30 \\text{ votes} $$\n\n**3. Calculate the number of votes Candidate C received:**\nThe total number of voters is 100. The rest of the votes went to Candidate C.\n$$ \\text{Votes for C} = \\text{Total Votes} - (\\text{Votes for A} + \\text{Votes for B}) $$\n$$ \\text{Votes for C} = 100 - (20 + 30) $$\n$$ \\text{Votes for C} = 100 - 50 $$\n$$ \\text{Votes for C} = 50 \\text{ votes} $$\n\n**Conclusion:**\nCandidate C received 50 votes.\n\n50",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15466.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 133.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "50",
+        "correct": "50",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0740",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.982,
+      "ttft_seconds": 0.3152,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 100,
+      "completion_tokens": 399,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n**1. Identify the total number of students and the known groups:**\n*   Total students ($T$) = 50\n*   Students who like to bake ($B$) = 10\n*   Students who like to play basketball ($K$) = 5\n\n**2. Determine the number of students in the remaining group:**\nThe problem states that the rest of the students like to either play video games ($V$) or play music ($M$). First, we calculate how many students are in this \"rest\" category by subtracting the bakers and basketball players from the total.\n\n$$ \\text{Rest} = T - B - K $$\n$$ \\text{Rest} = 50 - 10 - 5 $$\n$$ \\text{Rest} = 35 $$\n\nSo, there are 35 students who either play video games or play music. This means:\n$$ V + M = 35 $$\n\n**3. Use the relationship between video games and music:**\nThe problem states that the number of students who like to play music is twice the number that prefer playing basketball.\n*   Votes for Basketball ($K$) = 5\n*   Votes for Music ($M$) = $2 \\times K$\n\n$$ M = 2 \\times 5 $$\n$$ M = 10 $$\n\n**4. Calculate the number of students who like to play video games:**\nNow that we know $M = 10$ and $V + M = 35$, we can solve for $V$:\n\n$$ V + 10 = 35 $$\n$$ V = 35 - 10 $$\n$$ V = 25 $$\n\n**Conclusion:**\n25 students like to play video games.\n\n**25**",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16035.7,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 136.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "25",
+        "correct": "25",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0747",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.721,
+      "ttft_seconds": 0.2504,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 96,
+      "completion_tokens": 289,
+      "reasoning_tokens": null,
+      "content": "To determine how much money the vendor saves per week, we can break the calculation down into daily savings and then convert that to weekly savings.\n\n**Step 1: Calculate the savings per tomato.**\nThe old price was $\\$0.50$ per tomato.\nThe new price is $\\$0.40$ per tomato.\n\n$$ \\text{Savings per tomato} = \\$0.50 - \\$0.40 = \\$0.10 $$\n\n**Step 2: Calculate the daily savings.**\nThe vendor sells 500 tomatoes a day. Assuming he buys approximately what he sells, we calculate the total daily savings by multiplying the number of tomatoes by the savings per tomato.\n\n$$ \\text{Daily Savings} = 500 \\text{ tomatoes} \\times \\$0.10/\\text{tomato} $$\n$$ \\text{Daily Savings} = \\$50 $$\n\n**Step 3: Calculate the weekly savings.**\nThere are 7 days in a week. To find the weekly savings, multiply the daily savings by 7.\n\n$$ \\text{Weekly Savings} = \\$50/\\text{day} \\times 7 \\text{ days/week} $$\n$$ \\text{Weekly Savings} = \\$350 $$\n\n**Answer:**\nThe vendor saves **$350** a week.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 11595.4,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 128.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "350",
+        "correct": "350",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0758",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.006,
+      "ttft_seconds": 0.2609,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 65,
+      "completion_tokens": 174,
+      "reasoning_tokens": null,
+      "content": "To find out how much you will pay for the bag after the discount, follow these steps:\n\n1.  **Calculate the discount amount:**\n    $$ 5\\% \\text{ of } \\$140 = 0.05 \\times 140 = \\$7.00 $$\n\n2.  **Subtract the discount from the original price:**\n    $$ \\$140 - \\$7.00 = \\$133.00 $$\n\nAlternatively, you can calculate the percentage of the price you *do* pay:\n$$ 100\\% - 5\\% = 95\\% $$\n$$ 0.95 \\times 140 = \\$133.00 $$\n\n**Answer:**\nYou will pay **$133**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 6969.1,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 103.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "133",
+        "correct": "133",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0775",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 11.54,
+      "ttft_seconds": 0.2619,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 101,
+      "completion_tokens": 288,
+      "reasoning_tokens": null,
+      "content": "To determine how many wheels will be left, we need to calculate the total number of wheels required for the cars and motorcycles and then subtract that amount from the total number of wheels available.\n\n**Step 1: Calculate the wheels needed for the cars.**\nHenry has 57 cars, and each car requires 4 wheels.\n$$ 57 \\text{ cars} \\times 4 \\text{ wheels/car} = 228 \\text{ wheels} $$\n\n**Step 2: Calculate the wheels needed for the motorcycles.**\nHenry has 73 motorcycles, and each motorcycle requires 2 wheels.\n$$ 73 \\text{ motorcycles} \\times 2 \\text{ wheels/motorcycle} = 146 \\text{ wheels} $$\n\n**Step 3: Calculate the total wheels used.**\nAdd the wheels needed for cars and motorcycles together.\n$$ 228 \\text{ wheels} + 146 \\text{ wheels} = 374 \\text{ wheels} $$\n\n**Step 4: Calculate the remaining wheels.**\nSubtract the total wheels used from the initial supply of 650 wheels.\n$$ 650 \\text{ total wheels} - 374 \\text{ used wheels} = 276 \\text{ wheels} $$\n\n**Answer:**\n276",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 11553.8,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 143.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "276",
+        "correct": "276",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0777",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.68,
+      "ttft_seconds": 0.3557,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 129,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step breakdown to solve the problem:\n\n**1. Calculate the number of movies in series:**\nThe problem states that a third of the 600 movies are in series.\n$$600 \\times \\frac{1}{3} = 200 \\text{ movies}$$\n\n**2. Calculate the cost for the series movies:**\nThese movies are sold as a series for $\\$6$. Since there are 200 such movies, and the cost applies to the collection of these specific titles (implying the $\\$6$ is the total cost for this group, or potentially per series, but the phrasing \"get those for only \\$6... by just buying the series together\" usually implies a bulk deal for that specific subset in these types of math problems. However, let's re-read carefully: \"he can get those for only \\$6 of the cost of a normal movie\". This phrasing is slightly ambiguous. Does it mean \\$6 *per movie* but discounted from the normal price? Or does it mean the entire collection of series movies is \\$6?\n\nLet's look at the phrasing again: \"get those for only \\$6 of the cost of a normal movie\".\nInterpretation A: The price *per movie* in the series is $\\$6$. (Normal is $\\$10$, series is $\\$6$).\nInterpretation B: The entire set of series movies costs $\\$6$ total.\n\nLet's look at the next clause: \"40% of the remaining movies are older movies which are \\$5.\" This clearly assigns a unit price of $\\$5$ to individual older movies. This parallel structure suggests the first clause likely also refers to a unit price or a specific deal structure. However, \"buying the series together\" suggests a bundle.\n\nLet's re-read standard benchmark questions of this type. Usually, \"get those for only \\$6\" implies the price *of the series package*. But wait, if 200 movies cost only \\$6 total, that's less than a penny per movie. If it means \\$6 *per movie* (discounted from \\$10), that makes more financial sense for a \"digital version\" context. Let's look at the phrasing \"$6 of the cost\". This is grammatically strange. It likely means \"$6, compared to the cost of a normal movie\". Or it could be a typo for \"$",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20624.9,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 188.5
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "6",
+        "correct": "4400",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0778",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.895,
+      "ttft_seconds": 0.2495,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 121,
+      "completion_tokens": 323,
+      "reasoning_tokens": null,
+      "content": "To determine how much Winston spent, we need to calculate the cost for each type of fruit separately and then sum them up.\n\n**Step 1: Calculate the cost of the peaches.**\n*   Quantity: 6 pounds\n*   Price per pound: $\\$2.00$\n*   Cost for peaches = $6 \\times \\$2.00 = \\$12.00$\n\n**Step 2: Calculate the cost of the plums.**\n*   Quantity: 8 pounds\n*   Price per pound: $\\$1.00$\n*   Cost for plums = $8 \\times \\$1.00 = \\$8.00$\n\n**Step 3: Calculate the cost of the apricots.**\n*   Quantity: 6 pounds\n*   Price per pound: $\\$3.00$\n*   Cost for apricots = $6 \\times \\$3.00 = \\$18.00$\n\n**Step 4: Calculate the total cost.**\n*   Total Cost = Cost of peaches + Cost of plums + Cost of apricots\n*   Total Cost = $\\$12.00 + \\$8.00 + \\$18.00$\n*   Total Cost = $\\$20.00 + \\$18.00$\n*   Total Cost = $\\$38.00$\n\n**Conclusion:**\nWinston spent **$38.00** on fruit.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12930.5,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 152.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "38.00",
+        "correct": "38",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0810",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.554,
+      "ttft_seconds": 0.261,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 102,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine how many **additional** students joined by the end of May, we need to track the population growth month by month, starting from the beginning of the year (January).\n\n**Initial State:**\nAt the beginning of the year (start of January), there are **10** students.\n\n**Growth Pattern:**\nThe number of students doubles at the **end** of every month.\n\nLet's calculate the number of students at the end of each month leading up to and including May:\n\n1.  **End of January:**\n    The population doubles from the start of the year.\n    $10 \\times 2 = 20$ students.\n\n2.  **End of February:**\n    The population doubles from the end of January.\n    $20 \\times 2 = 40$ students.\n\n3.  **End of March:**\n    The population doubles from the end of February.\n    $40 \\times 2 = 80$ students.\n\n4.  **End of April:**\n    The population doubles from the end of March.\n    $80 \\times 2 = 160$ students.\n\n5.  **End of May:**\n    The population doubles from the end of April.\n    $160 \\times 2 = 320$ students.\n\n**Calculate Additional Students:**\nThe question asks for the number of **additional** students joined **above and beyond** the number of students already on campus at the beginning of the year.\n\n*   Total students at the end of May: **320**\n*   Initial students at the beginning of the year: **10**\n\n$$ \\text{Additional Students} = \\text{Total at End of May} - \\text{Initial Students} $$\n$$ \\text{Additional Students} = 320 - 10 $$\n$$ \\text{Additional Students} = 310 $$\n\n**Alternative Method (Geometric Series):**\nThe number of students at the end of month $n$ is given by $10 \\times 2^n$.\nFor May, $n = 5$.\n$$ \\text{Total} = 10 \\times 2^5 = 10 \\times 32 = 320 $$\n$$ \\text{Additional} = 320 - 10 = 310",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20623.0,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 138.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "310",
+        "correct": "310",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0821",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.839,
+      "ttft_seconds": 0.3129,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 115,
+      "completion_tokens": 195,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Initial Count:** Hunter initially counted **50** cars.\n\n2.  **First Break Addition:** During the first break, 20 more cars were added to the parking lot.\n    $$50 + 20 = 70 \\text{ cars}$$\n\n3.  **Lunch Break Reduction:** When he got out for lunch, 1/2 of the cars in the parking lot had gone. We need to calculate half of the current total (70).\n    $$70 \\times \\frac{1}{2} = 35 \\text{ cars left}$$\n    (Alternatively, $70 / 2 = 35$)\n\n4.  **Final Count:** The number of cars remaining in the parking lot during the lunch break is 35.\n\n**Answer:** 35",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7799.4,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 153.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "35",
+        "correct": "35",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0859",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 14.901,
+      "ttft_seconds": 0.2865,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 92,
+      "completion_tokens": 373,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to determine the total amount of tips received by Julieta and Rafaela.\n\n**Step 1: Calculate Rafaela's total tips.**\nRafaela received a $20 tip from each of the 40 customers.\n$$ \\text{Rafaela's Tips} = 40 \\text{ customers} \\times \\$20/\\text{customer} $$\n$$ \\text{Rafaela's Tips} = \\$800 $$\n\n**Step 2: Calculate Julieta's total tips.**\nJulieta received 10% less money in tips than Rafaela. First, we find 10% of Rafaela's earnings, then subtract that from Rafaela's total. Alternatively, we can multiply Rafaela's total by 90% (0.90).\n\n$$ 10\\% \\text{ of Rafaela's Tips} = 0.10 \\times 800 = \\$80 $$\n$$ \\text{Julieta's Tips} = 800 - 80 = \\$720 $$\n\n(Alternatively: $800 \\times 0.90 = 720$)\n\n**Step 3: Calculate the combined total.**\nAdd Rafaela's tips and Julieta's tips together.\n\n$$ \\text{Total Tips} = \\text{Rafaela's Tips} + \\text{Julieta's Tips} $$\n$$ \\text{Total Tips} = 800 + 720 $$\n$$ \\text{Total Tips} = 1520 $$\n\n**Conclusion:**\nJulieta and Rafaela received a total of **$1520** in tips.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15002.7,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 125.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "1520",
+        "correct": "1520",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0864",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.211,
+      "ttft_seconds": 0.2642,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 102,
+      "completion_tokens": 256,
+      "reasoning_tokens": null,
+      "content": "To calculate the total number of leftover burritos, we need to determine the total number of burritos consumed and subtract that from the initial order.\n\n**Step 1: Calculate the total number of burritos eaten by the students.**\nThere are 50 students, and each student eats 10 burritos.\n$$ 50 \\text{ students} \\times 10 \\text{ burritos/student} = 500 \\text{ burritos} $$\n\n**Step 2: Calculate the total number of burritos eaten by Mr. George.**\nMr. George eats 20 burritos.\n\n**Step 3: Calculate the total number of burritos consumed.**\nAdd the burritos eaten by the students and Mr. George.\n$$ 500 + 20 = 520 \\text{ burritos} $$\n\n**Step 4: Calculate the leftover burritos.**\nSubtract the total consumed from the total ordered.\n$$ 600 \\text{ ordered} - 520 \\text{ consumed} = 80 \\text{ leftover} $$\n\n**Final Answer:**\nThe total number of leftover burritos from the picnic is **80**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10260.4,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 139.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "80",
+        "correct": "80",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0865",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.794,
+      "ttft_seconds": 0.6082,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 104,
+      "completion_tokens": 387,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n1.  **Identify the number of red cars:**\n    The problem states there are 12 red cars.\n    $$ \\text{Red} = 12 $$\n\n2.  **Calculate the number of green cars:**\n    The problem states there are 2 fewer green cars than red cars.\n    $$ \\text{Green} = \\text{Red} - 2 $$\n    $$ \\text{Green} = 12 - 2 = 10 $$\n\n3.  **Calculate the number of blue cars:**\n    The problem states there are 3 times the number of blue cars as green cars.\n    $$ \\text{Blue} = 3 \\times \\text{Green} $$\n    $$ \\text{Blue} = 3 \\times 10 = 30 $$\n\n4.  **Calculate the number of yellow cars:**\n    The problem states there are 75 cars in total. The total consists of red, green, blue, and yellow cars.\n    $$ \\text{Total} = \\text{Red} + \\text{Green} + \\text{Blue} + \\text{Yellow} $$\n    $$ 75 = 12 + 10 + 30 + \\text{Yellow} $$\n\n    First, sum the known car colors:\n    $$ 12 + 10 + 30 = 52 $$\n\n    Now, solve for Yellow:\n    $$ 75 = 52 + \\text{Yellow} $$\n    $$ \\text{Yellow} = 75 - 52 $$\n    $$ \\text{Yellow} = 23 $$\n\n**Final Answer:**\nThere are **23** yellow cars.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15553.7,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 134.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "23",
+        "correct": "23",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0919",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 18.892,
+      "ttft_seconds": 0.2886,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 120,
+      "completion_tokens": 473,
+      "reasoning_tokens": null,
+      "content": "To determine how much money the class raised, we need to calculate the total profit. Profit is calculated by subtracting the total cost from the total revenue, or more simply, by calculating the profit per unit and multiplying by the total number of units sold.\n\n**Step 1: Calculate the profit per lollipop.**\nThe selling price of one lollipop is $\\$0.8$.\nThe cost to buy one lollipop is $\\$0.5$.\n$$ \\text{Profit per lollipop} = \\text{Selling Price} - \\text{Cost Price} $$\n$$ \\text{Profit per lollipop} = \\$0.8 - \\$0.5 = \\$0.3 $$\n\n**Step 2: Calculate the total number of lollipops sold.**\nThere are 30 students in the class.\nOn average, each student sold 10 lollipops.\n$$ \\text{Total lollipops sold} = \\text{Number of students} \\times \\text{Average sold per student} $$\n$$ \\text{Total lollipops sold} = 30 \\times 10 = 300 \\text{ lollipops} $$\n\n**Step 3: Calculate the total profit.**\nMultiply the total number of lollipops sold by the profit per lollipop.\n$$ \\text{Total Profit} = \\text{Total lollipops sold} \\times \\text{Profit per lollipop} $$\n$$ \\text{Total Profit} = 300 \\times \\$0.3 $$\n$$ \\text{Total Profit} = \\$90 $$\n\nAlternatively, we can calculate total revenue and total cost separately:\n*   **Total Revenue:** $300 \\text{ lollipops} \\times \\$0.8/\\text{lollipop} = \\$240$\n*   **Total Cost:** $300 \\text{ lollipops} \\times \\$0.5/\\text{lollipop} = \\$150$\n*   **Profit:** $\\$240 - \\$150 = \\$90$\n\nThe class was able to raise $\\$90$.\n\n**Answer:** 90",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 19031.1,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 153.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "90",
+        "correct": "90",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0928",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 17.565,
+      "ttft_seconds": 0.3154,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 115,
+      "completion_tokens": 438,
+      "reasoning_tokens": null,
+      "content": "To find the average number of Junebugs removed per day, we must first determine the total number of Junebugs removed and then divide by the number of days on which removal occurred.\n\n**Step 1: Determine the number of Junebugs removed each day.**\n\n*   **Monday:** The problem states she removed **39** Junebugs.\n*   **Tuesday:** She removed twice as many as Monday.\n    $$ 39 \\times 2 = 78 \\text{ Junebugs} $$\n*   **Wednesday:** She removed twice as many as Monday (same as Tuesday).\n    $$ 39 \\times 2 = 78 \\text{ Junebugs} $$\n*   **Thursday:** The problem states she removed **48** Junebugs.\n*   **Friday:** The problem states she removed **57** Junebugs.\n\n**Step 2: Calculate the sum of all Junebugs removed.**\n\n$$ \\text{Total} = 39 + 78 + 78 + 48 + 57 $$\n\nLet's add them up:\n1.  $39 + 78 = 117$\n2.  $117 + 78 = 195$\n3.  $195 + 48 = 243$\n4.  $243 + 57 = 300$\n\nThe total number of Junebugs removed is **300**.\n\n**Step 3: Count the number of days.**\n\nThe removals occurred on Monday, Tuesday, Wednesday, Thursday, and Friday.\nTotal days = **5**.\n\n**Step 4: Calculate the average.**\n\n$$ \\text{Average} = \\frac{\\text{Total Junebugs}}{\\text{Total Days}} $$\n$$ \\text{Average} = \\frac{300}{5} $$\n$$ \\text{Average} = 60 $$\n\n**Conclusion:**\n\nThe average number of Junebugs removed per day is 60.\n\n60",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17685.2,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 151.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "60",
+        "correct": "60",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0939",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.885,
+      "ttft_seconds": 0.3214,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 119,
+      "completion_tokens": 321,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to solve the problem:\n\n**1. Calculate the total number of letters Craig spelled:**\nCraig spelled 20 words, and each word had 15 letters.\n$$ \\text{Craig's Total Letters} = 20 \\text{ words} \\times 15 \\text{ letters/word} $$\n$$ \\text{Craig's Total Letters} = 300 $$\n\n**2. Calculate the total number of letters Craig's brother spelled:**\nThe problem states that Craig's brother spelled words with a total count of letters 50 more than Craig.\n$$ \\text{Brother's Total Letters} = \\text{Craig's Total Letters} + 50 $$\n$$ \\text{Brother's Total Letters} = 300 + 50 $$\n$$ \\text{Brother's Total Letters} = 350 $$\n\n**3. Calculate the combined total number of letters:**\nTo find the total number of letters in the words they've spelled together, add Craig's total to his brother's total.\n$$ \\text{Total Letters} = \\text{Craig's Total Letters} + \\text{Brother's Total Letters} $$\n$$ \\text{Total Letters} = 300 + 350 $$\n$$ \\text{Total Letters} = 650 $$\n\n**Conclusion:**\nThe total number of letters in the words they've spelled after the ten rounds is 650.\n\n650",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12935.3,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 154.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "650",
+        "correct": "650",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0940",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 9.545,
+      "ttft_seconds": 0.3303,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 91,
+      "completion_tokens": 235,
+      "reasoning_tokens": null,
+      "content": "To calculate the total number of children in the drill, we need to break down the information provided:\n\n1.  **Children per row**: There are 8 children in a row.\n2.  **Rows per school**: There are 7 rows for each school.\n3.  **Number of schools**: There are 5 different schools.\n\n**Step 1: Calculate the number of children in one school.**\n$$ \\text{Children per school} = \\text{Children per row} \\times \\text{Rows per school} $$\n$$ \\text{Children per school} = 8 \\times 7 = 56 $$\n\n**Step 2: Calculate the total number of children for all 5 schools.**\n$$ \\text{Total children} = \\text{Children per school} \\times \\text{Number of schools} $$\n$$ \\text{Total children} = 56 \\times 5 $$\n\n**Calculation:**\n$$ 56 \\times 5 = 280 $$\n\n**Answer:**\nThere can be **280** children in the drill.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 9519.8,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 125.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "280",
+        "correct": "280",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-0946",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 6.529,
+      "ttft_seconds": 0.2929,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 82,
+      "completion_tokens": 160,
+      "reasoning_tokens": null,
+      "content": "To find the total number of loaves of bread the bakery has, we can follow these steps based on the problem description:\n\n1.  **Identify the number of loaves Sam had:**\n    Sam had 70 loaves of bread last Friday.\n\n2.  **Calculate \"seven times as many loaves as Sam had\":**\n    $$ 7 \\times 70 = 490 $$\n\n3.  **Calculate \"40 less than\" that amount:**\n    The problem states the bakery has 40 less than the amount calculated above.\n    $$ 490 - 40 = 450 $$\n\n**Conclusion:**\nThe bakery has 450 loaves of bread.\n\n450",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 6454.3,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 119.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "450",
+        "correct": "450",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1022",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.515,
+      "ttft_seconds": 0.2918,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 94,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n**Step 1: Determine the price of each type of stuffed animal.**\n*   We are given that each small stuffed animal costs $\\$4$.\n*   We are given that large stuffed animals cost three times the price of small ones.\n*   Price of a large stuffed animal = $3 \\times \\$4 = \\$12$.\n\n**Step 2: Define the variables for the quantity sold.**\n*   Let $s$ be the number of small stuffed animals sold.\n*   Let $l$ be the number of large stuffed animals sold.\n*   We are given that she sold twice as many small stuffed animals as large ones. This can be written as:\n    $$s = 2l$$\n\n**Step 3: Set up the equation for total earnings.**\n*   The total earnings are the sum of the earnings from small animals and large animals.\n*   Earnings from small animals = (Price of small) $\\times$ (Number of small) = $4s$.\n*   Earnings from large animals = (Price of large) $\\times$ (Number of large) = $12l$.\n*   Total earnings = $\\$120$.\n*   Equation: $4s + 12l = 120$.\n\n**Step 4: Solve for the number of small stuffed animals ($s$).**\n*   Substitute $s = 2l$ into the earnings equation:\n    $$4(2l) + 12l = 120$$\n*   Simplify the equation:\n    $$8l + 12l = 120$$\n    $$20l = 120$$\n*   Solve for $l$:\n    $$l = \\frac{120}{20}$$\n    $$l = 6$$\n*   So, Teresa sold 6 large stuffed animals.\n\n**Step 5: Calculate the number of small stuffed animals.**\n*   Using the relationship $s = 2l$:\n    $$s = 2 \\times 6$$\n    $$s = 12$$\n\n**Verification:**\n*   12 small animals at $\\$4$ each = $\\$48$.\n*   6 large animals at $\\$12$ each = $\\$72$.\n*",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20654.3,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 124.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "72",
+        "correct": "12",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1034",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 9.567,
+      "ttft_seconds": 0.237,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 75,
+      "completion_tokens": 230,
+      "reasoning_tokens": null,
+      "content": "To determine how much Ted spent in total, we need to calculate the cost of the books and the pencils separately and then sum them up. Note that the starting amount of $\\$200$ is not needed to calculate the *total spent*, only the remaining balance.\n\n**Step 1: Calculate the cost of the books.**\nTed buys 3 books at $\\$16$ each.\n$$ \\text{Cost of books} = 3 \\times 16 = 48 \\text{ dollars} $$\n\n**Step 2: Calculate the cost of the pencils.**\nTed buys 3 pencils at $\\$6$ each.\n$$ \\text{Cost of pencils} = 3 \\times 6 = 18 \\text{ dollars} $$\n\n**Step 3: Calculate the total amount spent.**\nAdd the cost of the books and the cost of the pencils.\n$$ \\text{Total spent} = 48 + 18 $$\n$$ 48 + 18 = 66 $$\n\nTed spent a total of **$66**.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 9243.9,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 107.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "66",
+        "correct": "66",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1093",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 19.249,
+      "ttft_seconds": 0.2885,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 101,
+      "completion_tokens": 481,
+      "reasoning_tokens": null,
+      "content": "To determine the cost of painting the room, we need to calculate the total surface area to be painted and then determine how many gallons of paint are required.\n\n**Step 1: Calculate the area of each wall.**\n\n*   **North and South Walls:**\n    *   Dimensions: $10 \\text{ ft} \\times 8 \\text{ ft}$\n    *   Area of one wall: $10 \\times 8 = 80 \\text{ sq ft}$\n    *   Since there are two such walls (North and South): $2 \\times 80 = 160 \\text{ sq ft}$\n\n*   **East and West Walls:**\n    *   Dimensions: $5 \\text{ ft} \\times 8 \\text{ ft}$\n    *   Area of one wall: $5 \\times 8 = 40 \\text{ sq ft}$\n    *   Since there are two such walls (East and West): $2 \\times 40 = 80 \\text{ sq ft}$\n\n**Step 2: Calculate the total area to be painted.**\n\n$$ \\text{Total Area} = \\text{Area of N/S walls} + \\text{Area of E/W walls} $$\n$$ \\text{Total Area} = 160 \\text{ sq ft} + 80 \\text{ sq ft} = 240 \\text{ sq ft} $$\n\n**Step 3: Calculate the number of gallons of paint needed.**\n\n*   Coverage per gallon: $20 \\text{ sq ft}$\n*   Total gallons needed: $\\frac{\\text{Total Area}}{\\text{Coverage per gallon}}$\n    $$ \\text{Gallons} = \\frac{240}{20} = 12 \\text{ gallons} $$\n\n**Step 4: Calculate the total cost.**\n\n*   Cost per gallon: $\\$12$\n*   Total Cost: $\\text{Gallons} \\times \\text{Cost per gallon}$\n    $$ \\text{Total Cost} = 12 \\times 12 = \\$144 $$\n\n**Conclusion:**\n\nIt will cost **$144** to paint the room.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 19408.3,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 139.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "144",
+        "correct": "144",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1098",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.163,
+      "ttft_seconds": 0.2897,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 84,
+      "completion_tokens": 179,
+      "reasoning_tokens": null,
+      "content": "To find Jeff's age, we will break down the problem step-by-step using the information provided.\n\n**1. Determine Mike's Age**\nThe problem states that Mike is 24 years old.\n$$Mike = 24$$\n\n**2. Determine Martha's Age**\nThe problem states that Martha is 4 years younger than Mike.\n$$Martha = Mike - 4$$\n$$Martha = 24 - 4$$\n$$Martha = 20$$\n\n**3. Determine Jeff's Age**\nThe problem states that Jeff is 10 years older than his younger sister, Martha.\n$$Jeff = Martha + 10$$\n$$Jeff = 20 + 10$$\n$$Jeff = 30$$\n\n**Conclusion**\nJeff is 30 years old.\n\n30",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7200.0,
+        "decode_tokens_per_sec": 24.9,
+        "prefill_ms": 122.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "30",
+        "correct": "30",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1103",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 18.297,
+      "ttft_seconds": 0.2619,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 110,
+      "completion_tokens": 448,
+      "reasoning_tokens": null,
+      "content": "To determine the total number of jellyfish in the tank, we can break down the problem step-by-step using the information provided.\n\n**Step 1: Determine the number of large jellyfish.**\nWe know that:\n1.  A third of the large jellyfish change color from green to blue under UV light.\n2.  When the UV light was turned on, exactly 6 jellyfish changed color.\n\nLet $L$ be the number of large jellyfish.\nAccording to the problem, $\\frac{1}{3}$ of $L$ equals the number of jellyfish that changed color (6).\n\n$$ \\frac{1}{3} \\times L = 6 $$\n\nTo find $L$, we multiply both sides by 3:\n$$ L = 6 \\times 3 $$\n$$ L = 18 $$\n\nSo, there are 18 large jellyfish.\n\n**Step 2: Determine the total number of jellyfish.**\nWe are given that a fifth of the total jellyfish are large. Let $T$ be the total number of jellyfish in the tank.\n\n$$ \\frac{1}{5} \\times T = L $$\n\nSubstitute the value of $L$ (18) into the equation:\n$$ \\frac{1}{5} \\times T = 18 $$\n\nTo find $T$, we multiply both sides by 5:\n$$ T = 18 \\times 5 $$\n$$ T = 90 $$\n\n**Verification:**\n*   Total jellyfish = 90.\n*   Large jellyfish = $\\frac{1}{5}$ of 90 = 18.\n*   Large jellyfish that change color = $\\frac{1}{3}$ of 18 = 6.\n*   This matches the given information that 6 jellyfish changed color.\n*   The remaining jellyfish are small ($90 - 18 = 72$) and stay blue, which is consistent with the problem description.\n\n**Final Answer:**\nThere are **90** jellyfish in the tank.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 18089.0,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 140.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "90",
+        "correct": "90",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1116",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.67,
+      "ttft_seconds": 0.2788,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 80,
+      "completion_tokens": 199,
+      "reasoning_tokens": null,
+      "content": "To find the total number of students enrolled this year, we need to calculate the increase in enrollment and add it to the previous year's total.\n\n**Step 1: Calculate the number of new students.**\nThe increase is 20% of last year's enrollment (50 students).\n$$ 0.20 \\times 50 = 10 $$\nSo, there are 10 new students.\n\n**Step 2: Calculate the total enrollment for this year.**\nAdd the new students to last year's enrollment.\n$$ 50 + 10 = 60 $$\n\n**Alternative Method:**\nYou can also multiply last year's enrollment by 1.20 (which represents 100% original enrollment + 20% increase).\n$$ 50 \\times 1.20 = 60 $$\n\nThere are **60** students enrolled this year in the calligraphy class.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 8031.5,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 111.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "60",
+        "correct": "60",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1130",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 16.795,
+      "ttft_seconds": 0.3176,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 119,
+      "completion_tokens": 415,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n**1. Determine the number of boxes needed:**\nNik has 200 crayons and wants to separate them into groups of 8.\n$$ \\text{Number of boxes} = \\frac{\\text{Total crayons}}{\\text{Crayons per box}} = \\frac{200}{8} = 25 \\text{ boxes} $$\n\n**2. Calculate the total weight of the crayons:**\nEach crayon weighs 1 ounce.\n$$ \\text{Weight of crayons} = 200 \\text{ crayons} \\times 1 \\text{ ounce/crayon} = 200 \\text{ ounces} $$\n\n**3. Calculate the total weight of the boxes:**\nEach box weighs 8 ounces. There are 25 boxes.\n$$ \\text{Weight of boxes} = 25 \\text{ boxes} \\times 8 \\text{ ounces/box} = 200 \\text{ ounces} $$\n\n**4. Calculate the total combined weight in ounces:**\n$$ \\text{Total weight (ounces)} = \\text{Weight of crayons} + \\text{Weight of boxes} $$\n$$ \\text{Total weight (ounces)} = 200 \\text{ ounces} + 200 \\text{ ounces} = 400 \\text{ ounces} $$\n\n**5. Convert the total weight to pounds:**\nThere are 16 ounces in 1 pound.\n$$ \\text{Total weight (pounds)} = \\frac{\\text{Total weight (ounces)}}{16} = \\frac{400}{16} $$\n\nPerforming the division:\n$$ 400 \\div 16 = 25 $$\n\n**Conclusion:**\nThe total weight of the crayons and the boxes is 25 pounds.\n\n25",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16769.3,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 149.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "25",
+        "correct": "25",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1140",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 12.54,
+      "ttft_seconds": 0.2863,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 87,
+      "completion_tokens": 318,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step solution:\n\n**Step 1: Determine how many scoops of mashed potatoes Gomer ate.**\nThe problem states Gomer ate 5 less than 23 scoops.\n$$ 23 - 5 = 18 \\text{ scoops} $$\n\n**Step 2: Determine the number of potatoes required per scoop ratio.**\nThe problem states it takes \"3 less than 6 potatoes\" to make \"1 less than 3 scoops\".\n\nFirst, find the number of potatoes used in the ratio:\n$$ 6 - 3 = 3 \\text{ potatoes} $$\n\nNext, find the number of scoops produced in the ratio:\n$$ 3 - 1 = 2 \\text{ scoops} $$\n\nSo, it takes 3 potatoes to make 2 scoops of mashed potatoes.\n\n**Step 3: Determine the number of potatoes needed per single scoop.**\n$$ \\frac{3 \\text{ potatoes}}{2 \\text{ scoops}} = 1.5 \\text{ potatoes per scoop} $$\n\n**Step 4: Calculate the total number of potatoes Gomer ate.**\nGomer ate 18 scoops. At a rate of 1.5 potatoes per scoop:\n$$ 18 \\text{ scoops} \\times 1.5 \\text{ potatoes/scoop} = 27 \\text{ potatoes} $$\n\n**Conclusion:**\nGomer ate 27 potatoes.\n\n27",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 12830.8,
+        "decode_tokens_per_sec": 24.8,
+        "prefill_ms": 121.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "27",
+        "correct": "27",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1149",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 7.865,
+      "ttft_seconds": 0.2204,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 71,
+      "completion_tokens": 196,
+      "reasoning_tokens": null,
+      "content": "To determine how much Jen spends on fish food in the month of May, we need to follow these steps:\n\n1.  **Identify the cost per fish per day:**\n    Each fish needs $1 worth of food per day.\n\n2.  **Calculate the daily cost for all fish:**\n    Jen has 3 fish.\n    $$3 \\text{ fish} \\times \\$1/\\text{fish/day} = \\$3 \\text{ per day}$$\n\n3.  **Determine the number of days in May:**\n    The month of May has 31 days.\n\n4.  **Calculate the total monthly cost:**\n    Multiply the daily cost by the number of days in the month.\n    $$\\$3/\\text{day} \\times 31 \\text{ days} = \\$93$$\n\n**Answer:** Jen spends **$93** on food in the month of May.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 7853.6,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 109.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "93",
+        "correct": "93",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1161",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.691,
+      "ttft_seconds": 0.2766,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 110,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "To determine how much money Abraham earns, we need to break down the sales into three parts: the first sale, the second sale, and the final sale of the remaining land.\n\n**Step 1: Analyze the first sale**\nAbraham starts with 80 square meters of land.\nHe sells half of the land.\n*   Area sold in first transaction: $80 \\times \\frac{1}{2} = 40$ square meters.\n*   Money earned from first transaction: **$50** (This is a lump sum for the 40 sq meters, not per square meter, based on the phrasing \"sold half of the land for $50\").\n*   Remaining land: $80 - 40 = 40$ square meters.\n\n**Step 2: Analyze the second sale**\nHe sells another $1/4$ of **his land**.\n*Note: In standard word problem contexts, \"his land\" usually refers to the original total unless specified as \"remaining land\". Let's verify if it means remaining.*\nIf it meant remaining: $1/4$ of remaining $40$ sqm is $10$ sqm.\nIf it meant original: $1/4$ of original $80$ sqm is $20$ sqm.\n\nLet's look at the phrasing carefully: \"sold another 1/4 of his land\". Usually, \"his land\" refers to the total property he owns. If he still owned the other half, he owns the total. However, since he *sold* the first half, he no longer owns it. Therefore, \"his land\" refers to the land he currently possesses, which is the remaining 40 square meters.\n\nLet's re-read carefully: \"sold half... then sold another 1/4 of his land\".\nInterpretation A: $1/4$ of the *original* total ($80$).\nInterpretation B: $1/4$ of the *remaining* amount ($40$).\n\nLet's look at the third sentence: \"He then sold the **remaining** land\". This implies there is a distinct remainder after the second sale.\n\nLet's test Interpretation B (1/4 of the remaining 40 sqm):\n*   Area sold in second transaction: $40 \\times \\frac{1}{4} = ",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20726.6,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 142.4
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "4",
+        "correct": "170",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1182",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 18.916,
+      "ttft_seconds": 0.2286,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 80,
+      "completion_tokens": 477,
+      "reasoning_tokens": null,
+      "content": "To determine how many books Bob can buy per school, we need to calculate the total number of books he can purchase with his budget and then distribute that total evenly among the 3 schools.\n\n**Step 1: Determine the cost per book**\nWe are given that 100 books cost $500. We can find the cost of a single book by dividing the total cost by the number of books:\n$$ \\text{Cost per book} = \\frac{\\$500}{100 \\text{ books}} = \\$5 \\text{ per book} $$\n\n**Step 2: Calculate the total number of books Bob can buy**\nBob has a total budget of $27,000. Using the cost per book calculated in Step 1, we can find the total number of books:\n$$ \\text{Total books} = \\frac{\\text{Total Budget}}{\\text{Cost per book}} = \\frac{\\$27,000}{\\$5} $$\n\n$$ \\frac{27,000}{5} = 5,400 \\text{ books} $$\n\n**Step 3: Calculate the number of books per school**\nThe books are distributed between 3 schools. Assuming an equal distribution:\n$$ \\text{Books per school} = \\frac{\\text{Total books}}{\\text{Number of schools}} = \\frac{5,400}{3} $$\n\n$$ \\frac{5,400}{3} = 1,800 \\text{ books} $$\n\n**Alternative Method:**\n1. Calculate the budget per school: $\\$27,000 / 3 = \\$9,000$ per school.\n2. Calculate how many books $9,000 buys. Since 100 books cost $500, we can find the number of \"sets\" of 100 books: $\\$9,000 / \\$500 = 18$ sets.\n3. Total books per school: $18 \\times 100 = 1,800$ books.\n\nBoth methods yield the same result.\n\n**Final Answer:**\n1800",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 19358.6,
+        "decode_tokens_per_sec": 24.6,
+        "prefill_ms": 110.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "1800",
+        "correct": "1800",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1206",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.776,
+      "ttft_seconds": 0.2678,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 105,
+      "completion_tokens": 395,
+      "reasoning_tokens": null,
+      "content": "To determine how much money John has leftover after paying off his debts, we need to follow these steps:\n\n**Step 1: Calculate the loan amount.**\nJohn gets a loan worth 40% of his home's value.\n$$ \\text{Loan Amount} = 40\\% \\times \\$250,000 $$\n$$ \\text{Loan Amount} = 0.40 \\times 250,000 $$\n$$ \\text{Loan Amount} = \\$100,000 $$\n\n**Step 2: Calculate the amount used to pay off debts.**\nHe uses 60% of the loan amount to pay off his debts.\n$$ \\text{Debt Payment} = 60\\% \\times \\$100,000 $$\n$$ \\text{Debt Payment} = 0.60 \\times 100,000 $$\n$$ \\text{Debt Payment} = \\$60,000 $$\n\n**Step 3: Calculate the leftover money.**\nSubtract the debt payment from the total loan amount.\n$$ \\text{Leftover Money} = \\text{Loan Amount} - \\text{Debt Payment} $$\n$$ \\text{Leftover Money} = \\$100,000 - \\$60,000 $$\n$$ \\text{Leftover Money} = \\$40,000 $$\n\nAlternatively, you can calculate the percentage of the loan that is leftover:\n$$ 100\\% - 60\\% = 40\\% \\text{ of the loan is leftover} $$\n$$ 40\\% \\times \\$100,000 = \\$40,000 $$\n\n**Answer:**\n$40,000",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16001.7,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 139.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "40000",
+        "correct": "40000",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1209",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 15.88,
+      "ttft_seconds": 0.4132,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 200,
+      "completion_tokens": 387,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step calculation to determine the total amount of water removed:\n\n**Step 1: Determine the daily water removal rate for each setting.**\n\n*   **Low Setting:** The problem states the low setting removes **1 liter** per day.\n*   **Medium Setting:** The medium setting removes twice as much as the low setting.\n    $$2 \\times 1 \\text{ liter/day} = \\mathbf{2 \\text{ liters/day}}$$\n*   **High Setting:** The high setting removes twice as much as the medium setting.\n    $$2 \\times 2 \\text{ liters/day} = \\mathbf{4 \\text{ liters/day}}$$\n\n**Step 2: Calculate the water removed during each period.**\n\n*   **Period 1 (Low Setting):** Ran for 3 days.\n    $$3 \\text{ days} \\times 1 \\text{ liter/day} = \\mathbf{3 \\text{ liters}}$$\n*   **Period 2 (Medium Setting):** Ran for 3 days.\n    $$3 \\text{ days} \\times 2 \\text{ liters/day} = \\mathbf{6 \\text{ liters}}$$\n*   **Period 3 (High Setting):** Ran for 5 days.\n    $$5 \\text{ days} \\times 4 \\text{ liters/day} = \\mathbf{20 \\text{ liters}}$$\n\n**Step 3: Calculate the total amount of water removed.**\n\nAdd the amounts from all three periods together:\n$$3 \\text{ liters} + 6 \\text{ liters} + 20 \\text{ liters} = 29 \\text{ liters}$$\n\n**Conclusion:**\n\nThe total amount of water removed from the air is 29 liters.\n\n29",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 15914.4,
+        "decode_tokens_per_sec": 24.3,
+        "prefill_ms": 269.7
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "29",
+        "correct": "29",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1232",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.33,
+      "ttft_seconds": 0.2869,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 82,
+      "completion_tokens": 326,
+      "reasoning_tokens": null,
+      "content": "To find the total amount of water removed (or in this case, pomelos removed), we need to calculate the amount remaining and subtract it from the original total, or sum up the amounts given away during each period.\n\n**Step 1: Calculate the number of pomelos remaining.**\nEve originally had 20 pomelos.\nShe is left with $1/4$ of the original amount.\n$$ \\text{Remaining pomelos} = 20 \\times \\frac{1}{4} = 5 \\text{ pomelos} $$\n\n**Step 2: Calculate the number of pomelos given away.**\nThe number of pomelos given away is the original amount minus the remaining amount.\n$$ \\text{Pomelos given away} = \\text{Original amount} - \\text{Remaining pomelos} $$\n$$ \\text{Pomelos given away} = 20 - 5 = 15 \\text{ pomelos} $$\n\n**Alternative Method:**\nIf Eve is left with $1/4$ of the pomelos, she must have given away the remaining fraction.\n$$ \\text{Fraction given away} = 1 - \\frac{1}{4} = \\frac{3}{4} $$\n$$ \\text{Pomelos given away} = 20 \\times \\frac{3}{4} = \\frac{60}{4} = 15 \\text{ pomelos} $$\n\n**Conclusion:**\nEve gave away 15 pomelos.\n\n15",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 13343.1,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 119.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "15",
+        "correct": "15",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1236",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.839,
+      "ttft_seconds": 0.2946,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 104,
+      "completion_tokens": 270,
+      "reasoning_tokens": null,
+      "content": "To find the total number of grapes at the beginning, we need to sum up the grapes used by Madeline, her brother, and their mother.\n\n**Step 1: Calculate the grapes used by Madeline's brother.**\nMadeline ate 6 grapes. Her brother used 5 times as many grapes as Madeline.\n$$ 6 \\times 5 = 30 \\text{ grapes} $$\n\n**Step 2: Calculate the grapes used by their mother for the pies.**\nThe mother made 4 pies, and each pie requires 12 grapes.\n$$ 4 \\times 12 = 48 \\text{ grapes} $$\n\n**Step 3: Calculate the total number of grapes.**\nAdd the grapes used by Madeline, her brother, and their mother together.\n$$ \\text{Total grapes} = (\\text{Madeline's grapes}) + (\\text{Brother's grapes}) + (\\text{Mother's grapes}) $$\n$$ \\text{Total grapes} = 6 + 30 + 48 $$\n\nLet's sum them up:\n$$ 6 + 30 = 36 $$\n$$ 36 + 48 = 84 $$\n\nThere were **84** grapes at the beginning.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 11142.5,
+        "decode_tokens_per_sec": 24.2,
+        "prefill_ms": 142.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "84",
+        "correct": "84",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1247",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.831,
+      "ttft_seconds": 0.3149,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 128,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step breakdown of the marble count:\n\n1.  **Start:** Brendan starts with 10 marbles.\n2.  **Drop:** He drops half of them.\n    $$ 10 / 2 = 5 \\text{ marbles dropped.} $$\n    This implies he still has the other half in his possession (or at least, they weren't the ones lost/scattered). However, the problem states he \"scrambled to search for them but only came up with 3.\" This phrasing usually implies that the 5 dropped ones were the ones being searched for, and he only recovered 3 of those specific dropped ones. The other 5 that he *didn't* drop are presumably still in the bag or in his hand, but standard riddle logic usually focuses on the items involved in the incident. Let's look closer at the phrasing: \"dropped half of them... only came up with 3.\"\n    \n    Let's re-evaluate the standard interpretation of this type of riddle:\n    *   Total marbles: 10.\n    *   He drops half (5 marbles). These 5 are now on the ground. The other 5 are safe in the bag/hand.\n    *   He searches for the dropped ones. He finds 3 of the dropped ones.\n    *   So, he now has the 3 recovered marbles plus the 5 that were never dropped. Total = $3 + 5 = 8$.\n    \n    *Alternative Interpretation:* Does \"came up with 3\" mean he only possesses 3 marbles in total? No, it says he searched for the ones he dropped. It implies he retrieved 3 of the dropped ones. The other 2 dropped marbles are lost forever.\n    \n    Let's trace the inventory:\n    *   **Initial:** 10 marbles.\n    *   **After dropping half:** 5 are on the ground, 5 are still with him (in the bag).\n    *   **After searching:** He picks up 3 of the ones on the ground. He loses 2 of the ones on the ground. He still has the original 5 in the bag.\n    *   **Current Count:** 5 (from bag) + 3 (recovered) = 8 marbles.\n    \n    *Wait, let's look at the next step:*",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 21048.3,
+        "decode_tokens_per_sec": 24.3,
+        "prefill_ms": 157.3
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "8",
+        "correct": "7",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1266",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.981,
+      "ttft_seconds": 0.2455,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 92,
+      "completion_tokens": 347,
+      "reasoning_tokens": null,
+      "content": "To determine the total amount of dog food needed for a week, we will calculate the daily consumption for each type of dog and then sum them up for a 7-day period.\n\n**Step 1: Calculate the daily food consumption for German Shepherds.**\n*   Number of German Shepherds: 3\n*   Daily consumption per German Shepherd: 5 kg\n*   Total daily consumption for German Shepherds:\n    $$3 \\times 5 \\text{ kg} = 15 \\text{ kg}$$\n\n**Step 2: Calculate the daily food consumption for Bulldogs.**\n*   Number of Bulldogs: 2\n*   Daily consumption per Bulldog: 3 kg\n*   Total daily consumption for Bulldogs:\n    $$2 \\times 3 \\text{ kg} = 6 \\text{ kg}$$\n\n**Step 3: Calculate the total daily food consumption for all dogs.**\n*   Total daily consumption = (Daily consumption for German Shepherds) + (Daily consumption for Bulldogs)\n    $$15 \\text{ kg} + 6 \\text{ kg} = 21 \\text{ kg per day}$$\n\n**Step 4: Calculate the total food consumption for a week.**\n*   Number of days in a week: 7\n*   Total weekly consumption = (Total daily consumption) $\\times$ 7\n    $$21 \\text{ kg/day} \\times 7 \\text{ days} = 147 \\text{ kg}$$\n\n**Conclusion:**\nThe kennel house will need **147** kilograms of dog food in a week.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14215.5,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 126.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "147",
+        "correct": "147",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1287",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 13.902,
+      "ttft_seconds": 0.3168,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 96,
+      "completion_tokens": 339,
+      "reasoning_tokens": null,
+      "content": "To find the total age of all siblings, we need to determine the age of each individual sibling and then add them together.\n\n**Step 1: Determine the ages of the sisters.**\nThe problem states there are 3 sisters and they are all the same age, which is 16.\n*   Age of Sister 1 = 16\n*   Age of Sister 2 = 16\n*   Age of Sister 3 = 16\n*   **Total age of sisters** = $16 + 16 + 16 = 48$ years.\n\n**Step 2: Determine the ages of the brothers.**\nThe problem states there are 2 brothers.\n*   One brother is 12 years old.\n*   This age (12) is half the age of the older brother.\n    *   Let $A$ be the age of the older brother.\n    *   $12 = \\frac{1}{2} A$\n    *   $A = 12 \\times 2 = 24$\n*   So, the older brother is 24 years old.\n*   **Total age of brothers** = $12 + 24 = 36$ years.\n\n**Step 3: Calculate the total age of all siblings.**\nTotal Age = (Total age of sisters) + (Total age of brothers)\nTotal Age = $48 + 36$\nTotal Age = $84$\n\n**Final Answer:**\nThe total age of all these siblings is 84.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 13927.9,
+        "decode_tokens_per_sec": 24.3,
+        "prefill_ms": 138.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "84",
+        "correct": "84",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1300",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 10.735,
+      "ttft_seconds": 0.2544,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 85,
+      "completion_tokens": 265,
+      "reasoning_tokens": null,
+      "content": "To calculate how much Josh makes in 2 weeks, we need to break down the calculation into daily earnings and then multiply by the number of working days.\n\n**Step 1: Calculate daily earnings**\nJosh services 3 cars per day and gets paid $4 per car.\n$$3 \\text{ cars/day} \\times \\$4/\\text{car} = \\$12 \\text{ per day}$$\n\n**Step 2: Determine the number of working days in a week**\nJosh is open every day except Sunday and Wednesday.\nA standard week has 7 days.\nExcluded days: Sunday, Wednesday (2 days).\nWorking days per week: $7 - 2 = 5$ days.\n\n**Step 3: Calculate total working days in 2 weeks**\n$$5 \\text{ days/week} \\times 2 \\text{ weeks} = 10 \\text{ working days}$$\n\n**Step 4: Calculate total earnings**\nTotal Earnings = Daily Earnings $\\times$ Total Working Days\n$$\\$12/\\text{day} \\times 10 \\text{ days} = \\$120$$\n\n**Conclusion:**\nJosh makes **$120** in 2 weeks.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 10854.4,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 120.8
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "2",
+        "correct": "120",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1301",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 16.519,
+      "ttft_seconds": 0.3268,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 116,
+      "completion_tokens": 407,
+      "reasoning_tokens": null,
+      "content": "To find the total number of cookies Randy has now, we will track the inventory of each flavor (oatmeal, chocolate chip, and sugar) through each step of the process.\n\n**Initial Inventory:**\n*   Oatmeal: 9\n*   Chocolate Chip: 4\n*   Sugar: 5\n\n**Step 1: Early day snack**\nRandy eats 3 cookies, one of each flavor.\n*   Oatmeal: $9 - 1 = 8$\n*   Chocolate Chip: $4 - 1 = 3$\n*   Sugar: $5 - 1 = 4$\n\n**Step 2: Lunch**\nRandy eats 2 oatmeal cookies.\n*   Oatmeal: $8 - 2 = 6$\n*   Chocolate Chip: $3$ (unchanged)\n*   Sugar: $4$ (unchanged)\n\n**Step 3: Giving to friends**\nRandy gives 2 sugar cookies to his friends.\n*   Oatmeal: $6$ (unchanged)\n*   Chocolate Chip: $3$ (unchanged)\n*   Sugar: $4 - 2 = 2$\n\n**Step 4: Baking for dinner**\nRandy bakes 4 of *each* flavor. We add 4 to each category.\n*   Oatmeal: $6 + 4 = 10$\n*   Chocolate Chip: $3 + 4 = 7$\n*   Sugar: $2 + 4 = 6$\n\n**Final Calculation:**\nTo find the total number of cookies, we sum the final counts for each flavor:\n$$10 \\text{ (Oatmeal)} + 7 \\text{ (Chocolate Chip)} + 6 \\text{ (Sugar)} = 23$$\n\nRandy has 23 cookies now.\n\n23",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 16661.1,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 150.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "23",
+        "correct": "23",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1309",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 14.411,
+      "ttft_seconds": 0.2796,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 99,
+      "completion_tokens": 353,
+      "reasoning_tokens": null,
+      "content": "To determine the total amount of money raised, we need to calculate the amount raised by each girl individually and then sum them up.\n\n**1. Calculate Alexandra's earnings:**\nThe problem states directly that Alexandra raises **$430**.\n\n**2. Calculate Kim's earnings:**\nKim raises $320 more than Alexandra.\n$$ \\text{Kim} = 430 + 320 = 750 $$\nSo, Kim raises **$750**.\n\n**3. Calculate Sarah's earnings:**\nThe problem states directly that Sarah raises **$300**.\n\n**4. Calculate Maryam's earnings:**\nMaryam raises $400 more than Sarah.\n$$ \\text{Maryam} = 300 + 400 = 700 $$\nSo, Maryam raises **$700**.\n\n**5. Calculate the total amount raised:**\nNow, we sum the amounts raised by all four girls:\n$$ \\text{Total} = \\text{Alexandra} + \\text{Kim} + \\text{Sarah} + \\text{Maryam} $$\n$$ \\text{Total} = 430 + 750 + 300 + 700 $$\n\nLet's add them step-by-step:\n$$ 430 + 750 = 1180 $$\n$$ 300 + 700 = 1000 $$\n$$ 1180 + 1000 = 2180 $$\n\nThe total amount raised is **$2180**.\n\n2180",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14575.3,
+        "decode_tokens_per_sec": 24.2,
+        "prefill_ms": 138.6
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "2180",
+        "correct": "2280",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1310",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 20.73,
+      "ttft_seconds": 0.3212,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 108,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "content": "Here is the step-by-step logical deduction to solve the problem:\n\n**Step 1: Determine the distances run by each person.**\n*   We are given that Vanessa ran 4 miles.\n*   We are given that Vanessa ran twice as far as Aaron.\n*   Therefore, Aaron's distance is half of Vanessa's distance:\n    $$ \\text{Aaron's Distance} = \\frac{4 \\text{ miles}}{2} = 2 \\text{ miles} $$\n\n**Step 2: Determine Aaron's speed.**\n*   Aaron ran 2 miles in 16 minutes.\n*   We can calculate Aaron's pace (minutes per mile):\n    $$ \\text{Aaron's Pace} = \\frac{16 \\text{ minutes}}{2 \\text{ miles}} = 8 \\text{ minutes per mile} $$\n*   Alternatively, we can calculate Aaron's speed in miles per minute:\n    $$ \\text{Aaron's Speed} = \\frac{2 \\text{ miles}}{16 \\text{ minutes}} = 0.125 \\text{ miles/minute} $$\n\n**Step 3: Determine Vanessa's speed.**\n*   The problem states that Aaron runs each mile *twice as fast* as Vanessa. This means Aaron's speed is twice Vanessa's speed, or conversely, Vanessa's speed is half of Aaron's speed.\n*   Using the pace (minutes per mile), \"twice as fast\" means it takes Vanessa twice as long to run a mile as it does Aaron.\n    $$ \\text{Vanessa's Pace} = 2 \\times \\text{Aaron's Pace} $$\n    $$ \\text{Vanessa's Pace} = 2 \\times 8 \\text{ minutes per mile} = 16 \\text{ minutes per mile} $$\n*   Alternatively, using speed (miles per minute):\n    $$ \\text{Vanessa's Speed} = \\frac{\\text{Aaron's Speed}}{2} = \\frac{0.125}{2} = 0.0625 \\text{ miles/minute} $$\n\n**Step 4: Calculate the time Vanessa took.**\n*   Vanessa ran a total of 4 miles.\n*   Her pace is 16 minutes per mile.\n*   $$ \\text{Total Time} = \\text{Distance} \\times \\text{",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 20959.0,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 142.2
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "16",
+        "correct": "64",
+        "status": "failed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "gsm8k-test-1316",
+      "source": "gsm8k",
+      "kind": "math-word-problem",
+      "wall_seconds": 14.736,
+      "ttft_seconds": 0.285,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 113,
+      "completion_tokens": 366,
+      "reasoning_tokens": null,
+      "content": "To determine how much Mark paid, we need to calculate the cost of the radiator and the cost of the labor separately, then add them together.\n\n**Step 1: Calculate the cost of the radiator.**\nThe original cost of the radiator is $400.\nMark gets it for 80% off. This means he pays 20% of the original price (since $100\\% - 80\\% = 20\\%$).\n\n$$ \\text{Cost of radiator} = \\$400 \\times 0.20 $$\n$$ \\text{Cost of radiator} = \\$80 $$\n\nAlternatively, you can calculate the discount amount first:\n$$ \\text{Discount} = \\$400 \\times 0.80 = \\$320 $$\n$$ \\text{Final Price} = \\$400 - \\$320 = \\$80 $$\n\n**Step 2: Calculate the cost of the labor.**\nThe mechanic charges $50 per hour.\nThe installation takes 3 hours.\n\n$$ \\text{Labor Cost} = 3 \\text{ hours} \\times \\$50/\\text{hour} $$\n$$ \\text{Labor Cost} = \\$150 $$\n\n**Step 3: Calculate the total cost.**\nAdd the cost of the radiator and the labor cost.\n\n$$ \\text{Total Cost} = \\text{Cost of radiator} + \\text{Labor Cost} $$\n$$ \\text{Total Cost} = \\$80 + \\$150 $$\n$$ \\text{Total Cost} = \\$230 $$\n\n**Conclusion:**\nMark paid a total of $230.\n\n230",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 14979.4,
+        "decode_tokens_per_sec": 24.4,
+        "prefill_ms": 149.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "230",
+        "correct": "230",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}
