@@ -1,0 +1,6 @@
+cell	budget	max_ctx	lazy	kv	mean_decode_tps	mean_prefill_tps	ok	vram_peak_mib	prefill_mode
+ctx32k-pfoff	16	32768	0	tq3_0	36.667	0.000	3	20275	off
+ctx65k-pfoff	16	65536	0	tq3_0	35.500	0.000	3	20723	off
+ctx98k-pfoff	16	98304	0	tq3_0	40.200	0.000	3	21171	off
+ctx32k-pfauto	16	32768	0	tq3_0	48.000	0.000	3	19299	auto
+ctx65k-pfauto	16	65536	0	tq3_0	44.033	0.000	3	19747	auto

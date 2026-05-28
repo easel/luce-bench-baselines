@@ -1,0 +1,5 @@
+[probe] starting lucebox-probe-1893040 (cell=b16-ctx65k-l0-q80, dflash=1)
+[probe] 1: comp=253 prompt=37 decode_tps=46.4 prefill_tps= wall=6.156s
+[probe] 2: comp=256 prompt=41 decode_tps=19.9 prefill_tps= wall=13.002s
+[probe] 3: comp=170 prompt=29 decode_tps=39.6 prefill_tps= wall=5.313s
+[probe] cell done: mean_decode_tps=35.300  mean_prefill_tps=0.000  vram_peak=21953MiB

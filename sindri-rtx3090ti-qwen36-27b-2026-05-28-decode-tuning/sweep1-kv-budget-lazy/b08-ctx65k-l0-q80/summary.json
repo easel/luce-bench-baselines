@@ -1,0 +1,11 @@
+{
+  "cell": "b08-ctx65k-l0-q80",
+  "n_probes": 3,
+  "ok": 3,
+  "mean_decode_tps": 34.300,
+  "mean_prefill_tps": 0.000,
+  "vram_start_mib": 20495,
+  "vram_peak_mib": 21879,
+  "enable_dflash": "1",
+  "env_args": "-e\nDFLASH_BUDGET=8\n-e\nDFLASH_MAX_CTX=65536\n-e\nDFLASH_PREFIX_CACHE_SLOTS=0\n-e\nDFLASH_PREFILL_CACHE_SLOTS=0\n-e\nDFLASH_THINK_MAX=15488\n-e\nDFLASH_PORT=8080\n-e\nDFLASH_TARGET=/opt/lucebox-hub/server/models/Qwen3.6-27B-Q4_K_M.gguf\n-e\nDFLASH_DRAFT=/opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf\n-e\nDFLASH_CACHE_TYPE_K=q8_0\n-e\nDFLASH_CACHE_TYPE_V=q8_0"
+}

@@ -1,0 +1,5 @@
+[probe] starting lucebox-probe-1930491 (cell=IQ4_XS, dflash=1)
+[probe] 1: comp=229 prompt=37 decode_tps=69.7 prefill_tps= wall=4.886s
+[probe] 2: comp=256 prompt=41 decode_tps=24.0 prefill_tps= wall=10.831s
+[probe] 3: comp=167 prompt=29 decode_tps=51.1 prefill_tps= wall=3.381s
+[probe] cell done: mean_decode_tps=48.267  mean_prefill_tps=0.000  vram_peak=18963MiB

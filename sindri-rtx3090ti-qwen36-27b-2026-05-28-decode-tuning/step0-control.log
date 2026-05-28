@@ -1,0 +1,5 @@
+[probe] starting lucebox-probe-1871822 (cell=step0-control-dflashON-budget16-ctx65536-lazy1-kvDEFAULT, dflash=1)
+[probe] 1: comp=230 prompt=37 decode_tps=63.5 prefill_tps= wall=4.216s
+[probe] 2: comp=256 prompt=41 decode_tps=20.4 prefill_tps= wall=12.707s
+[probe] 3: comp=175 prompt=29 decode_tps=69.6 prefill_tps= wall=2.628s
+[probe] cell done: mean_decode_tps=51.167  mean_prefill_tps=0.000  vram_peak=20723MiB

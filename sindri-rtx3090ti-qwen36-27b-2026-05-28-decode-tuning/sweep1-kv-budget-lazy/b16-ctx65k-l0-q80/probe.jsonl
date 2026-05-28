@@ -1,0 +1,3 @@
+{"i":1,"wall_s":6.156,"prompt_tokens":37,"completion_tokens":253,"decode_tps":46.4,"prefill_tps":null,"timings":{"decode_ms":5447.4,"decode_tokens_per_sec":46.4,"prefill_ms":671.5}}
+{"i":2,"wall_s":13.002,"prompt_tokens":41,"completion_tokens":256,"decode_tps":19.9,"prefill_tps":null,"timings":{"decode_ms":12854.3,"decode_tokens_per_sec":19.9,"prefill_ms":107.5}}
+{"i":3,"wall_s":5.313,"prompt_tokens":29,"completion_tokens":170,"decode_tps":39.6,"prefill_tps":null,"timings":{"decode_ms":4288.3,"decode_tokens_per_sec":39.6,"prefill_ms":70.7}}

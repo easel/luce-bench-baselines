@@ -1,0 +1,5 @@
+[probe] starting lucebox-probe-1928927 (cell=Q5_K_M, dflash=1)
+[probe] 1: comp=226 prompt=37 decode_tps=42.1 prefill_tps= wall=6.461s
+[probe] 2: comp=256 prompt=41 decode_tps=20.2 prefill_tps= wall=12.864s
+[probe] 3: comp=167 prompt=29 decode_tps=40.9 prefill_tps= wall=4.214s
+[probe] cell done: mean_decode_tps=34.400  mean_prefill_tps=0.000  vram_peak=22691MiB

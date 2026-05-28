@@ -1,0 +1,6 @@
+[probe] DFlash disabled: hid /home/erik/.local/share/lucebox/models/draft
+[probe] starting lucebox-probe-1890491 (cell=step0-dflashOFF-budget0-ctx65536-kvDEFAULT, dflash=0)
+[probe] 1: comp=230 prompt=37 decode_tps=20.7 prefill_tps= wall=11.614s
+[probe] 2: comp=256 prompt=41 decode_tps=20.4 prefill_tps= wall=13.546s
+[probe] 3: comp=171 prompt=29 decode_tps=20.3 prefill_tps= wall=8.544s
+[probe] cell done: mean_decode_tps=20.467  mean_prefill_tps=0.000  vram_peak=19243MiB

@@ -1,0 +1,198 @@
+[1;34m[INFO][0m  Autotune: DFLASH27B_DRAFT_SWA=2048 (Qwen3.6 draft SWA)
+[1;34m[INFO][0m  lucebox-hub container starting (target=Qwen3.6-27B-Q4_K_M.gguf, max_ctx=32768, budget=16, lazy=1)
+[server] loading tokenizer from /opt/lucebox-hub/server/models/Qwen3.6-27B-Q4_K_M.gguf
+[tokenizer] added_tokens: 33 special tokens
+[tokenizer] loaded vocab=248320 merges=247587 bos=248044 eos=248046 eot=248046 pre=qwen35 sp=no
+[server] loading pflash drafter tokenizer from /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[tokenizer] added_tokens: 33 special tokens
+[tokenizer] loaded vocab=248320 merges=247587 bos=-1 eos=248046 eot=248046 pre=qwen35 sp=no
+[server] pflash: mode=auto threshold=8000 keep=0.050 drafter_gpu=0 skip_park=0
+[server] creating backend...
+[backend_factory] detected arch=qwen35
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 24563 MiB):
+  Device 0: NVIDIA GeForce RTX 3090 Ti, compute capability 8.6, VMM: yes, VRAM: 24563 MiB
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[server] gguf meta: general.name='Qwen3.6-27B' general.architecture='qwen35'
+[model_card] using cards dir: /opt/lucebox-hub/server/build/../share/model_cards
+[model_card] probing sidecar: /opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json (from general.name='Qwen3.6-27B')
+[server] effort-tier ceiling = max_ctx(32768) - hard_limit_reply_budget(4096) = 28672
+[server] reasoning-effort high=32256 clamped to max_ctx - hard_limit_reply_budget = 28672
+[server] reasoning-effort x-high=56832 clamped to max_ctx - hard_limit_reply_budget = 28672
+[server] reasoning-effort max=81408 clamped to max_ctx - hard_limit_reply_budget = 28672
+
+[server] ╭─── Configuration ───────────────────────────────────╮
+[server] │  host            = 0.0.0.0
+[server] │  port            = 8080
+[server] │  model           = /opt/lucebox-hub/server/models/Qwen3.6-27B-Q4_K_M.gguf
+[server] │  draft           = /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[server] │  model_name      = dflash
+[server] │  max_ctx         = 32768
+[server] │  model_card      = /opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json
+[server] │  max_tokens      = 32768 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  think_max_tokens= 15488 (from CLI)
+[server] │  hard_limit_reply= 4096 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  effort tiers    = low=4032 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    medium=16128 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    high=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    x-high=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    max=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  target_device   = auto:0
+[server] │  draft_device    = auto:0
+[server] │  draft_exec      = local
+[server] │  peer_access     = off
+[server] │  chunk           = 512
+[server] │  fa_window       = 2048
+[server] │  ddtree          = ON
+[server] │  ddtree_budget   = 16
+[server] │  prefix_cache    = 0 slots
+[server] │  cors            = ON
+[server] │  cache_type_k    = tq3_0
+[server] │  cache_type_v    = tq3_0
+[server] │  pflash          = auto
+[server] │  pflash_threshold= 8000
+[server] │  pflash_keep     = 0.050
+[server] │  pflash_drafter  = /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[server] │  pflash_drafter_gpu= 0
+[server] │  pflash_drafter_exec= local
+[server] │  pflash_skip_park= off
+[server] │  fp_use_bsa      = ON
+[server] │  fp_alpha        = 0.85
+[server] │  lazy_draft      = ON
+[server] ╰─────────────────────────────────────────────────────╯
+
+[server] level-2 force-close (sidecar-hint, 116 chars → 24 tokens, hard_limit_reply_budget = 4096)
+[server] level-2 force-close token ids: 79939,279,6973,854,539,279,1156,11,353,599,310,2873,279,6093,3018,383,...
+[loader] eos_id=248046 eos_chat_id=-1
+[target] target loaded: layers [0,64) output=1, 850 tensors on GPU 14.99 GiB, tok_embd 682 MiB CPU-only (q4_K)
+[draft]  loaded
+[park] draft released
+[server] listening on http://0.0.0.0:8080
+[server] request path=/v1/chat/completions body_bytes=226
+[server] chat chatcmpl_0000000000000000 format=chat stream=false msgs=1 tools=0 prompt_tokens=37 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000000 format=chat stream=false prompt_tokens=37 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000000 restore=false slot=-1 prefix_len=0 effective_prompt=37 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=230 time=4.017 s speed=57.26 tok/s steps=22 accepted=215/352 (61.1%) avg_commit=10.45
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000000 ok=true in=37 effective_in=37 out=230 5.2s 44.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=4.0s(57.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=244
+[server] chat chatcmpl_0000000000000001 format=chat stream=false msgs=1 tools=0 prompt_tokens=41 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000001 format=chat stream=false prompt_tokens=41 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000001 restore=false slot=-1 prefix_len=0 effective_prompt=41 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=256 time=12.915 s speed=19.82 tok/s steps=70 accepted=187/1120 (16.7%) avg_commit=3.66
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000001 ok=true in=41 effective_in=41 out=256 13.6s 18.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.1s decode=12.9s(19.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=175
+[server] chat chatcmpl_0000000000000002 format=chat stream=false msgs=1 tools=0 prompt_tokens=29 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000002 format=chat stream=false prompt_tokens=29 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000002 restore=false slot=-1 prefix_len=0 effective_prompt=29 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=175 time=2.615 s speed=66.91 tok/s steps=17 accepted=163/272 (59.9%) avg_commit=10.29
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000002 ok=true in=29 effective_in=29 out=175 3.2s 54.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.1s decode=2.6s(66.9tok/s) error=-
+[1;34m[INFO][0m  Autotune: DFLASH27B_DRAFT_SWA=2048 (Qwen3.6 draft SWA)
+[1;34m[INFO][0m  lucebox-hub container starting (target=Qwen3.6-27B-Q4_K_M.gguf, max_ctx=32768, budget=16, lazy=1)
+[server] loading tokenizer from /opt/lucebox-hub/server/models/Qwen3.6-27B-Q4_K_M.gguf
+[tokenizer] added_tokens: 33 special tokens
+[tokenizer] loaded vocab=248320 merges=247587 bos=248044 eos=248046 eot=248046 pre=qwen35 sp=no
+[server] loading pflash drafter tokenizer from /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[tokenizer] added_tokens: 33 special tokens
+[tokenizer] loaded vocab=248320 merges=247587 bos=-1 eos=248046 eot=248046 pre=qwen35 sp=no
+[server] pflash: mode=auto threshold=8000 keep=0.050 drafter_gpu=0 skip_park=0
+[server] creating backend...
+[backend_factory] detected arch=qwen35
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 24563 MiB):
+  Device 0: NVIDIA GeForce RTX 3090 Ti, compute capability 8.6, VMM: yes, VRAM: 24563 MiB
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[server] gguf meta: general.name='Qwen3.6-27B' general.architecture='qwen35'
+[model_card] using cards dir: /opt/lucebox-hub/server/build/../share/model_cards
+[model_card] probing sidecar: /opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json (from general.name='Qwen3.6-27B')
+[server] effort-tier ceiling = max_ctx(32768) - hard_limit_reply_budget(4096) = 28672
+[server] reasoning-effort high=32256 clamped to max_ctx - hard_limit_reply_budget = 28672
+[server] reasoning-effort x-high=56832 clamped to max_ctx - hard_limit_reply_budget = 28672
+[server] reasoning-effort max=81408 clamped to max_ctx - hard_limit_reply_budget = 28672
+
+[server] ╭─── Configuration ───────────────────────────────────╮
+[server] │  host            = 0.0.0.0
+[server] │  port            = 8080
+[server] │  model           = /opt/lucebox-hub/server/models/Qwen3.6-27B-Q4_K_M.gguf
+[server] │  draft           = /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[server] │  model_name      = dflash
+[server] │  max_ctx         = 32768
+[server] │  model_card      = /opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json
+[server] │  max_tokens      = 32768 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  think_max_tokens= 15488 (from CLI)
+[server] │  hard_limit_reply= 4096 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  effort tiers    = low=4032 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    medium=16128 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    high=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    x-high=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │                    max=28672 (/opt/lucebox-hub/server/build/../share/model_cards/qwen3.6-27b.json)
+[server] │  target_device   = auto:0
+[server] │  draft_device    = auto:0
+[server] │  draft_exec      = local
+[server] │  peer_access     = off
+[server] │  chunk           = 512
+[server] │  fa_window       = 2048
+[server] │  ddtree          = ON
+[server] │  ddtree_budget   = 16
+[server] │  prefix_cache    = 0 slots
+[server] │  cors            = ON
+[server] │  cache_type_k    = tq3_0
+[server] │  cache_type_v    = tq3_0
+[server] │  pflash          = auto
+[server] │  pflash_threshold= 8000
+[server] │  pflash_keep     = 0.050
+[server] │  pflash_drafter  = /opt/lucebox-hub/server/models/draft/dflash-draft-3.6-q4_k_m.gguf
+[server] │  pflash_drafter_gpu= 0
+[server] │  pflash_drafter_exec= local
+[server] │  pflash_skip_park= off
+[server] │  fp_use_bsa      = ON
+[server] │  fp_alpha        = 0.85
+[server] │  lazy_draft      = ON
+[server] ╰─────────────────────────────────────────────────────╯
+
+[server] level-2 force-close (sidecar-hint, 116 chars → 24 tokens, hard_limit_reply_budget = 4096)
+[server] level-2 force-close token ids: 79939,279,6973,854,539,279,1156,11,353,599,310,2873,279,6093,3018,383,...
+[loader] eos_id=248046 eos_chat_id=-1
+[target] target loaded: layers [0,64) output=1, 850 tensors on GPU 14.99 GiB, tok_embd 682 MiB CPU-only (q4_K)
+[draft]  loaded
+[park] draft released
+[server] listening on http://0.0.0.0:8080
+[server] request path=/v1/chat/completions body_bytes=226
+[server] chat chatcmpl_0000000000000000 format=chat stream=false msgs=1 tools=0 prompt_tokens=37 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000000 format=chat stream=false prompt_tokens=37 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000000 restore=false slot=-1 prefix_len=0 effective_prompt=37 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=230 time=4.017 s speed=57.26 tok/s steps=22 accepted=215/352 (61.1%) avg_commit=10.45
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000000 ok=true in=37 effective_in=37 out=230 5.2s 44.2 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.6s decode=4.0s(57.3tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=244
+[server] chat chatcmpl_0000000000000001 format=chat stream=false msgs=1 tools=0 prompt_tokens=41 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000001 format=chat stream=false prompt_tokens=41 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000001 restore=false slot=-1 prefix_len=0 effective_prompt=41 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=256 time=12.915 s speed=19.82 tok/s steps=70 accepted=187/1120 (16.7%) avg_commit=3.66
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000001 ok=true in=41 effective_in=41 out=256 13.6s 18.9 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.1s decode=12.9s(19.8tok/s) error=-
+[server] request path=/v1/chat/completions body_bytes=175
+[server] chat chatcmpl_0000000000000002 format=chat stream=false msgs=1 tools=0 prompt_tokens=29 max_tokens=256 max_ctx=32768 thinking=false stops=0 model=dflash
+[server] chat START chatcmpl_0000000000000002 format=chat stream=false prompt_tokens=29 max_tokens=256 tools=0
+[server] chat CACHE chatcmpl_0000000000000002 restore=false slot=-1 prefix_len=0 effective_prompt=29 pflash=false disk_hit=false snap_slot=-1 snap_pos=0
+[draft GGUF] SWA layers: 4/5 (window=2048)
+[unpark] draft restored
+[spec-decode] tokens=175 time=2.615 s speed=66.91 tok/s steps=17 accepted=163/272 (59.9%) avg_commit=10.29
+[park] draft released
+[vram] released scratch buffers
+[server] chat DONE chatcmpl_0000000000000002 ok=true in=29 effective_in=29 out=175 3.2s 54.6 tok/s finish=stop restore=false slot=-1 prefix_len=0 prefill=0.1s decode=2.6s(66.9tok/s) error=-
