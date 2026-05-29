@@ -1,0 +1,101 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "smoke",
+  "url": "https://openrouter.ai/api",
+  "model": "qwen/qwen3.6-27b",
+  "think": false,
+  "max_tokens": 4096,
+  "n": 3,
+  "pass": 3,
+  "pass_rate": 100.0,
+  "wall_total": 2.339,
+  "wall_median": 0.904,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": true,
+    "token": "/no_think",
+    "source": "family_map"
+  },
+  "rows": [
+    {
+      "case_id": "smoke-arithmetic",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.319,
+      "ttft_seconds": 0.305,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "reasoning_tokens": 0,
+      "content": "4",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "4",
+        "correct": "4",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-capital",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.904,
+      "ttft_seconds": 0.4919,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "reasoning_tokens": 0,
+      "content": "Paris",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "Paris",
+        "correct": "Paris",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-sequence",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 1.116,
+      "ttft_seconds": 1.1109,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "reasoning_tokens": 0,
+      "content": "3",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "3",
+        "correct": "3",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}

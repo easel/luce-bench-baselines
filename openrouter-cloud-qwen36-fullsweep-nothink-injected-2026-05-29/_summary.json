@@ -1,0 +1,88 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "name": "openrouter-cloud-qwen36-fullsweep-nothink-injected-2026-05-29",
+  "url": "https://openrouter.ai/api",
+  "model": "qwen/qwen3.6-27b",
+  "areas": [
+    {
+      "area": "smoke",
+      "n": 3,
+      "pass": 3,
+      "rate": 100.0,
+      "wall_total": 2.339,
+      "wall_median": 0.904
+    },
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 67,
+      "rate": 72.82608695652173,
+      "wall_total": 8687.482,
+      "wall_median": 47.107
+    },
+    {
+      "area": "gsm8k",
+      "n": 100,
+      "pass": 93,
+      "rate": 93.0,
+      "wall_total": 1097.197,
+      "wall_median": 6.8455
+    },
+    {
+      "area": "truthfulqa-mc1",
+      "n": 100,
+      "pass": 80,
+      "rate": 80.0,
+      "wall_total": 209.047,
+      "wall_median": 1.0585
+    },
+    {
+      "area": "hellaswag",
+      "n": 100,
+      "pass": 86,
+      "rate": 86.0,
+      "wall_total": 174.706,
+      "wall_median": 1.0845
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 9,
+      "rate": 90.0,
+      "wall_total": 33.092,
+      "wall_median": 1.298
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 6,
+      "rate": 100.0,
+      "wall_total": 49.385999999999996,
+      "wall_median": 7.4399999999999995
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 2,
+      "rate": 50.0,
+      "wall_total": 31.988,
+      "wall_median": 8.5595
+    },
+    {
+      "area": "agent_recorded",
+      "n": 26,
+      "pass": 8,
+      "rate": 30.76923076923077,
+      "wall_total": 475.784,
+      "wall_median": 11.7265
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 260.088,
+      "wall_median": 3.614
+    }
+  ]
+}
