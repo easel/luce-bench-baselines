@@ -1,0 +1,203 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "longctx",
+  "url": "http://bragi:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 6,
+  "pass_rate": 100.0,
+  "wall_total": 238.833,
+  "wall_median": 18.070500000000003,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 4.318,
+      "ttft_seconds": 2.7112,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 2121,
+      "completion_tokens": 43,
+      "reasoning_tokens": null,
+      "content": "Risk: The smoke test asserts that tool calls are emitted in OpenAI format, while the server implementation parses XML tool calls, creating a critical API compatibility mismatch that could cause tool-use failures and benchmark invalidation.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1721.7,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 2573.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 7.143,
+      "ttft_seconds": 5.1295,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4156,
+      "completion_tokens": 50,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on parsing XML tool calls within the SSE streaming layer introduces a significant fragility risk, as any deviation in the Qwen chat template output or server-side parsing logic can break API compatibility and fail the OpenAI-format smoke tests.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2148.6,
+        "decode_tokens_per_sec": 23.3,
+        "prefill_ms": 4968.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 12.352,
+      "ttft_seconds": 10.3584,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 8218,
+      "completion_tokens": 48,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on XML parsing for tool calls in the server logic creates a fragility risk that is not sufficiently validated by the smoke tests, which only verify OpenAI format emission, potentially leading to silent failures in tool-use reliability.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2119.7,
+        "decode_tokens_per_sec": 22.6,
+        "prefill_ms": 10208.2
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 23.789,
+      "ttft_seconds": 22.1,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 16362,
+      "completion_tokens": 38,
+      "reasoning_tokens": null,
+      "content": "Risk: The repository contains only repetitive high-level auditing directives and feature summaries without any underlying implementation code, making it impossible to verify API compatibility, tool-call behavior, or Docker reproducibility.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1836.3,
+        "decode_tokens_per_sec": 20.7,
+        "prefill_ms": 21924.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 55.463,
+      "ttft_seconds": 51.7443,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 32649,
+      "completion_tokens": 66,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on parsing XML tool calls for OpenAI-compatible tool emission in `dflash/scripts/server.py` introduces a fragile coupling between the model's output format and the server's parsing logic, creating a high probability of silent failures or incorrect tool invocations if the model deviates from the expected XML structure during streaming.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3904.3,
+        "decode_tokens_per_sec": 16.9,
+        "prefill_ms": 51521.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 135.768,
+      "ttft_seconds": 132.7171,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 65212,
+      "completion_tokens": 42,
+      "reasoning_tokens": null,
+      "content": "Risk: The system's reliance on parsing XML tool calls for SSE streaming creates a single point of failure where malformed or non-conforming XML output from the Qwen model will break API compatibility and tool execution.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3304.0,
+        "decode_tokens_per_sec": 12.7,
+        "prefill_ms": 132416.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "code",
+  "url": "http://bragi:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 2048,
+  "n": 10,
+  "pass": 10,
+  "pass_rate": 100.0,
+  "wall_total": 16.708,
+  "wall_median": 1.586,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "has_close_elements",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.947,
+      "ttft_seconds": 0.3661,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 186,
+      "completion_tokens": 43,
+      "reasoning_tokens": null,
+      "content": "i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1697.4,
+        "decode_tokens_per_sec": 25.3,
+        "prefill_ms": 232.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "separate_paren_groups",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 3.347,
+      "ttft_seconds": 0.3548,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 196,
+      "completion_tokens": 77,
+      "reasoning_tokens": null,
+      "content": " char in paren_string:\n        if char == '(':\n            current_depth += 1\n            current_string.append(char)\n        elif char == ')':\n            current_depth -= 1\n            current_string.append(char)\n            if current_depth == 0:\n                result.append(''.join(current_string))\n                current_string = []\n    return result",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3070.9,
+        "decode_tokens_per_sec": 25.1,
+        "prefill_ms": 258.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "truncate_number",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 0.421,
+      "ttft_seconds": 0.3372,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 147,
+      "completion_tokens": 6,
+      "reasoning_tokens": null,
+      "content": "number - int(number)",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 204.2,
+        "decode_tokens_per_sec": 29.4,
+        "prefill_ms": 198.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "below_zero",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.182,
+      "ttft_seconds": 0.3772,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 189,
+      "completion_tokens": 24,
+      "reasoning_tokens": null,
+      "content": "operations:\n        balance += op\n        if balance < 0:\n                return True\n    return False",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 923.2,
+        "decode_tokens_per_sec": 26.0,
+        "prefill_ms": 240.0
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "mean_absolute_deviation",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.622,
+      "ttft_seconds": 0.3671,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 181,
+      "completion_tokens": 35,
+      "reasoning_tokens": null,
+      "content": "sum(numbers) / len(numbers)\n    total_deviation = sum(abs(x - mean) for x in numbers)\n    return total_deviation / len(numbers)",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1372.9,
+        "decode_tokens_per_sec": 25.5,
+        "prefill_ms": 231.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "intersperse",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.55,
+      "ttft_seconds": 0.2942,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 165,
+      "completion_tokens": 33,
+      "reasoning_tokens": null,
+      "content": "enumerate(numbers):\n        result.append(n)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1297.8,
+        "decode_tokens_per_sec": 25.4,
+        "prefill_ms": 234.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "parse_nested_parens",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 3.159,
+      "ttft_seconds": 0.4029,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 200,
+      "completion_tokens": 71,
+      "reasoning_tokens": null,
+      "content": "s:\n            if c == '(':\n                depth += 1\n                if depth > max_depth:\n                    max_depth = depth\n            elif c == ')':\n                depth -= 1\n        return max_depth\n\n    groups = paren_string.split()\n    return [parse_paren_group(g) for g in groups]",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2875.0,
+        "decode_tokens_per_sec": 24.7,
+        "prefill_ms": 267.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "filter_by_substring",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 0.624,
+      "ttft_seconds": 0.34,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 156,
+      "completion_tokens": 11,
+      "reasoning_tokens": null,
+      "content": "[str for s in strings if substring in s]",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 404.2,
+        "decode_tokens_per_sec": 27.2,
+        "prefill_ms": 203.3
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "sum_product",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.061,
+      "ttft_seconds": 0.377,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 192,
+      "completion_tokens": 21,
+      "reasoning_tokens": null,
+      "content": " numbers:\n        s += n\n        p *= n\n    return (s, p)",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 805.5,
+        "decode_tokens_per_sec": 26.1,
+        "prefill_ms": 236.8
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "rolling_max",
+      "source": "HumanEval-port",
+      "kind": "code-completion",
+      "wall_seconds": 1.795,
+      "ttft_seconds": 0.374,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 181,
+      "completion_tokens": 39,
+      "reasoning_tokens": null,
+      "content": "None:\n            running_max = n\n        else:\n            if n > running_max:\n                running_max = n\n        result.append(running_max)\n    return result",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1540.4,
+        "decode_tokens_per_sec": 25.3,
+        "prefill_ms": 235.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "parse_ok",
+        "correct": "parses-as-python",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}
