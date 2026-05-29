@@ -1,0 +1,88 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "name": "sindri-rtx3090ti-qwen36-fullsweep-nothink-2026-05-29",
+  "url": "http://sindri:8080",
+  "model": "dflash",
+  "areas": [
+    {
+      "area": "smoke",
+      "n": 3,
+      "pass": 3,
+      "rate": 100.0,
+      "wall_total": 1.264,
+      "wall_median": 0.174
+    },
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 66,
+      "rate": 71.73913043478261,
+      "wall_total": 17271.437,
+      "wall_median": 109.1385
+    },
+    {
+      "area": "gsm8k",
+      "n": 100,
+      "pass": 81,
+      "rate": 81.0,
+      "wall_total": 2448.036,
+      "wall_median": 20.414
+    },
+    {
+      "area": "truthfulqa-mc1",
+      "n": 100,
+      "pass": 76,
+      "rate": 76.0,
+      "wall_total": 40.682,
+      "wall_median": 0.414
+    },
+    {
+      "area": "hellaswag",
+      "n": 100,
+      "pass": 87,
+      "rate": 87.0,
+      "wall_total": 68.209,
+      "wall_median": 0.786
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 10,
+      "rate": 100.0,
+      "wall_total": 22.719,
+      "wall_median": 1.9465000000000001
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 6,
+      "rate": 100.0,
+      "wall_total": 405.108,
+      "wall_median": 32.085499999999996
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 2,
+      "rate": 50.0,
+      "wall_total": 63.918,
+      "wall_median": 13.277
+    },
+    {
+      "area": "agent_recorded",
+      "n": 26,
+      "pass": 9,
+      "rate": 34.61538461538461,
+      "wall_total": 1308.9,
+      "wall_median": 57.3655
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 137.12,
+      "wall_median": 3.2205000000000004
+    }
+  ]
+}

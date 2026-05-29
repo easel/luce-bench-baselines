@@ -1,0 +1,143 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "agent",
+  "url": "http://sindri:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 4096,
+  "n": 4,
+  "pass": 2,
+  "pass_rate": 50.0,
+  "wall_total": 63.918,
+  "wall_median": 13.277,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "codex-mini-read-task",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 9.436,
+      "ttft_seconds": 3.5779,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 1552,
+      "completion_tokens": 106,
+      "reasoning_tokens": null,
+      "content": "I would use the `rg` (ripgrep) tool to search for content, but since the goal is to read an entire file, I'd use `cat dflash/src/server/http_server.cpp` to display its contents, or `head`/`tail` with line numbers if it's very large. Alternatively, `rg --files` won't help here since we already know the file path. The best approach is simply `cat dflash/src/server/http_server.cpp` to read and summarize the file.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 5502.2,
+        "decode_tokens_per_sec": 19.3,
+        "prefill_ms": 3120.6
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "narrative",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-mini-apply-patch",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 7.744,
+      "ttft_seconds": 4.0215,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 1765,
+      "completion_tokens": 68,
+      "reasoning_tokens": null,
+      "content": "Let me find the function and understand the bug first.\n\n```bash\nrg -n \"budget_close_started\" dflash/src/qwen35/qwen35_backend.cpp\n```\n\n```bash\nrg -n \"qwen35_decode\" dflash/src/qwen35/qwen35_backend.cpp\n```",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3569.6,
+        "decode_tokens_per_sec": 19.0,
+        "prefill_ms": 3501.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "agent_shape_ok",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-large-explore",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 17.118,
+      "ttft_seconds": 12.1648,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 5361,
+      "completion_tokens": 86,
+      "reasoning_tokens": null,
+      "content": "I'll search the repository for authentication-related files using multiple strategies.\n\n*** Thinking Process\n- First, I'll look at the repo structure to understand the project layout\n- Search for files with \"auth\" in the name\n- Search for keywords like \"login\", \"password\", \"token\", \"session\", \"middleware\" in the codebase\n- Check common patterns like middleware dirs, config files, and route definitions",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4707.2,
+        "decode_tokens_per_sec": 18.3,
+        "prefill_ms": 11564.3
+      },
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "narrative",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "failed",
+        "format_pass": false,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "codex-medium-test",
+      "source": "agent-shape-probe",
+      "kind": "agent-prompt",
+      "wall_seconds": 29.62,
+      "ttft_seconds": 10.8466,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4824,
+      "completion_tokens": 316,
+      "reasoning_tokens": null,
+      "content": "*** Begin Patch\n*** Add File: tests/test_parse_thinking_budget.py\nimport pytest\n\ndef test_parse_thinking_budget_valid_values(parse_thinking_budget):\n    assert parse_thinking_budget(\"high\") == 16384\n    assert parse_thinking_budget(\"medium\") == 8192\n    assert parse_thinking_budget(\"low\") == 1024\n    assert parse_thinking_budget(\"4096\") == 4096\n    assert parse_thinking_budget(\"0\") == 0\n\n\ndef test_parse_thinking_budget_invalid_values(parse_thinking_budget):\n    with pytest.raises(ValueError):\n        parse_thinking_budget(\"invalid\")\n    with pytest.raises(ValueError):\n        parse_thinking_budget(\"-1\")\n    with pytest.raises(ValueError):\n        parse_thinking_budget(\"\")\n\n\n@pytest.fixture\ndef parse_thinking_budget():\n    def _parse(s: str) -> int:\n        presets = {\"high\": 16384, \"medium\": 8192, \"low\": 1024}\n        s = s.strip()\n        if s in presets:\n            return presets[s]\n        try:\n            val = int(s)\n        except ValueError:\n            raise ValueError(f\"Invalid thinking budget: {s!r}\")\n        if val < 0:\n            raise ValueError(f\"Budget must be non-negative, got {val}\")\n        return val\n\n    return _parse\n*** End Patch",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 17793.6,
+        "decode_tokens_per_sec": 17.8,
+        "prefill_ms": 9807.4
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "agent_shape_ok",
+        "correct": "code_block | json_tool_call | apply_patch",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}

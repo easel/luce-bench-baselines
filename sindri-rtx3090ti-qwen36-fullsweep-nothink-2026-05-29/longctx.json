@@ -1,0 +1,203 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "longctx",
+  "url": "http://sindri:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 6,
+  "pass_rate": 100.0,
+  "wall_total": 405.108,
+  "wall_median": 32.085499999999996,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 7.678,
+      "ttft_seconds": 4.762,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 2121,
+      "completion_tokens": 54,
+      "reasoning_tokens": null,
+      "content": "Risk: The divergence between the server's internal XML tool-call parsing and the smoke test's enforcement of OpenAI-format tool emission creates a high risk of API incompatibility, potentially leading to failed integration tests or runtime failures when downstream consumers expect standard OpenAI tool structures.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2805.3,
+        "decode_tokens_per_sec": 19.2,
+        "prefill_ms": 4375.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 12.176,
+      "ttft_seconds": 9.386,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4156,
+      "completion_tokens": 50,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls and rendering Qwen-specific chat templates introduces significant fragility in API compatibility and streaming reliability, which may fail to meet OpenAI format expectations during smoke tests if not rigorously isolated and validated.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2693.4,
+        "decode_tokens_per_sec": 18.6,
+        "prefill_ms": 8625.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 21.795,
+      "ttft_seconds": 19.0841,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 8218,
+      "completion_tokens": 47,
+      "reasoning_tokens": null,
+      "content": "Risk: The strict coupling between XML-parsed tool calls in the server and OpenAI-format expectations in the smoke test creates a high risk of API compatibility failures if the parsing logic or streaming delta implementation deviates from the standardized format.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2635.9,
+        "decode_tokens_per_sec": 17.8,
+        "prefill_ms": 17675.1
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 42.376,
+      "ttft_seconds": 39.9046,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 16362,
+      "completion_tokens": 40,
+      "reasoning_tokens": null,
+      "content": "Risk: The smoke test requires tools to be emitted in OpenAI format, but the server implementation parses XML tool calls, creating a critical API compatibility mismatch that will cause the validation suite to fail.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2434.4,
+        "decode_tokens_per_sec": 16.4,
+        "prefill_ms": 37154.5
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 93.573,
+      "ttft_seconds": 90.3562,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 32649,
+      "completion_tokens": 44,
+      "reasoning_tokens": null,
+      "content": "Risk: The discrepancy between the server's internal XML-based tool call parsing and the external requirement to emit tools in OpenAI format creates a high risk of API incompatibility and silent failures in client-side tool execution verification.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3280.0,
+        "decode_tokens_per_sec": 13.4,
+        "prefill_ms": 84038.6
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 227.51,
+      "ttft_seconds": 223.9612,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 65212,
+      "completion_tokens": 38,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls creates a significant compatibility risk for OpenAI-format clients, potentially causing failures if the model output deviates from the expected XML structure.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 3542.5,
+        "decode_tokens_per_sec": 10.7,
+        "prefill_ms": 209236.9
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    }
+  ]
+}
