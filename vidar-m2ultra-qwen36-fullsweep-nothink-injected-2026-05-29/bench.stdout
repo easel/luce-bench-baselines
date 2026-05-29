@@ -1,0 +1,497 @@
+[lucebench] v0.2.7.dev0
+[lucebench] preflight http://vidar:1237
+  liveness     ✓  reached in 0.02s
+  /v1/models   ✓  Qwen3-30B-A3B-Instruct-2507-MLX-4bit, *Qwen3.6-27B-MLX-8bit, … (+5 more)
+  /props       ✓  absent (non-lucebox server) — skipped
+[lucebench] sweep name=vidar-m2ultra-qwen36-fullsweep-nothink-injected-2026-05-29 areas=smoke,ds4-eval,gsm8k,truthfulqa-mc1,hellaswag,code,longctx,agent,agent_recorded,forge url=http://vidar:1237 model=Qwen3.6-27B-MLX-8bit out=/Users/erik/Projects/luce-bench-baselines/vidar-m2ultra-qwen36-fullsweep-nothink-injected-2026-05-29
+
+[lucebench] === area=smoke cases=3 think=False max_tokens=4096 ===
+    1 PASS smoke          smoke-arithmetic         given=4                    correct=4                    ttft=23.6s* wall=23.64s in=54 out=1
+    2 PASS smoke          smoke-capital            given=Paris                correct=Paris                ttft=849ms* wall=0.92s in=53 out=1
+    3 FAIL smoke          smoke-sequence           given=4                    correct=3                    ttft=812ms* wall=0.88s in=57 out=1
+[lucebench] area=smoke pass_rate=66.67% (2/3) wall_total=25s
+
+[lucebench] === area=ds4-eval cases=92 think=False max_tokens=16000 ===
+    1 PASS GPQA Diamond   recNu3MXkvWUzHZr9        given=B                    correct=B                    ttft=1.8s* wall=81.43s 16tps* in=233 out=1331
+    2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C                    correct=C                    ttft=1.5s* wall=45.62s 16tps* in=169 out=747
+    3 PASS AIME2025       aime2025-01              given=70                   correct=70                   ttft=1.2s* wall=63.42s 17tps* in=102 out=1048
+    4 PASS GPQA Diamond   recoiTJPGUmzAkief        given=C                    correct=C                    ttft=2.5s* wall=73.81s 16tps* in=354 out=1199
+    5 PASS SuperGPQA      b7e20eac98764fb0bf30e8366d951daa given=J                    correct=J                    ttft=2.2s* wall=59.14s 16tps* in=295 out=946
+    6 PASS AIME2025       aime2025-16              given=468                  correct=468                  ttft=1.5s* wall=90.58s 16tps* in=173 out=1484
+    7 FAIL GPQA Diamond   rec4UqStf9WUVif1f        given=?                    correct=B                    ttft=1.7s* wall=150.26s
+    8 PASS SuperGPQA      4a1d1780a93f4093b6fb7d3c314cbea8 given=E                    correct=E                    ttft=2.2s* wall=40.93s 16tps* in=145 out=640
+    9 FAIL AIME2025       aime2025-02              given=1044                 correct=588                  ttft=4.1s* wall=578.60s 16tps* in=701 out=9350
+   10 PASS GPQA Diamond   recgI6tUQ7RLJRWGx        given=B                    correct=B                    ttft=2.2s* wall=84.89s 16tps* in=222 out=1384
+   11 FAIL SuperGPQA      6082513c8dba4ec68aa68f1bf5854d09 given=E                    correct=A                    ttft=1.3s* wall=36.08s 16tps* in=156 out=584
+   12 PASS AIME2025       aime2025-03              given=16                   correct=16                   ttft=1.5s* wall=98.18s 17tps* in=185 out=1624
+   13 FAIL GPQA Diamond   recDytVnNYZe2HuUU        given=C                    correct=A                    ttft=1.5s* wall=405.88s 16tps* in=187 out=6669
+   14 FAIL SuperGPQA      bebf1ed45ae14ad7b4f205f3909cb58a given=A                    correct=J                    ttft=2.1s* wall=16.25s 15tps* in=195 out=239
+   15 PASS AIME2025       aime2025-18              given=82                   correct=82                   ttft=2.3s* wall=342.75s 16tps* in=342 out=5629
+   16 PASS GPQA Diamond   recNFJjE5PPTqVJGv        given=D                    correct=D                    ttft=1.8s* wall=101.42s 16tps* in=166 out=1668
+   17 PASS SuperGPQA      7ca71b86327744b78e93185a45bc5cef given=I                    correct=I                    ttft=1.8s* wall=64.09s 16tps* in=203 out=1037
+   18 PASS AIME2025       aime2025-04              given=117                  correct=117                  ttft=1.2s* wall=131.21s 16tps* in=129 out=2151
+   19 PASS GPQA Diamond   rec2UlKqC6RFHdcro        given=B                    correct=B                    ttft=2.0s* wall=59.47s 16tps* in=219 out=956
+   20 PASS SuperGPQA      d44b94f7749345a39a65f6312bda8764 given=E                    correct=E                    ttft=1.8s* wall=61.91s 16tps* in=207 out=1004
+   21 PASS AIME2025       aime2025-19              given=106                  correct=106                  ttft=2.1s* wall=103.19s 16tps* in=273 out=1685
+   22 PASS GPQA Diamond   recv7GsQg3f0fvB1f        given=B                    correct=B                    ttft=2.2s* wall=48.94s 16tps* in=279 out=784
+   23 PASS SuperGPQA      febe406f44d74a40b50bb5b7c69d5dc1 given=B                    correct=B                    ttft=2.0s* wall=34.14s 16tps* in=263 out=536
+   24 PASS AIME2025       aime2025-05              given=279                  correct=279                  ttft=1.4s* wall=328.72s 16tps* in=152 out=5291
+   25 PASS GPQA Diamond   recrHBEJJoDTV05JR        given=C                    correct=C                    ttft=2.4s* wall=237.37s 17tps* in=261 out=3927
+   26 PASS SuperGPQA      31950dc80ded400a9181f50626d1f75c given=C                    correct=C                    ttft=1.8s* wall=56.90s 16tps* in=190 out=936
+   27 PASS AIME2025       aime2025-06              given=504                  correct=504                  ttft=1.3s* wall=69.76s 17tps* in=155 out=1163
+   28 FAIL GPQA Diamond   recb80OwMgNnceA9t        given=B                    correct=D                    ttft=1.8s* wall=624.10s 16tps* in=231 out=10256
+   29 PASS SuperGPQA      0f14cd17be174618af6d60227e7dca9f given=C                    correct=C                    ttft=5.0s* wall=212.13s 16tps* in=801 out=3441
+   30 PASS AIME2025       aime2025-21              given=293                  correct=293                  ttft=5.1s* wall=214.18s 16tps* in=836 out=3514
+   31 PASS GPQA Diamond   recA1i5ZAh0Uzclxp        given=C                    correct=C                    ttft=2.3s* wall=562.14s 16tps* in=299 out=9237
+   32 PASS SuperGPQA      cef9bcc087434cc2b4e354a9baef55eb given=J                    correct=J                    ttft=3.6s* wall=60.72s 16tps* in=459 out=960
+   33 FAIL AIME2025       aime2025-07              given=271                  correct=821                  ttft=1.7s* wall=417.41s 16tps* in=216 out=6860
+   34 PASS GPQA Diamond   recqGD3fxPCI59vPQ        given=B                    correct=B                    ttft=2.5s* wall=147.84s 16tps* in=261 out=2416
+   35 PASS SuperGPQA      9f93aa2cfdb547b5b3a4623f80f7fff6 given=I                    correct=I                    ttft=1.7s* wall=43.84s 16tps* in=188 out=702
+   36 FAIL AIME2025       aime2025-22              given=60671                correct=237                  ttft=1.4s* wall=362.85s 16tps* in=164 out=5911
+   37 PASS GPQA Diamond   rechKl68Uc6H7vU0N        given=A                    correct=A                    ttft=2.7s* wall=210.35s 16tps* in=369 out=3375
+   38 FAIL SuperGPQA      97ad69dda7b2462c98638b79e78aea0b given=H                    correct=E                    ttft=1.6s* wall=66.20s 16tps* in=177 out=1063
+   39 PASS AIME2025       aime2025-08              given=77                   correct=77                   ttft=1.6s* wall=98.90s 16tps* in=187 out=1580
+   40 PASS GPQA Diamond   rec1zl5LvaatzGhFt        given=B                    correct=B                    ttft=3.0s* wall=99.53s 16tps* in=412 out=1579
+   41 FAIL SuperGPQA      e78e4e539d6f4e379ac140d923d7b1be given=E                    correct=H                    ttft=1.4s* wall=21.61s 15tps* in=148 out=333
+   42 PASS AIME2025       aime2025-09              given=62                   correct=62                   ttft=1.6s* wall=439.90s 16tps* in=176 out=7088
+   43 PASS GPQA Diamond   recTs7qzfJs6kfLUK        given=A                    correct=A                    ttft=4.6s* wall=59.91s 15tps* in=666 out=904
+   44 PASS SuperGPQA      8483667a25e74fdfa3188de4ea734f03 given=A                    correct=A                    ttft=1.7s* wall=158.25s 16tps* in=219 out=2543
+   45 PASS AIME2025       aime2025-24              given=149                  correct=149                  ttft=1.6s* wall=127.10s 16tps* in=164 out=2043
+   46 PASS GPQA Diamond   rec32C1ZEapBnCC0E        given=C                    correct=C                    ttft=2.1s* wall=63.21s 16tps* in=270 out=987
+   47 PASS SuperGPQA      e5ed76ef98144f06843125daf1bccd35 given=A                    correct=A                    ttft=1.7s* wall=140.97s 16tps* in=197 out=2239
+   48 FAIL AIME2025       aime2025-10              given=75                   correct=81                   ttft=2.6s* wall=375.33s 16tps* in=377 out=5886
+   49 FAIL GPQA Diamond   recZWeueB7lSPR6wN        given=A                    correct=B                    ttft=2.6s* wall=414.32s 16tps* in=263 out=6453
+   50 PASS SuperGPQA      fd7924876c4845cd83d95d61dfa0b236 given=H                    correct=H                    ttft=2.0s* wall=64.31s 15tps* in=147 out=989
+   51 FAIL AIME2025       aime2025-25              given=6                    correct=907                  ttft=1.3s* wall=387.02s 16tps* in=140 out=6041
+   52 FAIL GPQA Diamond   recVvpD8miVjmmyfe        given=A                    correct=C                    ttft=2.0s* wall=563.37s 15tps* in=149 out=8710
+   53 PASS SuperGPQA      6bfe7d19299d4b3184636e1f51694306 given=I                    correct=I                    ttft=3.2s* wall=148.22s 15tps* in=414 out=2297
+   54 PASS AIME2025       aime2025-26              given=113                  correct=113                  ttft=1.4s* wall=269.53s 16tps* in=130 out=4207
+   55 PASS GPQA Diamond   recAAJoHMW45Lv5je        given=D                    correct=D                    ttft=2.1s* wall=385.06s 16tps* in=255 out=6000
+   56 PASS SuperGPQA      e1825d70c5844c22933087eafa89e39c given=J                    correct=J                    ttft=3.8s* wall=88.80s 15tps* in=500 out=1340
+   57 PASS AIME2025       aime2025-12              given=510                  correct=510                  ttft=1.5s* wall=743.04s 15tps* in=184 out=11396
+   58 PASS GPQA Diamond   reckEnrOPFT9Ru7tW        given=C                    correct=C                    ttft=3.2s* wall=273.59s 15tps* in=316 out=4231
+   59 PASS SuperGPQA      ab430ac3f18e4e02a2cb3f35498c6b30 given=A                    correct=A                    ttft=2.6s* wall=300.08s 16tps* in=300 out=4656
+   60 PASS AIME2025       aime2025-27              given=19                   correct=19                   ttft=2.5s* wall=179.28s 16tps* in=334 out=2799
+   61 PASS GPQA Diamond   rec8nshandHARTkrg        given=A                    correct=A                    ttft=3.5s* wall=237.11s 16tps* in=571 out=3701
+   62 PASS SuperGPQA      e8c5da5ca40647158b0c91dd695c6243 given=F                    correct=F                    ttft=3.3s* wall=86.17s 15tps* in=500 out=1319
+   63 FAIL AIME2025       aime2025-13              given=187                  correct=204                  ttft=1.3s* wall=626.85s 15tps* in=153 out=9696
+   64 PASS GPQA Diamond   recFaL6j8UMhutXrc        given=A                    correct=A                    ttft=3.9s* wall=435.95s 16tps* in=499 out=6758
+   65 PASS SuperGPQA      05efdc6fb2404ddc8dd5729bb68c74e5 given=H                    correct=H                    ttft=2.0s* wall=214.23s 16tps* in=218 out=3369
+   66 FAIL AIME2025       aime2025-28              given=1000                 correct=248                  ttft=1.8s* wall=482.71s 16tps* in=213 out=7506
+   67 FAIL GPQA Diamond   reczQ4I0VpENdMtIj        given=A                    correct=C                    ttft=2.1s* wall=96.80s 15tps* in=239 out=1495
+   68 PASS SuperGPQA      ba52e06cbe1a4310a77a7d12cd1db943 given=H                    correct=H                    ttft=3.5s* wall=113.56s 15tps* in=609 out=1748
+   69 PASS AIME2025       aime2025-29              given=104                  correct=104                  ttft=1.6s* wall=386.92s 16tps* in=166 out=6039
+   70 FAIL GPQA Diamond   recWxGU8Q4YReJ1tb        given=A                    correct=C                    ttft=4.9s* wall=361.94s 15tps* in=825 out=5583
+   71 FAIL SuperGPQA      591a77df21324272914be82ac6583399 given=D                    correct=F                    ttft=2.6s* wall=62.68s 15tps* in=338 out=960
+   72 FAIL AIME2025       aime2025-15              given=147                  correct=735                  ttft=1.3s* wall=451.49s 16tps* in=148 out=7015
+   73 FAIL GPQA Diamond   recMicVBcqy1xM1jq        given=A                    correct=B                    ttft=2.6s* wall=73.66s 15tps* in=249 out=1125
+   74 FAIL SuperGPQA      e780f37a5baa4fe094cd9c157486664d given=J                    correct=H                    ttft=1.9s* wall=40.25s 15tps* in=233 out=610
+   75 PASS AIME2025       aime2025-30              given=240                  correct=240                  ttft=1.3s* wall=482.36s 16tps* in=154 out=7488
+   76 PASS COMPSEC        compsec-076              given=20                   correct=17-20                ttft=4.0s* wall=50.84s 14tps* in=454 out=737
+   77 PASS COMPSEC        compsec-077              given=20                   correct=18-20                ttft=2.7s* wall=59.42s 15tps* in=398 out=905
+   78 PASS COMPSEC        compsec-078              given=11                   correct=11                   ttft=2.5s* wall=36.48s 15tps* in=381 out=543
+   79 PASS COMPSEC        compsec-079              given=18                   correct=18-19                ttft=2.8s* wall=46.37s 15tps* in=429 out=686
+   80 FAIL COMPSEC        compsec-080              given=12                   correct=5-6                  ttft=2.4s* wall=62.97s 15tps* in=328 out=960
+   81 PASS COMPSEC        compsec-081              given=10                   correct=10-15                ttft=2.4s* wall=40.05s 15tps* in=374 out=598
+   82 PASS COMPSEC        compsec-082              given=9                    correct=9-10                 ttft=2.4s* wall=160.07s 16tps* in=327 out=2500
+   83 PASS COMPSEC        compsec-083              given=9                    correct=9-11                 ttft=2.5s* wall=181.58s 16tps* in=349 out=2831
+   84 PASS COMPSEC        compsec-084              given=7                    correct=6-7                  ttft=2.7s* wall=46.93s 15tps* in=359 out=707
+   85 PASS COMPSEC        compsec-085              given=5                    correct=5                    ttft=2.1s* wall=22.01s 14tps* in=268 out=313
+   86 PASS COMPSEC        compsec-086              given=3                    correct=3,13-15              ttft=2.6s* wall=34.00s 15tps* in=401 out=495
+   87 PASS COMPSEC        compsec-087              given=8                    correct=8,20-22              ttft=3.2s* wall=56.79s 15tps* in=522 out=850
+   88 PASS COMPSEC        compsec-088              given=11                   correct=11                   ttft=2.4s* wall=67.95s 15tps* in=348 out=1041
+   89 PASS COMPSEC        compsec-089              given=10                   correct=10                   ttft=2.2s* wall=19.11s 14tps* in=294 out=272
+   90 PASS COMPSEC        compsec-090              given=12                   correct=12-13                ttft=2.7s* wall=50.90s 15tps* in=390 out=764
+   91 PASS COMPSEC        compsec-091              given=3                    correct=3                    ttft=2.0s* wall=50.99s 15tps* in=282 out=782
+   92 FAIL COMPSEC        compsec-092              given=11,9-12              correct=10-14                ttft=2.4s* wall=140.27s 15tps* in=365 out=2173
+[lucebench] area=ds4-eval pass_rate=73.91% (68/92) wall_total=17067s
+
+[lucebench] === area=gsm8k cases=100 think=False max_tokens=2048 ===
+    1 PASS gsm8k          gsm8k-test-0013          given=18                   correct=18                   ttft=1.2s* wall=38.25s 16tps* in=100 out=593
+    2 PASS gsm8k          gsm8k-test-0051          given=5                    correct=5                    ttft=991ms* wall=13.98s 15tps* in=91 out=206
+    3 PASS gsm8k          gsm8k-test-0054          given=40                   correct=40                   ttft=1.4s* wall=13.38s 15tps* in=123 out=194
+    4 PASS gsm8k          gsm8k-test-0061          given=1430                 correct=1430                 ttft=1.1s* wall=14.59s 15tps* in=104 out=213
+    5 PASS gsm8k          gsm8k-test-0065          given=36                   correct=36                   ttft=1.0s* wall=16.77s 15tps* in=89 out=252
+    6 PASS gsm8k          gsm8k-test-0088          given=8000                 correct=8000                 ttft=1.0s* wall=18.54s 15tps* in=80 out=282
+    7 PASS gsm8k          gsm8k-test-0093          given=36                   correct=36                   ttft=1.1s* wall=46.27s 15tps* in=126 out=713
+    8 PASS gsm8k          gsm8k-test-0114          given=6                    correct=6                    ttft=1.2s* wall=23.74s 15tps* in=123 out=365
+    9 PASS gsm8k          gsm8k-test-0135          given=40                   correct=40                   ttft=1.0s* wall=14.48s 15tps* in=88 out=213
+   10 PASS gsm8k          gsm8k-test-0142          given=140                  correct=140                  ttft=1.0s* wall=12.62s 15tps* in=88 out=188
+   11 PASS gsm8k          gsm8k-test-0146          given=2125                 correct=2125                 ttft=1.2s* wall=17.86s 15tps* in=124 out=271
+   12 FAIL gsm8k          gsm8k-test-0161          given=17                   correct=32                   ttft=1.1s* wall=113.44s 16tps* in=114 out=1790
+   13 PASS gsm8k          gsm8k-test-0163          given=50                   correct=50                   ttft=1.1s* wall=26.62s 15tps* in=98 out=407
+   14 PASS gsm8k          gsm8k-test-0178          given=122                  correct=122                  ttft=1.1s* wall=18.24s 15tps* in=84 out=272
+   15 PASS gsm8k          gsm8k-test-0189          given=34                   correct=34                   ttft=1.1s* wall=25.53s 15tps* in=110 out=389
+   16 PASS gsm8k          gsm8k-test-0191          given=5                    correct=5                    ttft=1.0s* wall=11.21s 15tps* in=79 out=164
+   17 PASS gsm8k          gsm8k-test-0198          given=320                  correct=320                  ttft=1.1s* wall=27.79s 15tps* in=118 out=422
+   18 PASS gsm8k          gsm8k-test-0206          given=860                  correct=860                  ttft=1.2s* wall=22.63s 15tps* in=120 out=343
+   19 PASS gsm8k          gsm8k-test-0209          given=145                  correct=145                  ttft=1.1s* wall=26.56s 15tps* in=79 out=400
+   20 PASS gsm8k          gsm8k-test-0228          given=1                    correct=1                    ttft=1.1s* wall=20.88s 15tps* in=97 out=312
+   21 FAIL gsm8k          gsm8k-test-0255          given=40                   correct=192                  ttft=999ms* wall=129.68s 16tps* in=91 out=2048
+   22 PASS gsm8k          gsm8k-test-0285          given=21                   correct=21                   ttft=1.2s* wall=7.05s 13tps* in=68 out=92
+   23 PASS gsm8k          gsm8k-test-0292          given=75                   correct=75                   ttft=983ms* wall=21.25s 15tps* in=94 out=324
+   24 PASS gsm8k          gsm8k-test-0318          given=123                  correct=123                  ttft=1.0s* wall=21.41s 15tps* in=93 out=329
+   25 PASS gsm8k          gsm8k-test-0326          given=14                   correct=14                   ttft=1.2s* wall=24.15s 15tps* in=111 out=368
+   26 PASS gsm8k          gsm8k-test-0333          given=100                  correct=100                  ttft=1.3s* wall=18.24s 15tps* in=123 out=274
+   27 PASS gsm8k          gsm8k-test-0334          given=6                    correct=6                    ttft=1.2s* wall=39.39s 16tps* in=98 out=613
+   28 PASS gsm8k          gsm8k-test-0350          given=8                    correct=8                    ttft=1.2s* wall=17.74s 15tps* in=120 out=267
+   29 PASS gsm8k          gsm8k-test-0393          given=20                   correct=20                   ttft=1.2s* wall=33.41s 15tps* in=78 out=513
+   30 PASS gsm8k          gsm8k-test-0407          given=2000                 correct=2000                 ttft=1.3s* wall=24.67s 15tps* in=136 out=376
+   31 PASS gsm8k          gsm8k-test-0429          given=13                   correct=13                   ttft=1.0s* wall=15.55s 15tps* in=85 out=232
+   32 PASS gsm8k          gsm8k-test-0432          given=30                   correct=30                   ttft=1.3s* wall=15.48s 15tps* in=133 out=226
+   33 PASS gsm8k          gsm8k-test-0435          given=5                    correct=5                    ttft=1.0s* wall=10.07s 14tps* in=83 out=145
+   34 PASS gsm8k          gsm8k-test-0440          given=98                   correct=98                   ttft=1.1s* wall=20.04s 15tps* in=79 out=299
+   35 PASS gsm8k          gsm8k-test-0447          given=5                    correct=5                    ttft=993ms* wall=13.79s 15tps* in=91 out=203
+   36 PASS gsm8k          gsm8k-test-0449          given=112                  correct=112                  ttft=1.0s* wall=14.31s 15tps* in=91 out=211
+   37 PASS gsm8k          gsm8k-test-0451          given=11050                correct=11050                ttft=1.1s* wall=30.23s 16tps* in=104 out=469
+   38 PASS gsm8k          gsm8k-test-0457          given=45                   correct=45                   ttft=1.1s* wall=12.14s 14tps* in=119 out=174
+   39 PASS gsm8k          gsm8k-test-0466          given=1.00                 correct=1                    ttft=994ms* wall=20.48s 15tps* in=92 out=312
+   40 PASS gsm8k          gsm8k-test-0469          given=4                    correct=4                    ttft=1.1s* wall=11.67s 14tps* in=99 out=167
+   41 PASS gsm8k          gsm8k-test-0476          given=5                    correct=5                    ttft=1.0s* wall=14.05s 15tps* in=89 out=207
+   42 PASS gsm8k          gsm8k-test-0501          given=273                  correct=273                  ttft=1.2s* wall=28.45s 15tps* in=104 out=440
+   43 FAIL gsm8k          gsm8k-test-0505          given=24                   correct=1600                 ttft=1.3s* wall=129.57s 16tps* in=147 out=2048
+   44 PASS gsm8k          gsm8k-test-0538          given=18                   correct=18                   ttft=1.2s* wall=19.10s 15tps* in=111 out=285
+   45 PASS gsm8k          gsm8k-test-0541          given=50                   correct=50                   ttft=1.1s* wall=38.07s 15tps* in=103 out=587
+   46 PASS gsm8k          gsm8k-test-0542          given=7.00                 correct=7                    ttft=1.1s* wall=22.52s 15tps* in=98 out=342
+   47 PASS gsm8k          gsm8k-test-0546          given=130                  correct=130                  ttft=1.0s* wall=18.91s 15tps* in=94 out=284
+   48 PASS gsm8k          gsm8k-test-0548          given=100                  correct=100                  ttft=986ms* wall=10.35s 15tps* in=78 out=151
+   49 PASS gsm8k          gsm8k-test-0552          given=450                  correct=450                  ttft=1.2s* wall=14.76s 15tps* in=111 out=222
+   50 PASS gsm8k          gsm8k-test-0563          given=12                   correct=12                   ttft=981ms* wall=14.06s 15tps* in=91 out=209
+   51 PASS gsm8k          gsm8k-test-0569          given=21                   correct=21                   ttft=1.1s* wall=15.00s 15tps* in=109 out=222
+   52 PASS gsm8k          gsm8k-test-0592          given=1                    correct=1                    ttft=1.1s* wall=14.88s 15tps* in=110 out=219
+   53 PASS gsm8k          gsm8k-test-0600          given=10                   correct=10                   ttft=1.1s* wall=11.21s 15tps* in=104 out=164
+   54 PASS gsm8k          gsm8k-test-0644          given=29                   correct=29                   ttft=985ms* wall=12.41s 15tps* in=93 out=185
+   55 PASS gsm8k          gsm8k-test-0646          given=79                   correct=79                   ttft=1.0s* wall=21.00s 15tps* in=88 out=319
+   56 PASS gsm8k          gsm8k-test-0664          given=32                   correct=32                   ttft=1.0s* wall=14.51s 15tps* in=95 out=219
+   57 PASS gsm8k          gsm8k-test-0689          given=7.00                 correct=7                    ttft=989ms* wall=34.29s 15tps* in=90 out=531
+   58 FAIL gsm8k          gsm8k-test-0696          given=11                   correct=145                  ttft=1.3s* wall=129.82s 16tps* in=151 out=2048
+   59 PASS gsm8k          gsm8k-test-0704          given=50                   correct=50                   ttft=1.2s* wall=13.94s 15tps* in=77 out=205
+   60 PASS gsm8k          gsm8k-test-0727          given=112                  correct=112                  ttft=1.1s* wall=29.76s 15tps* in=122 out=455
+   61 PASS gsm8k          gsm8k-test-0735          given=50                   correct=50                   ttft=1.1s* wall=19.55s 15tps* in=101 out=296
+   62 PASS gsm8k          gsm8k-test-0740          given=25                   correct=25                   ttft=1.2s* wall=21.78s 15tps* in=104 out=330
+   63 PASS gsm8k          gsm8k-test-0747          given=350                  correct=350                  ttft=1.4s* wall=13.40s 15tps* in=100 out=195
+   64 PASS gsm8k          gsm8k-test-0758          given=133                  correct=133                  ttft=1.0s* wall=7.33s 14tps* in=69 out=105
+   65 PASS gsm8k          gsm8k-test-0775          given=276                  correct=276                  ttft=1.1s* wall=19.65s 15tps* in=105 out=299
+   66 PASS gsm8k          gsm8k-test-0777          given=4400                 correct=4400                 ttft=1.4s* wall=90.49s 16tps* in=133 out=1425
+   67 PASS gsm8k          gsm8k-test-0778          given=38.00                correct=38                   ttft=1.2s* wall=15.83s 15tps* in=125 out=234
+   68 PASS gsm8k          gsm8k-test-0810          given=310                  correct=310                  ttft=1.2s* wall=24.71s 15tps* in=106 out=374
+   69 PASS gsm8k          gsm8k-test-0821          given=35                   correct=35                   ttft=1.1s* wall=13.66s 15tps* in=119 out=203
+   70 PASS gsm8k          gsm8k-test-0859          given=1520                 correct=1520                 ttft=1.3s* wall=26.21s 15tps* in=96 out=400
+   71 PASS gsm8k          gsm8k-test-0864          given=80                   correct=80                   ttft=1.2s* wall=16.75s 15tps* in=106 out=246
+   72 PASS gsm8k          gsm8k-test-0865          given=23                   correct=23                   ttft=1.1s* wall=24.85s 15tps* in=108 out=381
+   73 PASS gsm8k          gsm8k-test-0919          given=90                   correct=90                   ttft=1.1s* wall=25.02s 15tps* in=124 out=383
+   74 PASS gsm8k          gsm8k-test-0928          given=60                   correct=60                   ttft=1.2s* wall=23.92s 15tps* in=119 out=364
+   75 PASS gsm8k          gsm8k-test-0939          given=650                  correct=650                  ttft=1.1s* wall=22.58s 15tps* in=123 out=347
+   76 PASS gsm8k          gsm8k-test-0940          given=280                  correct=280                  ttft=1.1s* wall=12.34s 15tps* in=95 out=179
+   77 PASS gsm8k          gsm8k-test-0946          given=450                  correct=450                  ttft=983ms* wall=10.52s 15tps* in=86 out=153
+   78 PASS gsm8k          gsm8k-test-1022          given=12                   correct=12                   ttft=1.2s* wall=36.51s 15tps* in=98 out=561
+   79 PASS gsm8k          gsm8k-test-1034          given=66                   correct=66                   ttft=1.0s* wall=11.81s 15tps* in=79 out=172
+   80 PASS gsm8k          gsm8k-test-1093          given=144                  correct=144                  ttft=1.2s* wall=30.94s 15tps* in=105 out=472
+   81 PASS gsm8k          gsm8k-test-1098          given=30                   correct=30                   ttft=1.1s* wall=13.35s 15tps* in=88 out=199
+   82 PASS gsm8k          gsm8k-test-1103          given=90                   correct=90                   ttft=1.3s* wall=22.53s 15tps* in=114 out=341
+   83 PASS gsm8k          gsm8k-test-1116          given=60                   correct=60                   ttft=981ms* wall=11.83s 14tps* in=84 out=171
+   84 PASS gsm8k          gsm8k-test-1130          given=25                   correct=25                   ttft=1.1s* wall=29.24s 15tps* in=123 out=453
+   85 PASS gsm8k          gsm8k-test-1140          given=27                   correct=27                   ttft=990ms* wall=21.32s 15tps* in=91 out=328
+   86 PASS gsm8k          gsm8k-test-1149          given=93                   correct=93                   ttft=1.2s* wall=11.78s 14tps* in=75 out=170
+   87 FAIL gsm8k          gsm8k-test-1161          given=140                  correct=170                  ttft=1.2s* wall=50.21s 16tps* in=114 out=785
+   88 PASS gsm8k          gsm8k-test-1182          given=1800                 correct=1800                 ttft=1.1s* wall=25.88s 15tps* in=84 out=395
+   89 PASS gsm8k          gsm8k-test-1206          given=40000                correct=40000                ttft=1.2s* wall=15.90s 15tps* in=109 out=236
+   90 PASS gsm8k          gsm8k-test-1209          given=29                   correct=29                   ttft=1.7s* wall=27.21s 15tps* in=204 out=407
+   91 PASS gsm8k          gsm8k-test-1232          given=15                   correct=15                   ttft=1.0s* wall=12.35s 15tps* in=86 out=184
+   92 PASS gsm8k          gsm8k-test-1236          given=84                   correct=84                   ttft=1.2s* wall=14.55s 15tps* in=108 out=214
+   93 PASS gsm8k          gsm8k-test-1247          given=7                    correct=7                    ttft=1.3s* wall=17.26s 15tps* in=132 out=255
+   94 PASS gsm8k          gsm8k-test-1266          given=147                  correct=147                  ttft=1.0s* wall=19.15s 15tps* in=96 out=292
+   95 PASS gsm8k          gsm8k-test-1287          given=84                   correct=84                   ttft=1.2s* wall=17.46s 15tps* in=100 out=257
+   96 FAIL gsm8k          gsm8k-test-1300          given=2                    correct=120                  ttft=1.0s* wall=17.19s 15tps* in=89 out=260
+   97 PASS gsm8k          gsm8k-test-1301          given=23                   correct=23                   ttft=1.2s* wall=25.01s 15tps* in=120 out=378
+   98 FAIL gsm8k          gsm8k-test-1309          given=2180                 correct=2280                 ttft=1.2s* wall=22.85s 15tps* in=103 out=347
+   99 PASS gsm8k          gsm8k-test-1310          given=64                   correct=64                   ttft=1.1s* wall=50.33s 16tps* in=112 out=790
+  100 PASS gsm8k          gsm8k-test-1316          given=230                  correct=230                  ttft=1.1s* wall=18.24s 15tps* in=117 out=274
+[lucebench] area=gsm8k pass_rate=93.00% (93/100) wall_total=2542s
+
+[lucebench] === area=truthfulqa-mc1 cases=100 think=False max_tokens=256 ===
+    1 PASS truthfulqa-mc1 truthfulqa-mc1-val-0006  given=A                    correct=A                    ttft=1.2s* wall=1.31s in=129 out=1
+    2 PASS truthfulqa-mc1 truthfulqa-mc1-val-0025  given=A                    correct=A                    ttft=1.4s* wall=1.44s in=149 out=1
+    3 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0027  given=B                    correct=A                    ttft=1.4s* wall=1.48s in=162 out=1
+    4 PASS truthfulqa-mc1 truthfulqa-mc1-val-0030  given=A                    correct=A                    ttft=1.1s* wall=1.20s in=128 out=1
+    5 PASS truthfulqa-mc1 truthfulqa-mc1-val-0032  given=A                    correct=A                    ttft=1.7s* wall=1.77s in=195 out=1
+    6 PASS truthfulqa-mc1 truthfulqa-mc1-val-0044  given=A                    correct=A                    ttft=1.4s* wall=1.48s in=166 out=1
+    7 PASS truthfulqa-mc1 truthfulqa-mc1-val-0046  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=132 out=1
+    8 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0071  given=B                    correct=A                    ttft=1.3s* wall=1.46s in=132 out=1
+    9 PASS truthfulqa-mc1 truthfulqa-mc1-val-0073  given=A                    correct=A                    ttft=1.5s* wall=1.54s in=172 out=1
+   10 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0080  given=C                    correct=A                    ttft=1.3s* wall=1.35s in=131 out=1
+   11 PASS truthfulqa-mc1 truthfulqa-mc1-val-0081  given=A                    correct=A                    ttft=1.8s* wall=1.88s in=176 out=1
+   12 PASS truthfulqa-mc1 truthfulqa-mc1-val-0089  given=A                    correct=A                    ttft=1.3s* wall=1.37s in=151 out=1
+   13 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0094  given=B                    correct=A                    ttft=1.3s* wall=1.36s in=159 out=1
+   14 PASS truthfulqa-mc1 truthfulqa-mc1-val-0095  given=A                    correct=A                    ttft=1.5s* wall=1.57s in=168 out=1
+   15 PASS truthfulqa-mc1 truthfulqa-mc1-val-0099  given=A                    correct=A                    ttft=1.2s* wall=1.28s in=128 out=1
+   16 PASS truthfulqa-mc1 truthfulqa-mc1-val-0103  given=A                    correct=A                    ttft=1.6s* wall=1.70s in=195 out=1
+   17 PASS truthfulqa-mc1 truthfulqa-mc1-val-0104  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=137 out=1
+   18 PASS truthfulqa-mc1 truthfulqa-mc1-val-0114  given=A                    correct=A                    ttft=1.2s* wall=1.27s in=120 out=1
+   19 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0127  given=B                    correct=A                    ttft=1.4s* wall=1.42s in=160 out=1
+   20 PASS truthfulqa-mc1 truthfulqa-mc1-val-0142  given=A                    correct=A                    ttft=1.1s* wall=1.18s in=108 out=1
+   21 PASS truthfulqa-mc1 truthfulqa-mc1-val-0159  given=A                    correct=A                    ttft=1.4s* wall=1.50s in=167 out=1
+   22 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0163  given=B                    correct=A                    ttft=1.4s* wall=1.46s in=150 out=1
+   23 PASS truthfulqa-mc1 truthfulqa-mc1-val-0166  given=A                    correct=A                    ttft=1.6s* wall=1.71s in=194 out=1
+   24 PASS truthfulqa-mc1 truthfulqa-mc1-val-0167  given=A                    correct=A                    ttft=1.7s* wall=1.78s in=214 out=1
+   25 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0175  given=B                    correct=A                    ttft=1.3s* wall=1.40s in=152 out=1
+   26 PASS truthfulqa-mc1 truthfulqa-mc1-val-0196  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=142 out=1
+   27 PASS truthfulqa-mc1 truthfulqa-mc1-val-0203  given=A                    correct=A                    ttft=1.5s* wall=1.58s in=174 out=1
+   28 PASS truthfulqa-mc1 truthfulqa-mc1-val-0214  given=A                    correct=A                    ttft=1.4s* wall=1.60s in=154 out=1
+   29 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0220  given=B                    correct=A                    ttft=1.1s* wall=1.22s in=123 out=1
+   30 PASS truthfulqa-mc1 truthfulqa-mc1-val-0223  given=A                    correct=A                    ttft=1.4s* wall=1.44s in=154 out=1
+   31 PASS truthfulqa-mc1 truthfulqa-mc1-val-0225  given=A                    correct=A                    ttft=1.3s* wall=1.41s in=142 out=1
+   32 PASS truthfulqa-mc1 truthfulqa-mc1-val-0228  given=A                    correct=A                    ttft=1.3s* wall=1.36s in=143 out=1
+   33 PASS truthfulqa-mc1 truthfulqa-mc1-val-0233  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=132 out=1
+   34 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0238  given=B                    correct=A                    ttft=1.1s* wall=1.23s in=120 out=1
+   35 PASS truthfulqa-mc1 truthfulqa-mc1-val-0250  given=A                    correct=A                    ttft=1.4s* wall=1.72s in=167 out=1
+   36 PASS truthfulqa-mc1 truthfulqa-mc1-val-0270  given=A                    correct=A                    ttft=1.6s* wall=1.65s in=165 out=1
+   37 PASS truthfulqa-mc1 truthfulqa-mc1-val-0273  given=A                    correct=A                    ttft=1.5s* wall=1.53s in=185 out=1
+   38 PASS truthfulqa-mc1 truthfulqa-mc1-val-0276  given=A                    correct=A                    ttft=1.4s* wall=1.49s in=162 out=1
+   39 PASS truthfulqa-mc1 truthfulqa-mc1-val-0281  given=A                    correct=A                    ttft=1.3s* wall=1.45s in=145 out=1
+   40 PASS truthfulqa-mc1 truthfulqa-mc1-val-0284  given=A                    correct=A                    ttft=1.4s* wall=1.42s in=145 out=1
+   41 PASS truthfulqa-mc1 truthfulqa-mc1-val-0296  given=A                    correct=A                    ttft=1.3s* wall=1.36s in=155 out=1
+   42 PASS truthfulqa-mc1 truthfulqa-mc1-val-0300  given=A                    correct=A                    ttft=1.5s* wall=1.59s in=193 out=1
+   43 PASS truthfulqa-mc1 truthfulqa-mc1-val-0344  given=A                    correct=A                    ttft=1.4s* wall=1.48s in=162 out=1
+   44 PASS truthfulqa-mc1 truthfulqa-mc1-val-0348  given=A                    correct=A                    ttft=1.4s* wall=1.48s in=166 out=1
+   45 PASS truthfulqa-mc1 truthfulqa-mc1-val-0352  given=A                    correct=A                    ttft=1.5s* wall=1.81s in=164 out=1
+   46 PASS truthfulqa-mc1 truthfulqa-mc1-val-0363  given=A                    correct=A                    ttft=1.3s* wall=1.38s in=155 out=1
+   47 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0367  given=D                    correct=A                    ttft=1.3s* wall=1.35s in=130 out=1
+   48 PASS truthfulqa-mc1 truthfulqa-mc1-val-0370  given=A                    correct=A                    ttft=1.4s* wall=1.45s in=137 out=1
+   49 PASS truthfulqa-mc1 truthfulqa-mc1-val-0373  given=A                    correct=A                    ttft=1.4s* wall=1.45s in=153 out=1
+   50 PASS truthfulqa-mc1 truthfulqa-mc1-val-0379  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=133 out=1
+   51 PASS truthfulqa-mc1 truthfulqa-mc1-val-0387  given=A                    correct=A                    ttft=1.1s* wall=1.17s in=100 out=1
+   52 PASS truthfulqa-mc1 truthfulqa-mc1-val-0388  given=A                    correct=A                    ttft=1.1s* wall=1.18s in=116 out=1
+   53 PASS truthfulqa-mc1 truthfulqa-mc1-val-0389  given=A                    correct=A                    ttft=1.4s* wall=1.45s in=148 out=1
+   54 PASS truthfulqa-mc1 truthfulqa-mc1-val-0429  given=A                    correct=A                    ttft=1.2s* wall=1.26s in=104 out=1
+   55 PASS truthfulqa-mc1 truthfulqa-mc1-val-0432  given=A                    correct=A                    ttft=1.3s* wall=1.42s in=151 out=1
+   56 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0459  given=C                    correct=A                    ttft=1.5s* wall=1.57s in=148 out=1
+   57 PASS truthfulqa-mc1 truthfulqa-mc1-val-0464  given=A                    correct=A                    ttft=1.4s* wall=1.44s in=139 out=1
+   58 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0470  given=D                    correct=A                    ttft=1.5s* wall=1.55s in=191 out=1
+   59 PASS truthfulqa-mc1 truthfulqa-mc1-val-0473  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=130 out=1
+   60 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0517  given=C                    correct=A                    ttft=1.3s* wall=1.45s in=130 out=1
+   61 PASS truthfulqa-mc1 truthfulqa-mc1-val-0546  given=A                    correct=A                    ttft=1.4s* wall=1.48s in=163 out=1
+   62 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0549  given=B                    correct=A                    ttft=1.1s* wall=1.19s in=122 out=1
+   63 PASS truthfulqa-mc1 truthfulqa-mc1-val-0558  given=A                    correct=A                    ttft=1.5s* wall=1.56s in=144 out=1
+   64 PASS truthfulqa-mc1 truthfulqa-mc1-val-0565  given=A                    correct=A                    ttft=1.9s* wall=1.93s in=230 out=1
+   65 PASS truthfulqa-mc1 truthfulqa-mc1-val-0574  given=A                    correct=A                    ttft=1.1s* wall=1.17s in=129 out=1
+   66 PASS truthfulqa-mc1 truthfulqa-mc1-val-0591  given=A                    correct=A                    ttft=1.1s* wall=1.17s in=113 out=1
+   67 PASS truthfulqa-mc1 truthfulqa-mc1-val-0603  given=A                    correct=A                    ttft=1.4s* wall=1.44s in=161 out=1
+   68 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0604  given=D                    correct=A                    ttft=1.4s* wall=1.49s in=170 out=1
+   69 PASS truthfulqa-mc1 truthfulqa-mc1-val-0616  given=A                    correct=A                    ttft=1.1s* wall=1.20s in=122 out=1
+   70 PASS truthfulqa-mc1 truthfulqa-mc1-val-0618  given=A                    correct=A                    ttft=1.6s* wall=1.67s in=159 out=1
+   71 PASS truthfulqa-mc1 truthfulqa-mc1-val-0623  given=A                    correct=A                    ttft=1.5s* wall=1.59s in=183 out=1
+   72 PASS truthfulqa-mc1 truthfulqa-mc1-val-0633  given=A                    correct=A                    ttft=1.4s* wall=1.48s in=171 out=1
+   73 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0643  given=B                    correct=A                    ttft=1.4s* wall=1.43s in=141 out=1
+   74 PASS truthfulqa-mc1 truthfulqa-mc1-val-0650  given=A                    correct=A                    ttft=1.2s* wall=1.27s in=126 out=1
+   75 PASS truthfulqa-mc1 truthfulqa-mc1-val-0654  given=A                    correct=A                    ttft=1.4s* wall=1.43s in=160 out=1
+   76 PASS truthfulqa-mc1 truthfulqa-mc1-val-0663  given=A                    correct=A                    ttft=1.3s* wall=1.37s in=144 out=1
+   77 PASS truthfulqa-mc1 truthfulqa-mc1-val-0665  given=A                    correct=A                    ttft=1.3s* wall=1.49s in=127 out=1
+   78 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0677  given=C                    correct=A                    ttft=1.5s* wall=1.53s in=166 out=1
+   79 PASS truthfulqa-mc1 truthfulqa-mc1-val-0686  given=A                    correct=A                    ttft=1.6s* wall=1.76s in=199 out=1
+   80 PASS truthfulqa-mc1 truthfulqa-mc1-val-0692  given=A                    correct=A                    ttft=1.4s* wall=1.44s in=133 out=1
+   81 PASS truthfulqa-mc1 truthfulqa-mc1-val-0699  given=A                    correct=A                    ttft=1.1s* wall=1.19s in=127 out=1
+   82 PASS truthfulqa-mc1 truthfulqa-mc1-val-0714  given=A                    correct=A                    ttft=1.3s* wall=1.37s in=150 out=1
+   83 PASS truthfulqa-mc1 truthfulqa-mc1-val-0718  given=A                    correct=A                    ttft=1.1s* wall=1.18s in=114 out=1
+   84 FAIL truthfulqa-mc1 truthfulqa-mc1-val-0721  given=E                    correct=A                    ttft=1.5s* wall=1.58s in=157 out=1
+   85 PASS truthfulqa-mc1 truthfulqa-mc1-val-0733  given=A                    correct=A                    ttft=1.2s* wall=1.26s in=112 out=1
+   86 PASS truthfulqa-mc1 truthfulqa-mc1-val-0737  given=A                    correct=A                    ttft=1.5s* wall=1.54s in=174 out=1
+   87 PASS truthfulqa-mc1 truthfulqa-mc1-val-0747  given=A                    correct=A                    ttft=1.4s* wall=1.79s in=171 out=1
+   88 PASS truthfulqa-mc1 truthfulqa-mc1-val-0754  given=A                    correct=A                    ttft=1.3s* wall=1.42s in=134 out=1
+   89 PASS truthfulqa-mc1 truthfulqa-mc1-val-0758  given=A                    correct=A                    ttft=1.5s* wall=1.55s in=182 out=1
+   90 PASS truthfulqa-mc1 truthfulqa-mc1-val-0759  given=A                    correct=A                    ttft=1.4s* wall=1.49s in=152 out=1
+   91 PASS truthfulqa-mc1 truthfulqa-mc1-val-0769  given=A                    correct=A                    ttft=1.3s* wall=1.42s in=142 out=1
+   92 PASS truthfulqa-mc1 truthfulqa-mc1-val-0775  given=A                    correct=A                    ttft=1.3s* wall=1.36s in=141 out=1
+   93 PASS truthfulqa-mc1 truthfulqa-mc1-val-0777  given=A                    correct=A                    ttft=1.3s* wall=1.35s in=132 out=1
+   94 PASS truthfulqa-mc1 truthfulqa-mc1-val-0782  given=A                    correct=A                    ttft=1.6s* wall=1.72s in=158 out=1
+   95 PASS truthfulqa-mc1 truthfulqa-mc1-val-0788  given=A                    correct=A                    ttft=1.2s* wall=1.24s in=129 out=1
+   96 PASS truthfulqa-mc1 truthfulqa-mc1-val-0796  given=A                    correct=A                    ttft=1.3s* wall=1.42s in=146 out=1
+   97 PASS truthfulqa-mc1 truthfulqa-mc1-val-0801  given=A                    correct=A                    ttft=2.3s* wall=2.38s in=294 out=1
+   98 PASS truthfulqa-mc1 truthfulqa-mc1-val-0804  given=A                    correct=A                    ttft=1.3s* wall=1.37s in=154 out=1
+   99 PASS truthfulqa-mc1 truthfulqa-mc1-val-0807  given=A                    correct=A                    ttft=1.3s* wall=1.44s in=140 out=1
+  100 PASS truthfulqa-mc1 truthfulqa-mc1-val-0811  given=A                    correct=A                    ttft=1.3s* wall=1.42s in=144 out=1
+[lucebench] area=truthfulqa-mc1 pass_rate=82.00% (82/100) wall_total=146s
+
+[lucebench] === area=hellaswag cases=100 think=False max_tokens=128 ===
+    1 PASS hellaswag      hellaswag-val-00106      given=C                    correct=C                    ttft=1.8s* wall=1.87s in=185 out=1
+    2 PASS hellaswag      hellaswag-val-00409      given=A                    correct=A                    ttft=1.3s* wall=1.42s in=140 out=1
+    3 PASS hellaswag      hellaswag-val-00434      given=C                    correct=C                    ttft=1.3s* wall=1.36s in=155 out=1
+    4 PASS hellaswag      hellaswag-val-00488      given=D                    correct=D                    ttft=1.3s* wall=1.36s in=145 out=1
+    5 PASS hellaswag      hellaswag-val-00520      given=D                    correct=D                    ttft=1.7s* wall=1.74s in=199 out=1
+    6 FAIL hellaswag      hellaswag-val-00525      given=A                    correct=B                    ttft=1.7s* wall=1.78s in=202 out=1
+    7 PASS hellaswag      hellaswag-val-00711      given=D                    correct=D                    ttft=1.4s* wall=1.48s in=136 out=1
+    8 PASS hellaswag      hellaswag-val-00750      given=C                    correct=C                    ttft=1.3s* wall=1.37s in=154 out=1
+    9 PASS hellaswag      hellaswag-val-00916      given=B                    correct=B                    ttft=1.7s* wall=1.77s in=196 out=1
+   10 PASS hellaswag      hellaswag-val-01084      given=C                    correct=C                    ttft=1.5s* wall=1.52s in=161 out=1
+   11 PASS hellaswag      hellaswag-val-01139      given=D                    correct=D                    ttft=1.5s* wall=1.61s in=178 out=1
+   12 PASS hellaswag      hellaswag-val-01169      given=D                    correct=D                    ttft=1.4s* wall=1.44s in=147 out=1
+   13 FAIL hellaswag      hellaswag-val-01291      given=A                    correct=B                    ttft=1.7s* wall=1.80s in=194 out=1
+   14 PASS hellaswag      hellaswag-val-01307      given=C                    correct=C                    ttft=1.4s* wall=1.44s in=133 out=1
+   15 FAIL hellaswag      hellaswag-val-01424      given=B                    correct=A                    ttft=1.3s* wall=1.39s in=156 out=1
+   16 PASS hellaswag      hellaswag-val-01519      given=C                    correct=C                    ttft=1.5s* wall=1.59s in=171 out=1
+   17 FAIL hellaswag      hellaswag-val-01535      given=B                    correct=D                    ttft=1.4s* wall=1.45s in=154 out=1
+   18 FAIL hellaswag      hellaswag-val-01584      given=A                    correct=D                    ttft=1.3s* wall=1.36s in=155 out=1
+   19 FAIL hellaswag      hellaswag-val-01654      given=D                    correct=C                    ttft=1.5s* wall=1.59s in=172 out=1
+   20 PASS hellaswag      hellaswag-val-01674      given=C                    correct=C                    ttft=1.4s* wall=1.43s in=154 out=1
+   21 FAIL hellaswag      hellaswag-val-01679      given=B                    correct=D                    ttft=1.1s* wall=1.19s in=120 out=1
+   22 PASS hellaswag      hellaswag-val-01824      given=A                    correct=A                    ttft=1.4s* wall=1.52s in=166 out=1
+   23 PASS hellaswag      hellaswag-val-02045      given=D                    correct=D                    ttft=1.5s* wall=1.79s in=164 out=1
+   24 PASS hellaswag      hellaswag-val-02286      given=C                    correct=C                    ttft=1.3s* wall=1.39s in=142 out=1
+   25 PASS hellaswag      hellaswag-val-02287      given=B                    correct=B                    ttft=1.4s* wall=1.47s in=153 out=1
+   26 FAIL hellaswag      hellaswag-val-02340      given=D                    correct=C                    ttft=1.3s* wall=1.42s in=153 out=1
+   27 PASS hellaswag      hellaswag-val-02547      given=B                    correct=B                    ttft=1.5s* wall=1.54s in=185 out=1
+   28 PASS hellaswag      hellaswag-val-02615      given=D                    correct=D                    ttft=1.4s* wall=1.45s in=159 out=1
+   29 PASS hellaswag      hellaswag-val-02664      given=D                    correct=D                    ttft=1.3s* wall=1.41s in=131 out=1
+   30 FAIL hellaswag      hellaswag-val-02677      given=C                    correct=A                    ttft=1.3s* wall=1.36s in=136 out=1
+   31 PASS hellaswag      hellaswag-val-02803      given=A                    correct=A                    ttft=1.5s* wall=1.60s in=180 out=1
+   32 PASS hellaswag      hellaswag-val-03150      given=D                    correct=D                    ttft=1.5s* wall=1.54s in=176 out=1
+   33 PASS hellaswag      hellaswag-val-03257      given=C                    correct=C                    ttft=2.2s* wall=2.30s in=308 out=1
+   34 PASS hellaswag      hellaswag-val-03432      given=D                    correct=D                    ttft=2.3s* wall=2.41s in=335 out=1
+   35 PASS hellaswag      hellaswag-val-03456      given=C                    correct=C                    ttft=2.3s* wall=2.37s in=337 out=1
+   36 PASS hellaswag      hellaswag-val-03483      given=C                    correct=C                    ttft=2.1s* wall=2.16s in=296 out=1
+   37 PASS hellaswag      hellaswag-val-03527      given=D                    correct=D                    ttft=2.5s* wall=2.75s in=367 out=1
+   38 PASS hellaswag      hellaswag-val-03582      given=B                    correct=B                    ttft=2.1s* wall=2.15s in=281 out=1
+   39 PASS hellaswag      hellaswag-val-03598      given=D                    correct=D                    ttft=2.3s* wall=2.40s in=331 out=1
+   40 PASS hellaswag      hellaswag-val-03611      given=D                    correct=D                    ttft=2.2s* wall=2.23s in=306 out=1
+   41 PASS hellaswag      hellaswag-val-03657      given=C                    correct=C                    ttft=2.1s* wall=2.20s in=301 out=1
+   42 PASS hellaswag      hellaswag-val-03733      given=B                    correct=B                    ttft=2.2s* wall=2.26s in=317 out=1
+   43 PASS hellaswag      hellaswag-val-03752      given=C                    correct=C                    ttft=2.1s* wall=2.20s in=315 out=1
+   44 PASS hellaswag      hellaswag-val-03811      given=B                    correct=B                    ttft=2.1s* wall=2.21s in=313 out=1
+   45 PASS hellaswag      hellaswag-val-03814      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=313 out=1
+   46 PASS hellaswag      hellaswag-val-04010      given=C                    correct=C                    ttft=2.3s* wall=2.37s in=293 out=1
+   47 PASS hellaswag      hellaswag-val-04012      given=D                    correct=D                    ttft=2.1s* wall=2.18s in=299 out=1
+   48 PASS hellaswag      hellaswag-val-04040      given=C                    correct=C                    ttft=2.1s* wall=2.43s in=310 out=1
+   49 PASS hellaswag      hellaswag-val-04333      given=B                    correct=B                    ttft=2.1s* wall=2.17s in=308 out=1
+   50 PASS hellaswag      hellaswag-val-04339      given=B                    correct=B                    ttft=2.3s* wall=2.40s in=340 out=1
+   51 PASS hellaswag      hellaswag-val-04374      given=D                    correct=D                    ttft=2.2s* wall=2.30s in=312 out=1
+   52 PASS hellaswag      hellaswag-val-04386      given=A                    correct=A                    ttft=2.2s* wall=2.27s in=296 out=1
+   53 PASS hellaswag      hellaswag-val-04422      given=B                    correct=B                    ttft=2.3s* wall=2.41s in=333 out=1
+   54 PASS hellaswag      hellaswag-val-04506      given=D                    correct=D                    ttft=2.2s* wall=2.26s in=310 out=1
+   55 PASS hellaswag      hellaswag-val-04552      given=B                    correct=B                    ttft=2.3s* wall=2.42s in=352 out=1
+   56 PASS hellaswag      hellaswag-val-04554      given=B                    correct=B                    ttft=2.2s* wall=2.26s in=294 out=1
+   57 PASS hellaswag      hellaswag-val-04557      given=A                    correct=A                    ttft=2.1s* wall=2.12s in=268 out=1
+   58 PASS hellaswag      hellaswag-val-04741      given=D                    correct=D                    ttft=2.3s* wall=2.36s in=325 out=1
+   59 PASS hellaswag      hellaswag-val-04803      given=A                    correct=A                    ttft=2.0s* wall=2.19s in=282 out=1
+   60 PASS hellaswag      hellaswag-val-05155      given=B                    correct=B                    ttft=2.2s* wall=2.24s in=304 out=1
+   61 PASS hellaswag      hellaswag-val-05168      given=C                    correct=C                    ttft=2.1s* wall=2.18s in=297 out=1
+   62 PASS hellaswag      hellaswag-val-05313      given=A                    correct=A                    ttft=2.3s* wall=2.38s in=348 out=1
+   63 PASS hellaswag      hellaswag-val-05514      given=B                    correct=B                    ttft=2.3s* wall=2.33s in=324 out=1
+   64 PASS hellaswag      hellaswag-val-05574      given=A                    correct=A                    ttft=2.3s* wall=2.41s in=339 out=1
+   65 PASS hellaswag      hellaswag-val-05635      given=B                    correct=B                    ttft=2.0s* wall=2.12s in=263 out=1
+   66 PASS hellaswag      hellaswag-val-05820      given=A                    correct=A                    ttft=2.5s* wall=2.53s in=360 out=1
+   67 PASS hellaswag      hellaswag-val-05881      given=A                    correct=A                    ttft=2.2s* wall=2.24s in=319 out=1
+   68 PASS hellaswag      hellaswag-val-05925      given=B                    correct=B                    ttft=2.3s* wall=2.34s in=325 out=1
+   69 PASS hellaswag      hellaswag-val-05977      given=A                    correct=A                    ttft=2.1s* wall=2.19s in=315 out=1
+   70 PASS hellaswag      hellaswag-val-06065      given=A                    correct=A                    ttft=2.1s* wall=2.22s in=264 out=1
+   71 PASS hellaswag      hellaswag-val-06201      given=A                    correct=A                    ttft=2.3s* wall=2.35s in=352 out=1
+   72 PASS hellaswag      hellaswag-val-06216      given=A                    correct=A                    ttft=2.1s* wall=2.18s in=312 out=1
+   73 PASS hellaswag      hellaswag-val-06224      given=B                    correct=B                    ttft=2.1s* wall=2.16s in=305 out=1
+   74 PASS hellaswag      hellaswag-val-06227      given=A                    correct=A                    ttft=2.1s* wall=2.18s in=312 out=1
+   75 PASS hellaswag      hellaswag-val-06482      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=303 out=1
+   76 PASS hellaswag      hellaswag-val-06572      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=319 out=1
+   77 PASS hellaswag      hellaswag-val-06873      given=D                    correct=D                    ttft=2.0s* wall=2.04s in=263 out=1
+   78 PASS hellaswag      hellaswag-val-06912      given=B                    correct=B                    ttft=2.3s* wall=2.37s in=344 out=1
+   79 PASS hellaswag      hellaswag-val-06924      given=D                    correct=D                    ttft=2.3s* wall=2.45s in=295 out=1
+   80 PASS hellaswag      hellaswag-val-07359      given=C                    correct=C                    ttft=2.3s* wall=2.42s in=345 out=1
+   81 PASS hellaswag      hellaswag-val-07428      given=B                    correct=B                    ttft=2.2s* wall=2.37s in=281 out=1
+   82 PASS hellaswag      hellaswag-val-07517      given=A                    correct=A                    ttft=2.3s* wall=2.40s in=330 out=1
+   83 PASS hellaswag      hellaswag-val-07527      given=B                    correct=B                    ttft=2.1s* wall=2.20s in=310 out=1
+   84 PASS hellaswag      hellaswag-val-07573      given=C                    correct=C                    ttft=2.0s* wall=2.10s in=283 out=1
+   85 FAIL hellaswag      hellaswag-val-08179      given=B                    correct=C                    ttft=2.3s* wall=2.38s in=347 out=1
+   86 PASS hellaswag      hellaswag-val-08279      given=D                    correct=D                    ttft=2.1s* wall=2.18s in=311 out=1
+   87 PASS hellaswag      hellaswag-val-08751      given=C                    correct=C                    ttft=2.1s* wall=2.19s in=299 out=1
+   88 PASS hellaswag      hellaswag-val-08785      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=296 out=1
+   89 PASS hellaswag      hellaswag-val-08928      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=301 out=1
+   90 PASS hellaswag      hellaswag-val-08935      given=B                    correct=B                    ttft=2.2s* wall=2.31s in=284 out=1
+   91 PASS hellaswag      hellaswag-val-09044      given=B                    correct=B                    ttft=2.1s* wall=2.18s in=304 out=1
+   92 PASS hellaswag      hellaswag-val-09125      given=A                    correct=A                    ttft=2.1s* wall=2.17s in=312 out=1
+   93 PASS hellaswag      hellaswag-val-09195      given=D                    correct=D                    ttft=2.0s* wall=2.04s in=265 out=1
+   94 PASS hellaswag      hellaswag-val-09292      given=C                    correct=C                    ttft=2.1s* wall=2.17s in=302 out=1
+   95 PASS hellaswag      hellaswag-val-09459      given=B                    correct=B                    ttft=2.3s* wall=2.35s in=325 out=1
+   96 PASS hellaswag      hellaswag-val-09654      given=D                    correct=D                    ttft=2.1s* wall=2.18s in=291 out=1
+   97 PASS hellaswag      hellaswag-val-09674      given=D                    correct=D                    ttft=2.1s* wall=2.17s in=303 out=1
+   98 PASS hellaswag      hellaswag-val-09863      given=B                    correct=B                    ttft=2.1s* wall=2.18s in=310 out=1
+   99 PASS hellaswag      hellaswag-val-09891      given=A                    correct=A                    ttft=2.3s* wall=2.35s in=326 out=1
+  100 PASS hellaswag      hellaswag-val-09980      given=A                    correct=A                    ttft=2.3s* wall=2.34s in=343 out=1
+[lucebench] area=hellaswag pass_rate=90.00% (90/100) wall_total=203s
+
+[lucebench] === area=code cases=10 think=False max_tokens=2048 ===
+    1 FAIL HumanEval-port has_close_elements       given=parse_fail           correct=parses-as-python     ttft=1.6s* wall=4.40s 9.8tps* in=190 out=43
+    2 PASS HumanEval-port separate_paren_groups    given=parse_ok             correct=parses-as-python     ttft=1.7s* wall=6.47s 12tps* in=200 out=76
+    3 PASS HumanEval-port truncate_number          given=parse_ok             correct=parses-as-python     ttft=1.5s* wall=1.95s in=151 out=5
+    4 PASS HumanEval-port below_zero               given=parse_ok             correct=parses-as-python     ttft=1.5s* wall=2.89s 8.0tps* in=193 out=23
+    5 PASS HumanEval-port mean_absolute_deviation  given=parse_ok             correct=parses-as-python     ttft=1.6s* wall=3.29s 7.6tps* in=185 out=25
+    6 PASS HumanEval-port intersperse              given=parse_ok             correct=parses-as-python     ttft=1.4s* wall=3.19s 8.8tps* in=169 out=28
+    7 PASS HumanEval-port parse_nested_parens      given=parse_ok             correct=parses-as-python     ttft=1.6s* wall=5.78s 11tps* in=204 out=64
+    8 FAIL HumanEval-port filter_by_substring      given=parse_fail           correct=parses-as-python     ttft=1.3s* wall=2.41s 7.5tps* in=160 out=18
+    9 PASS HumanEval-port sum_product              given=parse_ok             correct=parses-as-python     ttft=1.8s* wall=3.21s 6.2tps* in=196 out=20
+   10 PASS HumanEval-port rolling_max              given=parse_ok             correct=parses-as-python     ttft=1.5s* wall=3.67s 9.8tps* in=185 out=36
+[lucebench] area=code pass_rate=80.00% (8/10) wall_total=37s
+
+[lucebench] === area=longctx cases=6 think=False max_tokens=256 ===
+    1 PASS long-context-frontier frontier-2k              given=risk_prefix_ok       correct=starts-with-Risk:    ttft=11.3s* wall=13.60s 2.7tps* in=2125 out=37
+    2 PASS long-context-frontier frontier-4k              given=risk_prefix_ok       correct=starts-with-Risk:    ttft=11.5s* wall=14.02s 2.6tps* in=4160 out=37
+    3 PASS long-context-frontier frontier-8k              given=risk_prefix_ok       correct=starts-with-Risk:    ttft=21.9s* wall=24.88s 1.7tps* in=8222 out=42
+    4 PASS long-context-frontier frontier-16k             given=risk_prefix_ok       correct=starts-with-Risk:    ttft=54.6s* wall=58.20s 0.8tps* in=16366 out=48
+    5 PASS long-context-frontier frontier-32k             given=risk_prefix_ok       correct=starts-with-Risk:    ttft=105.6s* wall=108.34s 0.3tps* in=32653 out=37
+    6 PASS long-context-frontier frontier-64k             given=risk_prefix_ok       correct=starts-with-Risk:    ttft=240.5s* wall=243.99s 0.2tps* in=65216 out=39
+[lucebench] area=longctx pass_rate=100.00% (6/6) wall_total=463s
+
+[lucebench] === area=agent cases=4 think=False max_tokens=4096 ===
+    1 PASS agent-shape-probe codex-mini-read-task     given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch ttft=13.2s* wall=18.74s 4.6tps* in=1555 out=86
+    2 PASS agent-shape-probe codex-mini-apply-patch   given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch ttft=9.3s* wall=12.57s 4.3tps* in=1768 out=54
+    3 FAIL agent-shape-probe codex-large-explore      given=narrative            correct=code_block | json_tool_call | apply_patch ttft=27.5s* wall=34.41s 3.1tps* in=5364 out=107
+    4 PASS agent-shape-probe codex-medium-test        given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch ttft=24.9s* wall=46.68s 7.2tps* in=4827 out=335
+[lucebench] area=agent pass_rate=75.00% (3/4) wall_total=112s
+
+[lucebench] === area=agent_recorded cases=26 think=False max_tokens=4096 ===
+    1 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-5ff904708a given=engaged              correct=Read,Bash,Write,Edit | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-07f6f8ff-20260528T010451-d88e26f9,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-07f6f8ff-20260528T010451-d88e26f9/.ddx/executions/20260528T010451-d88e26f9/no_changes_rationale.txt ttft=9.7s* wall=17.33s 6.9tps* in=1856 out=120
+    2 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-c41604143b given=engaged              correct=Read,Glob,Bash,Monitor | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-09103a98-20260528T040639-c31b855d,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-09103a98-20260528T040639-c31b855d/AGENTS.md ttft=13.0s* wall=21.27s 6.1tps* in=2476 out=130
+    3 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-432ce00a0a given=engaged              correct=Read,Glob,Bash,Write | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-439a49ae-20260528T002632-2fe5caef/arch_a_validation_minimal.py,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-439a49ae-20260528T002632-2fe5caef/benchmarks/competitive/docker-compose.yml ttft=16.4s* wall=39.05s 9.1tps* in=3122 out=357
+    4 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-aacc43b222 given=engaged              correct=Bash,Read,Monitor,Write | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-780a1278-20260528T014337-bbbbfcb0/.ddx/executions/20260528T014337-bbbbfcb0/manifest.json,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-780a1278-20260528T014337-bbbbfcb0/.ddx/executions/20260528T014337-bbbbfcb0/no_changes_rationale.txt ttft=9.2s* wall=12.95s 4.3tps* in=1776 out=56
+    5 PASS agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-da272ac247 given=engaged              correct=Read,Glob,Edit,Grep | <HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-da8fb4a4-20260528T042621-ada3a65f/crates/niflheim-core/src/config/mod.rs,<HOME>/.cache/ddx/exec-wt/.execute-bead-wt-niflheim-da8fb4a4-20260528T042621-ada3a65f/crates/niflheim-core/src/config/storage.rs ttft=18.7s* wall=30.72s 5.8tps* in=3675 out=179
+    6 FAIL agent-recorded-claude-code claude-2026-05-28-execute-bead-instructions-you-ar-43c0b72fe3 given=engaged              correct=Bash,Read,Write,Monitor | ./.ddx/executions/20260528T024433-37b5df01/no_changes_rationale.txt,/tmp/step2-pipelining-run/soak-report-samples.jsonl ttft=9.7s* wall=16.08s 6.5tps* in=1836 out=104
+    7 FAIL agent-recorded-claude-code claude-2026-05-27-we-are-rebasing-easel-auto-integ-49dea9d669 given=engaged              correct=Bash,Read,Edit | <HOME>/Projects/luce2-auto-cron-20260527-152327/server/src/common/model_backend.h,<HOME>/Projects/luce2-auto-cron-20260527-152327/server/src/qwen35/qwen35_backend.cpp ttft=1.5s* wall=71.51s 15tps* in=144 out=1098
+    8 FAIL agent-recorded-claude-code claude-2026-05-27-resolve-the-current-git-merge-co-d513fe219f given=refused              correct=Bash,ToolSearch,TaskCreate ttft=1.3s* wall=80.90s 16tps* in=126 out=1265
+    9 FAIL agent-recorded-claude-code claude-2026-05-28-assess-whether-pr-131-broad-gemm-48b2593c35 given=refused              correct=Bash                 ttft=1.2s* wall=74.69s 16tps* in=129 out=1167
+   10 PASS agent-recorded-claude-code claude-2026-05-28-assess-pr-135-merge-conflicts-fo-fdc9f08609 given=engaged              correct=Bash                 ttft=1.3s* wall=13.16s 15tps* in=143 out=191
+   11 FAIL agent-recorded-claude-code claude-2026-05-28-assess-pr-177-merge-conflicts-in-e29c692709 given=stub                 correct=Bash                 ttft=1.2s* wall=2.87s 8.0tps* in=124 out=23
+   12 FAIL agent-recorded-claude-code claude-2026-05-28-assess-whether-pr-182-gemma4-mtp-5e46c356ef given=engaged              correct=Bash                 ttft=1.4s* wall=56.23s 15tps* in=134 out=869
+   13 FAIL agent-recorded-claude-code claude-2026-05-28-assess-this-conflicted-merge-of--2d45ab1f38 given=stub                 correct=Bash                 ttft=1.3s* wall=2.66s 8.6tps* in=131 out=23
+   14 FAIL agent-recorded-claude-code claude-2026-05-28-assess-pr-39-merge-conflicts-in--5ea156df00 given=stub                 correct=Bash                 ttft=1.4s* wall=2.71s 8.1tps* in=131 out=22
+   15 PASS agent-recorded-claude-code claude-2026-05-28-review-pr-237-origin-pr-237-agai-c39dc051bc given=engaged              correct=Bash                 ttft=1.3s* wall=123.89s 16tps* in=153 out=1939
+   16 FAIL agent-recorded-claude-code claude-2026-05-28-read-only-feasibility-report-com-fa144ffd71 given=refused              correct=Bash                 ttft=1.1s* wall=48.03s 16tps* in=91 out=748
+   17 PASS agent-recorded-claude-code claude-2026-05-27-assess-whether-pr-135-native-mul-aa3ab7518c given=engaged              correct=Bash                 ttft=1.3s* wall=140.01s 16tps* in=106 out=2198
+   18 FAIL agent-recorded-claude-code claude-2026-05-28-in-this-conflicted-pr177-worktre-965ae84c4a given=refused              correct=Bash,Read,Grep | /tmp/luce-pr177-feas-20260527-234303/server/src/errors.cpp,/tmp/luce-pr177-feas-20260527-234303/server/src/gemma4 ttft=1.4s* wall=48.28s 15tps* in=130 out=745
+   19 FAIL agent-recorded-codex codex-2026-03-11-review-the-beads-ready-for-work--59cdbb7aae given=refused              correct=Bash                 ttft=1.1s* wall=51.68s 15tps* in=122 out=796
+   20 FAIL agent-recorded-codex codex-2026-05-13-mode-lint-you-are-the-bead-lifec-4bc1c8d35b given=engaged              correct=Bash                 ttft=4.9s* wall=10.92s 8.5tps* in=893 out=93
+   21 FAIL agent-recorded-codex codex-2026-05-12-mode-intake-you-are-evaluating-w-eea12b26b4 given=engaged              correct=Bash                 ttft=10.0s* wall=18.58s 7.3tps* in=1945 out=135
+   22 PASS agent-recorded-codex codex-2026-05-04-execute-bead-bead-id-niflheim-b0-ee7d11c58f given=engaged              correct=Bash,write_stdin     ttft=12.5s* wall=34.54s 10.0tps* in=2348 out=344
+   23 PASS agent-recorded-codex codex-2026-05-11-execute-bead-instructions-you-ar-4ed0606482 given=engaged              correct=Bash,write_stdin     ttft=11.1s* wall=14.36s 3.3tps* in=2088 out=48
+   24 PASS agent-recorded-codex codex-2026-05-03-execute-bead-bead-id-niflheim-73-2b90e280dc given=engaged              correct=Bash,write_stdin     ttft=8.8s* wall=11.47s 3.8tps* in=1687 out=44
+   25 FAIL agent-recorded-codex codex-2026-03-09-review-this-project-for-rust-bes-754bc600e6 given=refused              correct=update_plan,Bash,write_stdin ttft=1.1s* wall=18.38s 15tps* in=109 out=276
+   26 FAIL agent-recorded-codex codex-2026-03-11-review-the-beads-ready-for-work--7af90ec58b given=refused              correct=Bash,write_stdin     ttft=1.1s* wall=24.56s 15tps* in=122 out=368
+[lucebench] area=agent_recorded pass_rate=26.92% (7/26) wall_total=987s
+
+[lucebench] === area=forge max_tokens=4096 ===
+[lucebench] area=forge pass_rate=0.00% (0/30)
+
+[lucebench] sweep complete → /Users/erik/Projects/luce-bench-baselines/vidar-m2ultra-qwen36-fullsweep-nothink-injected-2026-05-29
+# luce-bench sweep — vidar-m2ultra-qwen36-fullsweep-nothink-injected-2026-05-29
+
+- url:   `http://vidar:1237`
+- model: `Qwen3.6-27B-MLX-8bit`
+- lucebench v0.2.7.dev0
+
+| area | n | pass | rate | wall_total | wall_median |
+|------|---|------|------|------------|-------------|
+| smoke | 3 | 2 | 66.7% | 25s | 0.9s |
+| ds4-eval | 92 | 68 | 73.9% | 17067s | 99.2s |
+| gsm8k | 100 | 93 | 93.0% | 2542s | 19.1s |
+| truthfulqa-mc1 | 100 | 82 | 82.0% | 146s | 1.4s |
+| hellaswag | 100 | 90 | 90.0% | 203s | 2.2s |
+| code | 10 | 8 | 80.0% | 37s | 3.2s |
+| longctx | 6 | 6 | 100.0% | 463s | 41.5s |
+| agent | 4 | 3 | 75.0% | 112s | 26.6s |
+| agent_recorded | 26 | 7 | 26.9% | 987s | 22.9s |
+| forge | 30 | 0 | 0.0% | 761s | 19.5s |

@@ -1,0 +1,88 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "name": "vidar-m2ultra-qwen36-fullsweep-nothink-injected-2026-05-29",
+  "url": "http://vidar:1237",
+  "model": "Qwen3.6-27B-MLX-8bit",
+  "areas": [
+    {
+      "area": "smoke",
+      "n": 3,
+      "pass": 2,
+      "rate": 66.66666666666667,
+      "wall_total": 25.439,
+      "wall_median": 0.921
+    },
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 68,
+      "rate": 73.91304347826087,
+      "wall_total": 17067.406,
+      "wall_median": 99.212
+    },
+    {
+      "area": "gsm8k",
+      "n": 100,
+      "pass": 93,
+      "rate": 93.0,
+      "wall_total": 2542.275,
+      "wall_median": 19.124000000000002
+    },
+    {
+      "area": "truthfulqa-mc1",
+      "n": 100,
+      "pass": 82,
+      "rate": 82.0,
+      "wall_total": 145.535,
+      "wall_median": 1.4375
+    },
+    {
+      "area": "hellaswag",
+      "n": 100,
+      "pass": 90,
+      "rate": 90.0,
+      "wall_total": 202.705,
+      "wall_median": 2.1784999999999997
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 8,
+      "rate": 80.0,
+      "wall_total": 37.27,
+      "wall_median": 3.25
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 6,
+      "rate": 100.0,
+      "wall_total": 463.013,
+      "wall_median": 41.5375
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 3,
+      "rate": 75.0,
+      "wall_total": 112.399,
+      "wall_median": 26.5745
+    },
+    {
+      "area": "agent_recorded",
+      "n": 26,
+      "pass": 7,
+      "rate": 26.923076923076923,
+      "wall_total": 986.8149999999999,
+      "wall_median": 22.911499999999997
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 761.495,
+      "wall_median": 19.451999999999998
+    }
+  ]
+}
