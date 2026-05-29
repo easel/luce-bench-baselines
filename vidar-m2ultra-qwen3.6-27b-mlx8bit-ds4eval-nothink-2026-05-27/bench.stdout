@@ -1,0 +1,101 @@
+[lucebench] v0.2.7.dev0
+[lucebench] preflight http://vidar:1237
+  liveness     ✓  reached in 0.03s
+  /v1/models   ✓  Qwen3-30B-A3B-Instruct-2507-MLX-4bit, *Qwen3.6-27B-MLX-8bit, … (+5 more)
+  /props       ✓  absent (non-lucebox server) — skipped
+[lucebench] area=ds4-eval cases=92 url=http://vidar:1237 model=Qwen3.6-27B-MLX-8bit think=False max_tokens=16000
+    1 PASS GPQA Diamond   recNu3MXkvWUzHZr9        given=B                    correct=B                    wall=187.10s 12tps* in=229 out=2171
+    2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C                    correct=C                    wall=43.28s 16tps* in=165 out=690
+    3 PASS AIME2025       aime2025-01              given=70                   correct=70                   wall=63.47s 16tps* in=98 out=1042
+    4 PASS GPQA Diamond   recoiTJPGUmzAkief        given=C                    correct=C                    wall=62.20s 16tps* in=350 out=989
+    5 PASS SuperGPQA      b7e20eac98764fb0bf30e8366d951daa given=J                    correct=J                    wall=64.20s 16tps* in=291 out=1040
+    6 PASS AIME2025       aime2025-16              given=468                  correct=468                  wall=75.73s 16tps* in=169 out=1246
+    7 PASS GPQA Diamond   rec4UqStf9WUVif1f        given=B                    correct=B                    wall=76.98s 17tps* in=200 out=1275
+    8 PASS SuperGPQA      4a1d1780a93f4093b6fb7d3c314cbea8 given=E                    correct=E                    wall=33.99s 16tps* in=141 out=555
+    9 PASS AIME2025       aime2025-02              given=588                  correct=588                  wall=308.21s 16tps* in=697 out=5070
+   10 PASS GPQA Diamond   recgI6tUQ7RLJRWGx        given=B                    correct=B                    wall=70.59s 16tps* in=218 out=1157
+   11 FAIL SuperGPQA      6082513c8dba4ec68aa68f1bf5854d09 given=E                    correct=A                    wall=27.07s 16tps* in=152 out=433
+   12 PASS AIME2025       aime2025-03              given=16                   correct=16                   wall=99.39s 16tps* in=181 out=1616
+   13 PASS GPQA Diamond   recDytVnNYZe2HuUU        given=A                    correct=A                    wall=479.81s 16tps* in=183 out=7863
+   14 PASS SuperGPQA      bebf1ed45ae14ad7b4f205f3909cb58a given=J                    correct=J                    wall=18.35s 15tps* in=191 out=275
+   15 PASS AIME2025       aime2025-18              given=82                   correct=82                   wall=386.40s 16tps* in=338 out=6176
+   16 PASS GPQA Diamond   recNFJjE5PPTqVJGv        given=D                    correct=D                    wall=89.65s 16tps* in=162 out=1429
+   17 PASS SuperGPQA      7ca71b86327744b78e93185a45bc5cef given=I                    correct=I                    wall=41.77s 16tps* in=199 out=665
+   18 PASS AIME2025       aime2025-04              given=117                  correct=117                  wall=102.07s 16tps* in=125 out=1647
+   19 PASS GPQA Diamond   rec2UlKqC6RFHdcro        given=B                    correct=B                    wall=62.58s 16tps* in=215 out=996
+   20 PASS SuperGPQA      d44b94f7749345a39a65f6312bda8764 given=E                    correct=E                    wall=66.08s 16tps* in=203 out=1048
+   21 PASS AIME2025       aime2025-19              given=106                  correct=106                  wall=105.25s 16tps* in=269 out=1714
+   22 PASS GPQA Diamond   recv7GsQg3f0fvB1f        given=B                    correct=B                    wall=51.82s 16tps* in=275 out=825
+   23 PASS SuperGPQA      febe406f44d74a40b50bb5b7c69d5dc1 given=B                    correct=B                    wall=35.05s 16tps* in=259 out=551
+   24 PASS AIME2025       aime2025-05              given=279                  correct=279                  wall=239.79s 16tps* in=148 out=3951
+   25 PASS GPQA Diamond   recrHBEJJoDTV05JR        given=C                    correct=C                    wall=359.96s 16tps* in=257 out=5895
+   26 PASS SuperGPQA      31950dc80ded400a9181f50626d1f75c given=C                    correct=C                    wall=57.29s 16tps* in=186 out=911
+   27 PASS AIME2025       aime2025-06              given=504                  correct=504                  wall=76.07s 16tps* in=151 out=1234
+   28 FAIL GPQA Diamond   recb80OwMgNnceA9t        given=B                    correct=D                    wall=421.18s 16tps* in=227 out=6767
+   29 PASS SuperGPQA      0f14cd17be174618af6d60227e7dca9f given=C                    correct=C                    wall=194.37s 16tps* in=797 out=3087
+   30 PASS AIME2025       aime2025-21              given=293                  correct=293                  wall=210.39s 16tps* in=832 out=3348
+   31 FAIL GPQA Diamond   recA1i5ZAh0Uzclxp        given=B                    correct=C                    wall=206.78s 16tps* in=295 out=3300
+   32 PASS SuperGPQA      cef9bcc087434cc2b4e354a9baef55eb given=J                    correct=J                    wall=67.25s 15tps* in=455 out=1038
+   33 PASS AIME2025       aime2025-07              given=821                  correct=821                  wall=315.52s 16tps* in=212 out=5045
+   34 PASS GPQA Diamond   recqGD3fxPCI59vPQ        given=B                    correct=B                    wall=133.32s 16tps* in=257 out=2134
+   35 PASS SuperGPQA      9f93aa2cfdb547b5b3a4623f80f7fff6 given=I                    correct=I                    wall=40.14s 16tps* in=184 out=625
+   36 PASS AIME2025       aime2025-22              given=237                  correct=237                  wall=337.55s 16tps* in=160 out=5384
+   37 PASS GPQA Diamond   rechKl68Uc6H7vU0N        given=A                    correct=A                    wall=337.74s 16tps* in=365 out=5320
+   38 FAIL SuperGPQA      97ad69dda7b2462c98638b79e78aea0b given=I                    correct=E                    wall=66.69s 16tps* in=173 out=1042
+   39 PASS AIME2025       aime2025-08              given=77                   correct=77                   wall=95.06s 16tps* in=183 out=1499
+   40 PASS GPQA Diamond   rec1zl5LvaatzGhFt        given=B                    correct=B                    wall=125.39s 15tps* in=408 out=1931
+   41 FAIL SuperGPQA      e78e4e539d6f4e379ac140d923d7b1be given=C                    correct=H                    wall=22.74s 14tps* in=144 out=326
+   42 FAIL AIME2025       aime2025-09              given=3                    correct=62                   wall=696.88s 15tps* in=172 out=10765
+   43 PASS GPQA Diamond   recTs7qzfJs6kfLUK        given=A                    correct=A                    wall=183.74s 15tps* in=662 out=2746
+   44 PASS SuperGPQA      8483667a25e74fdfa3188de4ea734f03 given=A                    correct=A                    wall=196.06s 15tps* in=215 out=3008
+   45 FAIL AIME2025       aime2025-24              given=145                  correct=149                  wall=143.99s 15tps* in=160 out=2194
+   46 PASS GPQA Diamond   rec32C1ZEapBnCC0E        given=C                    correct=C                    wall=81.81s 15tps* in=266 out=1230
+   47 PASS SuperGPQA      e5ed76ef98144f06843125daf1bccd35 given=A                    correct=A                    wall=171.79s 15tps* in=193 out=2623
+   48 PASS AIME2025       aime2025-10              given=81                   correct=81                   wall=536.85s 15tps* in=373 out=8110
+   49 FAIL GPQA Diamond   recZWeueB7lSPR6wN        given=A                    correct=B                    wall=426.42s 15tps* in=259 out=6374
+   50 PASS SuperGPQA      fd7924876c4845cd83d95d61dfa0b236 given=H                    correct=H                    wall=32.30s 14tps* in=143 out=462
+   51 PASS AIME2025       aime2025-25              given=907                  correct=907                  wall=196.07s 15tps* in=136 out=3016
+   52 FAIL GPQA Diamond   recVvpD8miVjmmyfe        given=A                    correct=C                    wall=651.72s 15tps* in=145 out=9806
+   53 PASS SuperGPQA      6bfe7d19299d4b3184636e1f51694306 given=I                    correct=I                    wall=131.71s 15tps* in=410 out=1968
+   54 FAIL AIME2025       aime2025-26              given=4208                 correct=113                  wall=248.44s 15tps* in=126 out=3780
+   55 PASS GPQA Diamond   recAAJoHMW45Lv5je        given=D                    correct=D                    wall=240.77s 15tps* in=251 out=3629
+   56 PASS SuperGPQA      e1825d70c5844c22933087eafa89e39c given=J                    correct=J                    wall=97.19s 15tps* in=496 out=1414
+   57 FAIL AIME2025       aime2025-12              given=507                  correct=510                  wall=279.70s 15tps* in=180 out=4210
+   58 PASS GPQA Diamond   reckEnrOPFT9Ru7tW        given=C                    correct=C                    wall=256.34s 15tps* in=312 out=3842
+   59 PASS SuperGPQA      ab430ac3f18e4e02a2cb3f35498c6b30 given=A                    correct=A                    wall=150.16s 15tps* in=296 out=2234
+   60 FAIL AIME2025       aime2025-27              given=1                    correct=19                   wall=199.22s 15tps* in=330 out=2983
+   61 PASS GPQA Diamond   rec8nshandHARTkrg        given=A                    correct=A                    wall=723.24s 15tps* in=567 out=10714
+   62 PASS SuperGPQA      e8c5da5ca40647158b0c91dd695c6243 given=F                    correct=F                    wall=96.11s 15tps* in=496 out=1405
+   63 PASS AIME2025       aime2025-13              given=204                  correct=204                  wall=706.85s 15tps* in=149 out=10485
+   64 PASS GPQA Diamond   recFaL6j8UMhutXrc        given=A                    correct=A                    wall=415.37s 15tps* in=495 out=6189
+   65 PASS SuperGPQA      05efdc6fb2404ddc8dd5729bb68c74e5 given=H                    correct=H                    wall=96.17s 15tps* in=214 out=1434
+   66 FAIL AIME2025       aime2025-28              given=2                    correct=248                  wall=828.42s 15tps* in=209 out=12315
+   67 FAIL GPQA Diamond   reczQ4I0VpENdMtIj        given=A                    correct=C                    wall=190.63s 15tps* in=235 out=2799
+   68 PASS SuperGPQA      ba52e06cbe1a4310a77a7d12cd1db943 given=H                    correct=H                    wall=150.14s 15tps* in=605 out=2249
+   69 PASS AIME2025       aime2025-29              given=104                  correct=104                  wall=447.07s 15tps* in=162 out=6729
+   70 FAIL GPQA Diamond   recWxGU8Q4YReJ1tb        given=A                    correct=C                    wall=635.94s 15tps* in=821 out=9446
+   71 FAIL SuperGPQA      591a77df21324272914be82ac6583399 given=D                    correct=F                    wall=104.02s 15tps* in=334 out=1536
+   72 FAIL AIME2025       aime2025-15              given=3                    correct=735                  wall=490.03s 15tps* in=144 out=7353
+   73 FAIL GPQA Diamond   recMicVBcqy1xM1jq        given=A                    correct=B                    wall=64.32s 15tps* in=245 out=952
+   74 FAIL SuperGPQA      e780f37a5baa4fe094cd9c157486664d given=J                    correct=H                    wall=42.20s 15tps* in=229 out=624
+   75 FAIL AIME2025       aime2025-30              given=18                   correct=240                  wall=530.40s 15tps* in=150 out=8006
+   76 PASS COMPSEC        compsec-076              given=20                   correct=17-20                wall=48.17s 14tps* in=450 out=677
+   77 PASS COMPSEC        compsec-077              given=18                   correct=18-20                wall=26.87s 14tps* in=394 out=373
+   78 PASS COMPSEC        compsec-078              given=11                   correct=11                   wall=41.92s 14tps* in=377 out=607
+   79 PASS COMPSEC        compsec-079              given=19                   correct=18-19                wall=139.85s 15tps* in=425 out=2097
+   80 PASS COMPSEC        compsec-080              given=5                    correct=5-6                  wall=145.75s 15tps* in=324 out=2172
+   81 PASS COMPSEC        compsec-081              given=10                   correct=10-15                wall=66.44s 14tps* in=370 out=962
+   82 PASS COMPSEC        compsec-082              given=10,9                 correct=9-10                 wall=120.21s 15tps* in=323 out=1789
+   83 PASS COMPSEC        compsec-083              given=9                    correct=9-11                 wall=97.81s 15tps* in=345 out=1444
+   84 PASS COMPSEC        compsec-084              given=7                    correct=6-7                  wall=55.57s 14tps* in=355 out=802
+   85 PASS COMPSEC        compsec-085              given=5                    correct=5                    wall=55.57s 15tps* in=264 out=825
+   86 PASS COMPSEC        compsec-086              given=3                    correct=3,13-15              wall=29.66s 14tps* in=397 out=401
+   87 PASS COMPSEC        compsec-087              given=8                    correct=8,20-22              wall=77.73s 15tps* in=518 out=1132
+   88 PASS COMPSEC        compsec-088              given=11                   correct=11                   wall=105.53s 15tps* in=344 out=1568
+   89 PASS COMPSEC        compsec-089              given=10                   correct=10                   wall=32.36s 14tps* in=290 out=452
+   90 PASS COMPSEC        compsec-090              given=12                   correct=12-13                wall=29.37s 14tps* in=386 out=401
+   91 PASS COMPSEC        compsec-091              given=3                    correct=3                    wall=27.21s 14tps* in=278 out=378
+   92 FAIL COMPSEC        compsec-092              given=9,10,11              correct=10-14                wall=46.50s 14tps* in=361 out=671
+
+[lucebench] pass_rate=77.17% (71/92) wall_total=17447s wall_median=104.6s
+[lucebench] wrote 92 rows to /Users/erik/Projects/luce-bench-baselines/vidar-m2ultra-qwen3.6-27b-mlx8bit-ds4eval-nothink-2026-05-27/result.json

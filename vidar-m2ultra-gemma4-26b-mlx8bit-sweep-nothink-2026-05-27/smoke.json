@@ -1,0 +1,87 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "smoke",
+  "url": "http://vidar:1237",
+  "model": "gemma-4-26B-A4B-it-MLX-8bit",
+  "think": false,
+  "max_tokens": 4096,
+  "n": 3,
+  "pass": 3,
+  "pass_rate": 100.0,
+  "wall_total": 23.255000000000003,
+  "wall_median": 0.235,
+  "rows": [
+    {
+      "case_id": "smoke-arithmetic",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 22.812,
+      "http_status": 200,
+      "prompt_tokens": 51,
+      "completion_tokens": 1,
+      "reasoning_tokens": null,
+      "content": "4",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "4",
+        "correct": "4",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-capital",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.208,
+      "http_status": 200,
+      "prompt_tokens": 50,
+      "completion_tokens": 1,
+      "reasoning_tokens": null,
+      "content": "Paris",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "Paris",
+        "correct": "Paris",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-sequence",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.235,
+      "http_status": 200,
+      "prompt_tokens": 54,
+      "completion_tokens": 1,
+      "reasoning_tokens": null,
+      "content": "3",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": null,
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "3",
+        "correct": "3",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}

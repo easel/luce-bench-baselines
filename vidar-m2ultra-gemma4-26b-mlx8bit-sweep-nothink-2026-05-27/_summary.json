@@ -1,0 +1,56 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "name": "vidar-m2ultra-gemma4-26b-mlx8bit-sweep-nothink-2026-05-27",
+  "url": "http://vidar:1237",
+  "model": "gemma-4-26B-A4B-it-MLX-8bit",
+  "areas": [
+    {
+      "area": "smoke",
+      "n": 3,
+      "pass": 3,
+      "rate": 100.0,
+      "wall_total": 23.255000000000003,
+      "wall_median": 0.235
+    },
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 73,
+      "rate": 79.34782608695652,
+      "wall_total": 5466.35,
+      "wall_median": 23.2545
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 10,
+      "rate": 100.0,
+      "wall_total": 12.521,
+      "wall_median": 1.0585
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 6,
+      "rate": 100.0,
+      "wall_total": 125.02,
+      "wall_median": 10.225999999999999
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 1,
+      "rate": 25.0,
+      "wall_total": 39.434,
+      "wall_median": 6.9655000000000005
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 28.693,
+      "wall_median": 0.7755000000000001
+    }
+  ]
+}

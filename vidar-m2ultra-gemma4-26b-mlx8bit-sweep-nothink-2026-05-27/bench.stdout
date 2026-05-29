@@ -1,0 +1,155 @@
+[lucebench] v0.2.7.dev0
+[lucebench] preflight http://vidar:1237
+  liveness     ✓  reached in 0.01s
+  /v1/models   ✓  Qwen3-30B-A3B-Instruct-2507-MLX-4bit, *gemma-4-26B-A4B-it-MLX-8bit, … (+5 more)
+  /props       ✓  absent (non-lucebox server) — skipped
+[lucebench] sweep name=vidar-m2ultra-gemma4-26b-mlx8bit-sweep-nothink-2026-05-27 areas=smoke,ds4-eval,code,longctx,agent,forge url=http://vidar:1237 model=gemma-4-26B-A4B-it-MLX-8bit out=/Users/erik/Projects/luce-bench-baselines/vidar-m2ultra-gemma4-26b-mlx8bit-sweep-nothink-2026-05-27
+
+[lucebench] === area=smoke cases=3 think=False max_tokens=4096 ===
+    1 PASS smoke          smoke-arithmetic         given=4                    correct=4                    wall=22.81s in=51 out=1
+    2 PASS smoke          smoke-capital            given=Paris                correct=Paris                wall=0.21s in=50 out=1
+    3 PASS smoke          smoke-sequence           given=3                    correct=3                    wall=0.23s in=54 out=1
+[lucebench] area=smoke pass_rate=100.00% (3/3) wall_total=23s
+
+[lucebench] === area=ds4-eval cases=92 think=False max_tokens=16000 ===
+    1 PASS GPQA Diamond   recNu3MXkvWUzHZr9        given=B                    correct=B                    wall=15.26s 50tps* in=229 out=763
+    2 PASS SuperGPQA      001b51d76b4d422988f2c11f104a2c6c given=C                    correct=C                    wall=7.71s 46tps* in=165 out=357
+    3 PASS AIME2025       aime2025-01              given=70                   correct=70                   wall=24.38s 47tps* in=100 out=1137
+    4 PASS GPQA Diamond   recoiTJPGUmzAkief        given=C                    correct=C                    wall=11.32s 48tps* in=346 out=547
+    5 PASS SuperGPQA      b7e20eac98764fb0bf30e8366d951daa given=J                    correct=J                    wall=9.82s 51tps* in=283 out=501
+    6 PASS AIME2025       aime2025-16              given=468                  correct=468                  wall=16.78s 51tps* in=169 out=863
+    7 PASS GPQA Diamond   rec4UqStf9WUVif1f        given=B                    correct=B                    wall=16.51s 51tps* in=185 out=846
+    8 PASS SuperGPQA      4a1d1780a93f4093b6fb7d3c314cbea8 given=E                    correct=E                    wall=6.12s 50tps* in=141 out=304
+    9 PASS AIME2025       aime2025-02              given=588                  correct=588                  wall=196.69s 52tps* in=697 out=10169
+   10 PASS GPQA Diamond   recgI6tUQ7RLJRWGx        given=B                    correct=B                    wall=15.69s 45tps* in=214 out=700
+   11 PASS SuperGPQA      6082513c8dba4ec68aa68f1bf5854d09 given=A                    correct=A                    wall=6.18s 50tps* in=151 out=306
+   12 PASS AIME2025       aime2025-03              given=16                   correct=16                   wall=18.63s 49tps* in=181 out=911
+   13 PASS GPQA Diamond   recDytVnNYZe2HuUU        given=A                    correct=A                    wall=25.44s 49tps* in=178 out=1252
+   14 PASS SuperGPQA      bebf1ed45ae14ad7b4f205f3909cb58a given=J                    correct=J                    wall=6.37s 47tps* in=177 out=302
+   15 PASS AIME2025       aime2025-18              given=82                   correct=82                   wall=127.49s 50tps* in=335 out=6312
+   16 PASS GPQA Diamond   recNFJjE5PPTqVJGv        given=D                    correct=D                    wall=19.45s 47tps* in=159 out=918
+   17 PASS SuperGPQA      7ca71b86327744b78e93185a45bc5cef given=I                    correct=I                    wall=11.57s 49tps* in=192 out=571
+   18 PASS AIME2025       aime2025-04              given=117                  correct=117                  wall=20.80s 49tps* in=124 out=1024
+   19 PASS GPQA Diamond   rec2UlKqC6RFHdcro        given=B                    correct=B                    wall=15.07s 48tps* in=206 out=728
+   20 PASS SuperGPQA      d44b94f7749345a39a65f6312bda8764 given=E                    correct=E                    wall=14.44s 48tps* in=203 out=686
+   21 PASS AIME2025       aime2025-19              given=106                  correct=106                  wall=40.79s 48tps* in=254 out=1964
+   22 PASS GPQA Diamond   recv7GsQg3f0fvB1f        given=B                    correct=B                    wall=11.82s 48tps* in=265 out=572
+   23 PASS SuperGPQA      febe406f44d74a40b50bb5b7c69d5dc1 given=B                    correct=B                    wall=6.81s 49tps* in=247 out=331
+   24 PASS AIME2025       aime2025-05              given=279                  correct=279                  wall=82.33s 50tps* in=149 out=4100
+   25 FAIL GPQA Diamond   recrHBEJJoDTV05JR        given=D                    correct=C                    wall=58.27s 48tps* in=249 out=2783
+   26 PASS SuperGPQA      31950dc80ded400a9181f50626d1f75c given=C                    correct=C                    wall=16.39s 47tps* in=195 out=764
+   27 PASS AIME2025       aime2025-06              given=504                  correct=504                  wall=21.66s 45tps* in=142 out=965
+   28 FAIL GPQA Diamond   recb80OwMgNnceA9t        given=C                    correct=D                    wall=36.83s 46tps* in=212 out=1704
+   29 PASS SuperGPQA      0f14cd17be174618af6d60227e7dca9f given=C                    correct=C                    wall=21.61s 45tps* in=838 out=966
+   30 PASS AIME2025       aime2025-21              given=293                  correct=293                  wall=32.16s 47tps* in=806 out=1518
+   31 PASS GPQA Diamond   recA1i5ZAh0Uzclxp        given=C                    correct=C                    wall=23.86s 44tps* in=268 out=1043
+   32 PASS SuperGPQA      cef9bcc087434cc2b4e354a9baef55eb given=J                    correct=J                    wall=16.29s 42tps* in=445 out=692
+   33 PASS AIME2025       aime2025-07              given=821                  correct=821                  wall=381.63s 42tps* in=212 out=16000
+   34 PASS GPQA Diamond   recqGD3fxPCI59vPQ        given=B                    correct=B                    wall=37.48s 35tps* in=252 out=1321
+   35 PASS SuperGPQA      9f93aa2cfdb547b5b3a4623f80f7fff6 given=I                    correct=I                    wall=11.15s 36tps* in=194 out=404
+   36 PASS AIME2025       aime2025-22              given=237                  correct=237                  wall=37.41s 37tps* in=157 out=1387
+   37 PASS GPQA Diamond   rechKl68Uc6H7vU0N        given=A                    correct=A                    wall=41.09s 39tps* in=319 out=1582
+   38 FAIL SuperGPQA      97ad69dda7b2462c98638b79e78aea0b given=I                    correct=E                    wall=16.87s 36tps* in=166 out=609
+   39 FAIL AIME2025       aime2025-08              given=93                   correct=77                   wall=24.57s 38tps* in=181 out=930
+   40 PASS GPQA Diamond   rec1zl5LvaatzGhFt        given=B                    correct=B                    wall=28.83s 39tps* in=392 out=1120
+   41 FAIL SuperGPQA      e78e4e539d6f4e379ac140d923d7b1be given=E                    correct=H                    wall=7.90s 38tps* in=143 out=298
+   42 FAIL AIME2025       aime2025-09              given=215                  correct=62                   wall=442.68s 36tps* in=165 out=16000
+   43 PASS GPQA Diamond   recTs7qzfJs6kfLUK        given=A                    correct=A                    wall=22.56s 27tps* in=596 out=612
+   44 PASS SuperGPQA      8483667a25e74fdfa3188de4ea734f03 given=A                    correct=A                    wall=26.43s 35tps* in=191 out=937
+   45 PASS AIME2025       aime2025-24              given=149                  correct=149                  wall=36.63s 37tps* in=161 out=1350
+   46 PASS GPQA Diamond   rec32C1ZEapBnCC0E        given=C                    correct=C                    wall=44.30s 36tps* in=260 out=1584
+   47 PASS SuperGPQA      e5ed76ef98144f06843125daf1bccd35 given=A                    correct=A                    wall=44.71s 36tps* in=188 out=1607
+   48 FAIL AIME2025       aime2025-10              given=95                   correct=81                   wall=111.20s 37tps* in=367 out=4109
+   49 FAIL GPQA Diamond   recZWeueB7lSPR6wN        given=A                    correct=B                    wall=28.91s 38tps* in=229 out=1092
+   50 PASS SuperGPQA      fd7924876c4845cd83d95d61dfa0b236 given=H                    correct=H                    wall=8.89s 36tps* in=143 out=323
+   51 PASS AIME2025       aime2025-25              given=907                  correct=907                  wall=41.58s 36tps* in=136 out=1478
+   52 PASS GPQA Diamond   recVvpD8miVjmmyfe        given=C                    correct=C                    wall=453.17s 35tps* in=144 out=16000
+   53 PASS SuperGPQA      6bfe7d19299d4b3184636e1f51694306 given=I                    correct=I                    wall=32.11s 29tps* in=396 out=939
+   54 PASS AIME2025       aime2025-26              given=113                  correct=113                  wall=65.50s 38tps* in=125 out=2498
+   55 FAIL GPQA Diamond   recAAJoHMW45Lv5je        given=B                    correct=D                    wall=130.08s 37tps* in=244 out=4871
+   56 PASS SuperGPQA      e1825d70c5844c22933087eafa89e39c given=J                    correct=J                    wall=38.78s 36tps* in=448 out=1411
+   57 PASS AIME2025       aime2025-12              given=510                  correct=510                  wall=256.64s 35tps* in=181 out=8860
+   58 PASS GPQA Diamond   reckEnrOPFT9Ru7tW        given=C                    correct=C                    wall=34.25s 30tps* in=272 out=1037
+   59 PASS SuperGPQA      ab430ac3f18e4e02a2cb3f35498c6b30 given=A                    correct=A                    wall=97.81s 35tps* in=296 out=3428
+   60 PASS AIME2025       aime2025-27              given=19                   correct=19                   wall=85.48s 36tps* in=325 out=3065
+   61 PASS GPQA Diamond   rec8nshandHARTkrg        given=A                    correct=A                    wall=23.54s 35tps* in=497 out=819
+   62 PASS SuperGPQA      e8c5da5ca40647158b0c91dd695c6243 given=F                    correct=F                    wall=36.74s 38tps* in=447 out=1393
+   63 FAIL AIME2025       aime2025-13              given=1                    correct=204                  wall=445.37s 36tps* in=145 out=16000
+   64 FAIL GPQA Diamond   recFaL6j8UMhutXrc        given=C                    correct=A                    wall=62.42s 37tps* in=470 out=2280
+   65 PASS SuperGPQA      05efdc6fb2404ddc8dd5729bb68c74e5 given=H                    correct=H                    wall=26.41s 41tps* in=212 out=1092
+   66 FAIL AIME2025       aime2025-28              given=916                  correct=248                  wall=411.70s 39tps* in=209 out=16000
+   67 PASS GPQA Diamond   reczQ4I0VpENdMtIj        given=C                    correct=C                    wall=27.54s 30tps* in=231 out=824
+   68 FAIL SuperGPQA      ba52e06cbe1a4310a77a7d12cd1db943 given=B                    correct=H                    wall=37.12s 38tps* in=609 out=1411
+   69 PASS AIME2025       aime2025-29              given=104                  correct=104                  wall=67.39s 39tps* in=161 out=2635
+   70 FAIL GPQA Diamond   recWxGU8Q4YReJ1tb        given=A                    correct=C                    wall=16.62s 37tps* in=834 out=618
+   71 FAIL SuperGPQA      591a77df21324272914be82ac6583399 given=D                    correct=F                    wall=26.13s 38tps* in=328 out=1005
+   72 FAIL AIME2025       aime2025-15              given=3                    correct=735                  wall=415.36s 39tps* in=144 out=16000
+   73 FAIL GPQA Diamond   recMicVBcqy1xM1jq        given=A                    correct=B                    wall=22.97s 28tps* in=235 out=636
+   74 FAIL SuperGPQA      e780f37a5baa4fe094cd9c157486664d given=J                    correct=H                    wall=11.99s 39tps* in=223 out=473
+   75 PASS AIME2025       aime2025-30              given=240                  correct=240                  wall=74.35s 42tps* in=149 out=3146
+   76 PASS COMPSEC        compsec-076              given=20                   correct=17-20                wall=8.91s 37tps* in=487 out=333
+   77 PASS COMPSEC        compsec-077              given=18,19,20             correct=18-20                wall=8.18s 40tps* in=405 out=325
+   78 PASS COMPSEC        compsec-078              given=11                   correct=11                   wall=7.32s 41tps* in=412 out=303
+   79 PASS COMPSEC        compsec-079              given=18                   correct=18-19                wall=11.59s 42tps* in=446 out=483
+   80 FAIL COMPSEC        compsec-080              given=12                   correct=5-6                  wall=11.41s 41tps* in=357 out=471
+   81 PASS COMPSEC        compsec-081              given=10                   correct=10-15                wall=14.03s 39tps* in=414 out=549
+   82 PASS COMPSEC        compsec-082              given=10                   correct=9-10                 wall=7.40s 37tps* in=342 out=275
+   83 PASS COMPSEC        compsec-083              given=11                   correct=9-11                 wall=21.20s 40tps* in=372 out=838
+   84 PASS COMPSEC        compsec-084              given=7                    correct=6-7                  wall=15.12s 40tps* in=374 out=607
+   85 PASS COMPSEC        compsec-085              given=5                    correct=5                    wall=15.85s 40tps* in=283 out=635
+   86 PASS COMPSEC        compsec-086              given=3                    correct=3,13-15              wall=8.46s 40tps* in=427 out=339
+   87 PASS COMPSEC        compsec-087              given=8                    correct=8,20-22              wall=15.01s 39tps* in=538 out=585
+   88 PASS COMPSEC        compsec-088              given=11                   correct=11                   wall=10.97s 40tps* in=369 out=438
+   89 PASS COMPSEC        compsec-089              given=10                   correct=10                   wall=6.12s 39tps* in=310 out=238
+   90 PASS COMPSEC        compsec-090              given=12                   correct=12-13                wall=9.12s 41tps* in=418 out=370
+   91 PASS COMPSEC        compsec-091              given=3                    correct=3                    wall=7.61s 40tps* in=293 out=303
+   92 PASS COMPSEC        compsec-092              given=11                   correct=10-14                wall=39.25s 42tps* in=385 out=1641
+[lucebench] area=ds4-eval pass_rate=79.35% (73/92) wall_total=5466s
+
+[lucebench] === area=code cases=10 think=False max_tokens=2048 ===
+    1 PASS HumanEval-port has_close_elements       given=parse_ok             correct=parses-as-python     wall=1.57s 31tps* in=195 out=49
+    2 PASS HumanEval-port separate_paren_groups    given=parse_ok             correct=parses-as-python     wall=2.55s 39tps* in=205 out=100
+    3 PASS HumanEval-port truncate_number          given=parse_ok             correct=parses-as-python     wall=0.86s in=148 out=6
+    4 PASS HumanEval-port below_zero               given=parse_ok             correct=parses-as-python     wall=0.97s 24tps* in=195 out=23
+    5 PASS HumanEval-port mean_absolute_deviation  given=parse_ok             correct=parses-as-python     wall=1.08s 28tps* in=184 out=30
+    6 PASS HumanEval-port intersperse              given=parse_ok             correct=parses-as-python     wall=1.18s 32tps* in=172 out=38
+    7 PASS HumanEval-port parse_nested_parens      given=parse_ok             correct=parses-as-python     wall=1.87s 38tps* in=210 out=71
+    8 PASS HumanEval-port filter_by_substring      given=parse_ok             correct=parses-as-python     wall=0.57s 19tps* in=163 out=11
+    9 PASS HumanEval-port sum_product              given=parse_ok             correct=parses-as-python     wall=0.82s 22tps* in=198 out=18
+   10 PASS HumanEval-port rolling_max              given=parse_ok             correct=parses-as-python     wall=1.03s 28tps* in=189 out=29
+[lucebench] area=code pass_rate=100.00% (10/10) wall_total=13s
+
+[lucebench] === area=longctx cases=6 think=False max_tokens=256 ===
+    1 PASS long-context-frontier frontier-2k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=3.80s 12tps* in=2175 out=44
+    2 PASS long-context-frontier frontier-4k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=4.32s 9.0tps* in=4261 out=39
+    3 PASS long-context-frontier frontier-8k              given=risk_prefix_ok       correct=starts-with-Risk:    wall=7.18s 7.2tps* in=8425 out=52
+    4 PASS long-context-frontier frontier-16k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=13.28s 3.4tps* in=16774 out=45
+    5 PASS long-context-frontier frontier-32k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=28.31s 1.3tps* in=33471 out=38
+    6 PASS long-context-frontier frontier-64k             given=risk_prefix_ok       correct=starts-with-Risk:    wall=68.14s 0.5tps* in=66853 out=31
+[lucebench] area=longctx pass_rate=100.00% (6/6) wall_total=125s
+
+[lucebench] === area=agent cases=4 think=False max_tokens=4096 ===
+    1 FAIL agent-shape-probe codex-mini-read-task     given=narrative            correct=code_block | json_tool_call | apply_patch wall=18.70s 7.6tps* in=1579 out=142
+    2 PASS agent-shape-probe codex-mini-apply-patch   given=agent_shape_ok       correct=code_block | json_tool_call | apply_patch wall=6.80s 37tps* in=1796 out=251
+    3 FAIL agent-shape-probe codex-large-explore      given=narrative            correct=code_block | json_tool_call | apply_patch wall=7.13s 6.7tps* in=5489 out=48
+    4 FAIL agent-shape-probe codex-medium-test        given=narrative            correct=code_block | json_tool_call | apply_patch wall=6.80s 9.0tps* in=4922 out=61
+[lucebench] area=agent pass_rate=25.00% (1/4) wall_total=39s
+
+[lucebench] === area=forge max_tokens=4096 ===
+[lucebench] area=forge pass_rate=0.00% (0/30)
+
+[lucebench] sweep complete → /Users/erik/Projects/luce-bench-baselines/vidar-m2ultra-gemma4-26b-mlx8bit-sweep-nothink-2026-05-27
+# luce-bench sweep — vidar-m2ultra-gemma4-26b-mlx8bit-sweep-nothink-2026-05-27
+
+- url:   `http://vidar:1237`
+- model: `gemma-4-26B-A4B-it-MLX-8bit`
+- lucebench v0.2.7.dev0
+
+| area | n | pass | rate | wall_total | wall_median |
+|------|---|------|------|------------|-------------|
+| smoke | 3 | 3 | 100.0% | 23s | 0.2s |
+| ds4-eval | 92 | 73 | 79.3% | 5466s | 23.3s |
+| code | 10 | 10 | 100.0% | 13s | 1.1s |
+| longctx | 6 | 6 | 100.0% | 125s | 10.2s |
+| agent | 4 | 1 | 25.0% | 39s | 7.0s |
+| forge | 30 | 0 | 0.0% | 29s | 0.8s |
