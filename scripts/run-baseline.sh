@@ -190,6 +190,43 @@ if command -v curl &>/dev/null; then
         || rm -f "$RUN_DIR/props.json"
 fi
 
+# Capture raw host evidence next to /props snapshot. luce-bench writes
+# a canonical host.json (via lucebench.snapshot) when running against a
+# lucebox-shaped server, but that path goes through /props.host which
+# only lucebox containers populate. host.txt is the belt-and-suspenders
+# layer — every command's raw output, dumped verbatim — so a later
+# forensic can cross-reference the canonical block against the actual
+# host commands.
+{
+    echo "── uname -a"
+    uname -a 2>&1 || echo "(no uname)"
+    echo
+    echo "── /proc/version"
+    cat /proc/version 2>/dev/null || echo "(no /proc/version)"
+    echo
+    echo "── nvidia-smi --query-gpu=..."
+    if command -v nvidia-smi &>/dev/null; then
+        nvidia-smi --query-gpu=index,uuid,pci.bus_id,name,compute_cap,memory.total,power.limit \
+                   --format=csv,noheader 2>&1 || echo "(nvidia-smi query failed)"
+    else
+        echo "(nvidia-smi not installed)"
+    fi
+    echo
+    echo "── docker --version"
+    docker --version 2>&1 || echo "(no docker)"
+    echo
+    echo "── nvidia-ctk --version"
+    nvidia-ctk --version 2>/dev/null || echo "none"
+    echo
+    echo "── /etc/os-release PRETTY_NAME"
+    if [ -r /etc/os-release ]; then
+        # shellcheck disable=SC1091
+        (. /etc/os-release && printf '%s\n' "${PRETTY_NAME:-(unset)}")
+    else
+        echo "(no /etc/os-release)"
+    fi
+} > "$RUN_DIR/host.txt" 2>&1
+
 # Capture the exact command for reproducibility — handy when re-running
 # against a different ref / model later.
 {
