@@ -1,0 +1,720 @@
+Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-63' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-64' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-65' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-66' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-68' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-69' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-70' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-71' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-72' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-83' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-94' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-110' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-146' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-147' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-148' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-149' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-150' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-151' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-152' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-153' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-154' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-155' coro=<AsyncClient.aclose() done, defined at /home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/streams/tls.py", line 236, in aclose
+    await self.transport_stream.aclose()
+  File "/home/erik/.cache/uv/archive-v0/tyu8yXpIIsHwNhlS/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1344, in aclose
+    self._transport.close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 1210, in close
+    super().close()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/home/erik/.local/share/uv/python/cpython-3.12.3-linux-aarch64-gnu/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
