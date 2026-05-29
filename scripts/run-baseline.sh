@@ -54,7 +54,8 @@ Bench options (pass-through to luce-bench):
                          sweep (lucebench writes per-area JSON files +
                          a _summary.md into the run dir instead of
                          result.json).
-  --think                Set thinking mode on (omit for nothink).
+  --think                Enable thinking mode (default: nothink).
+  --no-think             Disable thinking mode (this is the default).
   --auth-env NAME        Env var holding the auth token (e.g.
                          OPENROUTER_API_KEY).
   --questions N          Limit each area to N questions (smoke runs).
@@ -82,7 +83,7 @@ HOST_OVERRIDE=""
 GPU_OVERRIDE=""
 DATE_OVERRIDE=""
 AREAS="ds4-eval"
-THINK=0
+THINK=0  # default: nothink — pass --think to enable thinking mode
 AUTH_ENV=""
 QUESTIONS=""
 TIMEOUT=""
@@ -102,6 +103,7 @@ while [ $# -gt 0 ]; do
         --date) DATE_OVERRIDE="$2"; shift 2 ;;
         --areas) AREAS="$2"; shift 2 ;;
         --think) THINK=1; shift ;;
+        --no-think) THINK=0; shift ;;
         --auth-env) AUTH_ENV="$2"; shift 2 ;;
         --questions) QUESTIONS="$2"; shift 2 ;;
         --timeout) TIMEOUT="$2"; shift 2 ;;
@@ -120,17 +122,43 @@ done
 [ -n "$LABEL" ]     || { echo "--label is required" >&2; exit 2; }
 
 # --- auto-detect: host, gpu, date, baselines_dir ---------------------------
+# Prefer the SERVER's identity over the client's: a bench run should be labeled
+# by the box being measured, not the box driving luce-bench. The server's
+# /props.host block (props_schema 4+) carries the real GPU; the host slug comes
+# from the URL, since /props.host has no hostname field. Both fall back to
+# client-side probes for non-lucebox servers that don't expose /props.host.
+_PROPS_GPU=""
+if command -v curl &>/dev/null && command -v python3 &>/dev/null; then
+    _auth=()
+    [ -n "$AUTH_ENV" ] && [ -n "${!AUTH_ENV:-}" ] && _auth=(-H "Authorization: Bearer ${!AUTH_ENV}")
+    _PROPS_GPU="$(curl -fsS --max-time 5 "${_auth[@]}" "${URL%/}/props" 2>/dev/null \
+        | python3 -c 'import sys,json
+try: d=json.load(sys.stdin)
+except Exception: sys.exit(0)
+g=((d.get("host") or {}).get("gpus") or [])
+print(g[0].get("name","") if g else "")' 2>/dev/null || true)"
+fi
+
 if [ -z "$HOST_OVERRIDE" ]; then
-    HOST_OVERRIDE="$(hostname -s 2>/dev/null | tr '[:upper:]' '[:lower:]')"
+    # URL host identifies a remote server; localhost means client == server.
+    _url_host="$(printf '%s' "$URL" | sed -E 's#^[a-zA-Z]+://##; s#[:/].*$##')"
+    case "$_url_host" in
+        localhost|127.*|0.0.0.0|::1|"")
+            HOST_OVERRIDE="$(hostname -s 2>/dev/null | tr '[:upper:]' '[:lower:]')" ;;
+        *)
+            HOST_OVERRIDE="$(printf '%s' "$_url_host" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]//g')" ;;
+    esac
 fi
 if [ -z "$GPU_OVERRIDE" ]; then
-    if command -v nvidia-smi &>/dev/null; then
-        # First GPU's name, sluggified: lowercase, alnum-only.
+    # First choice: the server's own GPU from /props.host. Fall back to the
+    # client's nvidia-smi (only correct when the client IS the server).
+    raw="$_PROPS_GPU"
+    if [ -z "$raw" ] && command -v nvidia-smi &>/dev/null; then
         raw=$(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo "")
-        # "NVIDIA GeForce RTX 3090 Ti" → "rtx3090ti"
-        GPU_OVERRIDE=$(printf '%s' "$raw" | tr '[:upper:]' '[:lower:]' \
-            | sed 's/nvidia geforce //;s/[[:space:]]//g;s/-//g')
     fi
+    # "NVIDIA GeForce RTX 3090 Ti" → "rtx3090ti"; "... RTX 5090 Laptop GPU" → "rtx5090laptop"
+    GPU_OVERRIDE=$(printf '%s' "$raw" | tr '[:upper:]' '[:lower:]' \
+        | sed 's/nvidia geforce //;s/nvidia //;s/ gpu$//;s/[[:space:]]//g;s/-//g')
     [ -n "$GPU_OVERRIDE" ] || GPU_OVERRIDE="unknown"
 fi
 if [ -z "$DATE_OVERRIDE" ]; then
@@ -151,7 +179,9 @@ LB_ARGS=(
     --model "$API_MODEL"
     --areas "$AREAS"
 )
-[ "$THINK" = "1" ]      && LB_ARGS+=(--think)
+# Always send an explicit mode so the bench never falls back to its own
+# think default. Default here is nothink; --think flips it.
+if [ "$THINK" = "1" ]; then LB_ARGS+=(--think); else LB_ARGS+=(--no-think); fi
 [ -n "$AUTH_ENV" ]      && LB_ARGS+=(--auth-env "$AUTH_ENV")
 [ -n "$QUESTIONS" ]     && LB_ARGS+=(--questions "$QUESTIONS")
 [ -n "$TIMEOUT" ]       && LB_ARGS+=(--timeout "$TIMEOUT")
