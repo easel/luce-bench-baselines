@@ -1,0 +1,18 @@
+── uname -a
+Linux bragi 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+── /proc/version
+Linux version 6.6.87.2-microsoft-standard-WSL2 (root@439a258ad544) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+
+── nvidia-smi --query-gpu=...
+0, GPU-9140842c-e5d5-063c-aac4-10802ad5d97a, 00000000:02:00.0, NVIDIA GeForce RTX 5090 Laptop GPU, 12.0, 24463 MiB, [N/A]
+
+── docker --version
+Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+
+── nvidia-ctk --version
+NVIDIA Container Toolkit CLI version 1.19.0
+commit: ec7b4e2fa2caecad6d89be4a26029b831fe7503a
+
+── /etc/os-release PRETTY_NAME
+Ubuntu 24.04.4 LTS

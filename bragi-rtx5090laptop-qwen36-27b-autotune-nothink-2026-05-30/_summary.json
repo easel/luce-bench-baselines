@@ -1,0 +1,88 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "name": "bragi-rtx5090laptop-qwen36-27b-autotune-nothink-2026-05-30",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "areas": [
+    {
+      "area": "smoke",
+      "n": 3,
+      "pass": 3,
+      "rate": 100.0,
+      "wall_total": 0.915,
+      "wall_median": 0.144
+    },
+    {
+      "area": "ds4-eval",
+      "n": 92,
+      "pass": 65,
+      "rate": 70.65217391304348,
+      "wall_total": 12352.147,
+      "wall_median": 68.1015
+    },
+    {
+      "area": "gsm8k",
+      "n": 100,
+      "pass": 89,
+      "rate": 89.0,
+      "wall_total": 1722.26,
+      "wall_median": 13.873999999999999
+    },
+    {
+      "area": "truthfulqa-mc1",
+      "n": 100,
+      "pass": 80,
+      "rate": 80.0,
+      "wall_total": 25.625,
+      "wall_median": 0.253
+    },
+    {
+      "area": "hellaswag",
+      "n": 100,
+      "pass": 90,
+      "rate": 90.0,
+      "wall_total": 39.969,
+      "wall_median": 0.4525
+    },
+    {
+      "area": "code",
+      "n": 10,
+      "pass": 8,
+      "rate": 80.0,
+      "wall_total": 16.372,
+      "wall_median": 1.4235000000000002
+    },
+    {
+      "area": "longctx",
+      "n": 6,
+      "pass": 6,
+      "rate": 100.0,
+      "wall_total": 240.838,
+      "wall_median": 18.6055
+    },
+    {
+      "area": "agent",
+      "n": 4,
+      "pass": 3,
+      "rate": 75.0,
+      "wall_total": 30.146,
+      "wall_median": 6.343
+    },
+    {
+      "area": "agent_recorded",
+      "n": 26,
+      "pass": 11,
+      "rate": 42.30769230769231,
+      "wall_total": 904.746,
+      "wall_median": 34.668
+    },
+    {
+      "area": "forge",
+      "n": 30,
+      "pass": 0,
+      "rate": 0.0,
+      "wall_total": 87.19,
+      "wall_median": 2.2835
+    }
+  ]
+}

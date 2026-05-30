@@ -1,0 +1,269 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "longctx",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 256,
+  "n": 6,
+  "pass": 6,
+  "pass_rate": 100.0,
+  "wall_total": 240.838,
+  "wall_median": 18.6055,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "frontier-2k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 4.653,
+      "ttft_seconds": 2.6846,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 2121,
+      "completion_tokens": 52,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on parsing XML tool calls within the server logic introduces a high risk of API incompatibility and parsing failures if the Qwen chat template output deviates from the expected XML structure, potentially breaking OpenAI-format compliance required by the smoke tests.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2081.0,
+        "decode_tokens_per_sec": 25.0,
+        "prefill_ms": 2554.4
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-4k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 7.147,
+      "ttft_seconds": 5.1948,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 4156,
+      "completion_tokens": 50,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls and rendering Qwen chat templates introduces a high risk of API compatibility and format fidelity failures if the parsing logic or template rendering deviates from the strict expectations of the OpenAI-format smoke tests.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2072.4,
+        "decode_tokens_per_sec": 24.1,
+        "prefill_ms": 5056.2
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-8k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 12.308,
+      "ttft_seconds": 10.5402,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 8218,
+      "completion_tokens": 43,
+      "reasoning_tokens": null,
+      "content": "Risk: The reliance on XML parsing for tool calls within the server logic introduces significant fragility and deviation from the standard OpenAI JSON format, creating a high risk of API incompatibility and breaking changes during updates.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 1894.0,
+        "decode_tokens_per_sec": 22.7,
+        "prefill_ms": 10397.4
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-16k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 24.903,
+      "ttft_seconds": 22.3783,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 16362,
+      "completion_tokens": 55,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls and rendering Qwen-specific chat templates introduces significant API compatibility risks, as the smoke tests only verify that tools are emitted in OpenAI format without ensuring the underlying XML parsing logic is robust against malformed inputs or template variations.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2667.0,
+        "decode_tokens_per_sec": 20.6,
+        "prefill_ms": 22215.6
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-32k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 54.367,
+      "ttft_seconds": 51.9645,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 32649,
+      "completion_tokens": 44,
+      "reasoning_tokens": null,
+      "content": "Risk: The server parses XML tool calls while the smoke check validates OpenAI format emission, creating a high risk of API incompatibility and tool-call failures due to a mismatch between internal parsing logic and external format expectations.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 2585.0,
+        "decode_tokens_per_sec": 17.0,
+        "prefill_ms": 51760.3
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    },
+    {
+      "case_id": "frontier-64k",
+      "source": "long-context-frontier",
+      "kind": "longctx-frontier",
+      "wall_seconds": 137.46,
+      "ttft_seconds": 133.4536,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 65212,
+      "completion_tokens": 54,
+      "reasoning_tokens": null,
+      "content": "Risk: The server's reliance on parsing XML tool calls while attempting to maintain OpenAI API compatibility creates a critical reliability risk where malformed or non-standard tool outputs may fail to parse, causing silent failures or broken tool-use loops that the smoke tests do not sufficiently validate.",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 4229.2,
+        "decode_tokens_per_sec": 12.8,
+        "prefill_ms": 133202.6
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "risk_prefix_ok",
+        "correct": "starts-with-Risk:",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "smoke",
+  "url": "http://localhost:8080",
+  "model": "dflash",
+  "think": false,
+  "max_tokens": 4096,
+  "n": 3,
+  "pass": 3,
+  "pass_rate": 100.0,
+  "wall_total": 0.915,
+  "wall_median": 0.144,
+  "thinking_control_requested": "nothink",
+  "thinking_control_honored": true,
+  "contradicting_rows": 0,
+  "thinking_control_injection": {
+    "active": false,
+    "token": null,
+    "source": "none"
+  },
+  "rows": [
+    {
+      "case_id": "smoke-arithmetic",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.63,
+      "ttft_seconds": 0.6303,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 50,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "4",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 68.6,
+        "decode_tokens_per_sec": 29.1,
+        "prefill_ms": 504.3
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "4",
+        "correct": "4",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-capital",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.144,
+      "ttft_seconds": 0.1441,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "Paris",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 39.4,
+        "decode_tokens_per_sec": 50.8,
+        "prefill_ms": 93.7
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "Paris",
+        "correct": "Paris",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    },
+    {
+      "case_id": "smoke-sequence",
+      "source": "smoke",
+      "kind": "smoke",
+      "wall_seconds": 0.141,
+      "ttft_seconds": 0.1405,
+      "streaming": true,
+      "http_status": 200,
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "reasoning_tokens": null,
+      "content": "3",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "finish_details": {},
+      "timings": {
+        "decode_ms": 39.6,
+        "decode_tokens_per_sec": 50.5,
+        "prefill_ms": 90.9
+      },
+      "card_source": "props",
+      "card_stem": "dflash",
+      "client_thinking": {
+        "mode": "off",
+        "requested_budget": null,
+        "engaged": false,
+        "marking": "unmarked",
+        "reasoning_tokens_at_abort": 0,
+        "continuation": "skipped",
+        "answer_started_before_abort": false
+      },
+      "pass": true,
+      "graded": {
+        "pass": true,
+        "given": "3",
+        "correct": "3",
+        "status": "passed",
+        "format_pass": true,
+        "semantic_hint": true
+      }
+    }
+  ]
+}
