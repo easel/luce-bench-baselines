@@ -1,0 +1,1940 @@
+{
+  "lucebench_version": "0.2.7.dev0",
+  "area": "forge",
+  "url": "https://openrouter.ai/api",
+  "model": "qwen/qwen3.6-27b",
+  "n_scenarios": 30,
+  "n_pass": 0,
+  "pass_rate": 0.0,
+  "rows": [
+    {
+      "case_id": "basic_2step",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.423,
+      "iterations": [
+        {
+          "wall_s": 2.4184,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 415,
+          "completion_tokens": 128,
+          "tool_calls": [
+            {
+              "name": "get_country_info",
+              "arguments": {
+                "country": "France"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Use the available tools to answer the user's question. First use get_country_info to retrieve information, then use summarize to provide the final answer.\"}, {\"role\": \"user\", \"content\": \"What is the capital of France?\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 415,
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "thinking_tokens": 104
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00052995,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00052995,
+              "upstream_inference_prompt_cost": 0.00012035,
+              "upstream_inference_completions_cost": 0.0004096
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 415,
+      "completion_tokens": 128,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "sequential_3step",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.349,
+      "iterations": [
+        {
+          "wall_s": 2.3458,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 503,
+          "completion_tokens": 142,
+          "tool_calls": [
+            {
+              "name": "fetch_sales_data",
+              "arguments": {
+                "quarter": 4,
+                "year": 2024
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a data analyst assistant. Fetch the sales data first, then analyze it, then produce a report using the report tool.\"}, {\"role\": \"user\", \"content\": \"Generate a sales report from the Q4 2024 dataset.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 503,
+            "output_tokens": 142,
+            "output_tokens_details": {
+              "thinking_tokens": 84
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00060027,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00060027,
+              "upstream_inference_prompt_cost": 0.00014587,
+              "upstream_inference_completions_cost": 0.0004544
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 503,
+      "completion_tokens": 142,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "error_recovery",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.872,
+      "iterations": [
+        {
+          "wall_s": 2.8688,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 406,
+          "completion_tokens": 154,
+          "tool_calls": [
+            {
+              "name": "fetch",
+              "arguments": {
+                "count": "10"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Fetch the requested records, then summarize them.\"}, {\"role\": \"user\", \"content\": \"Fetch 10 records and summarize them.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 406,
+            "output_tokens": 154,
+            "output_tokens_details": {
+              "thinking_tokens": 116
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00061054,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00061054,
+              "upstream_inference_prompt_cost": 0.00011774,
+              "upstream_inference_completions_cost": 0.0004928
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 406,
+      "completion_tokens": 154,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "tool_selection",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.175,
+      "iterations": [
+        {
+          "wall_s": 2.1734,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 876,
+          "completion_tokens": 119,
+          "tool_calls": [
+            {
+              "name": "lookup_user",
+              "arguments": {
+                "name": "Alice"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an admin assistant. Use the available tools to answer the user's question. Look up the user first, then check their permissions, then respond.\"}, {\"role\": \"user\", \"content\": \"What permissions does Alice have?\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 876,
+            "output_tokens": 119,
+            "output_tokens_details": {
+              "thinking_tokens": 88
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00063484,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00063484,
+              "upstream_inference_prompt_cost": 0.00025404,
+              "upstream_inference_completions_cost": 0.0003808
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 876,
+      "completion_tokens": 119,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "argument_fidelity",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.111,
+      "iterations": [
+        {
+          "wall_s": 2.109,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 495,
+          "completion_tokens": 109,
+          "tool_calls": [
+            {
+              "name": "lookup_entity",
+              "arguments": {
+                "entity": "Widget Pro"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Look up the entity, then fetch its details using the entity ID from the lookup result, then present a summary.\"}, {\"role\": \"user\", \"content\": \"Look up the entity 'Widget Pro' and get its details.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 495,
+            "output_tokens": 109,
+            "output_tokens_details": {
+              "thinking_tokens": 80
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00049235,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00049235,
+              "upstream_inference_prompt_cost": 0.00014355,
+              "upstream_inference_completions_cost": 0.0003488
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 495,
+      "completion_tokens": 109,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "sequential_reasoning",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 12.736,
+      "iterations": [
+        {
+          "wall_s": 12.733,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 610,
+          "completion_tokens": 747,
+          "tool_calls": [
+            {
+              "name": "identify_patient",
+              "arguments": {
+                "name": "John Doe"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical assistant. Identify the patient, retrieve their records, check drug interactions for their current medication, then provide a recommendation.\"}, {\"role\": \"user\", \"content\": \"Check drug interactions for patient John Doe's current medication.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 610,
+            "output_tokens": 747,
+            "output_tokens_details": {
+              "thinking_tokens": 763
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.0025673,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.0025673,
+              "upstream_inference_prompt_cost": 0.0001769,
+              "upstream_inference_completions_cost": 0.0023904
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 610,
+      "completion_tokens": 747,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "conditional_routing",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.33,
+      "iterations": [
+        {
+          "wall_s": 2.3264,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 703,
+          "completion_tokens": 123,
+          "tool_calls": [
+            {
+              "name": "get_alert",
+              "arguments": {
+                "service": "payments"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an infrastructure incident responder. Use the available tools to investigate the P1 alert, determine the root cause, and recommend an action. Call diagnose when you have enough evidence to identify the root cause.\"}, {\"role\": \"user\", \"content\": \"We got a P1 alert on the payments service. Diagnose the root cause and recommend an action.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 703,
+            "output_tokens": 123,
+            "output_tokens_details": {
+              "thinking_tokens": 119
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00059747,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00059747,
+              "upstream_inference_prompt_cost": 0.00020387,
+              "upstream_inference_completions_cost": 0.0003936
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 703,
+      "completion_tokens": 123,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "data_gap_recovery",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 3.312,
+      "iterations": [
+        {
+          "wall_s": 3.3087,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 866,
+          "completion_tokens": 212,
+          "tool_calls": [
+            {
+              "name": "get_employee",
+              "arguments": {
+                "name": "Sarah Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an HR systems assistant. Use the available tools to gather the requested employee information and submit a complete profile report.\"}, {\"role\": \"user\", \"content\": \"Pull together a complete profile for Sarah Chen \u2014 we need her clearance level and emergency contact for the onboarding audit.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 866,
+            "output_tokens": 212,
+            "output_tokens_details": {
+              "thinking_tokens": 218
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00092954,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00092954,
+              "upstream_inference_prompt_cost": 0.00025114,
+              "upstream_inference_completions_cost": 0.0006784
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 866,
+      "completion_tokens": 212,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "data_gap_recovery_extended",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.201,
+      "iterations": [
+        {
+          "wall_s": 2.1977,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1314,
+          "completion_tokens": 116,
+          "tool_calls": [
+            {
+              "name": "get_employee",
+              "arguments": {
+                "name": "Sarah Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an HR systems assistant. Use the available tools to gather the requested employee information and submit a complete profile report. Read tool results carefully \u2014 some endpoints redirect to newer systems.\"}, {\"role\": \"user\", \"content\": \"Pull together a complete profile for Sarah Chen \u2014 we need her clearance level, current emergency contact, latest salary band, and active access groups for the onboarding audit and access review.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1314,
+            "output_tokens": 116,
+            "output_tokens_details": {
+              "thinking_tokens": 111
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00075226,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00075226,
+              "upstream_inference_prompt_cost": 0.00038106,
+              "upstream_inference_completions_cost": 0.0003712
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1314,
+      "completion_tokens": 116,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "argument_transformation",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 9.232,
+      "iterations": [
+        {
+          "wall_s": 9.2287,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1136,
+          "completion_tokens": 206,
+          "tool_calls": [
+            {
+              "name": "list_transactions",
+              "arguments": {
+                "quarter": "Q4",
+                "year": 2024
+              }
+            },
+            {
+              "name": "get_approved_vendors",
+              "arguments": {}
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an expense audit assistant. Use the available tools to identify flagged transactions and submit a complete audit report. Read tool results carefully \u2014 amounts may be in different currencies and vendor records may have aliases.\"}, {\"role\": \"user\", \"content\": \"Run our Q4 2024 expense audit. Flag any transaction of $5,000 or more from vendors NOT on our approved list. Submit the audit report with: comma-separated transaction IDs, total flagged amount in USD, and the vendor of the single largest flagged transaction.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1136,
+            "output_tokens": 206,
+            "output_tokens_details": {
+              "thinking_tokens": 144
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00098864,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00098864,
+              "upstream_inference_prompt_cost": 0.00032944,
+              "upstream_inference_completions_cost": 0.0006592
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1136,
+      "completion_tokens": 206,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "inconsistent_api_recovery",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 9.133,
+      "iterations": [
+        {
+          "wall_s": 9.1297,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1042,
+          "completion_tokens": 541,
+          "tool_calls": [
+            {
+              "name": "legacy_get_balance",
+              "arguments": {
+                "account_id": "ACC-12345"
+              }
+            },
+            {
+              "name": "legacy_get_transactions",
+              "arguments": {
+                "account_id": "ACC-12345",
+                "since": "2024-10-01",
+                "until": "2024-12-31"
+              }
+            },
+            {
+              "name": "legacy_check_compliance",
+              "arguments": {
+                "region": "US",
+                "period": "Q4 2024"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a compliance audit assistant. Use the available tools to complete the requested audit.\"}, {\"role\": \"user\", \"content\": \"Run a Q4 2024 (Oct 1 - Dec 31) compliance audit on Acme Corp (account ACC-12345). Pull the account balance and Q4 transactions, categorize at least one transaction, run a US-region compliance check for the period, calculate the subtotal of all transaction amounts in USD, and submit the audit report with keys: flagged_count (int), total_usd (str), compliance_status (str), txn_count (int).\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1042,
+            "output_tokens": 541,
+            "output_tokens_details": {
+              "thinking_tokens": 289
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00203338,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00203338,
+              "upstream_inference_prompt_cost": 0.00030218,
+              "upstream_inference_completions_cost": 0.0017312
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1042,
+      "completion_tokens": 541,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "grounded_synthesis",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.274,
+      "iterations": [
+        {
+          "wall_s": 2.2721,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 762,
+          "completion_tokens": 127,
+          "tool_calls": [
+            {
+              "name": "get_open_role",
+              "arguments": {}
+            },
+            {
+              "name": "get_candidate_pool",
+              "arguments": {}
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a hiring manager. Use the available tools to evaluate the candidate pool for the open role and submit your decision.\"}, {\"role\": \"user\", \"content\": \"We have an open senior backend engineering role and four candidates in the pool. Review the role, evaluate the candidates, and submit your hiring decision with a brief rationale explaining why you selected (and did not select) the candidates you considered.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 762,
+            "output_tokens": 127,
+            "output_tokens_details": {
+              "thinking_tokens": 105
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00062738,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00062738,
+              "upstream_inference_prompt_cost": 0.00022098,
+              "upstream_inference_completions_cost": 0.0004064
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 762,
+      "completion_tokens": 127,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "relevance_detection",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 11.324,
+      "iterations": [
+        {
+          "wall_s": 11.3217,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 789,
+          "completion_tokens": 786,
+          "tool_calls": [
+            {
+              "name": "decline",
+              "arguments": {
+                "reason": "The available tools are limited to travel-related functions (weather, flights, hotels, currency conversion) and cannot perform mathematical calculations."
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. You have access to travel-related tools. If the user's request cannot be answered using the available tools, call the decline tool to explain why. Do NOT call a tool unless it is directly relevant.\"}, {\"role\": \"user\", \"content\": \"What is the square root of 144?\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 789,
+            "output_tokens": 786,
+            "output_tokens_details": {
+              "thinking_tokens": 849
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00274401,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00274401,
+              "upstream_inference_prompt_cost": 0.00022881,
+              "upstream_inference_completions_cost": 0.0025152
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 789,
+      "completion_tokens": 786,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "basic_2step_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 6.626,
+      "iterations": [
+        {
+          "wall_s": 6.6244,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 415,
+          "completion_tokens": 386,
+          "tool_calls": [
+            {
+              "name": "get_country_info",
+              "arguments": {
+                "country": "France"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Use the available tools to answer the user's question. First use get_country_info to retrieve information, then use summarize to provide the final answer.\"}, {\"role\": \"user\", \"content\": \"What is the capital of France?\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 415,
+            "output_tokens": 386,
+            "output_tokens_details": {
+              "thinking_tokens": 378
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00135555,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00135555,
+              "upstream_inference_prompt_cost": 0.00012035,
+              "upstream_inference_completions_cost": 0.0012352
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 415,
+      "completion_tokens": 386,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "sequential_3step_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 5.369,
+      "iterations": [
+        {
+          "wall_s": 5.3676,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 503,
+          "completion_tokens": 277,
+          "tool_calls": [
+            {
+              "name": "fetch_sales_data",
+              "arguments": {
+                "quarter": 4,
+                "year": 2024
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a data analyst assistant. Fetch the sales data first, then analyze it, then produce a report using the report tool.\"}, {\"role\": \"user\", \"content\": \"Generate a sales report from the Q4 2024 dataset.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 503,
+            "output_tokens": 277,
+            "output_tokens_details": {
+              "thinking_tokens": 206
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00103227,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00103227,
+              "upstream_inference_prompt_cost": 0.00014587,
+              "upstream_inference_completions_cost": 0.0008864
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 503,
+      "completion_tokens": 277,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "error_recovery_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 4.035,
+      "iterations": [
+        {
+          "wall_s": 4.0334,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 406,
+          "completion_tokens": 248,
+          "tool_calls": [
+            {
+              "name": "fetch",
+              "arguments": {
+                "count": "10"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Fetch the requested records, then summarize them.\"}, {\"role\": \"user\", \"content\": \"Fetch 10 records and summarize them.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 406,
+            "output_tokens": 248,
+            "output_tokens_details": {
+              "thinking_tokens": 201
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00091134,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00091134,
+              "upstream_inference_prompt_cost": 0.00011774,
+              "upstream_inference_completions_cost": 0.0007936
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 406,
+      "completion_tokens": 248,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "tool_selection_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 3.027,
+      "iterations": [
+        {
+          "wall_s": 3.0228,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 876,
+          "completion_tokens": 90,
+          "tool_calls": [
+            {
+              "name": "lookup_user",
+              "arguments": {
+                "name": "Alice"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an admin assistant. Use the available tools to answer the user's question. Look up the user first, then check their permissions, then respond.\"}, {\"role\": \"user\", \"content\": \"What permissions does Alice have?\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 876,
+            "output_tokens": 90,
+            "output_tokens_details": {
+              "thinking_tokens": 60
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00054204,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00054204,
+              "upstream_inference_prompt_cost": 0.00025404,
+              "upstream_inference_completions_cost": 0.000288
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 876,
+      "completion_tokens": 90,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "argument_fidelity_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 5.109,
+      "iterations": [
+        {
+          "wall_s": 5.1081,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 495,
+          "completion_tokens": 283,
+          "tool_calls": [
+            {
+              "name": "lookup_entity",
+              "arguments": {
+                "entity": "Widget Pro"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. Look up the entity, then fetch its details using the entity ID from the lookup result, then present a summary.\"}, {\"role\": \"user\", \"content\": \"Look up the entity 'Widget Pro' and get its details.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 495,
+            "output_tokens": 283,
+            "output_tokens_details": {
+              "thinking_tokens": 243
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00104915,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00104915,
+              "upstream_inference_prompt_cost": 0.00014355,
+              "upstream_inference_completions_cost": 0.0009056
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 495,
+      "completion_tokens": 283,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "sequential_reasoning_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.613,
+      "iterations": [
+        {
+          "wall_s": 2.6098,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 611,
+          "completion_tokens": 149,
+          "tool_calls": [
+            {
+              "name": "identify_patient",
+              "arguments": {
+                "name": "John Doe"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical assistant. Identify the patient, retrieve their records, check drug interactions for their current medication, then provide a recommendation.\"}, {\"role\": \"user\", \"content\": \"Check drug interactions for patient John Doe's current medication.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 611,
+            "output_tokens": 149,
+            "output_tokens_details": {
+              "thinking_tokens": 143
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00065399,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00065399,
+              "upstream_inference_prompt_cost": 0.00017719,
+              "upstream_inference_completions_cost": 0.0004768
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 611,
+      "completion_tokens": 149,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "conditional_routing_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.451,
+      "iterations": [
+        {
+          "wall_s": 2.449,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 703,
+          "completion_tokens": 108,
+          "tool_calls": [
+            {
+              "name": "get_alert",
+              "arguments": {
+                "service": "payments"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an infrastructure incident responder. Use the available tools to investigate the P1 alert, determine the root cause, and recommend an action. Call diagnose when you have enough evidence to identify the root cause.\"}, {\"role\": \"user\", \"content\": \"We got a P1 alert on the payments service. Diagnose the root cause and recommend an action.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 703,
+            "output_tokens": 108,
+            "output_tokens_details": {
+              "thinking_tokens": 93
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00054947,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00054947,
+              "upstream_inference_prompt_cost": 0.00020387,
+              "upstream_inference_completions_cost": 0.0003456
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 703,
+      "completion_tokens": 108,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "data_gap_recovery_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.949,
+      "iterations": [
+        {
+          "wall_s": 2.9472,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 866,
+          "completion_tokens": 139,
+          "tool_calls": [
+            {
+              "name": "get_employee",
+              "arguments": {
+                "name": "Sarah Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an HR systems assistant. Use the available tools to gather the requested employee information and submit a complete profile report.\"}, {\"role\": \"user\", \"content\": \"Pull together a complete profile for Sarah Chen \u2014 we need her clearance level and emergency contact for the onboarding audit.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 866,
+            "output_tokens": 139,
+            "output_tokens_details": {
+              "thinking_tokens": 138
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00069594,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00069594,
+              "upstream_inference_prompt_cost": 0.00025114,
+              "upstream_inference_completions_cost": 0.0004448
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 866,
+      "completion_tokens": 139,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "data_gap_recovery_extended_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 3.621,
+      "iterations": [
+        {
+          "wall_s": 3.6178,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1314,
+          "completion_tokens": 210,
+          "tool_calls": [
+            {
+              "name": "hr_directory",
+              "arguments": {
+                "name": "Sarah Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an HR systems assistant. Use the available tools to gather the requested employee information and submit a complete profile report. Read tool results carefully \u2014 some endpoints redirect to newer systems.\"}, {\"role\": \"user\", \"content\": \"Pull together a complete profile for Sarah Chen \u2014 we need her clearance level, current emergency contact, latest salary band, and active access groups for the onboarding audit and access review.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1314,
+            "output_tokens": 210,
+            "output_tokens_details": {
+              "thinking_tokens": 218
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00105306,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00105306,
+              "upstream_inference_prompt_cost": 0.00038106,
+              "upstream_inference_completions_cost": 0.000672
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1314,
+      "completion_tokens": 210,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "argument_transformation_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 4.397,
+      "iterations": [
+        {
+          "wall_s": 4.3944,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1136,
+          "completion_tokens": 270,
+          "tool_calls": [
+            {
+              "name": "list_transactions",
+              "arguments": {
+                "quarter": "Q4",
+                "year": 2024
+              }
+            },
+            {
+              "name": "get_approved_vendors",
+              "arguments": {}
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are an expense audit assistant. Use the available tools to identify flagged transactions and submit a complete audit report. Read tool results carefully \u2014 amounts may be in different currencies and vendor records may have aliases.\"}, {\"role\": \"user\", \"content\": \"Run our Q4 2024 expense audit. Flag any transaction of $5,000 or more from vendors NOT on our approved list. Submit the audit report with: comma-separated transaction IDs, total flagged amount in USD, and the vendor of the single largest flagged transaction.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1136,
+            "output_tokens": 270,
+            "output_tokens_details": {
+              "thinking_tokens": 210
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00119344,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00119344,
+              "upstream_inference_prompt_cost": 0.00032944,
+              "upstream_inference_completions_cost": 0.000864
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1136,
+      "completion_tokens": 270,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "inconsistent_api_recovery_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 7.306,
+      "iterations": [
+        {
+          "wall_s": 7.3024,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1042,
+          "completion_tokens": 536,
+          "tool_calls": [
+            {
+              "name": "legacy_get_balance",
+              "arguments": {
+                "account_id": "ACC-12345"
+              }
+            },
+            {
+              "name": "legacy_get_transactions",
+              "arguments": {
+                "account_id": "ACC-12345",
+                "since": "2024-10-01",
+                "until": "2024-12-31"
+              }
+            },
+            {
+              "name": "legacy_check_compliance",
+              "arguments": {
+                "region": "US",
+                "period": "Q4 2024"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a compliance audit assistant. Use the available tools to complete the requested audit.\"}, {\"role\": \"user\", \"content\": \"Run a Q4 2024 (Oct 1 - Dec 31) compliance audit on Acme Corp (account ACC-12345). Pull the account balance and Q4 transactions, categorize at least one transaction, run a US-region compliance check for the period, calculate the subtotal of all transaction amounts in USD, and submit the audit report with keys: flagged_count (int), total_usd (str), compliance_status (str), txn_count (int).\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1042,
+            "output_tokens": 536,
+            "output_tokens_details": {
+              "thinking_tokens": 323
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00201738,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00201738,
+              "upstream_inference_prompt_cost": 0.00030218,
+              "upstream_inference_completions_cost": 0.0017152
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1042,
+      "completion_tokens": 536,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "grounded_synthesis_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.269,
+      "iterations": [
+        {
+          "wall_s": 2.2669,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 762,
+          "completion_tokens": 115,
+          "tool_calls": [
+            {
+              "name": "get_open_role",
+              "arguments": {}
+            },
+            {
+              "name": "get_candidate_pool",
+              "arguments": {}
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a hiring manager. Use the available tools to evaluate the candidate pool for the open role and submit your decision.\"}, {\"role\": \"user\", \"content\": \"We have an open senior backend engineering role and four candidates in the pool. Review the role, evaluate the candidates, and submit your hiring decision with a brief rationale explaining why you selected (and did not select) the candidates you considered.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 762,
+            "output_tokens": 115,
+            "output_tokens_details": {
+              "thinking_tokens": 93
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00058898,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00058898,
+              "upstream_inference_prompt_cost": 0.00022098,
+              "upstream_inference_completions_cost": 0.000368
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 762,
+      "completion_tokens": 115,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "relevance_detection_stateful",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 15.834,
+      "iterations": [
+        {
+          "wall_s": 15.8312,
+          "http_status": 200,
+          "finish_reason": "stop",
+          "stop_reason": "end_turn",
+          "prompt_tokens": 789,
+          "completion_tokens": 1119,
+          "tool_calls": [],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a helpful assistant. You have access to travel-related tools. If the user's request cannot be answered using the available tools, call the decline tool to explain why. Do NOT call a tool unless it is directly relevant.\"}, {\"role\": \"user\", \"content\": \"What is the square root of 144?\"}]",
+          "output": "The square root of 144 is 12.",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 789,
+            "output_tokens": 1119,
+            "output_tokens_details": {
+              "thinking_tokens": 1170
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.00380961,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.00380961,
+              "upstream_inference_prompt_cost": 0.00022881,
+              "upstream_inference_completions_cost": 0.0035808
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 789,
+      "completion_tokens": 1119,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "stop"
+    },
+    {
+      "case_id": "compaction_chain_baseline",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 4.824,
+      "iterations": [
+        {
+          "wall_s": 4.821,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1500,
+          "completion_tokens": 124,
+          "tool_calls": [
+            {
+              "name": "patient_lookup",
+              "arguments": {
+                "patient_name": "Margaret Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical case coordinator. Investigate the patient and build a treatment plan by following each step in order. Each tool returns an ID you will need for the next call.\\n\\nFollow this exact sequence:\\n1. patient_lookup \u2014 look up the patient by name\\n2. pull_records \u2014 use the MRN from step 1\\n3. order_labs \u2014 use the encounter ID from step 2\\n4. review_imaging \u2014 use the lab order ID from step 3\\n5. request_referral \u2014 use the imaging ID from step 4\\n6. check_pharmacy \u2014 use the referral ID from step 5\\n7. verify_insurance \u2014 use the patient MRN from step 1\\n8. request_prior_auth \u2014 use the plan ID from step 7 and referral ID from step 5\\n9. schedule_appointment \u2014 use the auth ID from step 8 and referral ID from step 5\\n10. submit_treatment_plan \u2014 summarize findings citing key facts from each step\"}, {\"role\": \"user\", \"content\": \"Patient Margaret Chen called about persistent fatigue. Investigate her case fully \u2014 look her up, pull records, run labs, review imaging, get a specialist referral, check medications, verify insurance, obtain authorization, schedule the appointment, and submit a treatment plan summarizing everything.\"}]",
+          "output": "",
+          "reasoning_content": "I'll investigate Margaret Chen's case step by step, following the required sequence. Let me start by looking up her patient information.\n\n",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1500,
+            "output_tokens": 124,
+            "output_tokens_details": {
+              "thinking_tokens": 76
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.0008318,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.0008318,
+              "upstream_inference_prompt_cost": 0.000435,
+              "upstream_inference_completions_cost": 0.0003968
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1500,
+      "completion_tokens": 124,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "compaction_chain_p1",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 1.756,
+      "iterations": [
+        {
+          "wall_s": 1.7535,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1500,
+          "completion_tokens": 75,
+          "tool_calls": [
+            {
+              "name": "patient_lookup",
+              "arguments": {
+                "patient_name": "Margaret Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical case coordinator. Investigate the patient and build a treatment plan by following each step in order. Each tool returns an ID you will need for the next call.\\n\\nFollow this exact sequence:\\n1. patient_lookup \u2014 look up the patient by name\\n2. pull_records \u2014 use the MRN from step 1\\n3. order_labs \u2014 use the encounter ID from step 2\\n4. review_imaging \u2014 use the lab order ID from step 3\\n5. request_referral \u2014 use the imaging ID from step 4\\n6. check_pharmacy \u2014 use the referral ID from step 5\\n7. verify_insurance \u2014 use the patient MRN from step 1\\n8. request_prior_auth \u2014 use the plan ID from step 7 and referral ID from step 5\\n9. schedule_appointment \u2014 use the auth ID from step 8 and referral ID from step 5\\n10. submit_treatment_plan \u2014 summarize findings citing key facts from each step\"}, {\"role\": \"user\", \"content\": \"Patient Margaret Chen called about persistent fatigue. Investigate her case fully \u2014 look her up, pull records, run labs, review imaging, get a specialist referral, check medications, verify insurance, obtain authorization, schedule the appointment, and submit a treatment plan summarizing everything.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1500,
+            "output_tokens": 75,
+            "output_tokens_details": {
+              "thinking_tokens": 50
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.000675,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.000675,
+              "upstream_inference_prompt_cost": 0.000435,
+              "upstream_inference_completions_cost": 0.00024
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1500,
+      "completion_tokens": 75,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "compaction_chain_p2",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.087,
+      "iterations": [
+        {
+          "wall_s": 2.0848,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1500,
+          "completion_tokens": 101,
+          "tool_calls": [
+            {
+              "name": "patient_lookup",
+              "arguments": {
+                "patient_name": "Margaret Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical case coordinator. Investigate the patient and build a treatment plan by following each step in order. Each tool returns an ID you will need for the next call.\\n\\nFollow this exact sequence:\\n1. patient_lookup \u2014 look up the patient by name\\n2. pull_records \u2014 use the MRN from step 1\\n3. order_labs \u2014 use the encounter ID from step 2\\n4. review_imaging \u2014 use the lab order ID from step 3\\n5. request_referral \u2014 use the imaging ID from step 4\\n6. check_pharmacy \u2014 use the referral ID from step 5\\n7. verify_insurance \u2014 use the patient MRN from step 1\\n8. request_prior_auth \u2014 use the plan ID from step 7 and referral ID from step 5\\n9. schedule_appointment \u2014 use the auth ID from step 8 and referral ID from step 5\\n10. submit_treatment_plan \u2014 summarize findings citing key facts from each step\"}, {\"role\": \"user\", \"content\": \"Patient Margaret Chen called about persistent fatigue. Investigate her case fully \u2014 look her up, pull records, run labs, review imaging, get a specialist referral, check medications, verify insurance, obtain authorization, schedule the appointment, and submit a treatment plan summarizing everything.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1500,
+            "output_tokens": 101,
+            "output_tokens_details": {
+              "thinking_tokens": 77
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.0007582,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.0007582,
+              "upstream_inference_prompt_cost": 0.000435,
+              "upstream_inference_completions_cost": 0.0003232
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1500,
+      "completion_tokens": 101,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    },
+    {
+      "case_id": "compaction_chain_p3",
+      "source": "forge",
+      "kind": "forge-scenario",
+      "pass": false,
+      "graded": {
+        "pass": false,
+        "given": "ValidationError",
+        "correct": "no error_type",
+        "status": "failed"
+      },
+      "wall_seconds": 2.101,
+      "iterations": [
+        {
+          "wall_s": 2.0981,
+          "http_status": 200,
+          "finish_reason": "tool_calls",
+          "stop_reason": "tool_use",
+          "prompt_tokens": 1500,
+          "completion_tokens": 100,
+          "tool_calls": [
+            {
+              "name": "patient_lookup",
+              "arguments": {
+                "patient_name": "Margaret Chen"
+              }
+            }
+          ],
+          "prompt": "[{\"role\": \"system\", \"content\": \"You are a medical case coordinator. Investigate the patient and build a treatment plan by following each step in order. Each tool returns an ID you will need for the next call.\\n\\nFollow this exact sequence:\\n1. patient_lookup \u2014 look up the patient by name\\n2. pull_records \u2014 use the MRN from step 1\\n3. order_labs \u2014 use the encounter ID from step 2\\n4. review_imaging \u2014 use the lab order ID from step 3\\n5. request_referral \u2014 use the imaging ID from step 4\\n6. check_pharmacy \u2014 use the referral ID from step 5\\n7. verify_insurance \u2014 use the patient MRN from step 1\\n8. request_prior_auth \u2014 use the plan ID from step 7 and referral ID from step 5\\n9. schedule_appointment \u2014 use the auth ID from step 8 and referral ID from step 5\\n10. submit_treatment_plan \u2014 summarize findings citing key facts from each step\"}, {\"role\": \"user\", \"content\": \"Patient Margaret Chen called about persistent fatigue. Investigate her case fully \u2014 look her up, pull records, run labs, review imaging, get a specialist referral, check medications, verify insurance, obtain authorization, schedule the appointment, and submit a treatment plan summarizing everything.\"}]",
+          "output": "",
+          "reasoning_content": "",
+          "timings": null,
+          "raw_usage": {
+            "cache_creation": null,
+            "cache_creation_input_tokens": null,
+            "cache_read_input_tokens": 0,
+            "inference_geo": null,
+            "input_tokens": 1500,
+            "output_tokens": 100,
+            "output_tokens_details": {
+              "thinking_tokens": 79
+            },
+            "server_tool_use": null,
+            "service_tier": null,
+            "speed": "standard",
+            "cost": 0.000755,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0.000755,
+              "upstream_inference_prompt_cost": 0.000435,
+              "upstream_inference_completions_cost": 0.00032
+            }
+          },
+          "error": null
+        }
+      ],
+      "prompt_tokens": 1500,
+      "completion_tokens": 100,
+      "timings": null,
+      "error": "ValidationError",
+      "http_status": null,
+      "finish_reason": "tool_calls"
+    }
+  ]
+}
